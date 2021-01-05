@@ -39,7 +39,12 @@ namespace Fantasy
 
         private void PlayerView_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile("../Images/english-premier-league.png");
+            pictureBox1.Image = Image.FromFile("Images/english-premier-league.png");
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
