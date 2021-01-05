@@ -42,8 +42,8 @@ namespace Fantasy
             this.SignInButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
-            this.PlayersButton = new System.Windows.Forms.Button();
             this.TopPlayersButton = new System.Windows.Forms.Button();
+            this.PlayersButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,11 +53,14 @@ namespace Fantasy
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.OldLace;
             this.flowLayoutPanel1.Controls.Add(this.button7);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(249, 517);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(249, 674);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(640, 98);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(937, 73);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // button7
@@ -74,10 +77,13 @@ namespace Fantasy
             // 
             // childPanel
             // 
+            this.childPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.childPanel.BackColor = System.Drawing.Color.SkyBlue;
             this.childPanel.Location = new System.Drawing.Point(249, 0);
             this.childPanel.Name = "childPanel";
-            this.childPanel.Size = new System.Drawing.Size(640, 521);
+            this.childPanel.Size = new System.Drawing.Size(937, 678);
             this.childPanel.TabIndex = 1;
             this.childPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.childPanel_Paint);
             // 
@@ -118,7 +124,6 @@ namespace Fantasy
             // 
             // TablesButton
             // 
-            this.TablesButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.TablesButton.FlatAppearance.BorderSize = 0;
             this.TablesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TablesButton.ForeColor = System.Drawing.SystemColors.Control;
@@ -133,7 +138,6 @@ namespace Fantasy
             // 
             // FixturesButton
             // 
-            this.FixturesButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.FixturesButton.FlatAppearance.BorderSize = 0;
             this.FixturesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FixturesButton.ForeColor = System.Drawing.SystemColors.Control;
@@ -149,7 +153,6 @@ namespace Fantasy
             // 
             // ClubsButton
             // 
-            this.ClubsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ClubsButton.FlatAppearance.BorderSize = 0;
             this.ClubsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClubsButton.ForeColor = System.Drawing.SystemColors.Control;
@@ -164,7 +167,6 @@ namespace Fantasy
             // 
             // SignInButton
             // 
-            this.SignInButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.SignInButton.FlatAppearance.BorderSize = 0;
             this.SignInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInButton.ForeColor = System.Drawing.Color.GhostWhite;
@@ -180,7 +182,6 @@ namespace Fantasy
             // 
             // HomeButton
             // 
-            this.HomeButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.HomeButton.FlatAppearance.BorderSize = 0;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButton.ForeColor = System.Drawing.Color.GhostWhite;
@@ -202,30 +203,13 @@ namespace Fantasy
             this.SideMenuPanel.Controls.Add(this.PlayersButton);
             this.SideMenuPanel.Controls.Add(this.panel1);
             this.SideMenuPanel.Controls.Add(this.logoPanel);
-            this.SideMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.SideMenuPanel.Name = "SideMenuPanel";
-            this.SideMenuPanel.Size = new System.Drawing.Size(250, 618);
+            this.SideMenuPanel.Size = new System.Drawing.Size(250, 747);
             this.SideMenuPanel.TabIndex = 0;
-            // 
-            // PlayersButton
-            // 
-            this.PlayersButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PlayersButton.FlatAppearance.BorderSize = 0;
-            this.PlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlayersButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.PlayersButton.Location = new System.Drawing.Point(0, 465);
-            this.PlayersButton.Name = "PlayersButton";
-            this.PlayersButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.PlayersButton.Size = new System.Drawing.Size(250, 62);
-            this.PlayersButton.TabIndex = 6;
-            this.PlayersButton.Text = "Players";
-            this.PlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PlayersButton.UseVisualStyleBackColor = true;
             // 
             // TopPlayersButton
             // 
-            this.TopPlayersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPlayersButton.FlatAppearance.BorderSize = 0;
             this.TopPlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TopPlayersButton.ForeColor = System.Drawing.Color.GhostWhite;
@@ -239,11 +223,25 @@ namespace Fantasy
             this.TopPlayersButton.UseVisualStyleBackColor = true;
             this.TopPlayersButton.Click += new System.EventHandler(this.SignInButton_Click);
             // 
+            // PlayersButton
+            // 
+            this.PlayersButton.FlatAppearance.BorderSize = 0;
+            this.PlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlayersButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.PlayersButton.Location = new System.Drawing.Point(0, 465);
+            this.PlayersButton.Name = "PlayersButton";
+            this.PlayersButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.PlayersButton.Size = new System.Drawing.Size(250, 62);
+            this.PlayersButton.TabIndex = 6;
+            this.PlayersButton.Text = "Players";
+            this.PlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PlayersButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 618);
+            this.ClientSize = new System.Drawing.Size(1184, 745);
             this.Controls.Add(this.childPanel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.SideMenuPanel);

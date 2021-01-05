@@ -21,5 +21,25 @@ namespace Fantasy
         {
 
         }
+        private Form activeForm = null;
+
+        private void openChildForm(Form childForm)
+        {
+
+            
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openChildForm(new SignUpForm());
+        }
     }
 }
