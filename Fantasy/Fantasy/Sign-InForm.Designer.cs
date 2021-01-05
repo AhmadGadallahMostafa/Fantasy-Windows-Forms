@@ -44,6 +44,7 @@ namespace Fantasy
             // 
             this.textBox2.Location = new System.Drawing.Point(35, 233);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(231, 20);
             this.textBox2.TabIndex = 11;
             // 
@@ -96,6 +97,7 @@ namespace Fantasy
             this.button6.TabIndex = 6;
             this.button6.Text = "Login";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button1
             // 
