@@ -12,11 +12,9 @@ namespace Fantasy
 {
     public partial class Sign_InForm : Form
     {
-        Controller controlObj;
         public Sign_InForm()
         {
             InitializeComponent();
-            controlObj = new Controller();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,10 +42,9 @@ namespace Fantasy
             openChildForm(new SignUpForm());
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
-
+            this.Close();
         }
     }
 }

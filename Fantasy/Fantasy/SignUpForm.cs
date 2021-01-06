@@ -7,145 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Mail;
+
 namespace Fantasy
 {
     public partial class SignUpForm : Form
-        
     {
-        Controller controlObj;
         public SignUpForm()
         {
             InitializeComponent();
-            controlObj = new Controller();
         }
 
-        private void SignUp_Click(object sender, EventArgs e)
-        {
-            string email = textBox1.Text;
-            string username = textBox2.Text;
-            string password = textBox3.Text;
-            string confirmPassword = textBox4.Text;
-            DateTime birthDate = dateTimePicker1.Value;
-
-            int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
-            int dob = int.Parse(birthDate.ToString("yyyyMMdd"));
-            int age = (now - dob) / 10000;
-            string gender="";
-
-            if (radioButton1.Checked) 
-            { gender = radioButton1.Text;  }
-            if (radioButton2.Checked)
-            { gender = radioButton2.Text; }
-            if (radioButton3.Checked)
-            { gender = radioButton3.Text; }
-
-
-
-            if (validateInputs())
-            {
-
-                if (controlObj.SignUpUser(email, birthDate, password, gender, confirmPassword) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
-                {
-                    MessageBox.Show("2man");
-
-                    //User signed up and redirect to create team page
-                }
-
-            }
-        }
-
-        private void label8_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-        private bool validateInputs() 
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
 
-            bool emailCheck = false;
-            bool usernameCheck = false;
-            bool passwordCheck = false;
-            bool matchCheck = false;
-            bool genderCheck = false;
-            string email = textBox1.Text;
-            string username = textBox2.Text;
-            string password = textBox3.Text;
-            string confirmPassword = textBox4.Text;
-
-
-            if (Validations.EmptyInputField(username))
-            {
-                label10.Visible = true;
-                
-            }
-            else
-            {
-                label10.Visible = false;
-                usernameCheck = true;
-            }
-
-
-            if (Validations.EmptyInputField(password))
-            {
-                label11.Visible = true;
-            }
-            else
-            {
-                label11.Visible = false;
-                passwordCheck = true;
-            }
-
-            
-            if (!Validations.ValidEmail(email))
-            {
-
-                label8.Visible = true;
-            }
-            else
-            { 
-                label8.Visible = false;
-                emailCheck = true;
-            }
-
-
-            if (!Validations.PasswordsMatch(password, confirmPassword))
-            {
-               
-                label9.Visible = true;
-            }
-            else
-            {
-                label9.Visible = false;
-                matchCheck = true;
-            }
-
-
-            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked)
-            {
-                label13.Visible = true;
-                
-
-            }
-            else
-            { 
-                label13.Visible = false;
-                genderCheck = true;
-            }
-
-
-            if (emailCheck && usernameCheck && passwordCheck && matchCheck && genderCheck)
-            {
-                return true;
-            }
-
-
-            else return false;
+        private void button6_Click(object sender, EventArgs e)
+        {
 
         }
     }

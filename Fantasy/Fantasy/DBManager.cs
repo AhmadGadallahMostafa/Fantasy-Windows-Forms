@@ -76,7 +76,6 @@ namespace Fantasy
             try
             {
                 SqlCommand myCommand = new SqlCommand(query, myConnection);
-                
                 return myCommand.ExecuteScalar();
             }
             catch (Exception ex)
