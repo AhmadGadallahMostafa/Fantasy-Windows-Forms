@@ -1,18 +1,7 @@
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Fantasy.exe.config
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Fantasy.exe
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Fantasy.pdb
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csprojAssemblyReference.cache
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.ClubsForm.resources
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Form1.resources
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Properties.Resources.resources
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csproj.GenerateResource.cache
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csproj.CoreCompileInputs.cache
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.exe
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.pdb
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.PlayerView.resources
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\bin\Debug\Fantasy.exe.config
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\bin\Debug\Fantasy.exe
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\bin\Debug\Fantasy.pdb
+C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csprojAssemblyReference.cache
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.ClubsForm.resources
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Form1.resources
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Form2.resources
@@ -25,4 +14,3 @@ C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csproj.CoreCompileInputs.cache
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.exe
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.pdb
-C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csprojAssemblyReference.cache
