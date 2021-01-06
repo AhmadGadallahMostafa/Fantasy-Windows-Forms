@@ -49,6 +49,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AddPlayer = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID2)).BeginInit();
@@ -70,17 +71,16 @@
             // 
             // pictureBox1
             // 
-            //this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -9);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(461, 563);
+            this.pictureBox1.Size = new System.Drawing.Size(912, 583);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // GK1
             // 
-            //this.GK1.Image = ((System.Drawing.Image)(resources.GetObject("GK1.Image")));
-            this.GK1.Location = new System.Drawing.Point(258, 478);
+            this.GK1.Location = new System.Drawing.Point(50, 172);
             this.GK1.Name = "GK1";
             this.GK1.Size = new System.Drawing.Size(63, 63);
             this.GK1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -90,8 +90,7 @@
             // 
             // MID2
             // 
-            //this.MID2.Image = ((System.Drawing.Image)(resources.GetObject("MID2.Image")));
-            this.MID2.Location = new System.Drawing.Point(193, 227);
+            this.MID2.Location = new System.Drawing.Point(560, 238);
             this.MID2.Name = "MID2";
             this.MID2.Size = new System.Drawing.Size(63, 63);
             this.MID2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -101,8 +100,7 @@
             // 
             // MID3
             // 
-            //this.MID3.Image = ((System.Drawing.Image)(resources.GetObject("MID3.Image")));
-            this.MID3.Location = new System.Drawing.Point(99, 227);
+            this.MID3.Location = new System.Drawing.Point(560, 143);
             this.MID3.Name = "MID3";
             this.MID3.Size = new System.Drawing.Size(63, 63);
             this.MID3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -112,8 +110,7 @@
             // 
             // DEF1
             // 
-            //this.DEF1.Image = ((System.Drawing.Image)(resources.GetObject("DEF1.Image")));
-            this.DEF1.Location = new System.Drawing.Point(382, 364);
+            this.DEF1.Location = new System.Drawing.Point(306, 459);
             this.DEF1.Name = "DEF1";
             this.DEF1.Size = new System.Drawing.Size(63, 63);
             this.DEF1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -123,8 +120,7 @@
             // 
             // DEF2
             // 
-            //this.DEF2.Image = ((System.Drawing.Image)(resources.GetObject("DEF2.Image")));
-            this.DEF2.Location = new System.Drawing.Point(290, 364);
+            this.DEF2.Location = new System.Drawing.Point(306, 344);
             this.DEF2.Name = "DEF2";
             this.DEF2.Size = new System.Drawing.Size(63, 63);
             this.DEF2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -134,8 +130,7 @@
             // 
             // DEF3
             // 
-           // this.DEF3.Image = ((System.Drawing.Image)(resources.GetObject("DEF3.Image")));
-            this.DEF3.Location = new System.Drawing.Point(193, 364);
+            this.DEF3.Location = new System.Drawing.Point(306, 238);
             this.DEF3.Name = "DEF3";
             this.DEF3.Size = new System.Drawing.Size(63, 63);
             this.DEF3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -145,8 +140,7 @@
             // 
             // DEF4
             // 
-            //this.DEF4.Image = ((System.Drawing.Image)(resources.GetObject("DEF4.Image")));
-            this.DEF4.Location = new System.Drawing.Point(99, 364);
+            this.DEF4.Location = new System.Drawing.Point(306, 143);
             this.DEF4.Name = "DEF4";
             this.DEF4.Size = new System.Drawing.Size(63, 63);
             this.DEF4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -156,8 +150,7 @@
             // 
             // DEF5
             // 
-            //this.DEF5.Image = ((System.Drawing.Image)(resources.GetObject("DEF5.Image")));
-            this.DEF5.Location = new System.Drawing.Point(12, 364);
+            this.DEF5.Location = new System.Drawing.Point(306, 59);
             this.DEF5.Name = "DEF5";
             this.DEF5.Size = new System.Drawing.Size(63, 63);
             this.DEF5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -167,7 +160,7 @@
             // 
             // GK2
             // 
-            //this.GK2.Location = new System.Drawing.Point(99, 478);
+            this.GK2.Location = new System.Drawing.Point(50, 335);
             this.GK2.Name = "GK2";
             this.GK2.Size = new System.Drawing.Size(63, 63);
             this.GK2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -177,8 +170,7 @@
             // 
             // MID0
             // 
-            //this.MID0.Image = ((System.Drawing.Image)(resources.GetObject("MID0.Image")));
-            this.MID0.Location = new System.Drawing.Point(382, 227);
+            this.MID0.Location = new System.Drawing.Point(560, 459);
             this.MID0.Name = "MID0";
             this.MID0.Size = new System.Drawing.Size(63, 63);
             this.MID0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -188,8 +180,7 @@
             // 
             // ATT1
             // 
-            //this.ATT1.Image = ((System.Drawing.Image)(resources.GetObject("ATT1.Image")));
-            this.ATT1.Location = new System.Drawing.Point(290, 66);
+            this.ATT1.Location = new System.Drawing.Point(748, 344);
             this.ATT1.Name = "ATT1";
             this.ATT1.Size = new System.Drawing.Size(63, 63);
             this.ATT1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -199,8 +190,7 @@
             // 
             // ATT2
             // 
-            //this.ATT2.Image = ((System.Drawing.Image)(resources.GetObject("ATT2.Image")));
-            this.ATT2.Location = new System.Drawing.Point(193, 66);
+            this.ATT2.Location = new System.Drawing.Point(748, 238);
             this.ATT2.Name = "ATT2";
             this.ATT2.Size = new System.Drawing.Size(63, 63);
             this.ATT2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -210,8 +200,7 @@
             // 
             // ATT3
             // 
-            //this.ATT3.Image = ((System.Drawing.Image)(resources.GetObject("ATT3.Image")));
-            this.ATT3.Location = new System.Drawing.Point(99, 66);
+            this.ATT3.Location = new System.Drawing.Point(748, 133);
             this.ATT3.Name = "ATT3";
             this.ATT3.Size = new System.Drawing.Size(63, 63);
             this.ATT3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -221,8 +210,7 @@
             // 
             // MID1
             // 
-            //this.MID1.Image = ((System.Drawing.Image)(resources.GetObject("MID1.Image")));
-            this.MID1.Location = new System.Drawing.Point(290, 227);
+            this.MID1.Location = new System.Drawing.Point(560, 344);
             this.MID1.Name = "MID1";
             this.MID1.Size = new System.Drawing.Size(63, 63);
             this.MID1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -232,8 +220,7 @@
             // 
             // MID4
             // 
-            //this.MID4.Image = ((System.Drawing.Image)(resources.GetObject("MID4.Image")));
-            this.MID4.Location = new System.Drawing.Point(12, 227);
+            this.MID4.Location = new System.Drawing.Point(560, 59);
             this.MID4.Name = "MID4";
             this.MID4.Size = new System.Drawing.Size(63, 63);
             this.MID4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -245,7 +232,7 @@
             // 
             this.PlayersList.FormattingEnabled = true;
             this.PlayersList.ItemHeight = 16;
-            this.PlayersList.Location = new System.Drawing.Point(467, 304);
+            this.PlayersList.Location = new System.Drawing.Point(921, 298);
             this.PlayersList.Name = "PlayersList";
             this.PlayersList.Size = new System.Drawing.Size(159, 212);
             this.PlayersList.TabIndex = 32;
@@ -254,16 +241,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(476, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(904, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(372, 185);
             this.dataGridView1.TabIndex = 34;
             // 
             // AddPlayer
             // 
-            this.AddPlayer.Location = new System.Drawing.Point(797, 284);
+            this.AddPlayer.Location = new System.Drawing.Point(1122, 210);
             this.AddPlayer.Name = "AddPlayer";
             this.AddPlayer.Size = new System.Drawing.Size(132, 25);
             this.AddPlayer.TabIndex = 35;
@@ -273,17 +260,28 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(712, 364);
+            this.textBox1.Location = new System.Drawing.Point(921, 213);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 36;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Form2
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1122, 258);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 28);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Remove Player";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // CreateTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 557);
+            this.ClientSize = new System.Drawing.Size(1277, 577);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.AddPlayer);
             this.Controls.Add(this.dataGridView1);
@@ -304,8 +302,9 @@
             this.Controls.Add(this.MID2);
             this.Controls.Add(this.GK1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form2";
+            this.Name = "CreateTeam";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.CreateTeam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID2)).EndInit();
@@ -350,5 +349,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AddPlayer;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

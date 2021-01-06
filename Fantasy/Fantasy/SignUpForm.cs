@@ -31,6 +31,7 @@ namespace Fantasy
             int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
             int dob = int.Parse(birthDate.ToString("yyyyMMdd"));
             int age = (now - dob) / 10000;
+
             string gender="";
 
             if (radioButton1.Checked) 
@@ -44,12 +45,26 @@ namespace Fantasy
 
             if (validateInputs())
             {
-
-                if (controlObj.SignUpUser(email, birthDate, password, gender, confirmPassword) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
+                if (controlObj.UniqueUsername(username))
                 {
-                    MessageBox.Show("2man");
+                    label12.Visible = false;
 
-                    //User signed up and redirect to create team page
+                    if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
+                    {
+                        MessageBox.Show("2man");
+                        label14.Visible = false;
+
+                        //User signed up and redirect to create team page
+                        //playerView(int fantay team id)
+                    }
+                    else 
+                    {
+                        label14.Visible = true;
+                    }
+                }
+                else 
+                {
+                    label12.Visible = true;
                 }
 
             }
@@ -73,11 +88,28 @@ namespace Fantasy
             bool passwordCheck = false;
             bool matchCheck = false;
             bool genderCheck = false;
+            bool ageCheck = false;
             string email = textBox1.Text;
             string username = textBox2.Text;
             string password = textBox3.Text;
             string confirmPassword = textBox4.Text;
+            DateTime birthDate = dateTimePicker1.Value;
 
+
+            int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
+            int dob = int.Parse(birthDate.ToString("yyyyMMdd"));
+            int age = (now - dob) / 10000;
+
+            if (age >= 15)
+            {
+                ageCheck = true;
+                label15.Visible = false;
+            }
+            else
+            {
+                label15.Visible = true;
+
+            }
 
             if (Validations.EmptyInputField(username))
             {
@@ -139,7 +171,7 @@ namespace Fantasy
             }
 
 
-            if (emailCheck && usernameCheck && passwordCheck && matchCheck && genderCheck)
+            if (emailCheck && usernameCheck && passwordCheck && matchCheck && genderCheck&& ageCheck)
             {
                 return true;
             }
@@ -165,6 +197,7 @@ namespace Fantasy
         }
 
         private void label11_Click(object sender, EventArgs e)
+        private void SignUpForm_Load(object sender, EventArgs e)
         {
 
         }
