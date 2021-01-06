@@ -107,7 +107,7 @@ namespace Fantasy
 
         private void ClubsButton_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new ClubsForm());
         }
 
         private void label1_Click_1(object sender, EventArgs e)

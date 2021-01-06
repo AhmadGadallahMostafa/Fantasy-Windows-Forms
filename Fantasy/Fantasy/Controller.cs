@@ -55,5 +55,35 @@ namespace Fantasy
             return dbMan.ExecuteNonQuery(sql);
         
         }
+        public DataTable GetGK()
+        {
+            string query = "SELECt Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=0 ";
+            return dbMan.ExecuteReader(query);
+
+
+        }
+        public DataTable GetDefender()
+        {
+            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=1 ";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetMidFielder()
+        {
+            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=2 ";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetStriker()
+        {
+            string query = "SELECT Last_Name,Price,Goals,Assists From Footballer WHERE Poisition=3 ";
+            return dbMan.ExecuteReader(query);
+        }
+        public int GetPrice(String LastName)
+        {
+            string query = "SELECT Price From Footballer Where Last_Name='" + LastName + "';";
+            return (int)dbMan.ExecuteScalar(query);
+
+        }
+
     }
 }
