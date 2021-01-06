@@ -12,6 +12,7 @@ namespace Fantasy
 {
     public partial class Sign_InForm : Form
     {
+        
         enum accountTypes 
         {
             admin=1,
@@ -23,6 +24,7 @@ namespace Fantasy
         {
             InitializeComponent();
             controlObj = new Controller();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,7 +35,6 @@ namespace Fantasy
 
         private void openChildForm(Form childForm)
         {
-
             
             if (activeForm != null) activeForm.Close();
             activeForm = childForm;
@@ -48,6 +49,7 @@ namespace Fantasy
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new SignUpForm());
+            
         }
 
 
@@ -90,6 +92,7 @@ namespace Fantasy
             }
             else 
             {
+                MessageBox.Show("login");
                 label6.Visible = false;
             }
 
