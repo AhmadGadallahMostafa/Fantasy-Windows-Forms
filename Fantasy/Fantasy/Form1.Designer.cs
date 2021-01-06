@@ -33,18 +33,7 @@ namespace Fantasy
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.childPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.logoPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.TopPlayersButton = new System.Windows.Forms.Button();
-            this.TablesButton = new System.Windows.Forms.Button();
-            this.PlayersButton = new System.Windows.Forms.Button();
-            this.FixturesButton = new System.Windows.Forms.Button();
-            this.ClubsButton = new System.Windows.Forms.Button();
-            this.SignInButton = new System.Windows.Forms.Button();
-            this.SideMenuPanel = new System.Windows.Forms.Panel();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
@@ -65,13 +54,21 @@ namespace Fantasy
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.logoPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TablesButton = new System.Windows.Forms.Button();
+            this.PlayersButton = new System.Windows.Forms.Button();
+            this.FixturesButton = new System.Windows.Forms.Button();
+            this.ClubsButton = new System.Windows.Forms.Button();
+            this.SignInButton = new System.Windows.Forms.Button();
+            this.TopPlayersButton = new System.Windows.Forms.Button();
+            this.SideMenuPanel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.childPanel.SuspendLayout();
-            this.logoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SideMenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -92,7 +89,10 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            this.logoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.SideMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -152,178 +152,15 @@ namespace Fantasy
             this.childPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.childPanel_Paint);
             this.childPanel.MouseHover += new System.EventHandler(this.childPanel_MouseHover);
             // 
-            // label2
+            // pictureBox22
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(793, 23);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Gather Points and compete with your friends in leagues in your road to become the" +
-    " ultimate manager";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(403, 39);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Welcome To Fantasy Football";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // logoPanel
-            // 
-            this.logoPanel.Controls.Add(this.pictureBox1);
-            this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logoPanel.Location = new System.Drawing.Point(0, 0);
-            this.logoPanel.Name = "logoPanel";
-            this.logoPanel.Size = new System.Drawing.Size(250, 164);
-            this.logoPanel.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 162);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.TablesButton);
-            this.panel1.Controls.Add(this.PlayersButton);
-            this.panel1.Controls.Add(this.FixturesButton);
-            this.panel1.Controls.Add(this.ClubsButton);
-            this.panel1.Controls.Add(this.SignInButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 164);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 301);
-            this.panel1.TabIndex = 1;
-            // 
-            // TopPlayersButton
-            // 
-            this.TopPlayersButton.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.TopPlayersButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPlayersButton.FlatAppearance.BorderSize = 0;
-            this.TopPlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TopPlayersButton.ForeColor = System.Drawing.Color.GhostWhite;
-            this.TopPlayersButton.Location = new System.Drawing.Point(0, 465);
-            this.TopPlayersButton.Name = "TopPlayersButton";
-            this.TopPlayersButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.TopPlayersButton.Size = new System.Drawing.Size(250, 60);
-            this.TopPlayersButton.TabIndex = 7;
-            this.TopPlayersButton.Text = "Top Players";
-            this.TopPlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TopPlayersButton.UseVisualStyleBackColor = false;
-            this.TopPlayersButton.Click += new System.EventHandler(this.SignInButton_Click);
-            // 
-            // TablesButton
-            // 
-            this.TablesButton.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.TablesButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TablesButton.FlatAppearance.BorderSize = 0;
-            this.TablesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TablesButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.TablesButton.Location = new System.Drawing.Point(0, 240);
-            this.TablesButton.Name = "TablesButton";
-            this.TablesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.TablesButton.Size = new System.Drawing.Size(250, 60);
-            this.TablesButton.TabIndex = 5;
-            this.TablesButton.Text = "Tables";
-            this.TablesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TablesButton.UseVisualStyleBackColor = false;
-            // 
-            // PlayersButton
-            // 
-            this.PlayersButton.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.PlayersButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PlayersButton.FlatAppearance.BorderSize = 0;
-            this.PlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlayersButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.PlayersButton.Location = new System.Drawing.Point(0, 180);
-            this.PlayersButton.Name = "PlayersButton";
-            this.PlayersButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.PlayersButton.Size = new System.Drawing.Size(250, 60);
-            this.PlayersButton.TabIndex = 6;
-            this.PlayersButton.Text = "Players";
-            this.PlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PlayersButton.UseVisualStyleBackColor = false;
-            // 
-            // FixturesButton
-            // 
-            this.FixturesButton.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.FixturesButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FixturesButton.FlatAppearance.BorderSize = 0;
-            this.FixturesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FixturesButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.FixturesButton.Location = new System.Drawing.Point(0, 120);
-            this.FixturesButton.Name = "FixturesButton";
-            this.FixturesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.FixturesButton.Size = new System.Drawing.Size(250, 60);
-            this.FixturesButton.TabIndex = 4;
-            this.FixturesButton.Text = "Fixtures";
-            this.FixturesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FixturesButton.UseVisualStyleBackColor = false;
-            this.FixturesButton.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // ClubsButton
-            // 
-            this.ClubsButton.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.ClubsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ClubsButton.FlatAppearance.BorderSize = 0;
-            this.ClubsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClubsButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ClubsButton.Location = new System.Drawing.Point(0, 60);
-            this.ClubsButton.Name = "ClubsButton";
-            this.ClubsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ClubsButton.Size = new System.Drawing.Size(250, 60);
-            this.ClubsButton.TabIndex = 3;
-            this.ClubsButton.Text = "Clubs";
-            this.ClubsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ClubsButton.UseVisualStyleBackColor = false;
-            this.ClubsButton.Click += new System.EventHandler(this.ClubsButton_Click);
-            // 
-            // SignInButton
-            // 
-            this.SignInButton.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.SignInButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SignInButton.FlatAppearance.BorderSize = 0;
-            this.SignInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SignInButton.ForeColor = System.Drawing.Color.GhostWhite;
-            this.SignInButton.Location = new System.Drawing.Point(0, 0);
-            this.SignInButton.Name = "SignInButton";
-            this.SignInButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.SignInButton.Size = new System.Drawing.Size(250, 60);
-            this.SignInButton.TabIndex = 2;
-            this.SignInButton.Text = "Sign-in";
-            this.SignInButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SignInButton.UseVisualStyleBackColor = false;
-            this.SignInButton.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // SideMenuPanel
-            // 
-            this.SideMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SideMenuPanel.AutoScroll = true;
-            this.SideMenuPanel.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.SideMenuPanel.Controls.Add(this.TopPlayersButton);
-            this.SideMenuPanel.Controls.Add(this.panel1);
-            this.SideMenuPanel.Controls.Add(this.logoPanel);
-            this.SideMenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.SideMenuPanel.Name = "SideMenuPanel";
-            this.SideMenuPanel.Size = new System.Drawing.Size(250, 798);
-            this.SideMenuPanel.TabIndex = 0;
+            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
+            this.pictureBox22.Location = new System.Drawing.Point(0, 157);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(1195, 558);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox22.TabIndex = 43;
+            this.pictureBox22.TabStop = false;
             // 
             // pictureBox21
             // 
@@ -505,15 +342,178 @@ namespace Fantasy
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox22
+            // label2
             // 
-            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(0, 157);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(1195, 558);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox22.TabIndex = 43;
-            this.pictureBox22.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(793, 23);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Gather Points and compete with your friends in leagues in your road to become the" +
+    " ultimate manager";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(403, 39);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Welcome To Fantasy Football";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // logoPanel
+            // 
+            this.logoPanel.Controls.Add(this.pictureBox1);
+            this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logoPanel.Location = new System.Drawing.Point(0, 0);
+            this.logoPanel.Name = "logoPanel";
+            this.logoPanel.Size = new System.Drawing.Size(250, 164);
+            this.logoPanel.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 162);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.TablesButton);
+            this.panel1.Controls.Add(this.PlayersButton);
+            this.panel1.Controls.Add(this.FixturesButton);
+            this.panel1.Controls.Add(this.ClubsButton);
+            this.panel1.Controls.Add(this.SignInButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 164);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 301);
+            this.panel1.TabIndex = 1;
+            // 
+            // TablesButton
+            // 
+            this.TablesButton.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.TablesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TablesButton.FlatAppearance.BorderSize = 0;
+            this.TablesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TablesButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.TablesButton.Location = new System.Drawing.Point(0, 240);
+            this.TablesButton.Name = "TablesButton";
+            this.TablesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.TablesButton.Size = new System.Drawing.Size(250, 60);
+            this.TablesButton.TabIndex = 5;
+            this.TablesButton.Text = "Tables";
+            this.TablesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TablesButton.UseVisualStyleBackColor = false;
+            // 
+            // PlayersButton
+            // 
+            this.PlayersButton.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.PlayersButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PlayersButton.FlatAppearance.BorderSize = 0;
+            this.PlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlayersButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.PlayersButton.Location = new System.Drawing.Point(0, 180);
+            this.PlayersButton.Name = "PlayersButton";
+            this.PlayersButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.PlayersButton.Size = new System.Drawing.Size(250, 60);
+            this.PlayersButton.TabIndex = 6;
+            this.PlayersButton.Text = "Players";
+            this.PlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PlayersButton.UseVisualStyleBackColor = false;
+            // 
+            // FixturesButton
+            // 
+            this.FixturesButton.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.FixturesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FixturesButton.FlatAppearance.BorderSize = 0;
+            this.FixturesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FixturesButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.FixturesButton.Location = new System.Drawing.Point(0, 120);
+            this.FixturesButton.Name = "FixturesButton";
+            this.FixturesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.FixturesButton.Size = new System.Drawing.Size(250, 60);
+            this.FixturesButton.TabIndex = 4;
+            this.FixturesButton.Text = "Fixtures";
+            this.FixturesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FixturesButton.UseVisualStyleBackColor = false;
+            this.FixturesButton.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // ClubsButton
+            // 
+            this.ClubsButton.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.ClubsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ClubsButton.FlatAppearance.BorderSize = 0;
+            this.ClubsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClubsButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.ClubsButton.Location = new System.Drawing.Point(0, 60);
+            this.ClubsButton.Name = "ClubsButton";
+            this.ClubsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.ClubsButton.Size = new System.Drawing.Size(250, 60);
+            this.ClubsButton.TabIndex = 3;
+            this.ClubsButton.Text = "Clubs";
+            this.ClubsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ClubsButton.UseVisualStyleBackColor = false;
+            this.ClubsButton.Click += new System.EventHandler(this.ClubsButton_Click);
+            // 
+            // SignInButton
+            // 
+            this.SignInButton.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.SignInButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SignInButton.FlatAppearance.BorderSize = 0;
+            this.SignInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SignInButton.ForeColor = System.Drawing.Color.GhostWhite;
+            this.SignInButton.Location = new System.Drawing.Point(0, 0);
+            this.SignInButton.Name = "SignInButton";
+            this.SignInButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.SignInButton.Size = new System.Drawing.Size(250, 60);
+            this.SignInButton.TabIndex = 2;
+            this.SignInButton.Text = "Sign-in";
+            this.SignInButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SignInButton.UseVisualStyleBackColor = false;
+            this.SignInButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // TopPlayersButton
+            // 
+            this.TopPlayersButton.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.TopPlayersButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPlayersButton.FlatAppearance.BorderSize = 0;
+            this.TopPlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TopPlayersButton.ForeColor = System.Drawing.Color.GhostWhite;
+            this.TopPlayersButton.Location = new System.Drawing.Point(0, 465);
+            this.TopPlayersButton.Name = "TopPlayersButton";
+            this.TopPlayersButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.TopPlayersButton.Size = new System.Drawing.Size(250, 60);
+            this.TopPlayersButton.TabIndex = 7;
+            this.TopPlayersButton.Text = "Top Players";
+            this.TopPlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TopPlayersButton.UseVisualStyleBackColor = false;
+            this.TopPlayersButton.Click += new System.EventHandler(this.SignInButton_Click);
+            // 
+            // SideMenuPanel
+            // 
+            this.SideMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SideMenuPanel.AutoScroll = true;
+            this.SideMenuPanel.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.SideMenuPanel.Controls.Add(this.TopPlayersButton);
+            this.SideMenuPanel.Controls.Add(this.panel1);
+            this.SideMenuPanel.Controls.Add(this.logoPanel);
+            this.SideMenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.SideMenuPanel.Name = "SideMenuPanel";
+            this.SideMenuPanel.Size = new System.Drawing.Size(250, 798);
+            this.SideMenuPanel.TabIndex = 0;
             // 
             // Form1
             // 
@@ -532,10 +532,7 @@ namespace Fantasy
             this.flowLayoutPanel1.ResumeLayout(false);
             this.childPanel.ResumeLayout(false);
             this.childPanel.PerformLayout();
-            this.logoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.SideMenuPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
@@ -556,7 +553,10 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            this.logoPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.SideMenuPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
