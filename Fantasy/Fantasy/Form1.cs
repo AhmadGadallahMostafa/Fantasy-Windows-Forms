@@ -114,5 +114,10 @@ namespace Fantasy
         {
 
         }
+
+        private void pictureBox22_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

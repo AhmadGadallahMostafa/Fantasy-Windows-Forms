@@ -48,6 +48,10 @@ namespace Fantasy
             this.Close();
         }
 
+        private void Sign_InForm_Load(object sender, EventArgs e)
+        {
 
+        }
+        
     }
 }
