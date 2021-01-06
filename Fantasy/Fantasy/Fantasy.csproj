@@ -47,11 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Club.cs" />
     <Compile Include="ClubsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClubsForm.Designer.cs">
       <DependentUpon>ClubsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubsInfoForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubsInfoForms.Designer.cs">
+      <DependentUpon>ClubsInfoForms.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="CreateTeam.cs">
@@ -103,6 +110,9 @@
     <EmbeddedResource Include="ClubsForm.resx">
       <DependentUpon>ClubsForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubsInfoForms.resx">
+      <DependentUpon>ClubsInfoForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

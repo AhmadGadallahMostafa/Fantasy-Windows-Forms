@@ -52,7 +52,7 @@ namespace Fantasy
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 576);
             this.panel1.TabIndex = 0;
@@ -64,7 +64,7 @@ namespace Fantasy
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.Location = new System.Drawing.Point(0, 136);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(185, 37);
@@ -80,7 +80,7 @@ namespace Fantasy
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Location = new System.Drawing.Point(0, 178);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(185, 102);
             this.panel2.TabIndex = 2;
@@ -94,7 +94,7 @@ namespace Fantasy
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.Location = new System.Drawing.Point(0, 64);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(185, 32);
@@ -111,7 +111,7 @@ namespace Fantasy
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.Location = new System.Drawing.Point(0, 32);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(185, 32);
@@ -128,7 +128,7 @@ namespace Fantasy
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(185, 32);
@@ -140,7 +140,7 @@ namespace Fantasy
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(188, 132);
             this.panel3.TabIndex = 3;
@@ -149,7 +149,7 @@ namespace Fantasy
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(208, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(462, 600);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -164,7 +164,7 @@ namespace Fantasy
             this.ClientSize = new System.Drawing.Size(646, 576);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PlayerView";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.PlayerView_Load);

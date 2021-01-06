@@ -14,3 +14,4 @@ C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csproj.CoreCompileInputs.cache
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.exe
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.pdb
+C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.ClubsInfoForms.resources

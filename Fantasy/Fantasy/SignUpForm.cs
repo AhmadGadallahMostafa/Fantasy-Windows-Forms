@@ -158,5 +158,15 @@ namespace Fantasy
         {
             this.Close();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
