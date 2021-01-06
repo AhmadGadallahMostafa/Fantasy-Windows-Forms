@@ -84,6 +84,31 @@ namespace Fantasy
             return (int)dbMan.ExecuteScalar(query);
 
         }
+        public int GetTeamFunds(int TeamID)
+        {
+            string query = "SELECT Team_Funds From Fantasy_Player_Team Where Fantasy_Team_ID=" +TeamID + ";";
+            return (int)dbMan.ExecuteScalar(query);
+
+        }
+
+       public int BuyingFunction(int TeamID,string LastName)
+        {
+            int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+
+            string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID="+TeamID +" ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int GetPlayerId(String LastName)
+        {
+            string query = "SELECT Player_id From Footballer Where Last_Name='" + LastName + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int InsertPlayer(int PlayerId, int FantasyTeamId)
+        {
+            string query = "Insert INTO Plays_In_Fantasy_Team VALUES (" + PlayerId + "," + FantasyTeamId + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
 
     }
 }
