@@ -44,12 +44,20 @@ namespace Fantasy
 
             if (validateInputs())
             {
-
-                if (controlObj.SignUpUser(email, birthDate, password, gender, confirmPassword) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
+                if (controlObj.UniqueUsername(username))
                 {
-                    MessageBox.Show("2man");
+                    label12.Visible = false;
 
-                    //User signed up and redirect to create team page
+                    if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
+                    {
+                        MessageBox.Show("2man");
+
+                        //User signed up and redirect to create team page
+                    }
+                }
+                else 
+                {
+                    label12.Visible = true;
                 }
 
             }
@@ -157,6 +165,11 @@ namespace Fantasy
         private void button3_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SignUpForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

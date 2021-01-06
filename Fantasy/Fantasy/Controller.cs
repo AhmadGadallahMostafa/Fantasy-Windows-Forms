@@ -22,10 +22,19 @@ namespace Fantasy
             return  dbMan.ExecuteScalar(sql);
         }
 
-        public int SignUpUser(string email, DateTime dateOfBirth, string password, string gender,string confimpassword) 
+        public int SignUpUser(string email, DateTime dateOfBirth, string password, string gender) 
         {
             string sql = $"insert into Account values ('{email}','{dateOfBirth.ToShortDateString()}',2,'{password}','{gender}')";
             return dbMan.ExecuteNonQuery(sql);
+        }
+        public bool UniqueUsername(string username) 
+        {
+            string sql = $"select Player_Username FROM Fantasy_Player_Team where Player_Username = '{username}'";
+            if (dbMan.ExecuteScalar(sql) == null)
+            {
+                return true;
+            }
+            else return false;
         }
         public int CreateFantasyTeam(string userName,string email,int age) 
         {

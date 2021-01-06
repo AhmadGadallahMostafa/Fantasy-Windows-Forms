@@ -12,9 +12,17 @@ namespace Fantasy
 {
     public partial class Sign_InForm : Form
     {
+        enum accountTypes 
+        {
+            admin=1,
+            player=2,
+            journalist=3
+        }
+        Controller controlObj;
         public Sign_InForm()
         {
             InitializeComponent();
+            controlObj = new Controller();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +60,52 @@ namespace Fantasy
         {
 
         }
-        
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (!Validations.ValidEmail(textBox1.Text))
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
+
+            if (Validations.EmptyInputField(textBox2.Text))
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
+
+
+            object accountType = controlObj.LoginVerification(textBox1.Text, textBox2.Text);
+            if (accountType == null)
+            {
+                label6.Visible = true;
+                return;
+            }
+            else 
+            {
+                label6.Visible = false;
+            }
+
+            switch ((int)accountType)
+            {
+                case (int)accountTypes.admin:
+                    // admin view
+                    break;
+                case (int)accountTypes.player:
+                    // player view
+                    break;
+                case (int)accountTypes.journalist:
+                    // journalist view : player view + add player profile + scout selection
+                    break;
+            }
+
+        }
     }
 }
