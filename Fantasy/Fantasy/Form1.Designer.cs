@@ -64,6 +64,8 @@ namespace Fantasy
             this.SignInButton = new System.Windows.Forms.Button();
             this.TopPlayersButton = new System.Windows.Forms.Button();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
+            this.SignedInAs = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.childPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -126,7 +128,7 @@ namespace Fantasy
             // pictureBox22
             // 
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(0, 167);
+            this.pictureBox22.Location = new System.Drawing.Point(0, 164);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(1202, 628);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -474,13 +476,34 @@ namespace Fantasy
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SideMenuPanel.AutoScroll = true;
             this.SideMenuPanel.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.SideMenuPanel.Controls.Add(this.label3);
+            this.SideMenuPanel.Controls.Add(this.SignedInAs);
             this.SideMenuPanel.Controls.Add(this.TopPlayersButton);
             this.SideMenuPanel.Controls.Add(this.panel1);
             this.SideMenuPanel.Controls.Add(this.logoPanel);
+            this.SideMenuPanel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SideMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.SideMenuPanel.Name = "SideMenuPanel";
             this.SideMenuPanel.Size = new System.Drawing.Size(250, 798);
             this.SideMenuPanel.TabIndex = 0;
+            this.SideMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SideMenuPanel_Paint);
+            // 
+            // SignedInAs
+            // 
+            this.SignedInAs.AutoSize = true;
+            this.SignedInAs.Location = new System.Drawing.Point(3, 528);
+            this.SignedInAs.Name = "SignedInAs";
+            this.SignedInAs.Size = new System.Drawing.Size(0, 15);
+            this.SignedInAs.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(12, 772);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 15);
+            this.label3.TabIndex = 9;
             // 
             // Form1
             // 
@@ -494,6 +517,7 @@ namespace Fantasy
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Fantasy";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.childPanel.ResumeLayout(false);
             this.childPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
@@ -521,6 +545,7 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.SideMenuPanel.ResumeLayout(false);
+            this.SideMenuPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -560,6 +585,8 @@ namespace Fantasy
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.Label SignedInAs;
+        private System.Windows.Forms.Label label3;
     }
 }
 
