@@ -19,11 +19,11 @@ namespace Fantasy
             player=2,
             journalist=3
         }
-        Controller controlObj;
+        SignInController controlObj;
         public Sign_InForm()
         {
             InitializeComponent();
-            controlObj = new Controller();
+            controlObj = new SignInController();
             
         }
 
@@ -99,6 +99,7 @@ namespace Fantasy
             switch ((int)accountType)
             {
                 case (int)accountTypes.admin:
+                    
                     // admin view
                     break;
                 case (int)accountTypes.player:

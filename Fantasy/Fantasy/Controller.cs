@@ -16,11 +16,7 @@ namespace Fantasy
             dbMan = new DBManager();
         }
 
-        public object LoginVerification(string email,string password) 
-        {
-            string sql = $"Select Account_Type from Account where Password='{password}' and Email ='{email}';";
-            return  dbMan.ExecuteScalar(sql);
-        }
+        
 
         public int SignUpUser(string email, DateTime dateOfBirth, string password, string gender) 
         {
@@ -36,22 +32,13 @@ namespace Fantasy
             }
             else return false;
         }
-        public int CreateFantasyTeam(string userName,string email,int age) 
+        public int CreateFantasyTeam(string userName,string email,int age,ref int newId) 
         {
             Object count = dbMan.ExecuteScalar("SELECT count(Fantasy_Team_ID) FROM Fantasy_Player_Team");
-         
-            
-            int newId;
-            if ((int)count == 0 )
-            {
-                newId = 1;
-            }
-            else
-            {
-                newId =(int) dbMan.ExecuteScalar("SELECT max(Fantasy_Team_ID) FROM Fantasy_Player_Team") + 1;
 
-            }
-            string sql = $"Insert into Fantasy_Player_Team (Player_Username,Fantasy_Team_ID,Email,age) values('{userName}',{newId},'{email}',{age})";
+            newId =(int) count + 1;
+            
+            string sql = $"Insert into Fantasy_Player_Team  (Player_Username,Age,Email,Fantasy_Team_Id,Total_Value,Team_Funds,Total_Points,Total_Transfers,Overall_Rank)values('{userName}',{age},'{email}',{newId},0,100,0,1,{newId})";
             return dbMan.ExecuteNonQuery(sql);
         
         }

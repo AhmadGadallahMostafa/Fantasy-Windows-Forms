@@ -178,4 +178,3 @@ D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Van-Dijk.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Walker.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Werner.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Zouma.png
-D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.CreateTeam.resources

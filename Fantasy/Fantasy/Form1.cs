@@ -12,10 +12,14 @@ namespace Fantasy
 {
     public partial class Form1 : Form
     {
+        SignInController SignController;
+        bool SignedIn;
         
         public Form1()
         {
             InitializeComponent();
+            SignController = new SignInController();
+            // SignedIn = (bool)SignController.GetSignedIn();
             
         }
 
@@ -39,67 +43,14 @@ namespace Fantasy
             childForm.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-     
-
-        private void childPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SignInButton_Click(object sender, EventArgs e)
-        {
-          
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new Sign_InForm());
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void childPanel_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
+      
         ~Form1()
         {
             this.Close();
@@ -110,14 +61,6 @@ namespace Fantasy
             openChildForm(new ClubsForm());
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox22_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

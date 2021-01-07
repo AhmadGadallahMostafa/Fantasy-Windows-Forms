@@ -19,6 +19,21 @@ namespace Fantasy
             InitializeComponent();
             controlObj = new Controller();
         }
+        private Form activeForm = null;
+
+        private void openChildForm(Form childForm)
+        {
+
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         private void SignUp_Click(object sender, EventArgs e)
         {
@@ -48,14 +63,15 @@ namespace Fantasy
                 if (controlObj.UniqueUsername(username))
                 {
                     label12.Visible = false;
+                    int id = 0;
 
-                    if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
+                    if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age, ref id) != 0))
                     {
-                        MessageBox.Show("2man");
+                        
                         label14.Visible = false;
 
-                        //User signed up and redirect to create team page
-                        //playerView(int fantay team id)
+                       // openChildForm(new f(id));
+                        
                     }
                     else 
                     {
@@ -74,7 +90,7 @@ namespace Fantasy
         {
 
         }
-
+      
         private void label10_Click(object sender, EventArgs e)
         {
 
