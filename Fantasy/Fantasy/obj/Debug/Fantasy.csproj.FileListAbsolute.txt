@@ -29,6 +29,7 @@ D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csproj.GenerateR
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csproj.CoreCompileInputs.cache
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.exe
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.pdb
+<<<<<<< HEAD
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Fantasy.exe.config
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Fantasy.exe
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Fantasy.pdb
@@ -179,3 +180,5 @@ D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Walker.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Werner.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Zouma.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.CreateTeam.resources
+=======
+>>>>>>> parent of 88f522c... CreateTeam Updated(insert player)
