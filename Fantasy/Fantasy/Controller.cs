@@ -109,6 +109,12 @@ namespace Fantasy
             return dbMan.ExecuteNonQuery(query);
         }
 
-
+        public Club GetClub(string ClubName)
+        {
+            Club c;
+            string query = $"select * from Club where club_name = '{ClubName}' ";
+            c = new Club(dbMan.ExecuteReader(query));
+            return c;
+        }
     }
 }

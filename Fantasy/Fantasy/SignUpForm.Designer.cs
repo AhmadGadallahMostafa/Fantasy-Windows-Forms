@@ -268,7 +268,6 @@ namespace Fantasy
             this.label11.TabIndex = 31;
             this.label11.Text = "Field can\'t be empty!";
             this.label11.Visible = false;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label13
             // 
@@ -335,7 +334,7 @@ namespace Fantasy
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(921, 615);
+            this.ClientSize = new System.Drawing.Size(1195, 798);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);

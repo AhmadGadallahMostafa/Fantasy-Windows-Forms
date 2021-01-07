@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FantasyModelStoreContainer" CdmEntityContainer="FantasyEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="FantasyModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Date_Of_Birth" ColumnName="Date_Of_Birth" />
+          <ScalarProperty Name="Account_Type" ColumnName="Account_Type" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clubs">
+      <EntityTypeMapping TypeName="FantasyModel.Club">
+        <MappingFragment StoreEntitySet="Club">
+          <ScalarProperty Name="Club_Id" ColumnName="Club_Id" />
+          <ScalarProperty Name="Club_Rank" ColumnName="Club_Rank" />
+          <ScalarProperty Name="Club_Name" ColumnName="Club_Name" />
+          <ScalarProperty Name="Club_Points" ColumnName="Club_Points" />
+          <ScalarProperty Name="Goals_Against" ColumnName="Goals_Against" />
+          <ScalarProperty Name="Total_Goals" ColumnName="Total_Goals" />
+          <ScalarProperty Name="Stadium_Name" ColumnName="Stadium_Name" />
+          <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+          <ScalarProperty Name="FoundationDate" ColumnName="FoundationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Club_Fixtures">
+      <EntityTypeMapping TypeName="FantasyModel.Club_Fixtures">
+        <MappingFragment StoreEntitySet="Club_Fixtures">
+          <ScalarProperty Name="Host_id" ColumnName="Host_id" />
+          <ScalarProperty Name="Guest_Id" ColumnName="Guest_Id" />
+          <ScalarProperty Name="Week_number" ColumnName="Week_number" />
+          <ScalarProperty Name="Season_number" ColumnName="Season_number" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fantasy_League">
+      <EntityTypeMapping TypeName="FantasyModel.Fantasy_League">
+        <MappingFragment StoreEntitySet="Fantasy_League">
+          <ScalarProperty Name="League_Id" ColumnName="League_Id" />
+          <ScalarProperty Name="League_Name" ColumnName="League_Name" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Total_Players" ColumnName="Total_Players" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fantasy_Player_Team">
+      <EntityTypeMapping TypeName="FantasyModel.Fantasy_Player_Team">
+        <MappingFragment StoreEntitySet="Fantasy_Player_Team">
+          <ScalarProperty Name="Player_Username" ColumnName="Player_Username" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fantasy_Team_ID" ColumnName="Fantasy_Team_ID" />
+          <ScalarProperty Name="Team_Name" ColumnName="Team_Name" />
+          <ScalarProperty Name="Total_Value" ColumnName="Total_Value" />
+          <ScalarProperty Name="Team_Funds" ColumnName="Team_Funds" />
+          <ScalarProperty Name="Total_Points" ColumnName="Total_Points" />
+          <ScalarProperty Name="Total_Transfers" ColumnName="Total_Transfers" />
+          <ScalarProperty Name="Overall_Rank" ColumnName="Overall_Rank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Footballers">
+      <EntityTypeMapping TypeName="FantasyModel.Footballer">
+        <MappingFragment StoreEntitySet="Footballer">
+          <ScalarProperty Name="Player_Id" ColumnName="Player_Id" />
+          <ScalarProperty Name="Club_ID" ColumnName="Club_ID" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Poisition" ColumnName="Poisition" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Goals" ColumnName="Goals" />
+          <ScalarProperty Name="Assists" ColumnName="Assists" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="CleanSheets" ColumnName="CleanSheets" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seasons">
+      <EntityTypeMapping TypeName="FantasyModel.Season">
+        <MappingFragment StoreEntitySet="Season">
+          <ScalarProperty Name="Season_Number" ColumnName="Season_Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transfereds">
+      <EntityTypeMapping TypeName="FantasyModel.Transfered">
+        <MappingFragment StoreEntitySet="Transfered">
+          <ScalarProperty Name="Player_ID" ColumnName="Player_ID" />
+          <ScalarProperty Name="Week_Number" ColumnName="Week_Number" />
+          <ScalarProperty Name="Season_Number" ColumnName="Season_Number" />
+          <ScalarProperty Name="Fantasy_Team_ID" ColumnName="Fantasy_Team_ID" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unavailable_Player">
+      <EntityTypeMapping TypeName="FantasyModel.Unavailable_Player">
+        <MappingFragment StoreEntitySet="Unavailable_Player">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Suspension_Status" ColumnName="Suspension_Status" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Injury_Status" ColumnName="Injury_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Weeks">
+      <EntityTypeMapping TypeName="FantasyModel.Week">
+        <MappingFragment StoreEntitySet="Week">
+          <ScalarProperty Name="Week_Number" ColumnName="Week_Number" />
+          <ScalarProperty Name="Season_Number" ColumnName="Season_Number" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Comepteing_Leauges" TypeName="FantasyModel.Comepteing_Leauges" StoreEntitySet="Comepteing_Leauges">
+      <EndProperty Name="Fantasy_Player_Team">
+        <ScalarProperty Name="Fantasy_Team_ID" ColumnName="Fantasy_Team_Id" />
+      </EndProperty>
+      <EndProperty Name="Fantasy_League">
+        <ScalarProperty Name="League_Id" ColumnName="Fantasy_Leauge_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Plays_In_Fantasy_Team" TypeName="FantasyModel.Plays_In_Fantasy_Team" StoreEntitySet="Plays_In_Fantasy_Team">
+      <EndProperty Name="Fantasy_Player_Team">
+        <ScalarProperty Name="Fantasy_Team_ID" ColumnName="Fantasy_Team_Id" />
+      </EndProperty>
+      <EndProperty Name="Footballer">
+        <ScalarProperty Name="Player_Id" ColumnName="Player_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

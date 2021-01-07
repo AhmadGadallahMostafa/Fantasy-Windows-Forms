@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Arsenal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAcXJJREFUeF7tXQdcVeX7//+almm2s6G2d5mZliNtqWWlpuZISy1Lc6+0zNxp7pVb
@@ -1681,7 +1681,7 @@
         QmCC
 </value>
   </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Chelsea.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAW41JREFUeF7tfQVYVdn3tjPjjDPjOOrY3WN3YoMtNqJgYQsGJqgoimIjGIQgIEoK
@@ -2966,7 +2966,7 @@
         nEwm781mqJOTyeS92Qx1cjKZvDe/xE9+8v8AeuBEIrrRXYMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AstonVilla.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAUZJJREFUeF7t
         fQeYFUXW9mLAHBAj5rzmb9ddAxkTCgICiihixLzmxCQmByYPOUiSoAIiOYcZhvknEgcYGBgm4qrrqrgq
@@ -4169,7 +4169,7 @@
         IossssgiiyyyyCKLLLLIoieONO3/AXIOKw4nlgxJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Liverpool.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAfYxJREFUeF7t
         3Qusd/tZF/hdFBxmVHAU1MyMU5OZTHCcUGWixgn6ShBTQSlIhFZLCgE61DJtacByEQ40eBqgtCANQhoO
@@ -5351,7 +5351,7 @@
         jDLKKKOMMsooo4wyythy8P/+3/8HQ1pCmc7+FH0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mancity.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAP+iSURBVHhe7F0FeBVX0w5WpbiFGBLc3Yt7gBhRkhvc
@@ -6469,7 +6469,7 @@
         N2w0u06J2j0+k3uS/wODdFHAmCSucQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ManchesterUnited.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAB0BUlEQVR4Xu2dBXRcx9XHxyJbkmUIJw4z
@@ -9018,7 +9018,7 @@
         2kMe8pCHPOQhD3nIQx7ykIc85CEPechD1xX95jf/HzS0zd5hO3ubAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox17.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Spurs.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAPa9JREFUeF7t
         nQdYFke79z3v+b73O285J55oiiWGJLaYaIgxxiTG2GNijb0kir0jKhZECWBDUMEGWAArdrGAYgMUvDA2

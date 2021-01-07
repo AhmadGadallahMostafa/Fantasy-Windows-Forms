@@ -14,13 +14,56 @@ namespace Fantasy
     {
         Club Club;
         Controller ControllerObj;
-        public ClubsInfoForms()
+        public ClubsInfoForms( )
         {
             InitializeComponent();
         }
 
+        public ClubsInfoForms(Club c)
+        {
+            InitializeComponent();
+            Club = c;
+        }
 
         private void ClubsInfoForms_Load(object sender, EventArgs e)
+        {
+
+            string path = "C:/Users/ahmad/OneDrive/Desktop/Fantasy Windows Forms/Images/Clubs/";
+            ClubName.Text = Club.Name;
+            clubPointsLabel.Text = Club.Points.ToString();
+            ManagerLabel.Text = Club.ManagerName;
+            FoundationLabel.Text = Club.FoundationDate;
+            StadiumLabel.Text = Club.StadiumName;
+            clubRankLabel.Text = Club.Rank.ToString();
+            ClubPicture.Load(path + Club.Name + ".png");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClubPicture_Click(object sender, EventArgs e)
         {
 
         }

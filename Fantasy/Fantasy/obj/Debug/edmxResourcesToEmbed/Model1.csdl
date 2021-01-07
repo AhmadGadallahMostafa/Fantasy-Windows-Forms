@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FantasyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date_Of_Birth" Type="DateTime" Precision="0" />
+    <Property Name="Account_Type" Type="Int32" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Club">
+    <Key>
+      <PropertyRef Name="Club_Id" />
+    </Key>
+    <Property Name="Club_Id" Type="Int32" Nullable="false" />
+    <Property Name="Club_Rank" Type="Int32" />
+    <Property Name="Club_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Club_Points" Type="Int32" />
+    <Property Name="Goals_Against" Type="Int32" />
+    <Property Name="Total_Goals" Type="Int32" />
+    <Property Name="Stadium_Name" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerName" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="FoundationDate" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Club_Fixtures" Relationship="Self.FK__Club_Fixt__Guest__31EC6D26" FromRole="Club" ToRole="Club_Fixtures" />
+    <NavigationProperty Name="Club_Fixtures1" Relationship="Self.FK__Club_Fixt__Host___30F848ED" FromRole="Club" ToRole="Club_Fixtures" />
+    <NavigationProperty Name="Footballers" Relationship="Self.FK__Footballe__Club___267ABA7A" FromRole="Club" ToRole="Footballer" />
+  </EntityType>
+  <EntityType Name="Club_Fixtures">
+    <Key>
+      <PropertyRef Name="Host_id" />
+      <PropertyRef Name="Guest_Id" />
+      <PropertyRef Name="Week_number" />
+      <PropertyRef Name="Season_number" />
+    </Key>
+    <Property Name="Host_id" Type="Int32" Nullable="false" />
+    <Property Name="Guest_Id" Type="Int32" Nullable="false" />
+    <Property Name="Week_number" Type="Int32" Nullable="false" />
+    <Property Name="Season_number" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Club" Relationship="Self.FK__Club_Fixt__Guest__31EC6D26" FromRole="Club_Fixtures" ToRole="Club" />
+    <NavigationProperty Name="Club1" Relationship="Self.FK__Club_Fixt__Host___30F848ED" FromRole="Club_Fixtures" ToRole="Club" />
+    <NavigationProperty Name="Week" Relationship="Self.FK__Club_Fixtures__32E0915F" FromRole="Club_Fixtures" ToRole="Week" />
+  </EntityType>
+  <EntityType Name="Fantasy_League">
+    <Key>
+      <PropertyRef Name="League_Id" />
+    </Key>
+    <Property Name="League_Id" Type="Int32" Nullable="false" />
+    <Property Name="League_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Players" Type="Int32" />
+    <NavigationProperty Name="Fantasy_Player_Team" Relationship="Self.Comepteing_Leauges" FromRole="Fantasy_League" ToRole="Fantasy_Player_Team" />
+  </EntityType>
+  <EntityType Name="Fantasy_Player_Team">
+    <Key>
+      <PropertyRef Name="Fantasy_Team_ID" />
+    </Key>
+    <Property Name="Player_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Fantasy_Team_ID" Type="Int32" Nullable="false" />
+    <Property Name="Team_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Value" Type="Int32" />
+    <Property Name="Team_Funds" Type="Int32" />
+    <Property Name="Total_Points" Type="Int32" />
+    <Property Name="Total_Transfers" Type="Int32" />
+    <Property Name="Overall_Rank" Type="Int32" />
+    <NavigationProperty Name="Transfereds" Relationship="Self.FK__Transfere__Fanta__3B75D760" FromRole="Fantasy_Player_Team" ToRole="Transfered" />
+    <NavigationProperty Name="Fantasy_League" Relationship="Self.Comepteing_Leauges" FromRole="Fantasy_Player_Team" ToRole="Fantasy_League" />
+    <NavigationProperty Name="Footballers" Relationship="Self.Plays_In_Fantasy_Team" FromRole="Fantasy_Player_Team" ToRole="Footballer" />
+  </EntityType>
+  <EntityType Name="Footballer">
+    <Key>
+      <PropertyRef Name="Player_Id" />
+    </Key>
+    <Property Name="Player_Id" Type="Int32" Nullable="false" />
+    <Property Name="Club_ID" Type="Int32" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Poisition" Type="Int32" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Goals" Type="Int32" />
+    <Property Name="Assists" Type="Int32" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="CleanSheets" Type="Int32" />
+    <NavigationProperty Name="Club" Relationship="Self.FK__Footballe__Club___267ABA7A" FromRole="Footballer" ToRole="Club" />
+    <NavigationProperty Name="Transfereds" Relationship="Self.FK__Transfere__Playe__398D8EEE" FromRole="Footballer" ToRole="Transfered" />
+    <NavigationProperty Name="Unavailable_Player" Relationship="Self.FK__Unavailable___ID__29572725" FromRole="Footballer" ToRole="Unavailable_Player" />
+    <NavigationProperty Name="Fantasy_Player_Team" Relationship="Self.Plays_In_Fantasy_Team" FromRole="Footballer" ToRole="Fantasy_Player_Team" />
+  </EntityType>
+  <EntityType Name="Season">
+    <Key>
+      <PropertyRef Name="Season_Number" />
+    </Key>
+    <Property Name="Season_Number" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Weeks" Relationship="Self.FK__Week__Season_Num__2E1BDC42" FromRole="Season" ToRole="Week" />
+  </EntityType>
+  <EntityType Name="Transfered">
+    <Key>
+      <PropertyRef Name="Player_ID" />
+      <PropertyRef Name="Week_Number" />
+      <PropertyRef Name="Season_Number" />
+      <PropertyRef Name="Fantasy_Team_ID" />
+    </Key>
+    <Property Name="Player_ID" Type="Int32" Nullable="false" />
+    <Property Name="Week_Number" Type="Int32" Nullable="false" />
+    <Property Name="Season_Number" Type="Int32" Nullable="false" />
+    <Property Name="Fantasy_Team_ID" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Fantasy_Player_Team" Relationship="Self.FK__Transfere__Fanta__3B75D760" FromRole="Transfered" ToRole="Fantasy_Player_Team" />
+    <NavigationProperty Name="Footballer" Relationship="Self.FK__Transfere__Playe__398D8EEE" FromRole="Transfered" ToRole="Footballer" />
+    <NavigationProperty Name="Week" Relationship="Self.FK__Transfered__3A81B327" FromRole="Transfered" ToRole="Week" />
+  </EntityType>
+  <EntityType Name="Unavailable_Player">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Start_Date" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Suspension_Status" Type="Boolean" />
+    <Property Name="Start_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="Injury_Status" Type="Boolean" />
+    <NavigationProperty Name="Footballer" Relationship="Self.FK__Unavailable___ID__29572725" FromRole="Unavailable_Player" ToRole="Footballer" />
+  </EntityType>
+  <EntityType Name="Week">
+    <Key>
+      <PropertyRef Name="Week_Number" />
+      <PropertyRef Name="Season_Number" />
+    </Key>
+    <Property Name="Week_Number" Type="Int32" Nullable="false" />
+    <Property Name="Season_Number" Type="Int32" Nullable="false" />
+    <Property Name="Start_Date" Type="DateTime" Precision="0" />
+    <Property Name="End_Date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Club_Fixtures" Relationship="Self.FK__Club_Fixtures__32E0915F" FromRole="Week" ToRole="Club_Fixtures" />
+    <NavigationProperty Name="Season" Relationship="Self.FK__Week__Season_Num__2E1BDC42" FromRole="Week" ToRole="Season" />
+    <NavigationProperty Name="Transfereds" Relationship="Self.FK__Transfered__3A81B327" FromRole="Week" ToRole="Transfered" />
+  </EntityType>
+  <Association Name="FK__Club_Fixt__Guest__31EC6D26">
+    <End Role="Club" Type="Self.Club" Multiplicity="1" />
+    <End Role="Club_Fixtures" Type="Self.Club_Fixtures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="Club_Id" />
+      </Principal>
+      <Dependent Role="Club_Fixtures">
+        <PropertyRef Name="Guest_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Club_Fixt__Host___30F848ED">
+    <End Role="Club" Type="Self.Club" Multiplicity="1" />
+    <End Role="Club_Fixtures" Type="Self.Club_Fixtures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="Club_Id" />
+      </Principal>
+      <Dependent Role="Club_Fixtures">
+        <PropertyRef Name="Host_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Footballe__Club___267ABA7A">
+    <End Role="Club" Type="Self.Club" Multiplicity="0..1" />
+    <End Role="Footballer" Type="Self.Footballer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="Club_Id" />
+      </Principal>
+      <Dependent Role="Footballer">
+        <PropertyRef Name="Club_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Club_Fixtures__32E0915F">
+    <End Role="Week" Type="Self.Week" Multiplicity="1" />
+    <End Role="Club_Fixtures" Type="Self.Club_Fixtures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Week">
+        <PropertyRef Name="Week_Number" />
+        <PropertyRef Name="Season_Number" />
+      </Principal>
+      <Dependent Role="Club_Fixtures">
+        <PropertyRef Name="Week_number" />
+        <PropertyRef Name="Season_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transfere__Fanta__3B75D760">
+    <End Role="Fantasy_Player_Team" Type="Self.Fantasy_Player_Team" Multiplicity="1" />
+    <End Role="Transfered" Type="Self.Transfered" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fantasy_Player_Team">
+        <PropertyRef Name="Fantasy_Team_ID" />
+      </Principal>
+      <Dependent Role="Transfered">
+        <PropertyRef Name="Fantasy_Team_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transfere__Playe__398D8EEE">
+    <End Role="Footballer" Type="Self.Footballer" Multiplicity="1" />
+    <End Role="Transfered" Type="Self.Transfered" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Footballer">
+        <PropertyRef Name="Player_Id" />
+      </Principal>
+      <Dependent Role="Transfered">
+        <PropertyRef Name="Player_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Unavailable___ID__29572725">
+    <End Role="Footballer" Type="Self.Footballer" Multiplicity="1" />
+    <End Role="Unavailable_Player" Type="Self.Unavailable_Player" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Footballer">
+        <PropertyRef Name="Player_Id" />
+      </Principal>
+      <Dependent Role="Unavailable_Player">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Week__Season_Num__2E1BDC42">
+    <End Role="Season" Type="Self.Season" Multiplicity="1" />
+    <End Role="Week" Type="Self.Week" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="Season_Number" />
+      </Principal>
+      <Dependent Role="Week">
+        <PropertyRef Name="Season_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transfered__3A81B327">
+    <End Role="Week" Type="Self.Week" Multiplicity="1" />
+    <End Role="Transfered" Type="Self.Transfered" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Week">
+        <PropertyRef Name="Week_Number" />
+        <PropertyRef Name="Season_Number" />
+      </Principal>
+      <Dependent Role="Transfered">
+        <PropertyRef Name="Week_Number" />
+        <PropertyRef Name="Season_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Comepteing_Leauges">
+    <End Role="Fantasy_Player_Team" Type="Self.Fantasy_Player_Team" Multiplicity="*" />
+    <End Role="Fantasy_League" Type="Self.Fantasy_League" Multiplicity="*" />
+  </Association>
+  <Association Name="Plays_In_Fantasy_Team">
+    <End Role="Fantasy_Player_Team" Type="Self.Fantasy_Player_Team" Multiplicity="*" />
+    <End Role="Footballer" Type="Self.Footballer" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="FantasyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Clubs" EntityType="Self.Club" />
+    <EntitySet Name="Club_Fixtures" EntityType="Self.Club_Fixtures" />
+    <EntitySet Name="Fantasy_League" EntityType="Self.Fantasy_League" />
+    <EntitySet Name="Fantasy_Player_Team" EntityType="Self.Fantasy_Player_Team" />
+    <EntitySet Name="Footballers" EntityType="Self.Footballer" />
+    <EntitySet Name="Seasons" EntityType="Self.Season" />
+    <EntitySet Name="Transfereds" EntityType="Self.Transfered" />
+    <EntitySet Name="Unavailable_Player" EntityType="Self.Unavailable_Player" />
+    <EntitySet Name="Weeks" EntityType="Self.Week" />
+    <AssociationSet Name="FK__Club_Fixt__Guest__31EC6D26" Association="Self.FK__Club_Fixt__Guest__31EC6D26">
+      <End Role="Club" EntitySet="Clubs" />
+      <End Role="Club_Fixtures" EntitySet="Club_Fixtures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Club_Fixt__Host___30F848ED" Association="Self.FK__Club_Fixt__Host___30F848ED">
+      <End Role="Club" EntitySet="Clubs" />
+      <End Role="Club_Fixtures" EntitySet="Club_Fixtures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Footballe__Club___267ABA7A" Association="Self.FK__Footballe__Club___267ABA7A">
+      <End Role="Club" EntitySet="Clubs" />
+      <End Role="Footballer" EntitySet="Footballers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Club_Fixtures__32E0915F" Association="Self.FK__Club_Fixtures__32E0915F">
+      <End Role="Week" EntitySet="Weeks" />
+      <End Role="Club_Fixtures" EntitySet="Club_Fixtures" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transfere__Fanta__3B75D760" Association="Self.FK__Transfere__Fanta__3B75D760">
+      <End Role="Fantasy_Player_Team" EntitySet="Fantasy_Player_Team" />
+      <End Role="Transfered" EntitySet="Transfereds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transfere__Playe__398D8EEE" Association="Self.FK__Transfere__Playe__398D8EEE">
+      <End Role="Footballer" EntitySet="Footballers" />
+      <End Role="Transfered" EntitySet="Transfereds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Unavailable___ID__29572725" Association="Self.FK__Unavailable___ID__29572725">
+      <End Role="Footballer" EntitySet="Footballers" />
+      <End Role="Unavailable_Player" EntitySet="Unavailable_Player" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Week__Season_Num__2E1BDC42" Association="Self.FK__Week__Season_Num__2E1BDC42">
+      <End Role="Season" EntitySet="Seasons" />
+      <End Role="Week" EntitySet="Weeks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transfered__3A81B327" Association="Self.FK__Transfered__3A81B327">
+      <End Role="Week" EntitySet="Weeks" />
+      <End Role="Transfered" EntitySet="Transfereds" />
+    </AssociationSet>
+    <AssociationSet Name="Comepteing_Leauges" Association="Self.Comepteing_Leauges">
+      <End Role="Fantasy_Player_Team" EntitySet="Fantasy_Player_Team" />
+      <End Role="Fantasy_League" EntitySet="Fantasy_League" />
+    </AssociationSet>
+    <AssociationSet Name="Plays_In_Fantasy_Team" Association="Self.Plays_In_Fantasy_Team">
+      <End Role="Fantasy_Player_Team" EntitySet="Fantasy_Player_Team" />
+      <End Role="Footballer" EntitySet="Footballers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
