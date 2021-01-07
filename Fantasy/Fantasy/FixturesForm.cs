@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Fantasy
 {
-    public partial class HomeForm : Form
+    public partial class FixturesForm : Form
     {
-        public HomeForm()
+        public FixturesForm()
         {
             InitializeComponent();
         }
 
-        private void HomeForm_Load(object sender, EventArgs e)
+        private void FixturesForm_Load(object sender, EventArgs e)
         {
-
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
     }
 }

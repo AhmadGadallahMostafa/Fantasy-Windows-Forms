@@ -122,7 +122,6 @@ namespace Fantasy
             this.childPanel.Name = "childPanel";
             this.childPanel.Size = new System.Drawing.Size(1195, 798);
             this.childPanel.TabIndex = 1;
-           
             // 
             // pictureBox22
             // 
@@ -324,7 +323,6 @@ namespace Fantasy
             this.label2.TabIndex = 21;
             this.label2.Text = "Gather Points and compete with your friends in leagues in your road to become the" +
     " ultimate manager";
-            
             // 
             // label1
             // 
@@ -335,7 +333,6 @@ namespace Fantasy
             this.label1.Size = new System.Drawing.Size(403, 39);
             this.label1.TabIndex = 20;
             this.label1.Text = "Welcome To Fantasy Football";
-          
             // 
             // logoPanel
             // 
@@ -357,7 +354,6 @@ namespace Fantasy
             this.pictureBox1.Size = new System.Drawing.Size(250, 162);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-         
             // 
             // panel1
             // 
@@ -419,7 +415,7 @@ namespace Fantasy
             this.FixturesButton.Text = "Fixtures";
             this.FixturesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FixturesButton.UseVisualStyleBackColor = false;
-            
+            this.FixturesButton.Click += new System.EventHandler(this.FixturesButton_Click);
             // 
             // ClubsButton
             // 
@@ -470,7 +466,6 @@ namespace Fantasy
             this.TopPlayersButton.Text = "Top Players";
             this.TopPlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TopPlayersButton.UseVisualStyleBackColor = false;
-           
             // 
             // SideMenuPanel
             // 
@@ -499,7 +494,6 @@ namespace Fantasy
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Fantasy";
-           
             this.childPanel.ResumeLayout(false);
             this.childPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();

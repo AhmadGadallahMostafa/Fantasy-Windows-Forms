@@ -15,9 +15,6 @@ namespace Fantasy
         {
             dbMan = new DBManager();
         }
-
-        
-
         public int SignUpUser(string email, DateTime dateOfBirth, string password, string gender) 
         {
             string sql = $"insert into Account values ('{email}','{dateOfBirth.ToShortDateString()}',2,'{password}','{gender}')";
@@ -49,6 +46,7 @@ namespace Fantasy
 
 
         }
+
         public DataTable GetDefender()
         {
             string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=1 ";
@@ -99,9 +97,11 @@ namespace Fantasy
         public Club GetClub(string ClubName)
         {
             Club c;
-            string query = $"select * from Club where club_name = '{ClubName}' ";
-            c = new Club(dbMan.ExecuteReader(query));
+            string query1 = $"select * from Club where club_name = '{ClubName}' ";
+            string query2 = $"select Footballer.First_Name,Footballer.Last_Name,Footballer.poisition from Footballer,Club  where Club.club_name = '{ClubName}' and Footballer.Club_id = Club.Club_id   ";
+            c = new Club(dbMan.ExecuteReader(query1),dbMan.ExecuteReader(query2));
             return c;
         }
+        
     }
 }

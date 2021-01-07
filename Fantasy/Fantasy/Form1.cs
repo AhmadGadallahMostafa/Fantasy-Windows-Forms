@@ -58,9 +58,12 @@ namespace Fantasy
 
         private void ClubsButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new ClubsForm());
+            openChildForm(new ClubsForm(true));
         }
 
-       
+        private void FixturesButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FixturesForm());
+        }
     }
 }
