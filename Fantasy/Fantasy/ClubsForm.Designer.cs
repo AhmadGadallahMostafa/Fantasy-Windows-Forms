@@ -50,6 +50,7 @@ namespace Fantasy
             this.Wolves = new System.Windows.Forms.PictureBox();
             this.WestHam = new System.Windows.Forms.PictureBox();
             this.WestBromich = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Arsenal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Everton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crystal)).BeginInit();
@@ -332,6 +333,21 @@ namespace Fantasy
             this.WestBromich.TabStop = false;
             this.WestBromich.Click += new System.EventHandler(this.WestBromich_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(1149, -2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 45);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ClubsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +355,7 @@ namespace Fantasy
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1195, 798);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.WestBromich);
             this.Controls.Add(this.WestHam);
             this.Controls.Add(this.Wolves);
@@ -410,5 +427,6 @@ namespace Fantasy
         private System.Windows.Forms.PictureBox Wolves;
         private System.Windows.Forms.PictureBox WestHam;
         private System.Windows.Forms.PictureBox WestBromich;
+        private System.Windows.Forms.Button button1;
     }
 }

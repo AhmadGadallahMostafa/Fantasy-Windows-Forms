@@ -165,5 +165,10 @@ namespace Fantasy
              c = ControllerObj.GetClub(Everton.AccessibleName);
             this.openChildForm(new ClubsInfoForms(c, true));
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
