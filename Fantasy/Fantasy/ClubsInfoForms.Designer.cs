@@ -404,7 +404,7 @@ namespace Fantasy
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(624, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(537, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 60);
             this.pictureBox2.TabIndex = 13;
@@ -414,7 +414,7 @@ namespace Fantasy
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Location = new System.Drawing.Point(547, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(471, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(60, 60);
             this.pictureBox3.TabIndex = 14;
@@ -423,7 +423,7 @@ namespace Fantasy
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Location = new System.Drawing.Point(471, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(403, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(60, 60);
             this.pictureBox4.TabIndex = 15;
@@ -569,7 +569,7 @@ namespace Fantasy
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(485, 63);
+            this.label16.Location = new System.Drawing.Point(400, 63);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 18);
             this.label16.TabIndex = 27;
@@ -581,7 +581,7 @@ namespace Fantasy
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(561, 63);
+            this.label17.Location = new System.Drawing.Point(468, 63);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(46, 18);
             this.label17.TabIndex = 28;
@@ -593,7 +593,7 @@ namespace Fantasy
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(638, 63);
+            this.label18.Location = new System.Drawing.Point(534, 63);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(46, 18);
             this.label18.TabIndex = 29;
