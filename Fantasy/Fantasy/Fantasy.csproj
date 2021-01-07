@@ -74,12 +74,6 @@
     <Compile Include="Footballer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="AdminView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminView.Designer.cs">
-      <DependentUpon>AdminView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -139,7 +133,7 @@
     <Compile Include="Sign-InForm.Designer.cs">
       <DependentUpon>Sign-InForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignInController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>

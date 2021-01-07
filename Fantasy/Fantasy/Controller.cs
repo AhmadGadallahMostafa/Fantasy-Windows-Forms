@@ -17,31 +17,6 @@ namespace Fantasy
         }
 
         
-
-        public int SignUpUser(string email, DateTime dateOfBirth, string password, string gender) 
-        {
-            string sql = $"insert into Account values ('{email}','{dateOfBirth.ToShortDateString()}',2,'{password}','{gender}')";
-            return dbMan.ExecuteNonQuery(sql);
-        }
-        public bool UniqueUsername(string username) 
-        {
-            string sql = $"select Player_Username FROM Fantasy_Player_Team where Player_Username = '{username}'";
-            if (dbMan.ExecuteScalar(sql) == null)
-            {
-                return true;
-            }
-            else return false;
-        }
-        public int CreateFantasyTeam(string userName,string email,int age,ref int newId) 
-        {
-            Object count = dbMan.ExecuteScalar("SELECT count(Fantasy_Team_ID) FROM Fantasy_Player_Team");
-
-            newId =(int) count + 1;
-            
-            string sql = $"Insert into Fantasy_Player_Team  (Player_Username,Age,Email,Fantasy_Team_Id,Total_Value,Team_Funds,Total_Points,Total_Transfers,Overall_Rank)values('{userName}',{age},'{email}',{newId},0,100,0,1,{newId})";
-            return dbMan.ExecuteNonQuery(sql);
-        
-        }
         public DataTable GetGK()
         {
             string query = "SELECt Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=0 ";
