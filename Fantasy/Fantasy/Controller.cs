@@ -78,6 +78,17 @@ namespace Fantasy
             c = new Club(dbMan.ExecuteReader(query1),dbMan.ExecuteReader(query2));
             return c;
         }
-        
+
+
+        public int RemovePlayer(int TeamID, string LastName)
+        {
+            int NewFunds = GetTeamFunds(TeamID) + GetPrice(LastName);
+
+            string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+
     }
 }

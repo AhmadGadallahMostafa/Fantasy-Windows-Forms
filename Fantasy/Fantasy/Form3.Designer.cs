@@ -50,6 +50,21 @@ namespace Fantasy
             this.PlayersList = new System.Windows.Forms.ListBox();
             this.AddPlayer = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SBT1 = new System.Windows.Forms.Button();
+            this.SBT2 = new System.Windows.Forms.Button();
+            this.SBT3 = new System.Windows.Forms.Button();
+            this.MFBT1 = new System.Windows.Forms.Button();
+            this.MFBT2 = new System.Windows.Forms.Button();
+            this.MFBT3 = new System.Windows.Forms.Button();
+            this.MFBT4 = new System.Windows.Forms.Button();
+            this.MFBT5 = new System.Windows.Forms.Button();
+            this.DBT1 = new System.Windows.Forms.Button();
+            this.DBT2 = new System.Windows.Forms.Button();
+            this.DBT3 = new System.Windows.Forms.Button();
+            this.DBT4 = new System.Windows.Forms.Button();
+            this.DBT5 = new System.Windows.Forms.Button();
+            this.GKBT1 = new System.Windows.Forms.Button();
+            this.GKBT2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).BeginInit();
@@ -279,11 +294,176 @@ namespace Fantasy
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 19;
             // 
+            // SBT1
+            // 
+            this.SBT1.Location = new System.Drawing.Point(727, 347);
+            this.SBT1.Name = "SBT1";
+            this.SBT1.Size = new System.Drawing.Size(27, 23);
+            this.SBT1.TabIndex = 20;
+            this.SBT1.Text = "X";
+            this.SBT1.UseVisualStyleBackColor = true;
+            this.SBT1.Click += new System.EventHandler(this.SBT1_Click);
+            // 
+            // SBT2
+            // 
+            this.SBT2.Location = new System.Drawing.Point(727, 252);
+            this.SBT2.Name = "SBT2";
+            this.SBT2.Size = new System.Drawing.Size(27, 23);
+            this.SBT2.TabIndex = 21;
+            this.SBT2.Text = "X";
+            this.SBT2.UseVisualStyleBackColor = true;
+            this.SBT2.Click += new System.EventHandler(this.SBT2_Click);
+            // 
+            // SBT3
+            // 
+            this.SBT3.Location = new System.Drawing.Point(727, 160);
+            this.SBT3.Name = "SBT3";
+            this.SBT3.Size = new System.Drawing.Size(27, 23);
+            this.SBT3.TabIndex = 22;
+            this.SBT3.Text = "X";
+            this.SBT3.UseVisualStyleBackColor = true;
+            this.SBT3.Click += new System.EventHandler(this.SBT3_Click);
+            // 
+            // MFBT1
+            // 
+            this.MFBT1.Location = new System.Drawing.Point(543, 475);
+            this.MFBT1.Name = "MFBT1";
+            this.MFBT1.Size = new System.Drawing.Size(27, 23);
+            this.MFBT1.TabIndex = 23;
+            this.MFBT1.Text = "X";
+            this.MFBT1.UseVisualStyleBackColor = true;
+            this.MFBT1.Click += new System.EventHandler(this.MFBT1_Click);
+            // 
+            // MFBT2
+            // 
+            this.MFBT2.Location = new System.Drawing.Point(543, 347);
+            this.MFBT2.Name = "MFBT2";
+            this.MFBT2.Size = new System.Drawing.Size(27, 23);
+            this.MFBT2.TabIndex = 24;
+            this.MFBT2.Text = "X";
+            this.MFBT2.UseVisualStyleBackColor = true;
+            this.MFBT2.Click += new System.EventHandler(this.MFBT2_Click);
+            // 
+            // MFBT3
+            // 
+            this.MFBT3.Location = new System.Drawing.Point(543, 252);
+            this.MFBT3.Name = "MFBT3";
+            this.MFBT3.Size = new System.Drawing.Size(27, 23);
+            this.MFBT3.TabIndex = 25;
+            this.MFBT3.Text = "X";
+            this.MFBT3.UseVisualStyleBackColor = true;
+            this.MFBT3.Click += new System.EventHandler(this.MFBT3_Click);
+            // 
+            // MFBT4
+            // 
+            this.MFBT4.Location = new System.Drawing.Point(543, 160);
+            this.MFBT4.Name = "MFBT4";
+            this.MFBT4.Size = new System.Drawing.Size(27, 23);
+            this.MFBT4.TabIndex = 26;
+            this.MFBT4.Text = "X";
+            this.MFBT4.UseVisualStyleBackColor = true;
+            this.MFBT4.Click += new System.EventHandler(this.MFBT4_Click);
+            // 
+            // MFBT5
+            // 
+            this.MFBT5.Location = new System.Drawing.Point(543, 46);
+            this.MFBT5.Name = "MFBT5";
+            this.MFBT5.Size = new System.Drawing.Size(27, 23);
+            this.MFBT5.TabIndex = 27;
+            this.MFBT5.Text = "X";
+            this.MFBT5.UseVisualStyleBackColor = true;
+            this.MFBT5.Click += new System.EventHandler(this.MFBT5_Click);
+            // 
+            // DBT1
+            // 
+            this.DBT1.Location = new System.Drawing.Point(266, 475);
+            this.DBT1.Name = "DBT1";
+            this.DBT1.Size = new System.Drawing.Size(27, 23);
+            this.DBT1.TabIndex = 28;
+            this.DBT1.Text = "X";
+            this.DBT1.UseVisualStyleBackColor = true;
+            this.DBT1.Click += new System.EventHandler(this.DBT1_Click);
+            // 
+            // DBT2
+            // 
+            this.DBT2.Location = new System.Drawing.Point(266, 347);
+            this.DBT2.Name = "DBT2";
+            this.DBT2.Size = new System.Drawing.Size(27, 23);
+            this.DBT2.TabIndex = 29;
+            this.DBT2.Text = "X";
+            this.DBT2.UseVisualStyleBackColor = true;
+            this.DBT2.Click += new System.EventHandler(this.DBT2_Click);
+            // 
+            // DBT3
+            // 
+            this.DBT3.Location = new System.Drawing.Point(266, 252);
+            this.DBT3.Name = "DBT3";
+            this.DBT3.Size = new System.Drawing.Size(27, 23);
+            this.DBT3.TabIndex = 30;
+            this.DBT3.Text = "X";
+            this.DBT3.UseVisualStyleBackColor = true;
+            this.DBT3.Click += new System.EventHandler(this.DBT3_Click);
+            // 
+            // DBT4
+            // 
+            this.DBT4.Location = new System.Drawing.Point(266, 160);
+            this.DBT4.Name = "DBT4";
+            this.DBT4.Size = new System.Drawing.Size(27, 23);
+            this.DBT4.TabIndex = 31;
+            this.DBT4.Text = "X";
+            this.DBT4.UseVisualStyleBackColor = true;
+            this.DBT4.Click += new System.EventHandler(this.DBT4_Click);
+            // 
+            // DBT5
+            // 
+            this.DBT5.Location = new System.Drawing.Point(266, 46);
+            this.DBT5.Name = "DBT5";
+            this.DBT5.Size = new System.Drawing.Size(27, 23);
+            this.DBT5.TabIndex = 32;
+            this.DBT5.Text = "X";
+            this.DBT5.UseVisualStyleBackColor = true;
+            this.DBT5.Click += new System.EventHandler(this.DBT5_Click);
+            // 
+            // GKBT1
+            // 
+            this.GKBT1.Location = new System.Drawing.Point(72, 339);
+            this.GKBT1.Name = "GKBT1";
+            this.GKBT1.Size = new System.Drawing.Size(27, 23);
+            this.GKBT1.TabIndex = 33;
+            this.GKBT1.Text = "X";
+            this.GKBT1.UseVisualStyleBackColor = true;
+            this.GKBT1.Click += new System.EventHandler(this.GKBT1_Click);
+            // 
+            // GKBT2
+            // 
+            this.GKBT2.Location = new System.Drawing.Point(72, 163);
+            this.GKBT2.Name = "GKBT2";
+            this.GKBT2.Size = new System.Drawing.Size(27, 23);
+            this.GKBT2.TabIndex = 34;
+            this.GKBT2.Text = "X";
+            this.GKBT2.UseVisualStyleBackColor = true;
+            this.GKBT2.Click += new System.EventHandler(this.GKBT2_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 608);
+            this.Controls.Add(this.GKBT2);
+            this.Controls.Add(this.GKBT1);
+            this.Controls.Add(this.DBT5);
+            this.Controls.Add(this.DBT4);
+            this.Controls.Add(this.DBT3);
+            this.Controls.Add(this.DBT2);
+            this.Controls.Add(this.DBT1);
+            this.Controls.Add(this.MFBT5);
+            this.Controls.Add(this.MFBT4);
+            this.Controls.Add(this.MFBT3);
+            this.Controls.Add(this.MFBT2);
+            this.Controls.Add(this.MFBT1);
+            this.Controls.Add(this.SBT3);
+            this.Controls.Add(this.SBT2);
+            this.Controls.Add(this.SBT1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.AddPlayer);
             this.Controls.Add(this.PlayersList);
@@ -351,5 +531,20 @@ namespace Fantasy
         private System.Windows.Forms.ListBox PlayersList;
         private System.Windows.Forms.Button AddPlayer;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button SBT1;
+        private System.Windows.Forms.Button SBT2;
+        private System.Windows.Forms.Button SBT3;
+        private System.Windows.Forms.Button MFBT1;
+        private System.Windows.Forms.Button MFBT2;
+        private System.Windows.Forms.Button MFBT3;
+        private System.Windows.Forms.Button MFBT4;
+        private System.Windows.Forms.Button MFBT5;
+        private System.Windows.Forms.Button DBT1;
+        private System.Windows.Forms.Button DBT2;
+        private System.Windows.Forms.Button DBT3;
+        private System.Windows.Forms.Button DBT4;
+        private System.Windows.Forms.Button DBT5;
+        private System.Windows.Forms.Button GKBT1;
+        private System.Windows.Forms.Button GKBT2;
     }
 }
