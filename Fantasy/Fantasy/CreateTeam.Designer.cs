@@ -50,6 +50,7 @@
             this.AddPlayer = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID2)).BeginInit();
@@ -67,22 +68,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.MID1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-6, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(912, 583);
+            this.pictureBox1.Size = new System.Drawing.Size(902, 613);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // GK1
             // 
-            this.GK1.Location = new System.Drawing.Point(50, 172);
+            this.GK1.Image = ((System.Drawing.Image)(resources.GetObject("GK1.Image")));
+            this.GK1.Location = new System.Drawing.Point(44, 161);
             this.GK1.Name = "GK1";
-            this.GK1.Size = new System.Drawing.Size(63, 63);
+            this.GK1.Size = new System.Drawing.Size(60, 60);
             this.GK1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.GK1.TabIndex = 15;
             this.GK1.TabStop = false;
@@ -90,9 +93,10 @@
             // 
             // MID2
             // 
-            this.MID2.Location = new System.Drawing.Point(560, 238);
+            this.MID2.Image = ((System.Drawing.Image)(resources.GetObject("MID2.Image")));
+            this.MID2.Location = new System.Drawing.Point(490, 223);
             this.MID2.Name = "MID2";
-            this.MID2.Size = new System.Drawing.Size(63, 63);
+            this.MID2.Size = new System.Drawing.Size(60, 60);
             this.MID2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MID2.TabIndex = 17;
             this.MID2.TabStop = false;
@@ -100,9 +104,10 @@
             // 
             // MID3
             // 
-            this.MID3.Location = new System.Drawing.Point(560, 143);
+            this.MID3.Image = ((System.Drawing.Image)(resources.GetObject("MID3.Image")));
+            this.MID3.Location = new System.Drawing.Point(490, 134);
             this.MID3.Name = "MID3";
-            this.MID3.Size = new System.Drawing.Size(63, 63);
+            this.MID3.Size = new System.Drawing.Size(60, 60);
             this.MID3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MID3.TabIndex = 18;
             this.MID3.TabStop = false;
@@ -110,9 +115,10 @@
             // 
             // DEF1
             // 
-            this.DEF1.Location = new System.Drawing.Point(306, 459);
+            this.DEF1.Image = ((System.Drawing.Image)(resources.GetObject("DEF1.Image")));
+            this.DEF1.Location = new System.Drawing.Point(268, 430);
             this.DEF1.Name = "DEF1";
-            this.DEF1.Size = new System.Drawing.Size(63, 63);
+            this.DEF1.Size = new System.Drawing.Size(60, 60);
             this.DEF1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.DEF1.TabIndex = 19;
             this.DEF1.TabStop = false;
@@ -120,9 +126,10 @@
             // 
             // DEF2
             // 
-            this.DEF2.Location = new System.Drawing.Point(306, 344);
+            this.DEF2.Image = ((System.Drawing.Image)(resources.GetObject("DEF2.Image")));
+            this.DEF2.Location = new System.Drawing.Point(268, 322);
             this.DEF2.Name = "DEF2";
-            this.DEF2.Size = new System.Drawing.Size(63, 63);
+            this.DEF2.Size = new System.Drawing.Size(60, 60);
             this.DEF2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.DEF2.TabIndex = 20;
             this.DEF2.TabStop = false;
@@ -130,9 +137,10 @@
             // 
             // DEF3
             // 
-            this.DEF3.Location = new System.Drawing.Point(306, 238);
+            this.DEF3.Image = ((System.Drawing.Image)(resources.GetObject("DEF3.Image")));
+            this.DEF3.Location = new System.Drawing.Point(268, 223);
             this.DEF3.Name = "DEF3";
-            this.DEF3.Size = new System.Drawing.Size(63, 63);
+            this.DEF3.Size = new System.Drawing.Size(60, 60);
             this.DEF3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.DEF3.TabIndex = 21;
             this.DEF3.TabStop = false;
@@ -140,9 +148,10 @@
             // 
             // DEF4
             // 
-            this.DEF4.Location = new System.Drawing.Point(306, 143);
+            this.DEF4.Image = ((System.Drawing.Image)(resources.GetObject("DEF4.Image")));
+            this.DEF4.Location = new System.Drawing.Point(268, 134);
             this.DEF4.Name = "DEF4";
-            this.DEF4.Size = new System.Drawing.Size(63, 63);
+            this.DEF4.Size = new System.Drawing.Size(60, 60);
             this.DEF4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.DEF4.TabIndex = 22;
             this.DEF4.TabStop = false;
@@ -150,9 +159,10 @@
             // 
             // DEF5
             // 
-            this.DEF5.Location = new System.Drawing.Point(306, 59);
+            this.DEF5.Image = ((System.Drawing.Image)(resources.GetObject("DEF5.Image")));
+            this.DEF5.Location = new System.Drawing.Point(268, 55);
             this.DEF5.Name = "DEF5";
-            this.DEF5.Size = new System.Drawing.Size(63, 63);
+            this.DEF5.Size = new System.Drawing.Size(60, 60);
             this.DEF5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.DEF5.TabIndex = 23;
             this.DEF5.TabStop = false;
@@ -160,9 +170,10 @@
             // 
             // GK2
             // 
-            this.GK2.Location = new System.Drawing.Point(50, 335);
+            this.GK2.Image = ((System.Drawing.Image)(resources.GetObject("GK2.Image")));
+            this.GK2.Location = new System.Drawing.Point(44, 314);
             this.GK2.Name = "GK2";
-            this.GK2.Size = new System.Drawing.Size(63, 63);
+            this.GK2.Size = new System.Drawing.Size(60, 60);
             this.GK2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.GK2.TabIndex = 24;
             this.GK2.TabStop = false;
@@ -170,9 +181,10 @@
             // 
             // MID0
             // 
-            this.MID0.Location = new System.Drawing.Point(560, 459);
+            this.MID0.Image = ((System.Drawing.Image)(resources.GetObject("MID0.Image")));
+            this.MID0.Location = new System.Drawing.Point(490, 430);
             this.MID0.Name = "MID0";
-            this.MID0.Size = new System.Drawing.Size(63, 63);
+            this.MID0.Size = new System.Drawing.Size(60, 60);
             this.MID0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MID0.TabIndex = 25;
             this.MID0.TabStop = false;
@@ -180,9 +192,10 @@
             // 
             // ATT1
             // 
-            this.ATT1.Location = new System.Drawing.Point(748, 344);
+            this.ATT1.Image = ((System.Drawing.Image)(resources.GetObject("ATT1.Image")));
+            this.ATT1.Location = new System.Drawing.Point(654, 322);
             this.ATT1.Name = "ATT1";
-            this.ATT1.Size = new System.Drawing.Size(63, 63);
+            this.ATT1.Size = new System.Drawing.Size(60, 60);
             this.ATT1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ATT1.TabIndex = 26;
             this.ATT1.TabStop = false;
@@ -190,9 +203,10 @@
             // 
             // ATT2
             // 
-            this.ATT2.Location = new System.Drawing.Point(748, 238);
+            this.ATT2.Image = ((System.Drawing.Image)(resources.GetObject("ATT2.Image")));
+            this.ATT2.Location = new System.Drawing.Point(654, 223);
             this.ATT2.Name = "ATT2";
-            this.ATT2.Size = new System.Drawing.Size(63, 63);
+            this.ATT2.Size = new System.Drawing.Size(60, 60);
             this.ATT2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ATT2.TabIndex = 27;
             this.ATT2.TabStop = false;
@@ -200,9 +214,10 @@
             // 
             // ATT3
             // 
-            this.ATT3.Location = new System.Drawing.Point(748, 133);
+            this.ATT3.Image = ((System.Drawing.Image)(resources.GetObject("ATT3.Image")));
+            this.ATT3.Location = new System.Drawing.Point(654, 125);
             this.ATT3.Name = "ATT3";
-            this.ATT3.Size = new System.Drawing.Size(63, 63);
+            this.ATT3.Size = new System.Drawing.Size(60, 60);
             this.ATT3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ATT3.TabIndex = 28;
             this.ATT3.TabStop = false;
@@ -210,9 +225,10 @@
             // 
             // MID1
             // 
-            this.MID1.Location = new System.Drawing.Point(560, 344);
+            this.MID1.Image = ((System.Drawing.Image)(resources.GetObject("MID1.Image")));
+            this.MID1.Location = new System.Drawing.Point(490, 322);
             this.MID1.Name = "MID1";
-            this.MID1.Size = new System.Drawing.Size(63, 63);
+            this.MID1.Size = new System.Drawing.Size(60, 60);
             this.MID1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MID1.TabIndex = 29;
             this.MID1.TabStop = false;
@@ -220,9 +236,10 @@
             // 
             // MID4
             // 
-            this.MID4.Location = new System.Drawing.Point(560, 59);
+            this.MID4.Image = ((System.Drawing.Image)(resources.GetObject("MID4.Image")));
+            this.MID4.Location = new System.Drawing.Point(490, 55);
             this.MID4.Name = "MID4";
-            this.MID4.Size = new System.Drawing.Size(63, 63);
+            this.MID4.Size = new System.Drawing.Size(60, 60);
             this.MID4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MID4.TabIndex = 30;
             this.MID4.TabStop = false;
@@ -231,28 +248,29 @@
             // PlayersList
             // 
             this.PlayersList.FormattingEnabled = true;
-            this.PlayersList.ItemHeight = 16;
-            this.PlayersList.Location = new System.Drawing.Point(921, 298);
+            this.PlayersList.ItemHeight = 15;
+            this.PlayersList.Location = new System.Drawing.Point(10, 237);
             this.PlayersList.Name = "PlayersList";
-            this.PlayersList.Size = new System.Drawing.Size(159, 212);
+            this.PlayersList.Size = new System.Drawing.Size(140, 199);
             this.PlayersList.TabIndex = 32;
             this.PlayersList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(904, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 8);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(372, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(311, 173);
             this.dataGridView1.TabIndex = 34;
             // 
             // AddPlayer
             // 
-            this.AddPlayer.Location = new System.Drawing.Point(1122, 210);
+            this.AddPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddPlayer.Location = new System.Drawing.Point(204, 193);
             this.AddPlayer.Name = "AddPlayer";
-            this.AddPlayer.Size = new System.Drawing.Size(132, 25);
+            this.AddPlayer.Size = new System.Drawing.Size(116, 45);
             this.AddPlayer.TabIndex = 35;
             this.AddPlayer.Text = "Add Player";
             this.AddPlayer.UseVisualStyleBackColor = true;
@@ -260,32 +278,42 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(921, 213);
+            this.textBox1.Location = new System.Drawing.Point(189, 463);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(88, 23);
             this.textBox1.TabIndex = 36;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1122, 258);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(204, 258);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 28);
+            this.button1.Size = new System.Drawing.Size(116, 45);
             this.button1.TabIndex = 37;
             this.button1.Text = "Remove Player";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.AddPlayer);
+            this.panel1.Controls.Add(this.PlayersList);
+            this.panel1.Location = new System.Drawing.Point(902, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(329, 597);
+            this.panel1.TabIndex = 38;
+            // 
             // CreateTeam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 577);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.AddPlayer);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.PlayersList);
+            this.ClientSize = new System.Drawing.Size(1235, 613);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.MID4);
             this.Controls.Add(this.MID1);
             this.Controls.Add(this.ATT3);
@@ -302,6 +330,7 @@
             this.Controls.Add(this.MID2);
             this.Controls.Add(this.GK1);
             this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CreateTeam";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.CreateTeam_Load);
@@ -322,6 +351,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MID1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +381,6 @@
         private System.Windows.Forms.Button AddPlayer;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
