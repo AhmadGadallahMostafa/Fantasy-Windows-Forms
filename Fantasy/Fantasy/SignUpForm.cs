@@ -13,11 +13,11 @@ namespace Fantasy
     public partial class SignUpForm : Form
         
     {
-        Controller controlObj;
+        AccountController controlObj;
         public SignUpForm()
         {
             InitializeComponent();
-            controlObj = new Controller();
+            controlObj = new AccountController();
         }
         private Form activeForm = null;
 
@@ -70,7 +70,7 @@ namespace Fantasy
                         
                         label14.Visible = false;
 
-                       // openChildForm(new f(id));
+
                         
                     }
                     else 

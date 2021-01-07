@@ -19,11 +19,11 @@ namespace Fantasy
             player=2,
             journalist=3
         }
-        SignInController controlObj;
+        AccountController controlObj;
         public Sign_InForm()
         {
             InitializeComponent();
-            controlObj = new SignInController();
+            controlObj = new AccountController();
             
         }
 
@@ -65,6 +65,7 @@ namespace Fantasy
 
         private void button6_Click(object sender, EventArgs e)
         {
+            
             if (!Validations.ValidEmail(textBox1.Text))
             {
                 label4.Visible = true;
@@ -93,23 +94,44 @@ namespace Fantasy
             else 
             {
                 MessageBox.Show("login");
+
+                
+
                 label6.Visible = false;
             }
+         
 
             switch ((int)accountType)
             {
+
                 case (int)accountTypes.admin:
+
                     
-                    // admin view
+                    SignedIn_AsAdmin?.Invoke(this,textBox1.Text);
+                    this.Close();
+                     
+
                     break;
                 case (int)accountTypes.player:
+
+                    SignedIn_AsUser?.Invoke(this, controlObj.GetUserName(textBox1.Text));
+                    this.Close();
                     // player view
                     break;
                 case (int)accountTypes.journalist:
+
+                    SignedIn_AsJourn?.Invoke(this, controlObj.GetUserName(textBox1.Text));
+                    this.Close();
                     // journalist view : player view + add player profile + scout selection
                     break;
             }
-
+            
         }
+        public event EventHandler<string> SignedIn_AsAdmin;
+        public event EventHandler<string> SignedIn_AsUser;
+        public event EventHandler<string> SignedIn_AsJourn;
+
+
     }
+
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,36 +15,12 @@ namespace Fantasy
         {
             dbMan = new DBManager();
         }
-        public int SignUpUser(string email, DateTime dateOfBirth, string password, string gender) 
-        {
-            string sql = $"insert into Account values ('{email}','{dateOfBirth.ToShortDateString()}',2,'{password}','{gender}')";
-            return dbMan.ExecuteNonQuery(sql);
-        }
-        public bool UniqueUsername(string username) 
-        {
-            string sql = $"select Player_Username FROM Fantasy_Player_Team where Player_Username = '{username}'";
-            if (dbMan.ExecuteScalar(sql) == null)
-            {
-                return true;
-            }
-            else return false;
-        }
-        public int CreateFantasyTeam(string userName,string email,int age,ref int newId) 
-        {
-            Object count = dbMan.ExecuteScalar("SELECT count(Fantasy_Team_ID) FROM Fantasy_Player_Team");
 
-            newId =(int) count + 1;
-            
-            string sql = $"Insert into Fantasy_Player_Team  (Player_Username,Age,Email,Fantasy_Team_Id,Total_Value,Team_Funds,Total_Points,Total_Transfers,Overall_Rank)values('{userName}',{age},'{email}',{newId},0,100,0,1,{newId})";
-            return dbMan.ExecuteNonQuery(sql);
         
-        }
         public DataTable GetGK()
         {
             string query = "SELECt Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=0 ";
             return dbMan.ExecuteReader(query);
-
-
         }
 
         public DataTable GetDefender()
@@ -102,6 +78,21 @@ namespace Fantasy
             c = new Club(dbMan.ExecuteReader(query1),dbMan.ExecuteReader(query2));
             return c;
         }
-        
+
+
+        public int RemovePlayer(int TeamID, string LastName)
+        {
+            int NewFunds = GetTeamFunds(TeamID) + GetPrice(LastName);
+
+            string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int DeletePlayer(int TeamId, int PlayerId)
+        {
+            string query = "Delete FROM Plays_In_Fantasy_Team WHERE Player_ID=" + PlayerId + "AND Fantasy_Team_Id=" + TeamId + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
     }
 }

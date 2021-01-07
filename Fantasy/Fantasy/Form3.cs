@@ -20,7 +20,7 @@ namespace Fantasy
         string[] Team = new string[15];
         int FTID;
 
-        bool ButtonClicked = false;
+        string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/");
 
         public Form3(int FT)
         {
@@ -44,7 +44,7 @@ namespace Fantasy
         {
             string PlayerName = PlayersList.GetItemText(PlayersList.SelectedItem);
 
-            string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/");
+            
 
             if (C1.GetTeamFunds(FTID) > C1.GetPrice(PlayerName))
             {
@@ -354,6 +354,127 @@ namespace Fantasy
         private void Form3_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void GKBT1_Click(object sender, EventArgs e)
+        {
+            
+            GK1.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[0]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+            C1.DeletePlayer(FTID, C1.GetPlayerId(Team[0]));
+        }
+
+        private void GKBT2_Click(object sender, EventArgs e)
+        {
+            
+            GK2.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[1]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void DBT1_Click(object sender, EventArgs e)
+        {
+          
+            DEF1.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[2]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void DBT2_Click(object sender, EventArgs e)
+        {
+            
+            DEF2.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[3]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void DBT3_Click(object sender, EventArgs e)
+        {
+            
+            DEF3.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[4]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void DBT4_Click(object sender, EventArgs e)
+        {
+           
+            DEF4.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[5]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void DBT5_Click(object sender, EventArgs e)
+        {
+            
+            DEF5.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[6]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void MFBT1_Click(object sender, EventArgs e)
+        {
+            
+            MID1.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[7]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void MFBT2_Click(object sender, EventArgs e)
+        {
+            
+            MID2.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[8]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void MFBT3_Click(object sender, EventArgs e)
+        {
+            
+            MID3.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[9]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void MFBT4_Click(object sender, EventArgs e)
+        {
+            
+            MID4.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[10]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void MFBT5_Click(object sender, EventArgs e)
+        {
+            
+            MID5.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[11]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void SBT1_Click(object sender, EventArgs e)
+        {
+           
+            ATT1.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[12]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void SBT2_Click(object sender, EventArgs e)
+        {
+            
+            ATT2.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[13]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+        }
+
+        private void SBT3_Click(object sender, EventArgs e)
+        {
+            
+           ATT3.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[14]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
     }
 }
