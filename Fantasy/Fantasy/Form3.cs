@@ -362,6 +362,7 @@ namespace Fantasy
             GK1.Load(path + "download (1) (1).png");
             C1.RemovePlayer(FTID, Team[0]);
             textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+            C1.DeletePlayer(FTID, C1.GetPlayerId(Team[0]));
         }
 
         private void GKBT2_Click(object sender, EventArgs e)

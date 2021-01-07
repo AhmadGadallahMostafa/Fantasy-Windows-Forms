@@ -88,7 +88,11 @@ namespace Fantasy
             return dbMan.ExecuteNonQuery(query);
         }
 
-
+        public int DeletePlayer(int TeamId, int PlayerId)
+        {
+            string query = "Delete FROM Plays_In_Fantasy_Team WHERE Player_ID=" + PlayerId + "AND Fantasy_Team_Id=" + TeamId + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
     }
 }
