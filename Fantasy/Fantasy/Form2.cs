@@ -18,18 +18,29 @@ namespace Fantasy
         int FTID;
         string[] TeamChosen = new string[15];
         string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/");
-       
+        string[] Inplayers = new string[11];
+        string[] OutPlayers = new string[4];
 
 
-        public Form2(int FantasyTeamId,string [] Team)
+
+        public Form2(int FantasyTeamId, string[] Team)
         {
             InitializeComponent();
             FTID = FantasyTeamId;
             TeamChosen = Team;
-           
+            CustomizeDesign();
+
+            
 
 
 
+        }
+
+        private void CustomizeDesign()
+        {
+            panel2.Hide();
+            textBox1.Hide();
+            label1.Hide();
         }
 
 
@@ -66,6 +77,23 @@ namespace Fantasy
 
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Show();
+            label1.Show();
+        }
+
+        private void SignInButton_Click(object sender, EventArgs e)
+        {
+            panel2.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+           
         }
     }
 }
