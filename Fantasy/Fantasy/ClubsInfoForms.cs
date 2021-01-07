@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Fantasy
 {
@@ -23,12 +24,15 @@ namespace Fantasy
         {
             InitializeComponent();
             Club = c;
+           
         }
 
         private void ClubsInfoForms_Load(object sender, EventArgs e)
         {
 
-            string path = "C:/Users/ahmad/OneDrive/Desktop/Fantasy Windows Forms/Images/Clubs/";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/Clubs/");
+            
+
             ClubName.Text = Club.Name;
             clubPointsLabel.Text = Club.Points.ToString();
             ManagerLabel.Text = Club.ManagerName;
@@ -37,6 +41,7 @@ namespace Fantasy
             clubRankLabel.Text = Club.Rank.ToString();
             ClubPicture.Load(path + Club.Name + ".png");
         }
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -64,6 +69,11 @@ namespace Fantasy
         }
 
         private void ClubPicture_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
