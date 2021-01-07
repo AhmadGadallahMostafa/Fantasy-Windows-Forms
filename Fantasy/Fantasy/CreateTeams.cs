@@ -11,7 +11,7 @@ using System.IO;
 
 namespace Fantasy
 {
-    public partial class Form3 : Form
+    public partial class CreateTeams : Form
     {
 
         Controller C1 = new Controller();
@@ -22,7 +22,7 @@ namespace Fantasy
 
         string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/");
 
-        public Form3(int FT)
+        public CreateTeams(int FT)
         {
             InitializeComponent();
             FTID = FT;
@@ -479,7 +479,7 @@ namespace Fantasy
 
         private void Proceed_Click(object sender, EventArgs e)
         {
-            Form2 PLayerView = new Form2(FTID, Team);
+            PlayerView PLayerView = new PlayerView(FTID, Team);
             PLayerView.Show();
 
         }

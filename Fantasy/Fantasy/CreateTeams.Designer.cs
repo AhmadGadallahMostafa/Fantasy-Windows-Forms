@@ -1,7 +1,7 @@
 ﻿
 namespace Fantasy
 {
-    partial class Form3
+    partial class CreateTeams
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Fantasy
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateTeams));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GK2 = new System.Windows.Forms.PictureBox();
             this.GK1 = new System.Windows.Forms.PictureBox();

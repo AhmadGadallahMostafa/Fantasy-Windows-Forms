@@ -1,7 +1,7 @@
 ﻿
 namespace Fantasy
 {
-    partial class Form2
+    partial class PlayerView
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Fantasy
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerView));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();

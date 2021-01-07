@@ -12,7 +12,7 @@ using System.IO;
 
 namespace Fantasy
 {
-    public partial class Form2 : Form
+    public partial class PlayerView : Form
     {
 
         int FTID;
@@ -23,7 +23,7 @@ namespace Fantasy
 
 
 
-        public Form2(int FantasyTeamId, string[] Team)
+        public PlayerView(int FantasyTeamId, string[] Team)
         {
             InitializeComponent();
             FTID = FantasyTeamId;
