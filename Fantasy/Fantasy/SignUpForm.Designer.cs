@@ -73,30 +73,30 @@ namespace Fantasy
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 197);
+            this.label3.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(37, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 22);
+            this.label3.Size = new System.Drawing.Size(77, 21);
             this.label3.TabIndex = 15;
             this.label3.Text = "Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(34, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 22);
+            this.label2.Size = new System.Drawing.Size(81, 21);
             this.label2.TabIndex = 14;
             this.label2.Text = "Username";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(33, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 29);
+            this.label1.Size = new System.Drawing.Size(108, 36);
             this.label1.TabIndex = 13;
             this.label1.Text = "Sign Up";
             // 
@@ -105,6 +105,7 @@ namespace Fantasy
             this.SignUp.BackColor = System.Drawing.Color.MediumVioletRed;
             this.SignUp.FlatAppearance.BorderSize = 0;
             this.SignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SignUp.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp.ForeColor = System.Drawing.SystemColors.Control;
             this.SignUp.Location = new System.Drawing.Point(41, 482);
             this.SignUp.Name = "SignUp";
@@ -117,10 +118,10 @@ namespace Fantasy
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(34, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 22);
+            this.label4.Size = new System.Drawing.Size(48, 21);
             this.label4.TabIndex = 18;
             this.label4.Text = "Email";
             // 
@@ -135,10 +136,10 @@ namespace Fantasy
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(37, 266);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 22);
+            this.label5.Size = new System.Drawing.Size(137, 21);
             this.label5.TabIndex = 20;
             this.label5.Text = "Confirm Password";
             // 
@@ -153,9 +154,10 @@ namespace Fantasy
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(41, 376);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 17);
+            this.radioButton1.Size = new System.Drawing.Size(53, 19);
             this.radioButton1.TabIndex = 22;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Male";
@@ -164,9 +166,10 @@ namespace Fantasy
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(201, 376);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(98, 17);
+            this.radioButton2.Size = new System.Drawing.Size(105, 19);
             this.radioButton2.TabIndex = 23;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Rather Not Say";
@@ -175,19 +178,20 @@ namespace Fantasy
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(37, 340);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 22);
+            this.label6.Size = new System.Drawing.Size(61, 21);
             this.label6.TabIndex = 24;
             this.label6.Text = "Gender";
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.Location = new System.Drawing.Point(117, 376);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(59, 17);
+            this.radioButton3.Size = new System.Drawing.Size(64, 19);
             this.radioButton3.TabIndex = 25;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Female";
@@ -196,10 +200,10 @@ namespace Fantasy
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(37, 411);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 22);
+            this.label7.Size = new System.Drawing.Size(98, 21);
             this.label7.TabIndex = 26;
             this.label7.Text = "Date of Birth";
             // 
@@ -214,10 +218,11 @@ namespace Fantasy
             // 
             this.label8.AutoSize = true;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(275, 105);
+            this.label8.Location = new System.Drawing.Point(275, 104);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 13);
+            this.label8.Size = new System.Drawing.Size(171, 18);
             this.label8.TabIndex = 28;
             this.label8.Text = "Please enter a valid Email!";
             this.label8.Visible = false;
@@ -227,22 +232,25 @@ namespace Fantasy
             // 
             this.label9.AutoSize = true;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(275, 305);
+            this.label9.Location = new System.Drawing.Point(275, 302);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 13);
+            this.label9.Size = new System.Drawing.Size(164, 18);
             this.label9.TabIndex = 29;
             this.label9.Text = "Passwords Doesn\'t match";
             this.label9.Visible = false;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(275, 165);
+            this.label10.Location = new System.Drawing.Point(275, 164);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 13);
+            this.label10.Size = new System.Drawing.Size(138, 18);
             this.label10.TabIndex = 30;
             this.label10.Text = "Field can\'t be empty!";
             this.label10.Visible = false;
@@ -252,10 +260,11 @@ namespace Fantasy
             // 
             this.label11.AutoSize = true;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(275, 236);
+            this.label11.Location = new System.Drawing.Point(275, 233);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 13);
+            this.label11.Size = new System.Drawing.Size(138, 18);
             this.label11.TabIndex = 31;
             this.label11.Text = "Field can\'t be empty!";
             this.label11.Visible = false;
@@ -264,10 +273,11 @@ namespace Fantasy
             // 
             this.label13.AutoSize = true;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(305, 378);
+            this.label13.Location = new System.Drawing.Point(312, 376);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 13);
+            this.label13.Size = new System.Drawing.Size(70, 18);
             this.label13.TabIndex = 33;
             this.label13.Text = "Required!";
             this.label13.Visible = false;
@@ -276,7 +286,7 @@ namespace Fantasy
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Red;
             this.button3.Location = new System.Drawing.Point(833, 21);
             this.button3.Name = "button3";
@@ -324,7 +334,7 @@ namespace Fantasy
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(921, 615);
+            this.ClientSize = new System.Drawing.Size(1195, 798);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);

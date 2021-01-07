@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Fantasy
 {
@@ -42,29 +43,22 @@ namespace Fantasy
 
             string PlayerName = PlayersList.GetItemText(PlayersList.SelectedItem);
 
-            string path = "C:/Users/LEGION/Documents/GitHub/Fantasy-Windows-Forms";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/");
 
             if (C1.GetTeamFunds(FTID) > C1.GetPrice(PlayerName))
             {
 
                 if (ChosenPlayerNo == 0)
                 {
-                    GK1.Load(path + "/Images/" + PlayerName + ".png");
+                    GK1.Load(path  + PlayerName + ".png");
                     Team[0] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                    
                     C1.InsertPlayer(C1.GetPlayerId(PlayerName),FTID);
-
-
-                   
-
-
-
                 }
                 else if (ChosenPlayerNo == 1)
                 {
-                    GK2.Load(path + "/Images/" + PlayerName + ".png");
+                    GK2.Load(path + PlayerName + ".png");
                     Team[1] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -74,7 +68,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 2)
                 {
-                    DEF1.Load(path + "/Images/" + PlayerName + ".png");
+                    DEF1.Load(path + PlayerName + ".png");
                     Team[2] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -84,7 +78,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 3)
                 {
-                    DEF2.Load(path + "/Images/" + PlayerName + ".png");
+                    DEF2.Load(path  + PlayerName + ".png");
                     Team[3] = PlayersList.GetItemText(PlayersList.SelectedItem);
 
                     C1.BuyingFunction(FTID, PlayerName);
@@ -94,7 +88,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 4)
                 {
-                    DEF3.Load(path + "/Images/" + PlayerName + ".png");
+                    DEF3.Load(path  + PlayerName + ".png");
                     Team[4] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -103,7 +97,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 5)
                 {
-                    DEF4.Load(path + "/Images/" + PlayerName + ".png");
+                    DEF4.Load(path + PlayerName + ".png");
                     Team[5] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -112,7 +106,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 6)
                 {
-                    DEF5.Load(path + "/Images/" + PlayerName + ".png");
+                    DEF5.Load(path  + PlayerName + ".png");
                     Team[6] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -121,7 +115,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 7)
                 {
-                    MID0.Load(path + "/Images/" + PlayerName + ".png");
+                    MID0.Load(path  + PlayerName + ".png");
                     Team[7] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -130,7 +124,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 8)
                 {
-                    MID1.Load(path + "/Images/" + PlayerName + ".png");
+                    MID1.Load(path  + PlayerName + ".png");
                     Team[8] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -139,7 +133,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 9)
                 {
-                    MID2.Load(path + "/Images/" + PlayerName + ".png");
+                    MID2.Load(path  + PlayerName + ".png");
                     Team[9] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -148,7 +142,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 10)
                 {
-                    MID3.Load(path + "/Images/" + PlayerName + ".png");
+                    MID3.Load(path + PlayerName + ".png");
                     Team[10] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -157,7 +151,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 11)
                 {
-                    MID4.Load(path + "/Images/" + PlayerName + ".png");
+                    MID4.Load(path  + PlayerName + ".png");
                     Team[11] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -166,7 +160,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 12)
                 {
-                    ATT1.Load(path + "/Images/" + PlayerName + ".png");
+                    ATT1.Load(path  + PlayerName + ".png");
                     Team[12] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -175,7 +169,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 13)
                 {
-                    ATT2.Load(path + "/Images/" + PlayerName + ".png");
+                    ATT2.Load(path + PlayerName + ".png");
                     Team[13] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
@@ -184,7 +178,7 @@ namespace Fantasy
                 }
                 else if (ChosenPlayerNo == 14)
                 {
-                    ATT3.Load(path + "/Images/" + PlayerName + ".png");
+                    ATT3.Load(path  + PlayerName + ".png");
                     Team[14] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();

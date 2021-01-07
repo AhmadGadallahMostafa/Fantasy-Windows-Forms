@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateTeam));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GK1 = new System.Windows.Forms.PictureBox();
             this.MID2 = new System.Windows.Forms.PictureBox();
             this.MID3 = new System.Windows.Forms.PictureBox();
@@ -50,8 +48,6 @@
             this.AddPlayer = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID3)).BeginInit();
@@ -84,6 +80,10 @@
             // 
             this.GK1.Image = ((System.Drawing.Image)(resources.GetObject("GK1.Image")));
             this.GK1.Location = new System.Drawing.Point(44, 161);
+            // GK1
+            // 
+            this.GK1.Location = new System.Drawing.Point(38, 140);
+            this.GK1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GK1.Name = "GK1";
             this.GK1.Size = new System.Drawing.Size(60, 60);
             this.GK1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -334,7 +334,6 @@
             this.Name = "CreateTeam";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.CreateTeam_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MID3)).EndInit();
@@ -359,8 +358,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox GK1;
         private System.Windows.Forms.PictureBox MID2;
         private System.Windows.Forms.PictureBox MID3;

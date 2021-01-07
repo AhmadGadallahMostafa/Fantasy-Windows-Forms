@@ -30,8 +30,6 @@ namespace Fantasy
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
             this.childPanel = new System.Windows.Forms.Panel();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
@@ -66,7 +64,6 @@ namespace Fantasy
             this.SignInButton = new System.Windows.Forms.Button();
             this.TopPlayersButton = new System.Windows.Forms.Button();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1.SuspendLayout();
             this.childPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -94,30 +91,6 @@ namespace Fantasy
             this.panel1.SuspendLayout();
             this.SideMenuPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.OldLace;
-            this.flowLayoutPanel1.Controls.Add(this.button7);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(249, 714);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1195, 84);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button7.Location = new System.Drawing.Point(3, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "About";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // childPanel
             // 
@@ -147,7 +120,7 @@ namespace Fantasy
             this.childPanel.Controls.Add(this.label1);
             this.childPanel.Location = new System.Drawing.Point(249, 0);
             this.childPanel.Name = "childPanel";
-            this.childPanel.Size = new System.Drawing.Size(1195, 715);
+            this.childPanel.Size = new System.Drawing.Size(1195, 798);
             this.childPanel.TabIndex = 1;
             this.childPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.childPanel_Paint);
             this.childPanel.MouseHover += new System.EventHandler(this.childPanel_MouseHover);
@@ -155,9 +128,9 @@ namespace Fantasy
             // pictureBox22
             // 
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(0, 157);
+            this.pictureBox22.Location = new System.Drawing.Point(0, 167);
             this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(1195, 558);
+            this.pictureBox22.Size = new System.Drawing.Size(1202, 628);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox22.TabIndex = 43;
             this.pictureBox22.TabStop = false;
@@ -521,7 +494,6 @@ namespace Fantasy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1442, 796);
             this.Controls.Add(this.childPanel);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.SideMenuPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -529,7 +501,6 @@ namespace Fantasy
             this.Name = "Form1";
             this.Text = "Fantasy";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.childPanel.ResumeLayout(false);
             this.childPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
@@ -562,8 +533,6 @@ namespace Fantasy
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel childPanel;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -573,7 +542,6 @@ namespace Fantasy
         private System.Windows.Forms.Button ClubsButton;
         private System.Windows.Forms.Button SignInButton;
         private System.Windows.Forms.Panel SideMenuPanel;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button PlayersButton;
         private System.Windows.Forms.Button TopPlayersButton;
         private System.Windows.Forms.Label label1;

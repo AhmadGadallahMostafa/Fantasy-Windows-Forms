@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd5e0c28bc394c1d9c0490808a3d0f5c" Name="Diagram1">
+        <EntityTypeShape EntityType="FantasyModel.Account" Width="1.5" PointX="5.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Club" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Club_Fixtures" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Fantasy_League" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Fantasy_Player_Team" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Footballer" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Season" Width="1.5" PointX="1.5" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Transfered" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Unavailable_Player" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FantasyModel.Week" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="FantasyModel.FK__Club_Fixt__Guest__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.FK__Club_Fixt__Host___30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.FK__Footballe__Club___267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.FK__Club_Fixtures__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.FK__Transfere__Fanta__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.FK__Transfere__Playe__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.FK__Unavailable___ID__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.FK__Week__Season_Num__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.FK__Transfered__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.Comepteing_Leauges" ManuallyRouted="false" />
+        <AssociationConnector Association="FantasyModel.Plays_In_Fantasy_Team" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
