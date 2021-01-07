@@ -35,7 +35,6 @@ C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.ClubsForm.resources
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Form1.resources
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Form2.resources
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.HomeForm.resources
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Properties.Resources.resources
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Sign_InForm.resources
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.SignUpForm.resources
@@ -576,3 +575,5 @@ D:\gam3a\New folder (2)\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\EntityFr
 D:\gam3a\New folder (2)\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\EntityFramework.xml
 D:\gam3a\New folder (2)\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\EntityFramework.SqlServer.xml
 D:\gam3a\New folder (2)\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csproj.CopyComplete
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\download (1) (1).png
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.FixturesForm.resources
