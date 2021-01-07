@@ -53,14 +53,7 @@ namespace Fantasy
                     Team[0] = PlayersList.GetItemText(PlayersList.SelectedItem);
                     C1.BuyingFunction(FTID, PlayerName);
                     textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                    
                     C1.InsertPlayer(C1.GetPlayerId(PlayerName),FTID);
-
-
-                   
-
-
-
                 }
                 else if (ChosenPlayerNo == 1)
                 {

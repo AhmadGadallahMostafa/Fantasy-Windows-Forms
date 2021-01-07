@@ -31,45 +31,45 @@ namespace Fantasy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClubsForm));
             this.Arsenal = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Everton = new System.Windows.Forms.PictureBox();
+            this.crystal = new System.Windows.Forms.PictureBox();
             this.Chelsea = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.Burnely = new System.Windows.Forms.PictureBox();
+            this.Brighton = new System.Windows.Forms.PictureBox();
             this.AstonVilla = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Fulham = new System.Windows.Forms.PictureBox();
+            this.Leeds = new System.Windows.Forms.PictureBox();
             this.Liverpool = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.LeicesterCity = new System.Windows.Forms.PictureBox();
             this.mancity = new System.Windows.Forms.PictureBox();
             this.ManchesterUnited = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.Southampton = new System.Windows.Forms.PictureBox();
+            this.Sheffield = new System.Windows.Forms.PictureBox();
+            this.NewCastle = new System.Windows.Forms.PictureBox();
             this.Spurs = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.Wolves = new System.Windows.Forms.PictureBox();
+            this.WestHam = new System.Windows.Forms.PictureBox();
+            this.WestBromich = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Arsenal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Everton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crystal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chelsea)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Burnely)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Brighton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AstonVilla)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fulham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Leeds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Liverpool)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeicesterCity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mancity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManchesterUnited)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Southampton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sheffield)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewCastle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spurs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wolves)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WestHam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WestBromich)).BeginInit();
             this.SuspendLayout();
             // 
             // Arsenal
@@ -85,27 +85,31 @@ namespace Fantasy
             this.Arsenal.TabStop = false;
             this.Arsenal.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // Everton
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(365, 211);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.Everton.AccessibleName = "Everton";
+            this.Everton.BackColor = System.Drawing.Color.Transparent;
+            this.Everton.Image = ((System.Drawing.Image)(resources.GetObject("Everton.Image")));
+            this.Everton.Location = new System.Drawing.Point(365, 211);
+            this.Everton.Name = "Everton";
+            this.Everton.Size = new System.Drawing.Size(129, 128);
+            this.Everton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Everton.TabIndex = 3;
+            this.Everton.TabStop = false;
+            this.Everton.Click += new System.EventHandler(this.Everton_Click);
             // 
-            // pictureBox3
+            // crystal
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(205, 211);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.crystal.AccessibleName = "Crystal Palace";
+            this.crystal.BackColor = System.Drawing.Color.Transparent;
+            this.crystal.Image = ((System.Drawing.Image)(resources.GetObject("crystal.Image")));
+            this.crystal.Location = new System.Drawing.Point(205, 211);
+            this.crystal.Name = "crystal";
+            this.crystal.Size = new System.Drawing.Size(129, 128);
+            this.crystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.crystal.TabIndex = 4;
+            this.crystal.TabStop = false;
+            this.crystal.Click += new System.EventHandler(this.crystal_Click);
             // 
             // Chelsea
             // 
@@ -120,30 +124,35 @@ namespace Fantasy
             this.Chelsea.TabStop = false;
             this.Chelsea.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // pictureBox5
+            // Burnely
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(680, 56);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
+            this.Burnely.AccessibleName = "Burnely";
+            this.Burnely.BackColor = System.Drawing.Color.Transparent;
+            this.Burnely.Image = ((System.Drawing.Image)(resources.GetObject("Burnely.Image")));
+            this.Burnely.Location = new System.Drawing.Point(680, 56);
+            this.Burnely.Name = "Burnely";
+            this.Burnely.Size = new System.Drawing.Size(129, 128);
+            this.Burnely.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Burnely.TabIndex = 6;
+            this.Burnely.TabStop = false;
+            this.Burnely.Click += new System.EventHandler(this.Burnely_Click);
             // 
-            // pictureBox6
+            // Brighton
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(525, 56);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
+            this.Brighton.AccessibleName = "Brighton";
+            this.Brighton.BackColor = System.Drawing.Color.Transparent;
+            this.Brighton.Image = ((System.Drawing.Image)(resources.GetObject("Brighton.Image")));
+            this.Brighton.Location = new System.Drawing.Point(525, 56);
+            this.Brighton.Name = "Brighton";
+            this.Brighton.Size = new System.Drawing.Size(129, 128);
+            this.Brighton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Brighton.TabIndex = 7;
+            this.Brighton.TabStop = false;
+            this.Brighton.Click += new System.EventHandler(this.Brighton_Click);
             // 
             // AstonVilla
             // 
+            this.AstonVilla.AccessibleName = "Aston Villa";
             this.AstonVilla.BackColor = System.Drawing.Color.Transparent;
             this.AstonVilla.Image = ((System.Drawing.Image)(resources.GetObject("AstonVilla.Image")));
             this.AstonVilla.Location = new System.Drawing.Point(365, 56);
@@ -152,28 +161,33 @@ namespace Fantasy
             this.AstonVilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AstonVilla.TabIndex = 8;
             this.AstonVilla.TabStop = false;
+            this.AstonVilla.Click += new System.EventHandler(this.AstonVilla_Click);
             // 
-            // pictureBox8
+            // Fulham
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(525, 211);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 9;
-            this.pictureBox8.TabStop = false;
+            this.Fulham.AccessibleName = "Fulham";
+            this.Fulham.BackColor = System.Drawing.Color.Transparent;
+            this.Fulham.Image = ((System.Drawing.Image)(resources.GetObject("Fulham.Image")));
+            this.Fulham.Location = new System.Drawing.Point(525, 211);
+            this.Fulham.Name = "Fulham";
+            this.Fulham.Size = new System.Drawing.Size(129, 128);
+            this.Fulham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Fulham.TabIndex = 9;
+            this.Fulham.TabStop = false;
+            this.Fulham.Click += new System.EventHandler(this.Fulham_Click);
             // 
-            // pictureBox9
+            // Leeds
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(680, 211);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 10;
-            this.pictureBox9.TabStop = false;
+            this.Leeds.AccessibleName = "Leeds United";
+            this.Leeds.BackColor = System.Drawing.Color.Transparent;
+            this.Leeds.Image = ((System.Drawing.Image)(resources.GetObject("Leeds.Image")));
+            this.Leeds.Location = new System.Drawing.Point(680, 211);
+            this.Leeds.Name = "Leeds";
+            this.Leeds.Size = new System.Drawing.Size(129, 128);
+            this.Leeds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Leeds.TabIndex = 10;
+            this.Leeds.TabStop = false;
+            this.Leeds.Click += new System.EventHandler(this.Leeds_Click);
             // 
             // Liverpool
             // 
@@ -188,16 +202,18 @@ namespace Fantasy
             this.Liverpool.TabStop = false;
             this.Liverpool.Click += new System.EventHandler(this.Liverpool_Click);
             // 
-            // pictureBox11
+            // LeicesterCity
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(832, 211);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 12;
-            this.pictureBox11.TabStop = false;
+            this.LeicesterCity.AccessibleName = "Leicester City";
+            this.LeicesterCity.BackColor = System.Drawing.Color.Transparent;
+            this.LeicesterCity.Image = ((System.Drawing.Image)(resources.GetObject("LeicesterCity.Image")));
+            this.LeicesterCity.Location = new System.Drawing.Point(832, 211);
+            this.LeicesterCity.Name = "LeicesterCity";
+            this.LeicesterCity.Size = new System.Drawing.Size(129, 128);
+            this.LeicesterCity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LeicesterCity.TabIndex = 12;
+            this.LeicesterCity.TabStop = false;
+            this.LeicesterCity.Click += new System.EventHandler(this.LeicesterCity_Click);
             // 
             // mancity
             // 
@@ -225,39 +241,44 @@ namespace Fantasy
             this.ManchesterUnited.TabStop = false;
             this.ManchesterUnited.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
-            // pictureBox14
+            // Southampton
             // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(205, 521);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 15;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            this.Southampton.AccessibleName = "Southampton";
+            this.Southampton.BackColor = System.Drawing.Color.Transparent;
+            this.Southampton.Image = ((System.Drawing.Image)(resources.GetObject("Southampton.Image")));
+            this.Southampton.Location = new System.Drawing.Point(205, 521);
+            this.Southampton.Name = "Southampton";
+            this.Southampton.Size = new System.Drawing.Size(129, 128);
+            this.Southampton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Southampton.TabIndex = 15;
+            this.Southampton.TabStop = false;
+            this.Southampton.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
-            // pictureBox15
+            // Sheffield
             // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(832, 366);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 16;
-            this.pictureBox15.TabStop = false;
+            this.Sheffield.AccessibleName = "Sheffield";
+            this.Sheffield.BackColor = System.Drawing.Color.Transparent;
+            this.Sheffield.Image = ((System.Drawing.Image)(resources.GetObject("Sheffield.Image")));
+            this.Sheffield.Location = new System.Drawing.Point(832, 366);
+            this.Sheffield.Name = "Sheffield";
+            this.Sheffield.Size = new System.Drawing.Size(129, 128);
+            this.Sheffield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Sheffield.TabIndex = 16;
+            this.Sheffield.TabStop = false;
+            this.Sheffield.Click += new System.EventHandler(this.Sheffield_Click);
             // 
-            // pictureBox16
+            // NewCastle
             // 
-            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(680, 366);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 17;
-            this.pictureBox16.TabStop = false;
+            this.NewCastle.AccessibleName = "Newcastle United";
+            this.NewCastle.BackColor = System.Drawing.Color.Transparent;
+            this.NewCastle.Image = ((System.Drawing.Image)(resources.GetObject("NewCastle.Image")));
+            this.NewCastle.Location = new System.Drawing.Point(680, 366);
+            this.NewCastle.Name = "NewCastle";
+            this.NewCastle.Size = new System.Drawing.Size(129, 128);
+            this.NewCastle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.NewCastle.TabIndex = 17;
+            this.NewCastle.TabStop = false;
+            this.NewCastle.Click += new System.EventHandler(this.NewCastle_Click);
             // 
             // Spurs
             // 
@@ -272,38 +293,44 @@ namespace Fantasy
             this.Spurs.TabStop = false;
             this.Spurs.Click += new System.EventHandler(this.pictureBox17_Click);
             // 
-            // pictureBox18
+            // Wolves
             // 
-            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(832, 521);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 19;
-            this.pictureBox18.TabStop = false;
+            this.Wolves.AccessibleName = "Wolves";
+            this.Wolves.BackColor = System.Drawing.Color.Transparent;
+            this.Wolves.Image = ((System.Drawing.Image)(resources.GetObject("Wolves.Image")));
+            this.Wolves.Location = new System.Drawing.Point(832, 521);
+            this.Wolves.Name = "Wolves";
+            this.Wolves.Size = new System.Drawing.Size(129, 128);
+            this.Wolves.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Wolves.TabIndex = 19;
+            this.Wolves.TabStop = false;
+            this.Wolves.Click += new System.EventHandler(this.Wolves_Click);
             // 
-            // pictureBox19
+            // WestHam
             // 
-            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(680, 521);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 20;
-            this.pictureBox19.TabStop = false;
+            this.WestHam.AccessibleName = "West Ham";
+            this.WestHam.BackColor = System.Drawing.Color.Transparent;
+            this.WestHam.Image = ((System.Drawing.Image)(resources.GetObject("WestHam.Image")));
+            this.WestHam.Location = new System.Drawing.Point(680, 521);
+            this.WestHam.Name = "WestHam";
+            this.WestHam.Size = new System.Drawing.Size(129, 128);
+            this.WestHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.WestHam.TabIndex = 20;
+            this.WestHam.TabStop = false;
+            this.WestHam.Click += new System.EventHandler(this.WestHam_Click);
             // 
-            // pictureBox20
+            // WestBromich
             // 
-            this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(525, 521);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(129, 128);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 21;
-            this.pictureBox20.TabStop = false;
+            this.WestBromich.AccessibleName = "West Bromich";
+            this.WestBromich.BackColor = System.Drawing.Color.Transparent;
+            this.WestBromich.Image = ((System.Drawing.Image)(resources.GetObject("WestBromich.Image")));
+            this.WestBromich.Location = new System.Drawing.Point(525, 521);
+            this.WestBromich.Name = "WestBromich";
+            this.WestBromich.Size = new System.Drawing.Size(129, 128);
+            this.WestBromich.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.WestBromich.TabIndex = 21;
+            this.WestBromich.TabStop = false;
+            this.WestBromich.Click += new System.EventHandler(this.WestBromich_Click);
             // 
             // ClubsForm
             // 
@@ -312,25 +339,25 @@ namespace Fantasy
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1195, 798);
-            this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.pictureBox19);
-            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.WestBromich);
+            this.Controls.Add(this.WestHam);
+            this.Controls.Add(this.Wolves);
             this.Controls.Add(this.Spurs);
-            this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.NewCastle);
+            this.Controls.Add(this.Sheffield);
+            this.Controls.Add(this.Southampton);
             this.Controls.Add(this.ManchesterUnited);
             this.Controls.Add(this.mancity);
-            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.LeicesterCity);
             this.Controls.Add(this.Liverpool);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.Leeds);
+            this.Controls.Add(this.Fulham);
             this.Controls.Add(this.AstonVilla);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.Brighton);
+            this.Controls.Add(this.Burnely);
             this.Controls.Add(this.Chelsea);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.crystal);
+            this.Controls.Add(this.Everton);
             this.Controls.Add(this.Arsenal);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.LightSkyBlue;
@@ -339,49 +366,49 @@ namespace Fantasy
             this.Text = "ClubsForm";
             this.Load += new System.EventHandler(this.ClubsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Arsenal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Everton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crystal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chelsea)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Burnely)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Brighton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AstonVilla)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fulham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Leeds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Liverpool)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeicesterCity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mancity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManchesterUnited)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Southampton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sheffield)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewCastle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spurs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wolves)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WestHam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WestBromich)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox Arsenal;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox Everton;
+        private System.Windows.Forms.PictureBox crystal;
         private System.Windows.Forms.PictureBox Chelsea;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox Burnely;
+        private System.Windows.Forms.PictureBox Brighton;
         private System.Windows.Forms.PictureBox AstonVilla;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox Fulham;
+        private System.Windows.Forms.PictureBox Leeds;
         private System.Windows.Forms.PictureBox Liverpool;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox LeicesterCity;
         private System.Windows.Forms.PictureBox mancity;
         private System.Windows.Forms.PictureBox ManchesterUnited;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox Southampton;
+        private System.Windows.Forms.PictureBox Sheffield;
+        private System.Windows.Forms.PictureBox NewCastle;
         private System.Windows.Forms.PictureBox Spurs;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox Wolves;
+        private System.Windows.Forms.PictureBox WestHam;
+        private System.Windows.Forms.PictureBox WestBromich;
     }
 }
