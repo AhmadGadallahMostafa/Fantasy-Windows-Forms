@@ -32,7 +32,13 @@ namespace Fantasy
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerView));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.SignedInAs = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SignInButton = new System.Windows.Forms.Button();
@@ -65,14 +71,10 @@ namespace Fantasy
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SideMenuPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -91,7 +93,6 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.ATT2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ATT1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK2)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -111,6 +112,7 @@ namespace Fantasy
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SideMenuPanel.AutoScroll = true;
             this.SideMenuPanel.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.SideMenuPanel.Controls.Add(this.button15);
             this.SideMenuPanel.Controls.Add(this.label1);
             this.SideMenuPanel.Controls.Add(this.textBox1);
             this.SideMenuPanel.Controls.Add(this.label3);
@@ -124,6 +126,23 @@ namespace Fantasy
             this.SideMenuPanel.Size = new System.Drawing.Size(368, 795);
             this.SideMenuPanel.TabIndex = 31;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 685);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 29);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Enter League ID";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(14, 717);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(199, 27);
+            this.textBox1.TabIndex = 3;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -132,6 +151,60 @@ namespace Fantasy
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 21);
             this.label3.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button14);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button16);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 251);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(368, 138);
+            this.panel2.TabIndex = 3;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Purple;
+            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button14.Location = new System.Drawing.Point(0, 90);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(368, 45);
+            this.button14.TabIndex = 4;
+            this.button14.Text = "My Leagues";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Purple;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(0, 45);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(368, 45);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Join League";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.Purple;
+            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button16.Location = new System.Drawing.Point(0, 0);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(368, 45);
+            this.button16.TabIndex = 3;
+            this.button16.Text = "Create League";
+            this.button16.UseVisualStyleBackColor = false;
             // 
             // SignedInAs
             // 
@@ -432,78 +505,18 @@ namespace Fantasy
             this.button13.TabIndex = 60;
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // button15
             // 
-            this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button16);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 251);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(368, 138);
-            this.panel2.TabIndex = 3;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Location = new System.Drawing.Point(239, 716);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(102, 27);
+            this.button15.TabIndex = 61;
+            this.button15.Text = "Join";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Purple;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(0, 45);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(368, 45);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Join League";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.Purple;
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button16.Location = new System.Drawing.Point(0, 0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(368, 45);
-            this.button16.TabIndex = 3;
-            this.button16.Text = "Create League";
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Purple;
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button14.Location = new System.Drawing.Point(0, 90);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(368, 45);
-            this.button14.TabIndex = 4;
-            this.button14.Text = "My Leagues";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(14, 717);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 27);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 685);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 29);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Enter League ID";
-            // 
-            // Form2
+            // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -538,12 +551,13 @@ namespace Fantasy
             this.Controls.Add(this.SideMenuPanel);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form2";
+            this.Name = "PlayerView";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SideMenuPanel.ResumeLayout(false);
             this.SideMenuPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -562,7 +576,6 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.ATT2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ATT1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK2)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -610,5 +623,6 @@ namespace Fantasy
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button15;
     }
 }

@@ -26,19 +26,15 @@ namespace Fantasy
         {
             InitializeComponent();
             FTID = FT;
+           
         }
-
-        private void GK1_Click(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetGK();
-
-            DataTable dt = C1.GetGK();
-            PlayersList.DataSource = dt;
-            PlayersList.DisplayMember = "Last_Name";
-
-            ChosenPlayerNo = 0;
-
+            C1.SetFunds(FTID);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
+
+       
 
         private void AddPlayer_Click(object sender, EventArgs e)
         {
@@ -192,7 +188,17 @@ namespace Fantasy
                 MessageBox.Show("you dont have enough money");
             }
         }
+        private void GK1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetGK();
 
+            DataTable dt = C1.GetGK();
+            PlayersList.DataSource = dt;
+            PlayersList.DisplayMember = "Last_Name";
+
+            ChosenPlayerNo = 0;
+
+        }
         private void GK2_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = C1.GetGK();
@@ -351,10 +357,7 @@ namespace Fantasy
             ChosenPlayerNo = 14;
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void GKBT1_Click(object sender, EventArgs e)
         {
@@ -481,6 +484,8 @@ namespace Fantasy
         {
             PlayerView PLayerView = new PlayerView(FTID, Team);
             PLayerView.Show();
+            string TeamName = textBox2.Text;
+            C1.SetTeamName(FTID,TeamName);
 
         }
     }

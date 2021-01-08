@@ -299,7 +299,6 @@ C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\EntityFramework.xml
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.ClubsInfoForms.resources
-C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Form3.resources
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.csproj.CopyComplete
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Pitch.png
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Clubs\Pitch(1).png
@@ -579,3 +578,7 @@ C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.TablesForm.resources
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\download (1) (1).png
 C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.FixturesForm.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.PlayerView.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.CreateTeams.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.PlayersForm.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.TablesForm.resources

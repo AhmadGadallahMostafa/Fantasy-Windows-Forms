@@ -14,6 +14,7 @@ namespace Fantasy
 {
     public partial class PlayerView : Form
     {
+        Controller C1 = new Controller();
 
         int FTID;
         string[] TeamChosen = new string[15];
@@ -41,6 +42,7 @@ namespace Fantasy
             panel2.Hide();
             textBox1.Hide();
             label1.Hide();
+            button15.Hide();
         }
 
 
@@ -83,6 +85,7 @@ namespace Fantasy
         {
             textBox1.Show();
             label1.Show();
+            button15.Show();
         }
 
         private void SignInButton_Click(object sender, EventArgs e)
@@ -94,6 +97,13 @@ namespace Fantasy
         {
 
            
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            int LeagueID=Int32.Parse(textBox1.Text);
+
+            C1.JoinLeague(FTID, LeagueID);
         }
     }
 }

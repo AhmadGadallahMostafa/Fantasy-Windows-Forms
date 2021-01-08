@@ -104,7 +104,7 @@ namespace Fantasy
         {
             int LeagueId = GetLeaguesCount() + 1;
             string query = "INSERT INTO Fantasy_League (League_Id,League_Name) Values(" + LeagueId + "," + LeagueName + ");";
-            return (int)dbMan.ExecuteScalar(query);
+            return dbMan.ExecuteNonQuery(query);
         }
 
         public DataTable GetFixturesByWeek(int weekNumber)
@@ -137,6 +137,31 @@ namespace Fantasy
             string query = "Select Club_Rank, Club_Name,Club_Points,Total_Goals,Goals_Against From Club order by club_rank asc";
             return dbMan.ExecuteReader(query);
         }
+        public int SetFunds(int FTID)
+        {
+            string query = "UPDATE Fantasy_Player_Team SET Team_Funds=100 WHERE Fantasy_Team_Id=" + FTID + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int SetTeamName(int FTID, String FTName)
+        {
+            string query = "UPDATE Fantasy_Player_Team SET Team_Name='" + FTName + "'WHERE Fantasy_Team_Id=" + FTID + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int UpdateTotalPlayers(int LeagueId)
+        {
+            string query = "UPDATE Fantasy_League SET Total_Players=Total_Players+1 WHERE League_Id=" + LeagueId + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int JoinLeague(int FTID, int LeagueId)
+        {
+            UpdateTotalPlayers(LeagueId);
 
+            string query = "INSERT INTO Comepteing_Leauges Values(" + FTID + "," + LeagueId + ");";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+
+
+        
     }
 }
