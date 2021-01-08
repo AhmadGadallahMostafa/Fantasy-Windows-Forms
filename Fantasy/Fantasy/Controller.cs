@@ -93,6 +93,19 @@ namespace Fantasy
             string query = "Delete FROM Plays_In_Fantasy_Team WHERE Player_ID=" + PlayerId + "AND Fantasy_Team_Id=" + TeamId + ";";
             return dbMan.ExecuteNonQuery(query);
         }
+        public int GetLeaguesCount()
+        {
+            string query = "COUNT(*) FROM Fantasy_League";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+
+        public int InsertLeague(String LeagueName)
+        {
+            int LeagueId = GetLeaguesCount() + 1;
+            string query = "INSERT INTO Fantasy_League (League_Id,League_Name) Values(" + LeagueId + "," + LeagueName + ");";
+            return (int)dbMan.ExecuteScalar(query);
+        }
 
         public DataTable GetFixturesByWeek(int weekNumber)
         {
