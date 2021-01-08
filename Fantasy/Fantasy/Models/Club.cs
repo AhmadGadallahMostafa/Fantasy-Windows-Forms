@@ -21,6 +21,7 @@ namespace Fantasy
 
         public String FoundationDate { get; set; }
         public List<Footballer> Footballers { get; set; }
+        public bool InFpl { set; get; }  
 
         public Club(DataTable d)
         {
@@ -34,6 +35,7 @@ namespace Fantasy
             StadiumName = row.Field<string>("Stadium_Name");
             ManagerName = row.Field<string>("ManagerName");
             FoundationDate = row.Field<string>("FoundationDate");
+            InFpl = row.Field<bool>("inFpl");
         }
         public Club(DataTable d, DataTable p )
         {
@@ -57,6 +59,7 @@ namespace Fantasy
                                Last_Name = dr["Last_Name"].ToString(),
                                Poisition = Convert.ToInt32(dr["Poisition"]),
                            }).ToList();
+        public Club() { }
 
         }
     }
