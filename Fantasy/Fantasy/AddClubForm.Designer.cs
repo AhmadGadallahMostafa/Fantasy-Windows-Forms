@@ -47,26 +47,30 @@ namespace Fantasy
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.NameField = new System.Windows.Forms.Label();
+            this.StadField = new System.Windows.Forms.Label();
+            this.ManagerField = new System.Windows.Forms.Label();
+            this.UrlField = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(696, 284);
+            this.textBox3.Location = new System.Drawing.Point(618, 284);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(170, 20);
             this.textBox3.TabIndex = 2;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(696, 203);
+            this.textBox4.Location = new System.Drawing.Point(618, 203);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(170, 20);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(696, 129);
+            this.textBox5.Location = new System.Drawing.Point(618, 129);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(170, 20);
             this.textBox5.TabIndex = 4;
@@ -76,7 +80,7 @@ namespace Fantasy
             this.ClubName.AutoSize = true;
             this.ClubName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClubName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClubName.Location = new System.Drawing.Point(696, 93);
+            this.ClubName.Location = new System.Drawing.Point(618, 93);
             this.ClubName.Name = "ClubName";
             this.ClubName.Size = new System.Drawing.Size(93, 23);
             this.ClubName.TabIndex = 10;
@@ -88,7 +92,7 @@ namespace Fantasy
             this.StadName.AutoSize = true;
             this.StadName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StadName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.StadName.Location = new System.Drawing.Point(696, 168);
+            this.StadName.Location = new System.Drawing.Point(618, 168);
             this.StadName.Name = "StadName";
             this.StadName.Size = new System.Drawing.Size(122, 23);
             this.StadName.TabIndex = 11;
@@ -99,7 +103,7 @@ namespace Fantasy
             this.ManagerName.AutoSize = true;
             this.ManagerName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManagerName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ManagerName.Location = new System.Drawing.Point(696, 245);
+            this.ManagerName.Location = new System.Drawing.Point(618, 245);
             this.ManagerName.Name = "ManagerName";
             this.ManagerName.Size = new System.Drawing.Size(140, 23);
             this.ManagerName.TabIndex = 12;
@@ -110,7 +114,7 @@ namespace Fantasy
             this.FoundationDate.AutoSize = true;
             this.FoundationDate.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FoundationDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.FoundationDate.Location = new System.Drawing.Point(696, 329);
+            this.FoundationDate.Location = new System.Drawing.Point(618, 329);
             this.FoundationDate.Name = "FoundationDate";
             this.FoundationDate.Size = new System.Drawing.Size(148, 23);
             this.FoundationDate.TabIndex = 13;
@@ -118,7 +122,7 @@ namespace Fantasy
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(696, 365);
+            this.dateTimePicker1.Location = new System.Drawing.Point(618, 365);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 14;
@@ -130,7 +134,7 @@ namespace Fantasy
             this.AddClub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddClub.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddClub.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddClub.Location = new System.Drawing.Point(746, 555);
+            this.AddClub.Location = new System.Drawing.Point(668, 555);
             this.AddClub.Name = "AddClub";
             this.AddClub.Size = new System.Drawing.Size(124, 40);
             this.AddClub.TabIndex = 15;
@@ -145,7 +149,7 @@ namespace Fantasy
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(700, 485);
+            this.button1.Location = new System.Drawing.Point(636, 489);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 40);
             this.button1.TabIndex = 16;
@@ -164,7 +168,7 @@ namespace Fantasy
             // 
             // URLb
             // 
-            this.URLb.Location = new System.Drawing.Point(696, 446);
+            this.URLb.Location = new System.Drawing.Point(618, 446);
             this.URLb.Name = "URLb";
             this.URLb.Size = new System.Drawing.Size(256, 20);
             this.URLb.TabIndex = 18;
@@ -174,7 +178,7 @@ namespace Fantasy
             this.URL.AutoSize = true;
             this.URL.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.URL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.URL.Location = new System.Drawing.Point(696, 411);
+            this.URL.Location = new System.Drawing.Point(618, 411);
             this.URL.Name = "URL";
             this.URL.Size = new System.Drawing.Size(81, 23);
             this.URL.TabIndex = 19;
@@ -241,12 +245,60 @@ namespace Fantasy
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // NameField
+            // 
+            this.NameField.AutoSize = true;
+            this.NameField.ForeColor = System.Drawing.Color.Red;
+            this.NameField.Location = new System.Drawing.Point(794, 137);
+            this.NameField.Name = "NameField";
+            this.NameField.Size = new System.Drawing.Size(101, 13);
+            this.NameField.TabIndex = 42;
+            this.NameField.Text = "Field can\'t be empty";
+            this.NameField.Visible = false;
+            // 
+            // StadField
+            // 
+            this.StadField.AutoSize = true;
+            this.StadField.ForeColor = System.Drawing.Color.Red;
+            this.StadField.Location = new System.Drawing.Point(794, 206);
+            this.StadField.Name = "StadField";
+            this.StadField.Size = new System.Drawing.Size(101, 13);
+            this.StadField.TabIndex = 43;
+            this.StadField.Text = "Field can\'t be empty";
+            this.StadField.Visible = false;
+            // 
+            // ManagerField
+            // 
+            this.ManagerField.AutoSize = true;
+            this.ManagerField.ForeColor = System.Drawing.Color.Red;
+            this.ManagerField.Location = new System.Drawing.Point(794, 284);
+            this.ManagerField.Name = "ManagerField";
+            this.ManagerField.Size = new System.Drawing.Size(101, 13);
+            this.ManagerField.TabIndex = 44;
+            this.ManagerField.Text = "Field can\'t be empty";
+            this.ManagerField.Visible = false;
+            // 
+            // UrlField
+            // 
+            this.UrlField.AutoSize = true;
+            this.UrlField.ForeColor = System.Drawing.Color.Red;
+            this.UrlField.Location = new System.Drawing.Point(880, 449);
+            this.UrlField.Name = "UrlField";
+            this.UrlField.Size = new System.Drawing.Size(101, 13);
+            this.UrlField.TabIndex = 45;
+            this.UrlField.Text = "Field can\'t be empty";
+            this.UrlField.Visible = false;
+            // 
             // AddClubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1195, 798);
+            this.Controls.Add(this.UrlField);
+            this.Controls.Add(this.ManagerField);
+            this.Controls.Add(this.StadField);
+            this.Controls.Add(this.NameField);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -294,5 +346,9 @@ namespace Fantasy
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label NameField;
+        private System.Windows.Forms.Label StadField;
+        private System.Windows.Forms.Label ManagerField;
+        private System.Windows.Forms.Label UrlField;
     }
 }

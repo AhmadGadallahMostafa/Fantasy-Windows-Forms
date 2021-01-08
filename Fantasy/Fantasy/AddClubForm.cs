@@ -32,8 +32,18 @@ namespace Fantasy
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (Validations.EmptyInputField(URLb.Text))
+            {
+                UrlField.Visible = true;
+                return;
+            }
+            else
+            {
+                UrlField.Visible = false;
+            }
             using (WebClient client = new WebClient())
             {
+
                 client.DownloadFile(new Uri(URLb.Text), Path.Combine(Directory.GetCurrentDirectory(), $@"Images/Clubs/{textBox5.Text}.png"));
              
             }
@@ -57,6 +67,46 @@ namespace Fantasy
 
         private void AddClub_Click(object sender, EventArgs e)
         {
+
+            if (Validations.EmptyInputField(textBox5.Text))
+            {
+                NameField.Visible = true;
+                return;
+            }
+            else
+            {
+                NameField.Visible = false;
+            }
+
+            if (Validations.EmptyInputField(textBox4.Text))
+            {
+                StadField.Visible = true;
+                return;
+            }
+            else
+            {
+                StadField.Visible = false;
+            }
+
+            if (Validations.EmptyInputField(textBox3.Text))
+            {
+                ManagerField.Visible = true;
+                return;
+            }
+            else
+            {
+                ManagerField.Visible = false;
+            }
+
+            if (Validations.EmptyInputField(URLb.Text))
+            {
+                UrlField.Visible = true;
+            }
+            else
+            {
+                UrlField.Visible = false;
+            }
+
             Club club = new Club
             {
                 Name = textBox5.Text,
@@ -71,7 +121,7 @@ namespace Fantasy
             if (controlObj.InsertClub(club) != 0)
             {
                 AddedClub?.Invoke(this, club.Name);
-                this.Close();
+                
 
                //MessageBox.Show("added"); 
             }

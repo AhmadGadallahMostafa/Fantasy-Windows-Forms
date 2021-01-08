@@ -87,7 +87,7 @@ namespace Fantasy
         {
             int ClubId = LastClubID() + 1;
             int ClubRank = ClubId;
-            string query = $"Insert into Club values({ClubId},{ClubRank},'{clubToAdd.Name}',0,0,0,'{clubToAdd.StadiumName}','{clubToAdd.ManagerName}','{clubToAdd.FoundationDate}',1)";
+            string query = $"Insert into Club values({ClubId},{ClubRank},'{clubToAdd.Name}',0,0,0,'{clubToAdd.StadiumName}','{clubToAdd.ManagerName}','{clubToAdd.FoundationDate}',0)";
             return dbMan.ExecuteNonQuery(query);
         }
         public int RemoveClub(string clubName)
@@ -97,7 +97,7 @@ namespace Fantasy
         }
         public DataTable GetClubsInLeague()
         {
-            string query = "Select* From  Club  order by Club_Name asc, inFpl asc";
+            string query = "Select* From  Club  order by  inFpl desc";
             return dbMan.ExecuteReader(query);
 
         }
@@ -111,6 +111,11 @@ namespace Fantasy
         {
             string query = $"Update club set inFpl =1 where Club_Name='{clubName}'";
             return dbMan.ExecuteNonQuery(query);
+        }
+        public int ClubCount() 
+        {
+            string query = "select count(Club_Id) from Club where inFpl=1";
+            return (int)dbMan.ExecuteScalar(query);
         }
 
     }
