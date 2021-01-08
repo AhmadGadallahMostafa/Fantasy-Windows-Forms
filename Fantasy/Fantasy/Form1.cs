@@ -16,7 +16,7 @@ namespace Fantasy
         string SignInAsUser = "";
         string SignInAsJourn = "";
 
-        int userId;
+        bool AsAdmin;
 
         public Form1()
         {
@@ -64,26 +64,51 @@ namespace Fantasy
 
 
         }
+
+        private void openClubsForm(ClubsForm childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            childPanel.Controls.Add(childForm);
+            childPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            childForm.RemovedClub += OnRemovedClub;
+
+        }
         protected void OnSignedIn_AsAdmin(object sender,string email)
         {
             SignInAsAdmin = email;
+            AsAdmin = true;
             label3.Text = $"Signed In as {SignInAsAdmin}";
             SignInButton.Text = "Sign Out";
         }
         protected void OnSignedIn_AsUser(object sender, string userName)
         {
             SignInAsUser = userName;
+            AsAdmin = false;
             label3.Text = $"Signed In as {SignInAsUser}";
             SignInButton.Text = "Sign Out";
         }
         protected void OnSignedIn_AsJourn(object sender, string userName)
         {
             SignInAsJourn = userName;
+            AsAdmin = false;
             label3.Text = $"Signed In as {SignInAsJourn}";
             SignInButton.Text = "Sign Out";
         }
 
+        protected void OnRemovedClub(object sender,bool e)
+        {
+            
+            
+          activeForm.Close();
+          this.openClubsForm(new ClubsForm());
 
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -94,6 +119,8 @@ namespace Fantasy
                 SignInAsUser = "";
                 SignInButton.Text = "Sign In";
                 label3.Text="";
+                AsAdmin = false;
+                activeForm.Close();
             }
             else 
             { 
@@ -108,7 +135,14 @@ namespace Fantasy
 
         private void ClubsButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new ClubsForm(true));
+
+            if (AsAdmin)
+            {
+                openClubsForm(new ClubsForm());
+
+            }
+            else openChildForm(new ClubsUser());
+      
         }
 
         private void FixturesButton_Click(object sender, EventArgs e)

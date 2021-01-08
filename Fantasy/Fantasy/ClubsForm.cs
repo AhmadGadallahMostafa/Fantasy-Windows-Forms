@@ -13,7 +13,7 @@ namespace Fantasy
 {
     public partial class ClubsForm : Form
     {
-        public string ClubName { set; get; }
+       
         string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/Clubs/");
         Controller ControllerObj;
         IEnumerable<Club> clubs;
@@ -22,7 +22,7 @@ namespace Fantasy
         {
             InitializeComponent();
             ControllerObj = new Controller();
-
+           
 
         }
         private IEnumerable<Club> ConvertToClubs(DataTable dataTable)
@@ -91,6 +91,7 @@ namespace Fantasy
             {
                 FirstClub.AccessibleName = clubs.ElementAt(0).Name;
             }
+
             if (clubs.ElementAt(1).InFpl) { SecondClub.AccessibleName = clubs.ElementAt(1).Name; }
 
             if (clubs.ElementAt(2).InFpl) {   ThirdClub.AccessibleName = clubs.ElementAt(2).Name; }
@@ -160,16 +161,15 @@ namespace Fantasy
         }
         protected void OnAddedClub(object sender, string club)
         {
-            ClubName = club;
+            
             this.ClubsForm_Load(null, EventArgs.Empty);
-
 
         }
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             if (SixteenthClub.AccessibleName == "EmptyClub")
             {
-                 //  openAddClubForm
+                openAddClubForm(new AddClubForm());
             }
             else
             {
@@ -180,17 +180,31 @@ namespace Fantasy
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Club c = ControllerObj.GetClub(FirstClub.AccessibleName);
-            this.openChildForm(new ClubsInfoForms(c));
+            if (FirstClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
+                Club c = ControllerObj.GetClub(FirstClub.AccessibleName);
+                this.openChildForm(new ClubsInfoForms(c));
+            }
         }
     
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
+
+            if (ThirtieenthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
+                        Club c = ControllerObj.GetClub(ThirtieenthClub.AccessibleName);
+                        this.openChildForm(new ClubsInfoForms(c));
+            }
             
-           
-                Club c = ControllerObj.GetClub(ThirtieenthClub.AccessibleName);
-                this.openChildForm(new ClubsInfoForms(c));
             
             
         }
@@ -198,57 +212,99 @@ namespace Fantasy
         private void pictureBox12_Click(object sender, EventArgs e)
         {
 
-           
-            
+            if (TwelvethClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
                 Club c = ControllerObj.GetClub(TwelvethClub.AccessibleName);
                 this.openChildForm(new ClubsInfoForms(c));
+            }
+
+            
             
             
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-          
-            
-            
+
+
+            if (FifthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
                 Club c = ControllerObj.GetClub(FifthClub.AccessibleName);
                 this.openChildForm(new ClubsInfoForms(c));
+            }
+            
             
             
         }
         
         private void Liverpool_Click(object sender, EventArgs e)
         {
+            if (EleventhClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
+                Club c = ControllerObj.GetClub(EleventhClub.AccessibleName);
+                this.openChildForm(new ClubsInfoForms(c));
+            }
            
-                 Club c = ControllerObj.GetClub(EleventhClub.AccessibleName);
-            this.openChildForm(new ClubsInfoForms(c));
             
            
         }
 
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-           
+            if (Seventeenth.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
                 Club c = ControllerObj.GetClub(Seventeenth.AccessibleName);
-            this.openChildForm(new ClubsInfoForms(c));
+                this.openChildForm(new ClubsInfoForms(c));
+            }
+            
             
             
         }
 
         private void AstonVilla_Click(object sender, EventArgs e)
         {
-           
-            Club c = ControllerObj.GetClub(SecondClub.AccessibleName);
+            if (SecondClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
+                          Club c = ControllerObj.GetClub(SecondClub.AccessibleName);
             this.openChildForm(new ClubsInfoForms(c));
+            }
+            
             
           
         }
 
         private void Brighton_Click(object sender, EventArgs e)
         {
+            if (ThirdClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
+                        Club c = ControllerObj.GetClub(ThirdClub.AccessibleName);
+                 this.openChildForm(new ClubsInfoForms(c));
+            }
            
-                Club c = ControllerObj.GetClub(ThirdClub.AccessibleName);
-                this.openChildForm(new ClubsInfoForms(c));
 
             
             
@@ -271,129 +327,210 @@ namespace Fantasy
 
         private void crystal_Click(object sender, EventArgs e)
         {
-            
-                Club c = ControllerObj.GetClub(SixthClub.AccessibleName);
+            if (SixthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
+            Club c = ControllerObj.GetClub(SixthClub.AccessibleName);
                 this.openChildForm(new ClubsInfoForms(c));
+
+            }
+
             
 
         }
 
         private void Fulham_Click(object sender, EventArgs e)
         {
-            
-            Club c = ControllerObj.GetClub(EighthClub.AccessibleName);
+
+            if (EighthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {  Club c = ControllerObj.GetClub(EighthClub.AccessibleName);
             this.openChildForm(new ClubsInfoForms(c));
+
+            }
+          
             
 
         }
 
         private void Leeds_Click(object sender, EventArgs e)
         {
-          
-           Club c = ControllerObj.GetClub(NinthClub.AccessibleName);
+            if (NinthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {   Club c = ControllerObj.GetClub(NinthClub.AccessibleName);
            this.openChildForm(new ClubsInfoForms(c));
+
+            }
+         
             
 
         }
 
         private void LeicesterCity_Click(object sender, EventArgs e)
         {
-           
 
-             Club c = ControllerObj.GetClub(TenthClub.AccessibleName);
+            if (TenthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            { Club c = ControllerObj.GetClub(TenthClub.AccessibleName);
              this.openChildForm(new ClubsInfoForms(c));
+
+            }
+           
             
 
         }
 
         private void NewCastle_Click(object sender, EventArgs e)
         {
-           
-              Club c = ControllerObj.GetClub(FourteenthClub.AccessibleName);
+            if (FourteenthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {  Club c = ControllerObj.GetClub(FourteenthClub.AccessibleName);
             this.openChildForm(new ClubsInfoForms(c));
+
+            }
+          
             
            
         }
 
         private void Sheffield_Click(object sender, EventArgs e)
         {
-           
-                Club c = ControllerObj.GetClub(Fifteenth.AccessibleName);
+            if (Fifteenth.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {    Club c = ControllerObj.GetClub(Fifteenth.AccessibleName);
              this.openChildForm(new ClubsInfoForms(c));
             
+
+            }
+
+        
  
         }
 
         private void WestBromich_Click(object sender, EventArgs e)
         {
-           
-              Club c = ControllerObj.GetClub(EighteenthClub.AccessibleName);
+
+            if (EighteenthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            { Club c = ControllerObj.GetClub(EighteenthClub.AccessibleName);
             this.openChildForm(new ClubsInfoForms(c));
             
+
+            }
+           
             
         }
 
         private void WestHam_Click(object sender, EventArgs e)
         {
-           
-            
-                Club c = ControllerObj.GetClub(NineteenthClub.AccessibleName);
+            if (NineteenthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {    Club c = ControllerObj.GetClub(NineteenthClub.AccessibleName);
                 this.openChildForm(new ClubsInfoForms(c));
             
+
+            }
+
+        
 
         }
 
         private void Wolves_Click(object sender, EventArgs e)
         {
-            
-             
-                  Club c = ControllerObj.GetClub(TwentiethClub.AccessibleName);
+            if (TwentiethClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {
+     Club c = ControllerObj.GetClub(TwentiethClub.AccessibleName);
                     this.openChildForm(new ClubsInfoForms(c));
+            }
+
+       
         
        
         }
 
         private void Everton_Click(object sender, EventArgs e)
         {
-            
-                   Club c = ControllerObj.GetClub(SeventhClub.AccessibleName);
+
+            if (Seventeenth.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            { Club c = ControllerObj.GetClub(SeventhClub.AccessibleName);
             this.openChildForm(new ClubsInfoForms(c));
             
+
+            }
+           
          
         }
 
 
         private void EighthClub_Click(object sender, EventArgs e)
         {
-            Club c = ControllerObj.GetClub(EighthClub.AccessibleName);
+            if (EighthClub.AccessibleName == "EmptyClub")
+            {
+                openAddClubForm(new AddClubForm());
+            }
+            else
+            {      Club c = ControllerObj.GetClub(EighthClub.AccessibleName);
             this.openChildForm(new ClubsInfoForms(c));
+
+            }
+      
         }
 
 
+        public event EventHandler<bool> RemovedClub;
 
         private void Club1_Click(object sender, EventArgs e)
         {
            if (ControllerObj.RemoveClub(FirstClub.AccessibleName) != 0)
             {
                
-                FirstClub.AccessibleName = "EmptyClub";
-                this.ClubsForm_Load(null, EventArgs.Empty);
-                
-              
-
-
+                RemovedClub?.Invoke(this, true);
+  
             }
-           
-
         }
 
         private void Club2Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(SecondClub.AccessibleName);
-            SecondClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-           
-            
+            if (ControllerObj.RemoveClub(SecondClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
+
 
         }
       
@@ -401,161 +538,223 @@ namespace Fantasy
        
         private void button3_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            if (ControllerObj.ClubCount() < 20)
+            {
+                MessageBox.Show("You must have 20 teams!");
+                return;
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
       
 
         private void Club3Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(ThirdClub.AccessibleName);
-            ThirdClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null,EventArgs.Empty);
-           
-           
+            if (ControllerObj.RemoveClub(ThirdClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
+
         }
 
         private void Club4Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(FourthClub.AccessibleName);
-            
-            FourthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-            
-            
+            if (ControllerObj.RemoveClub(FourthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
+
 
         }
 
         private void Club5Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(FifthClub.AccessibleName);
-            FifthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-            
-            
+            if (ControllerObj.RemoveClub(FifthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
+
         }
 
         private void Club6Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(SixthClub.AccessibleName);
-            SixthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-           
+            if (ControllerObj.RemoveClub(SixthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club7Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(SeventhClub.AccessibleName);
-            SeventhClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-            
+            if (ControllerObj.RemoveClub(SeventhClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
 
         }
 
         private void Club8Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(EighthClub.AccessibleName);
-            EighthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-            
+            if (ControllerObj.RemoveClub(EighthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club9Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(NinthClub.AccessibleName);
-            NinthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-         
+            if (ControllerObj.RemoveClub(NinthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
+
         }
 
         private void Club10Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(TenthClub.AccessibleName);
-            TenthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-           
+            if (ControllerObj.RemoveClub(TenthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
 
         }
 
         private void Club11Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(EleventhClub.AccessibleName);
-            EleventhClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-         
+            if (ControllerObj.RemoveClub(EleventhClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club12Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(TwelvethClub.AccessibleName);
-            TwelvethClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-           
+            if (ControllerObj.RemoveClub(TwelvethClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club13Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(ThirtieenthClub.AccessibleName);
-            ThirtieenthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-           
+            if (ControllerObj.RemoveClub(ThirtieenthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club14Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(FourteenthClub.AccessibleName);
-            FourteenthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-           
+            if (ControllerObj.RemoveClub(FourteenthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club15Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(Fifteenth.AccessibleName);
-            Fifteenth.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-            
+            if (ControllerObj.RemoveClub(Fifteenth.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club16Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(SixteenthClub.AccessibleName);
-            SixteenthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-            
+            if (ControllerObj.RemoveClub(SixteenthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club17Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(Seventeenth.AccessibleName);
-            Seventeenth.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-           
+            if(ControllerObj.RemoveClub(Seventeenth.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
 
         }
 
         private void Club18Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(EighteenthClub.AccessibleName);
-            EighteenthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-          
+            if (ControllerObj.RemoveClub(EighteenthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club19Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(NineteenthClub.AccessibleName);
-            NineteenthClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-           
+            if (ControllerObj.RemoveClub(NineteenthClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
         }
 
         private void Club20Remove_Click(object sender, EventArgs e)
         {
-            ControllerObj.RemoveClub(TwentiethClub.AccessibleName);
-            TwentiethClub.AccessibleName = "EmptyClub";
-            this.ClubsForm_Load(null, EventArgs.Empty);
-            
-         }
+            if (ControllerObj.RemoveClub(TwentiethClub.AccessibleName) != 0)
+            {
+
+                RemovedClub?.Invoke(this, true);
+
+            }
+
+        }
     }
 }
