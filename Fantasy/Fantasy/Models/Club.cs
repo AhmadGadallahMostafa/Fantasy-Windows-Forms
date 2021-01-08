@@ -20,6 +20,7 @@ namespace Fantasy
         public String ManagerName { get; set; }
 
         public String FoundationDate { get; set; }
+        public bool InFpl { set; get; }  
 
         public Club(DataTable d)
         {
@@ -33,7 +34,9 @@ namespace Fantasy
             StadiumName = row.Field<string>("Stadium_Name");
             ManagerName = row.Field<string>("ManagerName");
             FoundationDate = row.Field<string>("FoundationDate");
+            InFpl = row.Field<bool>("inFpl");
         }
+        public Club() { }
 
     }
 }

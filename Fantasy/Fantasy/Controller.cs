@@ -16,7 +16,7 @@ namespace Fantasy
             dbMan = new DBManager();
         }
 
-        
+
         public DataTable GetGK()
         {
             string query = "SELECt Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=0 ";
@@ -48,16 +48,16 @@ namespace Fantasy
         }
         public int GetTeamFunds(int TeamID)
         {
-            string query = "SELECT Team_Funds From Fantasy_Player_Team Where Fantasy_Team_ID=" +TeamID + ";";
+            string query = "SELECT Team_Funds From Fantasy_Player_Team Where Fantasy_Team_ID=" + TeamID + ";";
             return (int)dbMan.ExecuteScalar(query);
 
         }
 
-       public int BuyingFunction(int TeamID,string LastName)
+        public int BuyingFunction(int TeamID, string LastName)
         {
             int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
 
-            string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID="+TeamID +" ; ";
+            string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
             return dbMan.ExecuteNonQuery(query);
         }
         public int GetPlayerId(String LastName)
@@ -78,5 +78,40 @@ namespace Fantasy
             c = new Club(dbMan.ExecuteReader(query));
             return c;
         }
+        public int LastClubID()
+        {
+            string sql = "select max(Club_Id) from Club ";
+            return (int)dbMan.ExecuteScalar(sql);
+        }
+        public int InsertClub(Club clubToAdd)
+        {
+            int ClubId = LastClubID() + 1;
+            int ClubRank = ClubId;
+            string query = $"Insert into Club values({ClubId},{ClubRank},'{clubToAdd.Name}',0,0,0,'{clubToAdd.StadiumName}','{clubToAdd.ManagerName}','{clubToAdd.FoundationDate}',1)";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int RemoveClub(string clubName)
+        {
+            string query = $"update Club set inFpl = 0 where Club_Name='{clubName}'";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable GetClubsInLeague()
+        {
+            string query = "Select* From  Club  order by Club_Name asc, inFpl asc";
+            return dbMan.ExecuteReader(query);
+
+        }
+        public DataTable GetClubs()
+        {
+            string query = "Select* From  Club where inFpl=0  order by Club_Name asc ";
+            return dbMan.ExecuteReader(query);
+
+        }
+        public int InsertClubInLeague(string clubName) 
+        {
+            string query = $"Update club set inFpl =1 where Club_Name='{clubName}'";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
     }
 }
