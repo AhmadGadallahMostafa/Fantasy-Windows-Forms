@@ -59,9 +59,10 @@ namespace Fantasy
                                Last_Name = dr["Last_Name"].ToString(),
                                Poisition = Convert.ToInt32(dr["Poisition"]),
                            }).ToList();
-        public Club() { }
+       
 
         }
+        public Club() { }
     }
 
     }

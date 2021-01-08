@@ -120,10 +120,13 @@ namespace Fantasy
 
             if (controlObj.InsertClub(club) != 0)
             {
-                AddedClub?.Invoke(this, club.Name);
-                
+                // AddedClub?.Invoke(this);
 
-               //MessageBox.Show("added"); 
+                DataTable dt = controlObj.GetClubs();
+                comboBox1.DataSource = dt;
+                comboBox1.DisplayMember = "Club_Name";
+                comboBox1.Refresh();
+                //MessageBox.Show("added"); 
             }
         }
 
@@ -136,11 +139,11 @@ namespace Fantasy
         {
             this.Close();
         }
-        public event EventHandler<string> AddedClub;
+        public event EventHandler AddedClub1;
 
         private void AddClubForm_Load(object sender, EventArgs e)
         {
-          DataTable dt  =controlObj.GetClubs();
+            DataTable dt  =controlObj.GetClubs();
             comboBox1.DataSource = dt;
             comboBox1.DisplayMember="Club_Name";
             comboBox1.Refresh();
@@ -149,7 +152,7 @@ namespace Fantasy
         private void button2_Click(object sender, EventArgs e)
         {
             controlObj.InsertClubInLeague(comboBox1.Text);
-            AddedClub?.Invoke(this, comboBox1.Text);
+            AddedClub1?.Invoke(this,EventArgs.Empty);
             this.Close();
         }
     }

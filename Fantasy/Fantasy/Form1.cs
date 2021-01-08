@@ -77,6 +77,7 @@ namespace Fantasy
             childForm.BringToFront();
             childForm.Show();
             childForm.RemovedClub += OnRemovedClub;
+            childForm.AddedClub2 += OnAddedClub;
 
         }
         protected void OnSignedIn_AsAdmin(object sender,string email)
@@ -101,12 +102,18 @@ namespace Fantasy
             SignInButton.Text = "Sign Out";
         }
 
-        protected void OnRemovedClub(object sender,bool e)
+        protected void OnRemovedClub(object sender,EventArgs e)
         {
-            
-            
+           
           activeForm.Close();
           this.openClubsForm(new ClubsForm());
+
+        }
+        protected void OnAddedClub(object sender, EventArgs e)
+        {
+
+            activeForm.Close();
+            this.openClubsForm(new ClubsForm());
 
         }
 

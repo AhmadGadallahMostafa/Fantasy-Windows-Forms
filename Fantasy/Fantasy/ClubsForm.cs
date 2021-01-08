@@ -73,7 +73,7 @@ namespace Fantasy
             this.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            childForm.AddedClub += OnAddedClub;
+            childForm.AddedClub1 += OnAddedClub1;
 
         }
 
@@ -126,7 +126,7 @@ namespace Fantasy
             if (clubs.ElementAt(17).InFpl) { EighteenthClub.AccessibleName = clubs.ElementAt(17).Name; }
 
 
-            if (clubs.ElementAt(14).InFpl) { NineteenthClub.AccessibleName = clubs.ElementAt(18).Name;}
+            if (clubs.ElementAt(18).InFpl) { NineteenthClub.AccessibleName = clubs.ElementAt(18).Name;}
             
             if (clubs.ElementAt(19).InFpl) {TwentiethClub.AccessibleName = clubs.ElementAt(19).Name; }
             
@@ -159,10 +159,11 @@ namespace Fantasy
 
 
         }
-        protected void OnAddedClub(object sender, string club)
+        public event EventHandler AddedClub2;
+        protected void OnAddedClub1(object sender,EventArgs e)
         {
-            
-            this.ClubsForm_Load(null, EventArgs.Empty);
+
+            AddedClub2?.Invoke(this, EventArgs.Empty);
 
         }
         private void pictureBox14_Click(object sender, EventArgs e)
@@ -467,7 +468,7 @@ namespace Fantasy
             }
             else
             {
-     Club c = ControllerObj.GetClub(TwentiethClub.AccessibleName);
+                    Club c = ControllerObj.GetClub(TwentiethClub.AccessibleName);
                     this.openChildForm(new ClubsInfoForms(c));
             }
 
@@ -509,14 +510,14 @@ namespace Fantasy
         }
 
 
-        public event EventHandler<bool> RemovedClub;
+        public event EventHandler RemovedClub;
 
         private void Club1_Click(object sender, EventArgs e)
         {
            if (ControllerObj.RemoveClub(FirstClub.AccessibleName) != 0)
             {
                
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this,EventArgs.Empty);
   
             }
         }
@@ -526,7 +527,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(SecondClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -556,7 +557,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(ThirdClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -568,7 +569,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(FourthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -581,7 +582,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(FifthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -593,7 +594,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(SixthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -604,7 +605,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(SeventhClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -616,7 +617,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(EighthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -627,7 +628,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(NinthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -639,7 +640,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(TenthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -651,7 +652,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(EleventhClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -662,7 +663,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(TwelvethClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -673,7 +674,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(ThirtieenthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -684,7 +685,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(FourteenthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -695,7 +696,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(Fifteenth.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -706,7 +707,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(SixteenthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -717,7 +718,7 @@ namespace Fantasy
             if(ControllerObj.RemoveClub(Seventeenth.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -729,7 +730,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(EighteenthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -740,7 +741,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(NineteenthClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 
@@ -751,7 +752,7 @@ namespace Fantasy
             if (ControllerObj.RemoveClub(TwentiethClub.AccessibleName) != 0)
             {
 
-                RemovedClub?.Invoke(this, true);
+                RemovedClub?.Invoke(this, EventArgs.Empty);
 
             }
 

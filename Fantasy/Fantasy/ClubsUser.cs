@@ -113,7 +113,7 @@ namespace Fantasy
             if (clubs.ElementAt(17).InFpl) { EighteenthClub.AccessibleName = clubs.ElementAt(17).Name; }
 
 
-            if (clubs.ElementAt(14).InFpl) { NineteenthClub.AccessibleName = clubs.ElementAt(18).Name;}
+            if (clubs.ElementAt(18).InFpl) { NineteenthClub.AccessibleName = clubs.ElementAt(18).Name;}
             
             if (clubs.ElementAt(19).InFpl) {TwentiethClub.AccessibleName = clubs.ElementAt(19).Name; }
             
