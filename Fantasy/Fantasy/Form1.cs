@@ -126,5 +126,15 @@ namespace Fantasy
         {
 
         }
+
+        private void PlayersButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PlayersForm());
+        }
+
+        private void TablesButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new TablesForm());
+        }
     }
 }

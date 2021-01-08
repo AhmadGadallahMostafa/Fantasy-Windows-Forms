@@ -94,5 +94,36 @@ namespace Fantasy
             return dbMan.ExecuteNonQuery(query);
         }
 
+        public DataTable GetFixturesByWeek(int weekNumber)
+        {
+            string query = $"select c1.club_name , Club_Fixtures.Score , c2.club_name  from Club as c1 , club as c2 , Club_Fixtures where c1.Club_Id = Club_Fixtures.Host_id and c2.Club_Id = Club_Fixtures.Guest_Id and Club_Fixtures.Week_number = {weekNumber}";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetFootBallersByClubName(string club_name)
+        {
+            string query = $"select Footballer.Last_Name,Footballer.Points,Footballer.Price from footballer,club where footballer.Club_id = Club.Club_id and Club.club_name = '{club_name}'  order by points desc; ";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetFootBallersByPoints()
+        {
+            string query = $"select Footballer.Last_Name,Footballer.Points,Footballer.Price from footballer order by points desc; ";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetClubsNames()
+        {
+            string query = $"Select Club_Name from club ";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable getPlayerByPos(int pos)
+        {
+            string query = $"select Footballer.Last_Name,Footballer.Points,Footballer.Price from footballer where poisition ='{pos}'";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable getClubsByRank()
+        {
+            string query = "Select Club_Rank, Club_Name,Club_Points,Total_Goals,Goals_Against From Club order by club_rank asc";
+            return dbMan.ExecuteReader(query);
+        }
+
     }
 }

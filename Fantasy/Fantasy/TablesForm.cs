@@ -10,27 +10,31 @@ using System.Windows.Forms;
 
 namespace Fantasy
 {
-    public partial class FixturesForm : Form
+    public partial class TablesForm : Form
     {
         Controller ControllerObj;
-        public FixturesForm()
+        public TablesForm()
         {
             InitializeComponent();
             ControllerObj = new Controller();
+            styleDataGrid();
+            //Image loading
+            DataGridViewImageColumn img = new DataGridViewImageColumn();
+            //img.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            dataGridView1.Columns.Add(img);
+            dataGridView1.DataSource = ControllerObj.getClubsByRank();
+            dataGridView1.ClearSelection();
+            dataGridView1.Refresh();
+          
+
         }
 
-        private void FixturesForm_Load(object sender, EventArgs e)
-        { 
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-             dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
-            dataGridView1.ClearSelection();
-            styleDataGrid();
+        private void TablesForm_Load(object sender, EventArgs e)
+        {
+
         }
         private void styleDataGrid()
         {
-            dataGridView1.Columns[0].HeaderText = "Host Name";
-            dataGridView1.Columns[1].HeaderText = "Score";
-            dataGridView1.Columns[2].HeaderText = "Guest Name";
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SkyBlue;
@@ -38,7 +42,7 @@ namespace Fantasy
             dataGridView1.BackgroundColor = Color.SkyBlue;
             dataGridView1.DefaultCellStyle.Font = new Font("Calibri", 15);
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.RowTemplate.Height =70;
+            dataGridView1.RowTemplate.Height = 70;
             //dataGridView1.Columns.Width = 100;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView1.EnableHeadersVisualStyles = false;
@@ -49,27 +53,9 @@ namespace Fantasy
             dataGridView1.ClearSelection();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = ControllerObj.GetFixturesByWeek((int)numericUpDown1.Value);
-            dataGridView1.ClearSelection();
-            styleDataGrid();
-            dataGridView1.Refresh();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

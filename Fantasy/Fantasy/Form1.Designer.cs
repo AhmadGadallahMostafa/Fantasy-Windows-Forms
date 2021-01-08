@@ -62,10 +62,9 @@ namespace Fantasy
             this.FixturesButton = new System.Windows.Forms.Button();
             this.ClubsButton = new System.Windows.Forms.Button();
             this.SignInButton = new System.Windows.Forms.Button();
-            this.TopPlayersButton = new System.Windows.Forms.Button();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
-            this.SignedInAs = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.SignedInAs = new System.Windows.Forms.Label();
             this.childPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -376,6 +375,7 @@ namespace Fantasy
             this.TablesButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.TablesButton.FlatAppearance.BorderSize = 0;
             this.TablesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TablesButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TablesButton.ForeColor = System.Drawing.SystemColors.Control;
             this.TablesButton.Location = new System.Drawing.Point(0, 240);
             this.TablesButton.Name = "TablesButton";
@@ -385,6 +385,7 @@ namespace Fantasy
             this.TablesButton.Text = "Tables";
             this.TablesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TablesButton.UseVisualStyleBackColor = false;
+            this.TablesButton.Click += new System.EventHandler(this.TablesButton_Click);
             // 
             // PlayersButton
             // 
@@ -392,6 +393,7 @@ namespace Fantasy
             this.PlayersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.PlayersButton.FlatAppearance.BorderSize = 0;
             this.PlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlayersButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlayersButton.ForeColor = System.Drawing.SystemColors.Control;
             this.PlayersButton.Location = new System.Drawing.Point(0, 180);
             this.PlayersButton.Name = "PlayersButton";
@@ -401,6 +403,7 @@ namespace Fantasy
             this.PlayersButton.Text = "Players";
             this.PlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PlayersButton.UseVisualStyleBackColor = false;
+            this.PlayersButton.Click += new System.EventHandler(this.PlayersButton_Click);
             // 
             // FixturesButton
             // 
@@ -408,6 +411,7 @@ namespace Fantasy
             this.FixturesButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.FixturesButton.FlatAppearance.BorderSize = 0;
             this.FixturesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FixturesButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FixturesButton.ForeColor = System.Drawing.SystemColors.Control;
             this.FixturesButton.Location = new System.Drawing.Point(0, 120);
             this.FixturesButton.Name = "FixturesButton";
@@ -425,6 +429,7 @@ namespace Fantasy
             this.ClubsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ClubsButton.FlatAppearance.BorderSize = 0;
             this.ClubsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClubsButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClubsButton.ForeColor = System.Drawing.SystemColors.Control;
             this.ClubsButton.Location = new System.Drawing.Point(0, 60);
             this.ClubsButton.Name = "ClubsButton";
@@ -442,6 +447,7 @@ namespace Fantasy
             this.SignInButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.SignInButton.FlatAppearance.BorderSize = 0;
             this.SignInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SignInButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInButton.ForeColor = System.Drawing.Color.GhostWhite;
             this.SignInButton.Location = new System.Drawing.Point(0, 0);
             this.SignInButton.Name = "SignInButton";
@@ -453,22 +459,6 @@ namespace Fantasy
             this.SignInButton.UseVisualStyleBackColor = false;
             this.SignInButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // TopPlayersButton
-            // 
-            this.TopPlayersButton.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.TopPlayersButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPlayersButton.FlatAppearance.BorderSize = 0;
-            this.TopPlayersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TopPlayersButton.ForeColor = System.Drawing.Color.GhostWhite;
-            this.TopPlayersButton.Location = new System.Drawing.Point(0, 465);
-            this.TopPlayersButton.Name = "TopPlayersButton";
-            this.TopPlayersButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.TopPlayersButton.Size = new System.Drawing.Size(250, 60);
-            this.TopPlayersButton.TabIndex = 7;
-            this.TopPlayersButton.Text = "Top Players";
-            this.TopPlayersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TopPlayersButton.UseVisualStyleBackColor = false;
-            // 
             // SideMenuPanel
             // 
             this.SideMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -478,7 +468,6 @@ namespace Fantasy
             this.SideMenuPanel.BackColor = System.Drawing.Color.MediumVioletRed;
             this.SideMenuPanel.Controls.Add(this.label3);
             this.SideMenuPanel.Controls.Add(this.SignedInAs);
-            this.SideMenuPanel.Controls.Add(this.TopPlayersButton);
             this.SideMenuPanel.Controls.Add(this.panel1);
             this.SideMenuPanel.Controls.Add(this.logoPanel);
             this.SideMenuPanel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -488,14 +477,6 @@ namespace Fantasy
             this.SideMenuPanel.TabIndex = 0;
             this.SideMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SideMenuPanel_Paint);
             // 
-            // SignedInAs
-            // 
-            this.SignedInAs.AutoSize = true;
-            this.SignedInAs.Location = new System.Drawing.Point(3, 528);
-            this.SignedInAs.Name = "SignedInAs";
-            this.SignedInAs.Size = new System.Drawing.Size(0, 15);
-            this.SignedInAs.TabIndex = 8;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -504,6 +485,14 @@ namespace Fantasy
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 9;
+            // 
+            // SignedInAs
+            // 
+            this.SignedInAs.AutoSize = true;
+            this.SignedInAs.Location = new System.Drawing.Point(3, 528);
+            this.SignedInAs.Name = "SignedInAs";
+            this.SignedInAs.Size = new System.Drawing.Size(0, 15);
+            this.SignedInAs.TabIndex = 8;
             // 
             // Form1
             // 
@@ -561,7 +550,6 @@ namespace Fantasy
         private System.Windows.Forms.Button SignInButton;
         private System.Windows.Forms.Panel SideMenuPanel;
         private System.Windows.Forms.Button PlayersButton;
-        private System.Windows.Forms.Button TopPlayersButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox21;
