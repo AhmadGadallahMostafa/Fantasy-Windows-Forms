@@ -116,31 +116,108 @@ namespace Fantasy
             if (clubs.ElementAt(18).InFpl) { NineteenthClub.AccessibleName = clubs.ElementAt(18).Name;}
             
             if (clubs.ElementAt(19).InFpl) {TwentiethClub.AccessibleName = clubs.ElementAt(19).Name; }
+
+
+
+            if (ThirtieenthClub.AccessibleName != "EmptyClub") 
+            {
+                ThirtieenthClub.Load(path + ThirtieenthClub.AccessibleName + ".png");
+            }
+
+            if (TwelvethClub.AccessibleName != "EmptyClub")
+            {
+                TwelvethClub.Load(path + TwelvethClub.AccessibleName + ".png");
+            }
+
+            if (FirstClub.AccessibleName != "EmptyClub")
+            {
+                   FirstClub.Load(path + FirstClub.AccessibleName + ".png");
+            }
+
+
+            if (SecondClub.AccessibleName != "EmptyClub")
+            {
+                 SecondClub.Load(path + SecondClub.AccessibleName + ".png");
+            }
+
+            if (ThirdClub.AccessibleName != "EmptyClub")
+            {
+                ThirdClub.Load(path + ThirdClub.AccessibleName + ".png");
+            }
+
+            if (FourthClub.AccessibleName != "EmptyClub")
+            {
+               FourthClub.Load(path + FourthClub.AccessibleName + ".png");
+            }
+
+            if (FifthClub.AccessibleName != "EmptyClub")
+            {
+                FifthClub.Load(path + FifthClub.AccessibleName + ".png");
+            }
+
+            if (SixthClub.AccessibleName != "EmptyClub")
+            {
+               SixthClub.Load(path + SixthClub.AccessibleName + ".png");
+            }
+
+            if (SeventhClub.AccessibleName != "EmptyClub")
+            {
+                SeventhClub.Load(path + SeventhClub.AccessibleName + ".png");
+            }
+            if (EighthClub.AccessibleName != "EmptyClub")
+            {
+                EighthClub.Load(path + EighthClub.AccessibleName + ".png");
+            }
+            if (NinthClub.AccessibleName != "EmptyClub")
+            {
+              
+                NinthClub.Load(path + NinthClub.AccessibleName + ".png");
+            }
+            if (TenthClub.AccessibleName != "EmptyClub")
+            {
+               TenthClub.Load(path + TenthClub.AccessibleName + ".png");
+            }
+
+            if (EleventhClub.AccessibleName != "EmptyClub")
+            {
+                EleventhClub.Load(path + EleventhClub.AccessibleName + ".png");
+            }
+            if (FourteenthClub.AccessibleName != "EmptyClub")
+            {
+                FourteenthClub.Load(path + FourteenthClub.AccessibleName + ".png");
+            }
+            if (Fifteenth.AccessibleName != "EmptyClub")
+            {
+                Fifteenth.Load(path + Fifteenth.AccessibleName + ".png");
+            }
+
+            if (SixteenthClub.AccessibleName != "EmptyClub")
+            {
+                SixteenthClub.Load(path + SixteenthClub.AccessibleName + ".png");
+            }
+            if (Seventeenth.AccessibleName != "EmptyClub")
+            {
+                 Seventeenth.Load(path + Seventeenth.AccessibleName + ".png");
+            }
+
+            if (EighteenthClub.AccessibleName != "EmptyClub")
+            {
+               EighteenthClub.Load(path + EighteenthClub.AccessibleName + ".png");
+            }
+            if (EighteenthClub.AccessibleName != "EmptyClub")
+            {
+                EighteenthClub.Load(path + EighteenthClub.AccessibleName + ".png");
+            }
+            if (NineteenthClub.AccessibleName != "EmptyClub")
+            {
+                NineteenthClub.Load(path + NineteenthClub.AccessibleName + ".png");
+            }
+
+            if (TwentiethClub.AccessibleName != "EmptyClub")
+            {
+                TwentiethClub.Load(path + TwentiethClub.AccessibleName + ".png");
+            }
             
-
-
-
-            
-            ThirtieenthClub.Load(path + ThirtieenthClub.AccessibleName+ ".png");
-            TwelvethClub.Load(path + TwelvethClub.AccessibleName + ".png");
-            FirstClub.Load(path + FirstClub.AccessibleName + ".png");
-            SecondClub.Load(path + SecondClub.AccessibleName + ".png");
-            ThirdClub.Load(path + ThirdClub.AccessibleName + ".png");
-            FourthClub.Load(path + FourthClub.AccessibleName + ".png");
-            FifthClub.Load(path + FifthClub.AccessibleName + ".png");
-            SixthClub.Load(path + SixthClub.AccessibleName + ".png");
-            SeventhClub.Load(path + SeventhClub.AccessibleName + ".png");
-            EighthClub.Load(path + EighthClub.AccessibleName + ".png");
-            NinthClub.Load(path + NinthClub.AccessibleName + ".png");
-            TenthClub.Load(path + TenthClub.AccessibleName + ".png");
-            EleventhClub.Load(path + EleventhClub.AccessibleName + ".png");
-            FourteenthClub.Load(path + FourteenthClub.AccessibleName + ".png");
-            Fifteenth.Load(path + Fifteenth.AccessibleName + ".png");
-            SixteenthClub.Load(path + SixteenthClub.AccessibleName + ".png");
-            Seventeenth.Load(path + Seventeenth.AccessibleName + ".png");
-            EighteenthClub.Load(path + EighteenthClub.AccessibleName + ".png");
-            NineteenthClub.Load(path + NineteenthClub.AccessibleName + ".png");
-            TwentiethClub.Load(path + TwentiethClub.AccessibleName + ".png");
 
             
 
@@ -174,8 +251,8 @@ namespace Fantasy
         {
 
             
-                        Club c = ControllerObj.GetClub(ThirtieenthClub.AccessibleName);
-                        this.openChildForm(new ClubsInfoForms(c));
+              Club c = ControllerObj.GetClub(ThirtieenthClub.AccessibleName);
+              this.openChildForm(new ClubsInfoForms(c));
            
             
             

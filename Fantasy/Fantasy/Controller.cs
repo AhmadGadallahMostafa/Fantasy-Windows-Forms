@@ -51,7 +51,7 @@ namespace Fantasy
             return (int)dbMan.ExecuteScalar(query);
 
         }
-
+        
          public int BuyingInPLayer(int TeamID,string LastName)
          {
              if (InsertPlayer(GetPlayerId(LastName), TeamID,0) == 1)
@@ -152,6 +152,11 @@ namespace Fantasy
             string query = $"select Footballer.Last_Name,Footballer.Points,Footballer.Price from footballer,club where footballer.Club_id = Club.Club_id and Club.club_name = '{club_name}'  order by points desc; ";
             return dbMan.ExecuteReader(query);
         }
+        public DataTable GetFootBallersByClubNameForDelete(string club_name)
+        {
+            string query = $"select Footballer.First_Name,Footballer.Last_Name from footballer,club where footballer.Club_id = Club.Club_id and Club.club_name = '{club_name}' ; ";
+            return dbMan.ExecuteReader(query);
+        }
         public DataTable GetFootBallersByPoints()
         {
             string query = $"select Footballer.Last_Name,Footballer.Points,Footballer.Price from footballer order by points desc; ";
@@ -239,5 +244,40 @@ namespace Fantasy
             return (int)dbMan.ExecuteScalar(query);
         }
 
+        public int getClubIdByName(string name)
+        {
+            string query = $"select club.Club_Id from Club where Club.Club_Name = '{name}';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        
+        public int deletePlayerByNames(string fname, string lname)
+        {
+            string query = $"delete from footballer where First_Name = '{fname}' and Last_Name = '{lname}' ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        //testing stored procs
+        public DataTable getTeamsByRankStoredProc()
+        {
+            string name = StoredProcedures.getClubsByRank;
+            return dbMan.ExecuteReaderSto(name, null);
+        }
+        public DataTable getFootBallerForAdmin()
+        {
+            string name = StoredProcedures.getFootballlerNameAndClub;
+            return dbMan.ExecuteReaderSto(name, null);
+        }
+        public int addFootballerStoredProc(int clubID, string fname, string lname, int position, int price, int age, int points)
+        {
+            string name = StoredProcedures.addFootballer;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@clubID", clubID);
+            parameters.Add("@firstName", fname);
+            parameters.Add("@lastName ", lname);
+            parameters.Add("@position", position);
+            parameters.Add("@price", price);
+            parameters.Add("@age ", age);
+            parameters.Add("@points", points);
+            return dbMan.ExecuteNonQuerySto(name, parameters);
+        }
     }
 }

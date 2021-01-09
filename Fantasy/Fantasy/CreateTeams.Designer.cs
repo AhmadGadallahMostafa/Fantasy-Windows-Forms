@@ -48,7 +48,6 @@ namespace Fantasy
             this.ATT1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.PlayersList = new System.Windows.Forms.ListBox();
-            this.AddPlayer = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SBT1 = new System.Windows.Forms.Button();
             this.SBT2 = new System.Windows.Forms.Button();
@@ -66,9 +65,11 @@ namespace Fantasy
             this.GKBT1 = new System.Windows.Forms.Button();
             this.GKBT2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Proceed = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.addPlayer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Substitutes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).BeginInit();
@@ -94,7 +95,7 @@ namespace Fantasy
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(872, 644);
+            this.pictureBox1.Size = new System.Drawing.Size(881, 646);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -102,7 +103,7 @@ namespace Fantasy
             // GK2
             // 
             this.GK2.Image = ((System.Drawing.Image)(resources.GetObject("GK2.Image")));
-            this.GK2.Location = new System.Drawing.Point(78, 679);
+            this.GK2.Location = new System.Drawing.Point(143, 679);
             this.GK2.Name = "GK2";
             this.GK2.Size = new System.Drawing.Size(60, 60);
             this.GK2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -113,7 +114,7 @@ namespace Fantasy
             // GK1
             // 
             this.GK1.Image = ((System.Drawing.Image)(resources.GetObject("GK1.Image")));
-            this.GK1.Location = new System.Drawing.Point(67, 307);
+            this.GK1.Location = new System.Drawing.Point(68, 288);
             this.GK1.Name = "GK1";
             this.GK1.Size = new System.Drawing.Size(60, 60);
             this.GK1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -124,7 +125,7 @@ namespace Fantasy
             // DEF5
             // 
             this.DEF5.Image = ((System.Drawing.Image)(resources.GetObject("DEF5.Image")));
-            this.DEF5.Location = new System.Drawing.Point(258, 679);
+            this.DEF5.Location = new System.Drawing.Point(315, 679);
             this.DEF5.Name = "DEF5";
             this.DEF5.Size = new System.Drawing.Size(60, 60);
             this.DEF5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -179,7 +180,7 @@ namespace Fantasy
             // MID5
             // 
             this.MID5.Image = ((System.Drawing.Image)(resources.GetObject("MID5.Image")));
-            this.MID5.Location = new System.Drawing.Point(486, 679);
+            this.MID5.Location = new System.Drawing.Point(505, 679);
             this.MID5.Name = "MID5";
             this.MID5.Size = new System.Drawing.Size(60, 60);
             this.MID5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -266,48 +267,44 @@ namespace Fantasy
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(66, 250);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 257);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(221, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(286, 272);
             this.dataGridView1.TabIndex = 16;
             // 
             // PlayersList
             // 
-            this.PlayersList.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.PlayersList.BackColor = System.Drawing.Color.White;
             this.PlayersList.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PlayersList.FormattingEnabled = true;
-            this.PlayersList.ItemHeight = 15;
             this.PlayersList.Location = new System.Drawing.Point(66, 12);
             this.PlayersList.Name = "PlayersList";
-            this.PlayersList.Size = new System.Drawing.Size(217, 184);
+            this.PlayersList.Size = new System.Drawing.Size(217, 173);
             this.PlayersList.TabIndex = 17;
-            // 
-            // AddPlayer
-            // 
-            this.AddPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddPlayer.Location = new System.Drawing.Point(158, 202);
-            this.AddPlayer.Name = "AddPlayer";
-            this.AddPlayer.Size = new System.Drawing.Size(125, 42);
-            this.AddPlayer.TabIndex = 18;
-            this.AddPlayer.Text = "Add Player";
-            this.AddPlayer.UseVisualStyleBackColor = true;
-            this.AddPlayer.Click += new System.EventHandler(this.AddPlayer_Click);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 208);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(14, 208);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 36);
+            this.textBox1.Size = new System.Drawing.Size(47, 23);
             this.textBox1.TabIndex = 19;
             // 
             // SBT1
             // 
+            this.SBT1.ForeColor = System.Drawing.Color.Red;
             this.SBT1.Location = new System.Drawing.Point(655, 357);
             this.SBT1.Name = "SBT1";
             this.SBT1.Size = new System.Drawing.Size(24, 22);
@@ -318,6 +315,7 @@ namespace Fantasy
             // 
             // SBT2
             // 
+            this.SBT2.ForeColor = System.Drawing.Color.Red;
             this.SBT2.Location = new System.Drawing.Point(655, 222);
             this.SBT2.Name = "SBT2";
             this.SBT2.Size = new System.Drawing.Size(24, 22);
@@ -328,6 +326,7 @@ namespace Fantasy
             // 
             // SBT3
             // 
+            this.SBT3.ForeColor = System.Drawing.Color.Red;
             this.SBT3.Location = new System.Drawing.Point(655, 665);
             this.SBT3.Name = "SBT3";
             this.SBT3.Size = new System.Drawing.Size(24, 22);
@@ -338,6 +337,7 @@ namespace Fantasy
             // 
             // MFBT1
             // 
+            this.MFBT1.ForeColor = System.Drawing.Color.Red;
             this.MFBT1.Location = new System.Drawing.Point(475, 485);
             this.MFBT1.Name = "MFBT1";
             this.MFBT1.Size = new System.Drawing.Size(24, 22);
@@ -348,6 +348,7 @@ namespace Fantasy
             // 
             // MFBT2
             // 
+            this.MFBT2.ForeColor = System.Drawing.Color.Red;
             this.MFBT2.Location = new System.Drawing.Point(475, 345);
             this.MFBT2.Name = "MFBT2";
             this.MFBT2.Size = new System.Drawing.Size(24, 22);
@@ -358,6 +359,7 @@ namespace Fantasy
             // 
             // MFBT3
             // 
+            this.MFBT3.ForeColor = System.Drawing.Color.Red;
             this.MFBT3.Location = new System.Drawing.Point(475, 222);
             this.MFBT3.Name = "MFBT3";
             this.MFBT3.Size = new System.Drawing.Size(24, 22);
@@ -368,6 +370,7 @@ namespace Fantasy
             // 
             // MFBT4
             // 
+            this.MFBT4.ForeColor = System.Drawing.Color.Red;
             this.MFBT4.Location = new System.Drawing.Point(475, 113);
             this.MFBT4.Name = "MFBT4";
             this.MFBT4.Size = new System.Drawing.Size(24, 22);
@@ -378,7 +381,8 @@ namespace Fantasy
             // 
             // MFBT5
             // 
-            this.MFBT5.Location = new System.Drawing.Point(475, 665);
+            this.MFBT5.ForeColor = System.Drawing.Color.Red;
+            this.MFBT5.Location = new System.Drawing.Point(495, 665);
             this.MFBT5.Name = "MFBT5";
             this.MFBT5.Size = new System.Drawing.Size(24, 22);
             this.MFBT5.TabIndex = 27;
@@ -388,6 +392,7 @@ namespace Fantasy
             // 
             // DBT1
             // 
+            this.DBT1.ForeColor = System.Drawing.Color.Red;
             this.DBT1.Location = new System.Drawing.Point(233, 485);
             this.DBT1.Name = "DBT1";
             this.DBT1.Size = new System.Drawing.Size(24, 22);
@@ -398,6 +403,7 @@ namespace Fantasy
             // 
             // DBT2
             // 
+            this.DBT2.ForeColor = System.Drawing.Color.Red;
             this.DBT2.Location = new System.Drawing.Point(233, 345);
             this.DBT2.Name = "DBT2";
             this.DBT2.Size = new System.Drawing.Size(24, 22);
@@ -408,6 +414,7 @@ namespace Fantasy
             // 
             // DBT3
             // 
+            this.DBT3.ForeColor = System.Drawing.Color.Red;
             this.DBT3.Location = new System.Drawing.Point(233, 222);
             this.DBT3.Name = "DBT3";
             this.DBT3.Size = new System.Drawing.Size(24, 22);
@@ -418,6 +425,7 @@ namespace Fantasy
             // 
             // DBT4
             // 
+            this.DBT4.ForeColor = System.Drawing.Color.Red;
             this.DBT4.Location = new System.Drawing.Point(233, 100);
             this.DBT4.Name = "DBT4";
             this.DBT4.Size = new System.Drawing.Size(24, 22);
@@ -428,7 +436,8 @@ namespace Fantasy
             // 
             // DBT5
             // 
-            this.DBT5.Location = new System.Drawing.Point(244, 665);
+            this.DBT5.ForeColor = System.Drawing.Color.Red;
+            this.DBT5.Location = new System.Drawing.Point(303, 665);
             this.DBT5.Name = "DBT5";
             this.DBT5.Size = new System.Drawing.Size(24, 22);
             this.DBT5.TabIndex = 32;
@@ -438,7 +447,8 @@ namespace Fantasy
             // 
             // GKBT1
             // 
-            this.GKBT1.Location = new System.Drawing.Point(52, 295);
+            this.GKBT1.ForeColor = System.Drawing.Color.Red;
+            this.GKBT1.Location = new System.Drawing.Point(56, 273);
             this.GKBT1.Name = "GKBT1";
             this.GKBT1.Size = new System.Drawing.Size(24, 22);
             this.GKBT1.TabIndex = 33;
@@ -448,7 +458,8 @@ namespace Fantasy
             // 
             // GKBT2
             // 
-            this.GKBT2.Location = new System.Drawing.Point(67, 665);
+            this.GKBT2.ForeColor = System.Drawing.Color.Red;
+            this.GKBT2.Location = new System.Drawing.Point(130, 665);
             this.GKBT2.Name = "GKBT2";
             this.GKBT2.Size = new System.Drawing.Size(24, 22);
             this.GKBT2.TabIndex = 34;
@@ -459,51 +470,81 @@ namespace Fantasy
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.addPlayer);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.Proceed);
             this.panel1.Controls.Add(this.PlayersList);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.AddPlayer);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(878, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(298, 747);
+            this.panel1.Size = new System.Drawing.Size(317, 798);
             this.panel1.TabIndex = 35;
             // 
-            // Proceed
+            // button1
             // 
-            this.Proceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Proceed.Location = new System.Drawing.Point(62, 697);
-            this.Proceed.Name = "Proceed";
-            this.Proceed.Size = new System.Drawing.Size(133, 42);
-            this.Proceed.TabIndex = 20;
-            this.Proceed.Text = "Proceed";
-            this.Proceed.UseVisualStyleBackColor = true;
-            this.Proceed.Click += new System.EventHandler(this.Proceed_Click);
+            this.button1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(79, 679);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 40);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Proceed";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // addPlayer
+            // 
+            this.addPlayer.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.addPlayer.FlatAppearance.BorderSize = 0;
+            this.addPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPlayer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPlayer.ForeColor = System.Drawing.SystemColors.Control;
+            this.addPlayer.Location = new System.Drawing.Point(159, 202);
+            this.addPlayer.Name = "addPlayer";
+            this.addPlayer.Size = new System.Drawing.Size(124, 40);
+            this.addPlayer.TabIndex = 23;
+            this.addPlayer.Text = "Add Player";
+            this.addPlayer.UseVisualStyleBackColor = false;
+            this.addPlayer.Click += new System.EventHandler(this.SignUp_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 553);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 552);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 35);
+            this.label1.Size = new System.Drawing.Size(120, 27);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Enter Team Name:";
+            this.label1.Text = "Team Name";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(9, 591);
+            this.textBox2.Location = new System.Drawing.Point(14, 592);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 23);
+            this.textBox2.Size = new System.Drawing.Size(212, 20);
             this.textBox2.TabIndex = 21;
+            // 
+            // Substitutes
+            // 
+            this.Substitutes.AutoSize = true;
+            this.Substitutes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Substitutes.Location = new System.Drawing.Point(22, 670);
+            this.Substitutes.Name = "Substitutes";
+            this.Substitutes.Size = new System.Drawing.Size(97, 23);
+            this.Substitutes.TabIndex = 36;
+            this.Substitutes.Text = "Substitutes";
             // 
             // CreateTeams
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 751);
+            this.ClientSize = new System.Drawing.Size(1195, 798);
+            this.Controls.Add(this.Substitutes);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GKBT2);
             this.Controls.Add(this.GKBT1);
@@ -537,6 +578,7 @@ namespace Fantasy
             this.Controls.Add(this.GK2);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateTeams";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -584,7 +626,6 @@ namespace Fantasy
         private System.Windows.Forms.PictureBox ATT1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ListBox PlayersList;
-        private System.Windows.Forms.Button AddPlayer;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button SBT1;
         private System.Windows.Forms.Button SBT2;
@@ -602,8 +643,10 @@ namespace Fantasy
         private System.Windows.Forms.Button GKBT1;
         private System.Windows.Forms.Button GKBT2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Proceed;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addPlayer;
+        private System.Windows.Forms.Label Substitutes;
     }
 }

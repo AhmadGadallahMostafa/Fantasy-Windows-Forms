@@ -27,6 +27,7 @@ namespace Fantasy
         {
             InitializeComponent();
             FTID = FT;
+            styleDataGrid();
            
         }
         private void Form3_Load(object sender, EventArgs e)
@@ -34,8 +35,28 @@ namespace Fantasy
             C1.SetFunds(FTID);
             textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
+        private void styleDataGrid()
+        {
+   
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.White;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.DefaultCellStyle.Font = new Font("Calibri", 10);
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dataGridView1.RowTemplate.Height = 70;
+            //dataGridView1.Columns.Width = 100;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 12);
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(37, 37, 38);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.ClearSelection();
+        }
 
-       
+
 
         private void AddPlayer_Click(object sender, EventArgs e)
         {
@@ -590,6 +611,159 @@ namespace Fantasy
             string TeamName = textBox2.Text;
             C1.SetTeamName(FTID,TeamName);
 
+        }
+
+        private void SignUp_Click(object sender, EventArgs e)
+        {
+            string PlayerName = PlayersList.GetItemText(PlayersList.SelectedItem);
+
+
+            for (int i = 0; i < 14; i++)
+            {
+                if (PlayerName == Team[i])
+                {
+                    found = true;
+                }
+            }
+            if (found == false)
+            {
+
+                if (C1.GetTeamFunds(FTID) > C1.GetPrice(PlayerName))
+                {
+
+                    if (ChosenPlayerNo == 0)
+                    {
+
+
+                        GK1.Load(path + PlayerName + ".png");
+                        Team[0] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                        GK1.Enabled = false;
+
+                    }
+                    else if (ChosenPlayerNo == 1)
+                    {
+                        GK2.Load(path + PlayerName + ".png");
+                        Team[11] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingOutPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+
+                    }
+                    else if (ChosenPlayerNo == 2)
+                    {
+                        DEF1.Load(path + PlayerName + ".png");
+                        Team[1] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+
+                    }
+                    else if (ChosenPlayerNo == 3)
+                    {
+                        DEF2.Load(path + PlayerName + ".png");
+                        Team[2] = PlayersList.GetItemText(PlayersList.SelectedItem);
+
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 4)
+                    {
+                        DEF3.Load(path + PlayerName + ".png");
+                        Team[3] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 5)
+                    {
+                        DEF4.Load(path + PlayerName + ".png");
+                        Team[4] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 6)
+                    {
+                        DEF5.Load(path + PlayerName + ".png");
+                        Team[12] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingOutPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 7)
+                    {
+                        MID1.Load(path + PlayerName + ".png");
+                        Team[5] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 8)
+                    {
+                        MID2.Load(path + PlayerName + ".png");
+                        Team[6] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 9)
+                    {
+                        MID3.Load(path + PlayerName + ".png");
+                        Team[7] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 10)
+                    {
+                        MID4.Load(path + PlayerName + ".png");
+                        Team[8] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 11)
+                    {
+                        MID5.Load(path + PlayerName + ".png");
+                        Team[13] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingOutPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 12)
+                    {
+                        ATT1.Load(path + PlayerName + ".png");
+                        Team[9] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 13)
+                    {
+                        ATT2.Load(path + PlayerName + ".png");
+                        Team[10] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingInPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                    else if (ChosenPlayerNo == 14)
+                    {
+                        ATT3.Load(path + PlayerName + ".png");
+                        Team[14] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                        C1.BuyingOutPLayer(FTID, PlayerName);
+                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("you dont have enough money");
+                }
+            }
+            found = false;
         }
     }
 }
