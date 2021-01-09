@@ -67,8 +67,8 @@ namespace Fantasy
             this.GKBT2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Proceed = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).BeginInit();
@@ -92,9 +92,9 @@ namespace Fantasy
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(872, 736);
+            this.pictureBox1.Size = new System.Drawing.Size(872, 644);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -102,7 +102,7 @@ namespace Fantasy
             // GK2
             // 
             this.GK2.Image = ((System.Drawing.Image)(resources.GetObject("GK2.Image")));
-            this.GK2.Location = new System.Drawing.Point(72, 236);
+            this.GK2.Location = new System.Drawing.Point(78, 679);
             this.GK2.Name = "GK2";
             this.GK2.Size = new System.Drawing.Size(60, 60);
             this.GK2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -113,7 +113,7 @@ namespace Fantasy
             // GK1
             // 
             this.GK1.Image = ((System.Drawing.Image)(resources.GetObject("GK1.Image")));
-            this.GK1.Location = new System.Drawing.Point(72, 383);
+            this.GK1.Location = new System.Drawing.Point(67, 307);
             this.GK1.Name = "GK1";
             this.GK1.Size = new System.Drawing.Size(60, 60);
             this.GK1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -124,7 +124,7 @@ namespace Fantasy
             // DEF5
             // 
             this.DEF5.Image = ((System.Drawing.Image)(resources.GetObject("DEF5.Image")));
-            this.DEF5.Location = new System.Drawing.Point(244, 52);
+            this.DEF5.Location = new System.Drawing.Point(258, 679);
             this.DEF5.Name = "DEF5";
             this.DEF5.Size = new System.Drawing.Size(60, 60);
             this.DEF5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -135,7 +135,7 @@ namespace Fantasy
             // DEF4
             // 
             this.DEF4.Image = ((System.Drawing.Image)(resources.GetObject("DEF4.Image")));
-            this.DEF4.Location = new System.Drawing.Point(244, 163);
+            this.DEF4.Location = new System.Drawing.Point(244, 113);
             this.DEF4.Name = "DEF4";
             this.DEF4.Size = new System.Drawing.Size(60, 60);
             this.DEF4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -146,7 +146,7 @@ namespace Fantasy
             // DEF3
             // 
             this.DEF3.Image = ((System.Drawing.Image)(resources.GetObject("DEF3.Image")));
-            this.DEF3.Location = new System.Drawing.Point(244, 318);
+            this.DEF3.Location = new System.Drawing.Point(244, 235);
             this.DEF3.Name = "DEF3";
             this.DEF3.Size = new System.Drawing.Size(60, 60);
             this.DEF3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -157,7 +157,7 @@ namespace Fantasy
             // DEF2
             // 
             this.DEF2.Image = ((System.Drawing.Image)(resources.GetObject("DEF2.Image")));
-            this.DEF2.Location = new System.Drawing.Point(244, 436);
+            this.DEF2.Location = new System.Drawing.Point(244, 357);
             this.DEF2.Name = "DEF2";
             this.DEF2.Size = new System.Drawing.Size(60, 60);
             this.DEF2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -168,7 +168,7 @@ namespace Fantasy
             // DEF1
             // 
             this.DEF1.Image = ((System.Drawing.Image)(resources.GetObject("DEF1.Image")));
-            this.DEF1.Location = new System.Drawing.Point(244, 554);
+            this.DEF1.Location = new System.Drawing.Point(244, 494);
             this.DEF1.Name = "DEF1";
             this.DEF1.Size = new System.Drawing.Size(60, 60);
             this.DEF1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -179,7 +179,7 @@ namespace Fantasy
             // MID5
             // 
             this.MID5.Image = ((System.Drawing.Image)(resources.GetObject("MID5.Image")));
-            this.MID5.Location = new System.Drawing.Point(486, 52);
+            this.MID5.Location = new System.Drawing.Point(486, 679);
             this.MID5.Name = "MID5";
             this.MID5.Size = new System.Drawing.Size(60, 60);
             this.MID5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -190,7 +190,7 @@ namespace Fantasy
             // MID4
             // 
             this.MID4.Image = ((System.Drawing.Image)(resources.GetObject("MID4.Image")));
-            this.MID4.Location = new System.Drawing.Point(486, 163);
+            this.MID4.Location = new System.Drawing.Point(486, 125);
             this.MID4.Name = "MID4";
             this.MID4.Size = new System.Drawing.Size(60, 60);
             this.MID4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -201,7 +201,7 @@ namespace Fantasy
             // MID3
             // 
             this.MID3.Image = ((System.Drawing.Image)(resources.GetObject("MID3.Image")));
-            this.MID3.Location = new System.Drawing.Point(486, 318);
+            this.MID3.Location = new System.Drawing.Point(486, 235);
             this.MID3.Name = "MID3";
             this.MID3.Size = new System.Drawing.Size(60, 60);
             this.MID3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -212,7 +212,7 @@ namespace Fantasy
             // MID2
             // 
             this.MID2.Image = ((System.Drawing.Image)(resources.GetObject("MID2.Image")));
-            this.MID2.Location = new System.Drawing.Point(486, 436);
+            this.MID2.Location = new System.Drawing.Point(486, 357);
             this.MID2.Name = "MID2";
             this.MID2.Size = new System.Drawing.Size(60, 60);
             this.MID2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -223,7 +223,7 @@ namespace Fantasy
             // MID1
             // 
             this.MID1.Image = ((System.Drawing.Image)(resources.GetObject("MID1.Image")));
-            this.MID1.Location = new System.Drawing.Point(486, 554);
+            this.MID1.Location = new System.Drawing.Point(486, 494);
             this.MID1.Name = "MID1";
             this.MID1.Size = new System.Drawing.Size(60, 60);
             this.MID1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -234,7 +234,7 @@ namespace Fantasy
             // ATT3
             // 
             this.ATT3.Image = ((System.Drawing.Image)(resources.GetObject("ATT3.Image")));
-            this.ATT3.Location = new System.Drawing.Point(645, 163);
+            this.ATT3.Location = new System.Drawing.Point(666, 679);
             this.ATT3.Name = "ATT3";
             this.ATT3.Size = new System.Drawing.Size(60, 60);
             this.ATT3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -245,7 +245,7 @@ namespace Fantasy
             // ATT2
             // 
             this.ATT2.Image = ((System.Drawing.Image)(resources.GetObject("ATT2.Image")));
-            this.ATT2.Location = new System.Drawing.Point(645, 318);
+            this.ATT2.Location = new System.Drawing.Point(666, 235);
             this.ATT2.Name = "ATT2";
             this.ATT2.Size = new System.Drawing.Size(60, 60);
             this.ATT2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -256,7 +256,7 @@ namespace Fantasy
             // ATT1
             // 
             this.ATT1.Image = ((System.Drawing.Image)(resources.GetObject("ATT1.Image")));
-            this.ATT1.Location = new System.Drawing.Point(645, 436);
+            this.ATT1.Location = new System.Drawing.Point(666, 373);
             this.ATT1.Name = "ATT1";
             this.ATT1.Size = new System.Drawing.Size(60, 60);
             this.ATT1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -308,7 +308,7 @@ namespace Fantasy
             // 
             // SBT1
             // 
-            this.SBT1.Location = new System.Drawing.Point(636, 418);
+            this.SBT1.Location = new System.Drawing.Point(655, 357);
             this.SBT1.Name = "SBT1";
             this.SBT1.Size = new System.Drawing.Size(24, 22);
             this.SBT1.TabIndex = 20;
@@ -318,7 +318,7 @@ namespace Fantasy
             // 
             // SBT2
             // 
-            this.SBT2.Location = new System.Drawing.Point(636, 308);
+            this.SBT2.Location = new System.Drawing.Point(655, 222);
             this.SBT2.Name = "SBT2";
             this.SBT2.Size = new System.Drawing.Size(24, 22);
             this.SBT2.TabIndex = 21;
@@ -328,7 +328,7 @@ namespace Fantasy
             // 
             // SBT3
             // 
-            this.SBT3.Location = new System.Drawing.Point(636, 150);
+            this.SBT3.Location = new System.Drawing.Point(655, 665);
             this.SBT3.Name = "SBT3";
             this.SBT3.Size = new System.Drawing.Size(24, 22);
             this.SBT3.TabIndex = 22;
@@ -338,7 +338,7 @@ namespace Fantasy
             // 
             // MFBT1
             // 
-            this.MFBT1.Location = new System.Drawing.Point(475, 539);
+            this.MFBT1.Location = new System.Drawing.Point(475, 485);
             this.MFBT1.Name = "MFBT1";
             this.MFBT1.Size = new System.Drawing.Size(24, 22);
             this.MFBT1.TabIndex = 23;
@@ -348,7 +348,7 @@ namespace Fantasy
             // 
             // MFBT2
             // 
-            this.MFBT2.Location = new System.Drawing.Point(475, 418);
+            this.MFBT2.Location = new System.Drawing.Point(475, 345);
             this.MFBT2.Name = "MFBT2";
             this.MFBT2.Size = new System.Drawing.Size(24, 22);
             this.MFBT2.TabIndex = 24;
@@ -358,7 +358,7 @@ namespace Fantasy
             // 
             // MFBT3
             // 
-            this.MFBT3.Location = new System.Drawing.Point(475, 308);
+            this.MFBT3.Location = new System.Drawing.Point(475, 222);
             this.MFBT3.Name = "MFBT3";
             this.MFBT3.Size = new System.Drawing.Size(24, 22);
             this.MFBT3.TabIndex = 25;
@@ -368,7 +368,7 @@ namespace Fantasy
             // 
             // MFBT4
             // 
-            this.MFBT4.Location = new System.Drawing.Point(475, 150);
+            this.MFBT4.Location = new System.Drawing.Point(475, 113);
             this.MFBT4.Name = "MFBT4";
             this.MFBT4.Size = new System.Drawing.Size(24, 22);
             this.MFBT4.TabIndex = 26;
@@ -378,7 +378,7 @@ namespace Fantasy
             // 
             // MFBT5
             // 
-            this.MFBT5.Location = new System.Drawing.Point(475, 43);
+            this.MFBT5.Location = new System.Drawing.Point(475, 665);
             this.MFBT5.Name = "MFBT5";
             this.MFBT5.Size = new System.Drawing.Size(24, 22);
             this.MFBT5.TabIndex = 27;
@@ -388,7 +388,7 @@ namespace Fantasy
             // 
             // DBT1
             // 
-            this.DBT1.Location = new System.Drawing.Point(233, 539);
+            this.DBT1.Location = new System.Drawing.Point(233, 485);
             this.DBT1.Name = "DBT1";
             this.DBT1.Size = new System.Drawing.Size(24, 22);
             this.DBT1.TabIndex = 28;
@@ -398,7 +398,7 @@ namespace Fantasy
             // 
             // DBT2
             // 
-            this.DBT2.Location = new System.Drawing.Point(233, 418);
+            this.DBT2.Location = new System.Drawing.Point(233, 345);
             this.DBT2.Name = "DBT2";
             this.DBT2.Size = new System.Drawing.Size(24, 22);
             this.DBT2.TabIndex = 29;
@@ -408,7 +408,7 @@ namespace Fantasy
             // 
             // DBT3
             // 
-            this.DBT3.Location = new System.Drawing.Point(233, 308);
+            this.DBT3.Location = new System.Drawing.Point(233, 222);
             this.DBT3.Name = "DBT3";
             this.DBT3.Size = new System.Drawing.Size(24, 22);
             this.DBT3.TabIndex = 30;
@@ -418,7 +418,7 @@ namespace Fantasy
             // 
             // DBT4
             // 
-            this.DBT4.Location = new System.Drawing.Point(233, 150);
+            this.DBT4.Location = new System.Drawing.Point(233, 100);
             this.DBT4.Name = "DBT4";
             this.DBT4.Size = new System.Drawing.Size(24, 22);
             this.DBT4.TabIndex = 31;
@@ -428,7 +428,7 @@ namespace Fantasy
             // 
             // DBT5
             // 
-            this.DBT5.Location = new System.Drawing.Point(233, 43);
+            this.DBT5.Location = new System.Drawing.Point(244, 665);
             this.DBT5.Name = "DBT5";
             this.DBT5.Size = new System.Drawing.Size(24, 22);
             this.DBT5.TabIndex = 32;
@@ -438,7 +438,7 @@ namespace Fantasy
             // 
             // GKBT1
             // 
-            this.GKBT1.Location = new System.Drawing.Point(63, 368);
+            this.GKBT1.Location = new System.Drawing.Point(52, 295);
             this.GKBT1.Name = "GKBT1";
             this.GKBT1.Size = new System.Drawing.Size(24, 22);
             this.GKBT1.TabIndex = 33;
@@ -448,7 +448,7 @@ namespace Fantasy
             // 
             // GKBT2
             // 
-            this.GKBT2.Location = new System.Drawing.Point(63, 224);
+            this.GKBT2.Location = new System.Drawing.Point(67, 665);
             this.GKBT2.Name = "GKBT2";
             this.GKBT2.Size = new System.Drawing.Size(24, 22);
             this.GKBT2.TabIndex = 34;
@@ -482,13 +482,6 @@ namespace Fantasy
             this.Proceed.UseVisualStyleBackColor = true;
             this.Proceed.Click += new System.EventHandler(this.Proceed_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(9, 591);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 23);
-            this.textBox2.TabIndex = 21;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -498,6 +491,13 @@ namespace Fantasy
             this.label1.Size = new System.Drawing.Size(225, 35);
             this.label1.TabIndex = 22;
             this.label1.Text = "Enter Team Name:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(9, 591);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(212, 23);
+            this.textBox2.TabIndex = 21;
             // 
             // CreateTeams
             // 
