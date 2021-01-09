@@ -75,6 +75,10 @@ namespace Fantasy
             this.ClubComboBoxForDataGridView = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pointsedit = new System.Windows.Forms.NumericUpDown();
+            this.edit = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -99,6 +103,7 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.priceNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AgeNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PointsNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pointsedit)).BeginInit();
             this.SuspendLayout();
             // 
             // poslabel
@@ -183,7 +188,7 @@ namespace Fantasy
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(364, 119);
+            this.dataGridView1.Location = new System.Drawing.Point(344, 119);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -638,13 +643,71 @@ namespace Fantasy
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(538, 571);
+            this.button2.Location = new System.Drawing.Point(521, 569);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 85);
+            this.button2.Size = new System.Drawing.Size(183, 85);
             this.button2.TabIndex = 132;
             this.button2.Text = "Delete Selected Player";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(1010, 311);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 23);
+            this.label9.TabIndex = 133;
+            this.label9.Text = "Edit Player";
+            // 
+            // pointsedit
+            // 
+            this.pointsedit.BackColor = System.Drawing.Color.SkyBlue;
+            this.pointsedit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pointsedit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pointsedit.ForeColor = System.Drawing.Color.White;
+            this.pointsedit.Location = new System.Drawing.Point(1046, 372);
+            this.pointsedit.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.pointsedit.Name = "pointsedit";
+            this.pointsedit.Size = new System.Drawing.Size(121, 23);
+            this.pointsedit.TabIndex = 134;
+            this.pointsedit.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            // 
+            // edit
+            // 
+            this.edit.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.edit.FlatAppearance.BorderSize = 0;
+            this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.edit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit.ForeColor = System.Drawing.SystemColors.Control;
+            this.edit.Location = new System.Drawing.Point(1000, 567);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(183, 87);
+            this.edit.TabIndex = 136;
+            this.edit.Text = "Add Points Selected Player";
+            this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(906, 368);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(113, 23);
+            this.label11.TabIndex = 138;
+            this.label11.Text = "Add to Points";
             // 
             // adminPlayersView
             // 
@@ -652,6 +715,10 @@ namespace Fantasy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1195, 798);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.edit);
+            this.Controls.Add(this.pointsedit);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ClubComboBoxForDataGridView);
@@ -726,6 +793,7 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.priceNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AgeNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PointsNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pointsedit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,5 +846,9 @@ namespace Fantasy
         private System.Windows.Forms.ComboBox ClubComboBoxForDataGridView;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown pointsedit;
+        private System.Windows.Forms.Button edit;
+        private System.Windows.Forms.Label label11;
     }
 }

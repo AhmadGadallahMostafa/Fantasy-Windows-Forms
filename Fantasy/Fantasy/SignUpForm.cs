@@ -63,14 +63,15 @@ namespace Fantasy
                 if (controlObj.UniqueUsername(username))
                 {
                     label12.Visible = false;
-                    int id = 0;
+                   
 
-                    if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age, ref id) != 0))
+                    if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
                     {
                         
                         label14.Visible = false;
-                        openChildForm(new CreateTeams(id));
 
+                        int id = controlObj.getFantasyTeamId(email);
+                        openChildForm(new CreateTeams(id));
                     }
                     else 
                     {

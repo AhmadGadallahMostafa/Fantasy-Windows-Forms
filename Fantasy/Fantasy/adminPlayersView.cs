@@ -103,7 +103,6 @@ namespace Fantasy
                 if (flag == 1 )
                 {
                     MessageBox.Show("Player Added");
-
                 }
                 else
                 {
@@ -155,6 +154,31 @@ namespace Fantasy
 
             }
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentCell == null)
+            {
+                MessageBox.Show("Please select a palyer from the table");
+            }
+            else
+            {
+                string fname = dataGridView1.SelectedCells[0].Value.ToString();
+                string lname = dataGridView1.SelectedCells[1].Value.ToString();
+                int Points = ControllerObj.getPointsByNameStoredProc(fname, lname);
+                Points = Points + (int)pointsedit.Value;
+                int flag = ControllerObj.updatePointsStoredProc(fname, lname, Points);
+                if (flag == 1)
+                {
+                    MessageBox.Show("points added ");
+                }
+            }
         }
     }
 }
