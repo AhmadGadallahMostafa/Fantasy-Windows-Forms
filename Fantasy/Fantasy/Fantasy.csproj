@@ -176,6 +176,7 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StoredProcedures.cs" />
     <Compile Include="TablesForm.cs">
       <SubType>Form</SubType>
     </Compile>
