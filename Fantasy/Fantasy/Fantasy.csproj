@@ -99,7 +99,10 @@
       <DependentUpon>CreateTeams.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7711219... partially finished admin view of footballers
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
