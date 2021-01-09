@@ -69,7 +69,6 @@ namespace Fantasy
                     {
                         
                         label14.Visible = false;
-
                         openChildForm(new CreateTeams(id));
 
                     }
