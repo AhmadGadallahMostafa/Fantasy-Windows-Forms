@@ -244,6 +244,7 @@ namespace Fantasy
             return (int)dbMan.ExecuteScalar(query);
         }
 
+
         public int getClubIdByName(string name)
         {
             string query = $"select club.Club_Id from Club where Club.Club_Name = '{name}';";

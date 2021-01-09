@@ -134,26 +134,26 @@ namespace Fantasy
 
 
             
-            ThirtieenthClub.Load(path + ThirtieenthClub.AccessibleName+ ".png");
-            TwelvethClub.Load(path + TwelvethClub.AccessibleName + ".png");
-            FirstClub.Load(path + FirstClub.AccessibleName + ".png");
-            SecondClub.Load(path + SecondClub.AccessibleName + ".png");
-            ThirdClub.Load(path + ThirdClub.AccessibleName + ".png");
-            FourthClub.Load(path + FourthClub.AccessibleName + ".png");
-            FifthClub.Load(path + FifthClub.AccessibleName + ".png");
-            SixthClub.Load(path + SixthClub.AccessibleName + ".png");
-            SeventhClub.Load(path + SeventhClub.AccessibleName + ".png");
-            EighthClub.Load(path + EighthClub.AccessibleName + ".png");
-            NinthClub.Load(path + NinthClub.AccessibleName + ".png");
-            TenthClub.Load(path + TenthClub.AccessibleName + ".png");
-            EleventhClub.Load(path + EleventhClub.AccessibleName + ".png");
-            FourteenthClub.Load(path + FourteenthClub.AccessibleName + ".png");
-            Fifteenth.Load(path + Fifteenth.AccessibleName + ".png");
-            SixteenthClub.Load(path + SixteenthClub.AccessibleName + ".png");
-            Seventeenth.Load(path + Seventeenth.AccessibleName + ".png");
-            EighteenthClub.Load(path + EighteenthClub.AccessibleName + ".png");
-            NineteenthClub.Load(path + NineteenthClub.AccessibleName + ".png");
-            TwentiethClub.Load(path + TwentiethClub.AccessibleName + ".png");
+            ThirtieenthClub.LoadAsync(path + ThirtieenthClub.AccessibleName+ ".png");
+            TwelvethClub.LoadAsync(path + TwelvethClub.AccessibleName + ".png");
+            FirstClub.LoadAsync(path + FirstClub.AccessibleName + ".png");
+            SecondClub.LoadAsync(path + SecondClub.AccessibleName + ".png");
+            ThirdClub.LoadAsync(path + ThirdClub.AccessibleName + ".png");
+            FourthClub.LoadAsync(path + FourthClub.AccessibleName + ".png");
+            FifthClub.LoadAsync(path + FifthClub.AccessibleName + ".png");
+            SixthClub.LoadAsync(path + SixthClub.AccessibleName + ".png");
+            SeventhClub.LoadAsync(path + SeventhClub.AccessibleName + ".png");
+            EighthClub.LoadAsync(path + EighthClub.AccessibleName + ".png");
+            NinthClub.LoadAsync(path + NinthClub.AccessibleName + ".png");
+            TenthClub.LoadAsync(path + TenthClub.AccessibleName + ".png");
+            EleventhClub.LoadAsync(path + EleventhClub.AccessibleName + ".png");
+            FourteenthClub.LoadAsync(path + FourteenthClub.AccessibleName + ".png");
+            Fifteenth.LoadAsync(path + Fifteenth.AccessibleName + ".png");
+            SixteenthClub.LoadAsync(path + SixteenthClub.AccessibleName + ".png");
+            Seventeenth.LoadAsync(path + Seventeenth.AccessibleName + ".png");
+            EighteenthClub.LoadAsync(path + EighteenthClub.AccessibleName + ".png");
+            NineteenthClub.LoadAsync(path + NineteenthClub.AccessibleName + ".png");
+            TwentiethClub.LoadAsync(path + TwentiethClub.AccessibleName + ".png");
 
             
 

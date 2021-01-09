@@ -65,6 +65,18 @@
     <Compile Include="AddClubForm.Designer.cs">
       <DependentUpon>AddClubForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddFixture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFixture.Designer.cs">
+      <DependentUpon>AddFixture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFixturesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFixturesForm.Designer.cs">
+      <DependentUpon>adminFixturesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminPlayersView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +207,12 @@
     </Compile>
     <EmbeddedResource Include="AddClubForm.resx">
       <DependentUpon>AddClubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFixture.resx">
+      <DependentUpon>AddFixture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFixturesForm.resx">
+      <DependentUpon>adminFixturesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminPlayersView.resx">
       <DependentUpon>adminPlayersView.cs</DependentUpon>
