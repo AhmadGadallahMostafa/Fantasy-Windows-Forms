@@ -170,14 +170,7 @@ namespace Fantasy
 
         private void PlayersButton_Click(object sender, EventArgs e)
         {
-            if (AsAdmin)
-            {
-                openChildForm(new FootballerAdminForm());
-            }
-            else
-            {
-                openChildForm(new FootballerForm());
-            }
+            openChildForm(new PlayersForm());
         }
 
         private void TablesButton_Click(object sender, EventArgs e)
