@@ -590,3 +590,5 @@ D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Clubs\Pitch(1).pn
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\download (1) (1).png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Pitch.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.ClubsUser.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.AddClubForm.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.ClubsUser.resources

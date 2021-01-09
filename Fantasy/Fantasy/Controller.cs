@@ -134,10 +134,11 @@ namespace Fantasy
         }
 
 
-        public int InsertLeague(String LeagueName)
+        public int InsertLeague(String LeagueName,string Country)
         {
             int LeagueId = GetLeaguesCount() + 1;
-            string query = "INSERT INTO Fantasy_League (League_Id,League_Name) Values(" + LeagueId + "," + LeagueName + ");";
+            
+            string query = "INSERT INTO Fantasy_League (League_Id,League_Name,Country,Total_Players) Values(" + LeagueId + ",'" + LeagueName + "','"+Country+"',1);";
             return dbMan.ExecuteNonQuery(query);
         }
 

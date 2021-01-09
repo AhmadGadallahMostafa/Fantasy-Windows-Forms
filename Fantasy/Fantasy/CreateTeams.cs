@@ -585,7 +585,7 @@ namespace Fantasy
 
         private void Proceed_Click(object sender, EventArgs e)
         {
-            PlayerView PLayerView = new PlayerView(FTID, Team);
+            PlayerView PLayerView = new PlayerView(FTID);
             PLayerView.Show();
             string TeamName = textBox2.Text;
             C1.SetTeamName(FTID,TeamName);
