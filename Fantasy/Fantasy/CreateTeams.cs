@@ -19,7 +19,6 @@ namespace Fantasy
         int ChosenPlayerNo = -1;
         string[] Team = new string[15];
         int FTID;
-        bool found= false;
 
         string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/");
 
@@ -41,153 +40,153 @@ namespace Fantasy
         {
             string PlayerName = PlayersList.GetItemText(PlayersList.SelectedItem);
 
+            
 
-            for(int i=0;i<14;i++)
-            {
-                if(PlayerName==Team[i])
-                {
-                    found = true;
-                }
-            }
-            if (found == false)
+            if (C1.GetTeamFunds(FTID) > C1.GetPrice(PlayerName))
             {
 
-                if (C1.GetTeamFunds(FTID) > C1.GetPrice(PlayerName))
+                if (ChosenPlayerNo == 0)
                 {
-
-                    if (ChosenPlayerNo == 0)
-                    {
-
-
-                        GK1.Load(path + PlayerName + ".png");
-                        Team[0] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                        GK1.Enabled = false;
-
-                    }
-                    else if (ChosenPlayerNo == 1)
-                    {
-                        GK2.Load(path + PlayerName + ".png");
-                        Team[11] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingOutPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-
-                    }
-                    else if (ChosenPlayerNo == 2)
-                    {
-                        DEF1.Load(path + PlayerName + ".png");
-                        Team[1] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-
-                    }
-                    else if (ChosenPlayerNo == 3)
-                    {
-                        DEF2.Load(path + PlayerName + ".png");
-                        Team[2] = PlayersList.GetItemText(PlayersList.SelectedItem);
-
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 4)
-                    {
-                        DEF3.Load(path + PlayerName + ".png");
-                        Team[3] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 5)
-                    {
-                        DEF4.Load(path + PlayerName + ".png");
-                        Team[4] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 6)
-                    {
-                        DEF5.Load(path + PlayerName + ".png");
-                        Team[12] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingOutPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 7)
-                    {
-                        MID1.Load(path + PlayerName + ".png");
-                        Team[5] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 8)
-                    {
-                        MID2.Load(path + PlayerName + ".png");
-                        Team[6] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 9)
-                    {
-                        MID3.Load(path + PlayerName + ".png");
-                        Team[7] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 10)
-                    {
-                        MID4.Load(path + PlayerName + ".png");
-                        Team[8] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 11)
-                    {
-                        MID5.Load(path + PlayerName + ".png");
-                        Team[13] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingOutPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 12)
-                    {
-                        ATT1.Load(path + PlayerName + ".png");
-                        Team[9] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 13)
-                    {
-                        ATT2.Load(path + PlayerName + ".png");
-                        Team[10] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingInPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
-                    else if (ChosenPlayerNo == 14)
-                    {
-                        ATT3.Load(path + PlayerName + ".png");
-                        Team[14] = PlayersList.GetItemText(PlayersList.SelectedItem);
-                        C1.BuyingOutPLayer(FTID, PlayerName);
-                        textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                    }
+                    GK1.Load(path + PlayerName + ".png");
+                    Team[0] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
                 }
-                else
+                else if (ChosenPlayerNo == 1)
                 {
-                    MessageBox.Show("you dont have enough money");
+                    GK2.Load(path + PlayerName + ".png");
+                    Team[11] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 2)
+                {
+                    DEF1.Load(path + PlayerName + ".png");
+                    Team[1] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+
+                }
+                else if (ChosenPlayerNo == 3)
+                {
+                    DEF2.Load(path + PlayerName + ".png");
+                    Team[2] = PlayersList.GetItemText(PlayersList.SelectedItem);
+
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 4)
+                {
+                    DEF3.Load(path + PlayerName + ".png");
+                    Team[3] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 5)
+                {
+                    DEF4.Load(path + PlayerName + ".png");
+                    Team[4] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 6)
+                {
+                    DEF5.Load(path + PlayerName + ".png");
+                    Team[12] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 7)
+                {
+                    MID1.Load(path + PlayerName + ".png");
+                    Team[5] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 8)
+                {
+                    MID2.Load(path + PlayerName + ".png");
+                    Team[6] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 9)
+                {
+                    MID3.Load(path + PlayerName + ".png");
+                    Team[7] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 10)
+                {
+                    MID4.Load(path + PlayerName + ".png");
+                    Team[8] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 11)
+                {
+                    MID5.Load(path + PlayerName + ".png");
+                    Team[13] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 12)
+                {
+                    ATT1.Load(path + PlayerName + ".png");
+                    Team[9] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 13)
+                {
+                    ATT2.Load(path + PlayerName + ".png");
+                    Team[10] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
+                }
+                else if (ChosenPlayerNo == 14)
+                {
+                    ATT3.Load(path + PlayerName + ".png");
+                    Team[14] = PlayersList.GetItemText(PlayersList.SelectedItem);
+                    C1.BuyingFunction(FTID, PlayerName);
+                    textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+                    C1.InsertPlayer(C1.GetPlayerId(PlayerName), FTID);
+
                 }
             }
-            found = false;
+            else
+            {
+                MessageBox.Show("you dont have enough money");
+            }
         }
         private void GK1_Click(object sender, EventArgs e)
         {
@@ -358,229 +357,127 @@ namespace Fantasy
             ChosenPlayerNo = 14;
         }
 
-
+        
 
         private void GKBT1_Click(object sender, EventArgs e)
         {
-
-            if (Team[0] != null)
-            {
-
-                GK1.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[0]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[0]));
-                Team[0] = null;
-            }
+            
+            GK1.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[0]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
+            C1.DeletePlayer(FTID, C1.GetPlayerId(Team[0]));
         }
 
         private void GKBT2_Click(object sender, EventArgs e)
         {
-            if (Team[11] != null)
-            {
-
-
-                GK2.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[11]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[11]));
-
-                Team[11] = null;
-            }
-
+            
+            GK2.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[1]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void DBT1_Click(object sender, EventArgs e)
         {
-            if (Team[1] != null)
-            {
-
-
-                DEF1.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[1]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[1]));
-
-                Team[1] = null;
-            }
+          
+            DEF1.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[2]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void DBT2_Click(object sender, EventArgs e)
         {
-            if (Team[2] != null)
-            {
-
-
-                DEF2.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[2]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[2]));
-
-                Team[2] = null;
-            }
+            
+            DEF2.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[3]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void DBT3_Click(object sender, EventArgs e)
         {
-            if (Team[3] != null)
-            {
-
-
-                DEF3.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[3]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[3]));
-
-                Team[3] = null;
-            }
+            
+            DEF3.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[4]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void DBT4_Click(object sender, EventArgs e)
         {
-            if (Team[4] != null)
-            {
-
-
-                DEF4.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[4]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[4]));
-
-                Team[4] = null;
-
-              }
+           
+            DEF4.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[5]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void DBT5_Click(object sender, EventArgs e)
         {
-            if (Team[12] != null)
-            {
-
-
-                DEF5.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[12]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[12]));
-
-                Team[12] = null;
-            }
+            
+            DEF5.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[6]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void MFBT1_Click(object sender, EventArgs e)
         {
-            if (Team[5] != null)
-            {
-
-                MID1.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[5]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[5]));
-
-                Team[5] = null;
-            }
+            
+            MID1.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[7]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void MFBT2_Click(object sender, EventArgs e)
         {
-            if (Team[6] != null)
-            {
-
-                MID2.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[6]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[6]));
-
-                Team[6] = null;
-            }
+            
+            MID2.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[8]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void MFBT3_Click(object sender, EventArgs e)
         {
-            if (Team[7] != null)
-            {
-
-                MID3.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[7]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[7]));
-
-                Team[7] = null;
-            }
+            
+            MID3.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[9]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void MFBT4_Click(object sender, EventArgs e)
         {
-            if (Team[8] != null)
-            {
-
-
-                MID4.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[8]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[8]));
-
-                Team[8] = null;
-            }
+            
+            MID4.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[10]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void MFBT5_Click(object sender, EventArgs e)
         {
-            if (Team[13] != null)
-            {
-
-
-                MID5.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[13]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[13]));
-
-                Team[13] = null;
-            }
+            
+            MID5.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[11]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void SBT1_Click(object sender, EventArgs e)
         {
-            if (Team[9] != null)
-            {
-
-                ATT1.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[9]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[9]));
-
-                Team[9] = null;
-            }
+           
+            ATT1.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[12]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void SBT2_Click(object sender, EventArgs e)
         {
-            if (Team[10] != null)
-            {
-
-
-                ATT2.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[10]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[10]));
-
-                Team[10] = null;
-
-            }
+            
+            ATT2.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[13]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void SBT3_Click(object sender, EventArgs e)
         {
-            if (Team[14] != null)
-            {
-
-
-                ATT3.Load(path + "download (1) (1).png");
-                C1.RemovePlayer(FTID, Team[14]);
-                textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                C1.DeletePlayer(FTID, C1.GetPlayerId(Team[14]));
-
-                Team[14] = null;
-            }
+            
+           ATT3.Load(path + "download (1) (1).png");
+            C1.RemovePlayer(FTID, Team[14]);
+            textBox1.Text = C1.GetTeamFunds(FTID).ToString();
         }
 
         private void Proceed_Click(object sender, EventArgs e)
