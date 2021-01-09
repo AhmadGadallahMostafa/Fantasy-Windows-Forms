@@ -250,13 +250,53 @@ namespace Fantasy
             string query = $"select club.Club_Id from Club where Club.Club_Name = '{name}';";
             return (int)dbMan.ExecuteScalar(query);
         }
-        
+
+        public DataTable GetClubsName()
+        {
+            string query = "SELECT Club_Name FROM Club";
+            return dbMan.ExecuteReader(query);
+        }
+
         public int deletePlayerByNames(string fname, string lname)
         {
             string query = $"delete from footballer where First_Name = '{fname}' and Last_Name = '{lname}' ";
             return dbMan.ExecuteNonQuery(query);
         }
+        public int GetLastInsertedWeek() 
+        {
+            string query = "SELECT max(Week_Number) FROM Week";
+            return (int)dbMan.ExecuteScalar(query);
 
+        }
+        public DataTable GetWeeks() 
+        {
+            string query = "SELECT * FROM Week";
+            return dbMan.ExecuteReader(query);
+        }
+        public int GetSeason(string year) 
+        {
+            string query = $"select Season_Number From Season where year='{year}'";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int InsertWeek(DateTime Start_date,DateTime End_Date) 
+        {
+          
+            string query = $"INSERT INTO Week values ({GetSeason(Start_date.Year.ToString())},'{Start_date.ToShortDateString()}','{End_Date.ToShortDateString()}')";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertFixture(int host_id, int guest_id, int weekNumber, int seasonNumber, string score) 
+         
+        {
+           
+            string query = $"INSERT INTO Club_Fixtures values({host_id},{guest_id},{weekNumber},{seasonNumber},'{score}')";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+        public DataTable PlayedInThisWeek(int host_id, int guest_id, int weekNumber, int seasonNumber, string score) 
+        {
+            string query = $"SELECT * FROM Club_Fixtures where Host_id={host_id} and Week_number={weekNumber} and Season_number={seasonNumber} or Guest_id={guest_id} and Week_number={weekNumber} and Season_number={seasonNumber} ";
+            return dbMan.ExecuteReader(query);
+        }
         //testing stored procs
         public DataTable getTeamsByRankStoredProc()
         {

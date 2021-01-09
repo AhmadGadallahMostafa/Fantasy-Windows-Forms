@@ -56,8 +56,8 @@ namespace Fantasy
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AddFixture = new System.Windows.Forms.Button();
-            this.EditFixture = new System.Windows.Forms.Button();
             this.EnterScore = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -322,6 +322,7 @@ namespace Fantasy
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // dataGridView1
             // 
@@ -340,8 +341,10 @@ namespace Fantasy
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(655, 603);
             this.dataGridView1.TabIndex = 65;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // AddFixture
             // 
@@ -358,20 +361,6 @@ namespace Fantasy
             this.AddFixture.UseVisualStyleBackColor = false;
             this.AddFixture.Click += new System.EventHandler(this.AddFixture_Click);
             // 
-            // EditFixture
-            // 
-            this.EditFixture.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.EditFixture.FlatAppearance.BorderSize = 0;
-            this.EditFixture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditFixture.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditFixture.ForeColor = System.Drawing.SystemColors.Control;
-            this.EditFixture.Location = new System.Drawing.Point(38, 573);
-            this.EditFixture.Name = "EditFixture";
-            this.EditFixture.Size = new System.Drawing.Size(124, 40);
-            this.EditFixture.TabIndex = 91;
-            this.EditFixture.Text = "Edit Fixture";
-            this.EditFixture.UseVisualStyleBackColor = false;
-            // 
             // EnterScore
             // 
             this.EnterScore.BackColor = System.Drawing.Color.MediumVioletRed;
@@ -379,12 +368,24 @@ namespace Fantasy
             this.EnterScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EnterScore.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnterScore.ForeColor = System.Drawing.SystemColors.Control;
-            this.EnterScore.Location = new System.Drawing.Point(38, 486);
+            this.EnterScore.Location = new System.Drawing.Point(38, 600);
             this.EnterScore.Name = "EnterScore";
             this.EnterScore.Size = new System.Drawing.Size(124, 40);
             this.EnterScore.TabIndex = 92;
             this.EnterScore.Text = "Enter Score";
             this.EnterScore.UseVisualStyleBackColor = false;
+            this.EnterScore.Click += new System.EventHandler(this.EnterScore_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(417, 338);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(293, 33);
+            this.label3.TabIndex = 93;
+            this.label3.Text = "No Fixtures are added yet";
+            this.label3.Visible = false;
             // 
             // adminFixturesForm
             // 
@@ -392,8 +393,8 @@ namespace Fantasy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1179, 759);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.EnterScore);
-            this.Controls.Add(this.EditFixture);
             this.Controls.Add(this.AddFixture);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox21);
@@ -424,6 +425,7 @@ namespace Fantasy
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "adminFixturesForm";
             this.Text = "adminFixturesForm";
+            this.Load += new System.EventHandler(this.adminFixturesForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
@@ -479,7 +481,7 @@ namespace Fantasy
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AddFixture;
-        private System.Windows.Forms.Button EditFixture;
         private System.Windows.Forms.Button EnterScore;
+        private System.Windows.Forms.Label label3;
     }
 }

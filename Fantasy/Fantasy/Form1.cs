@@ -154,8 +154,14 @@ namespace Fantasy
 
         private void FixturesButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new FixturesForm());
-
+            if (AsAdmin)
+            {
+                 openChildForm(new adminFixturesForm());
+            }
+            else
+            {
+                openChildForm(new FixturesForm());
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

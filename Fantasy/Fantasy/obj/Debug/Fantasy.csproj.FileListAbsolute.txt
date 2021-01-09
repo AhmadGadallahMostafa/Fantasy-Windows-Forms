@@ -598,3 +598,5 @@ C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.AddFixture.resources
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminFixturesForm.resources
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminPlayersView.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.EnterScores.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.UserControl1.resources
