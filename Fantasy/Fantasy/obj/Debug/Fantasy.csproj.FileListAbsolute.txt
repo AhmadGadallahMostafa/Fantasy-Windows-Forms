@@ -595,3 +595,6 @@ C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.PlayerView.resources
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.CreateTeams.resources
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminPlayersView.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.AddFixture.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminFixturesForm.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminPlayersView.resources

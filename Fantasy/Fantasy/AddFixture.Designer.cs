@@ -39,6 +39,7 @@ namespace Fantasy
             this.AddFix = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HomeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GuestBox)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +121,7 @@ namespace Fantasy
             this.AddFix.TabIndex = 14;
             this.AddFix.Text = "Add Fixture";
             this.AddFix.UseVisualStyleBackColor = false;
+            this.AddFix.Click += new System.EventHandler(this.AddFix_Click);
             // 
             // dateTimePicker1
             // 
@@ -138,12 +140,22 @@ namespace Fantasy
             this.label2.TabIndex = 16;
             this.label2.Text = "Match Day";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(351, 446);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "label3";
+            // 
             // AddFixture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(731, 563);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.AddFix);
@@ -178,5 +190,6 @@ namespace Fantasy
         private System.Windows.Forms.Button AddFix;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

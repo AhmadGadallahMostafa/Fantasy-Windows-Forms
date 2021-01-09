@@ -44,5 +44,12 @@ namespace Fantasy
         {
             HomeBox.Load(path + comboBox1.Text + ".png");
         }
+
+        private void AddFix_Click(object sender, EventArgs e)
+        {
+
+            label3.Text = dateTimePicker1.Value.Date.Day.ToString();
+              
+        }
     }
 }
