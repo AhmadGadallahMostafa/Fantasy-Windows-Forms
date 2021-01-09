@@ -65,6 +65,12 @@
     <Compile Include="AddClubForm.Designer.cs">
       <DependentUpon>AddClubForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminPlayersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPlayersView.Designer.cs">
+      <DependentUpon>adminPlayersView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Club.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -188,6 +194,9 @@
     </Compile>
     <EmbeddedResource Include="AddClubForm.resx">
       <DependentUpon>AddClubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPlayersView.resx">
+      <DependentUpon>adminPlayersView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClubsForm.resx">
       <DependentUpon>ClubsForm.cs</DependentUpon>
