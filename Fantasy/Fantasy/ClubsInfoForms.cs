@@ -21,7 +21,7 @@ namespace Fantasy
             InitializeComponent();
         }
 
-        public ClubsInfoForms(Club c, bool SignedInAsAdmin)
+        public ClubsInfoForms(Club c)
         {
             InitializeComponent();
             Club = c;
