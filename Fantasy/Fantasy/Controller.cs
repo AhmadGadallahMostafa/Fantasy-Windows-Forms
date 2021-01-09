@@ -136,9 +136,9 @@ namespace Fantasy
 
         public int InsertLeague(String LeagueName,string Country)
         {
-            int LeagueId = GetLeaguesCount() + 1;
             
-            string query = "INSERT INTO Fantasy_League (League_Id,League_Name,Country,Total_Players) Values(" + LeagueId + ",'" + LeagueName + "','"+Country+"',1);";
+            
+            string query = "INSERT INTO Fantasy_League (League_Name,Country,Total_Players) Values('" + LeagueName + "','"+Country+"',1);";
             return dbMan.ExecuteNonQuery(query);
         }
 
@@ -302,10 +302,11 @@ namespace Fantasy
             return dbMan.ExecuteReader(query);
 
         }
-        public int Substitute(int FTID, int playerID, int sub )
+        public int Substitute(int FTID, int playerID, int sub)
         {
-            string query = "UPDATE Plays_In_Fantasy_Team SET Sub=" + sub + "WHERE Fantasy_Team_Id=" + FTID + " AND Player_ID="+playerID+";";
+            string query = "UPDATE Plays_In_Fantasy_Team SET Sub=" + sub + "WHERE Fantasy_Team_Id=" + FTID + " AND Player_ID=" + playerID + ";";
             return dbMan.ExecuteNonQuery(query);
+        }
         public int updatePointsStoredProc(string fname, string lname, int points)
         {
             string name = StoredProcedures.updatePoints;

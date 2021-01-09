@@ -598,3 +598,8 @@ C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.AddFixture.resources
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminFixturesForm.resources
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminPlayersView.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.AddClubForm.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.AddFixture.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminFixturesForm.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.adminPlayersView.resources
+C:\Users\LEGION\Documents\GitHub\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.ClubsUser.resources

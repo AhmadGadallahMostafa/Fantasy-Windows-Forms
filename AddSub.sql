@@ -1,0 +1,1 @@
+alter table Plays_In_Fantasy_Team add Sub bit
