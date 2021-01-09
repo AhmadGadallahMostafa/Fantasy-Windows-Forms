@@ -11,5 +11,7 @@ namespace Fantasy
         public static string addFootballer = "addFootballer";
         public static string getClubsByRank = "getClubsByRank";
         public static string getFootballlerNameAndClub = "getFootballlerNameAndClub";
+        public static string getPointsByName = "getPointsByName";
+        public static string updatePoints = "updatePoints";
     }
 }

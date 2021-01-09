@@ -255,11 +255,20 @@ namespace Fantasy
             string query = $"delete from footballer where First_Name = '{fname}' and Last_Name = '{lname}' ";
             return dbMan.ExecuteNonQuery(query);
         }
+
         //testing stored procs
         public DataTable getTeamsByRankStoredProc()
         {
             string name = StoredProcedures.getClubsByRank;
             return dbMan.ExecuteReaderSto(name, null);
+        }
+        public int getPointsByNameStoredProc(string fname, string lname)
+        {
+            string name = StoredProcedures.getPointsByName;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@Fname", fname);
+            parameters.Add("@lname", lname);
+            return (int)dbMan.ExecuteScalarSto(name, parameters);
         }
         public DataTable getFootBallerForAdmin()
         {
@@ -276,6 +285,15 @@ namespace Fantasy
             parameters.Add("@position", position);
             parameters.Add("@price", price);
             parameters.Add("@age ", age);
+            parameters.Add("@points", points);
+            return dbMan.ExecuteNonQuerySto(name, parameters);
+        }
+        public int updatePointsStoredProc(string fname, string lname, int points)
+        {
+            string name = StoredProcedures.updatePoints;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@Fname", fname);
+            parameters.Add("@Lname", lname);
             parameters.Add("@points", points);
             return dbMan.ExecuteNonQuerySto(name, parameters);
         }

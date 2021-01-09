@@ -16,7 +16,7 @@ namespace Fantasy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new adminPlayersView());
+            Application.Run(new Form1());
         }
     }
 }
