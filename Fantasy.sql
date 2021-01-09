@@ -1,4 +1,4 @@
--------------Database creation-------------
+---------------Database creation-------------
 
 create database Fantasy
 Go
@@ -8,8 +8,8 @@ use Fantasy
 ------------Table Creation-----------------
 create table Club
 (
-Club_Id int,
-Club_Rank int,
+Club_Id int identity(1,1),
+Club_Rank int ,
 Club_Name varchar(50) not null,
 Club_Points int,
 Goals_Against int,
@@ -19,7 +19,7 @@ primary key (Club_Id),
 
 create table Footballer
 (
-Player_Id int,
+Player_Id int identity(1,1),
 Club_ID int,
 First_Name varchar(50) not null,
 Last_Name varchar(50) not null,
@@ -47,14 +47,14 @@ foreign key (ID) references Footballer,
 
 create table Season
 (
-Season_Number int,
+Season_Number int identity(1,1),
 Primary key (Season_Number),
 )
 
 
 create table Week
 (
-Week_Number int,
+Week_Number int identity(1,1),
 Season_Number int,
 Start_Date date,
 End_Date date,
@@ -94,7 +94,7 @@ create table Fantasy_Player_Team
 Player_Username varchar(50) not null,
 Age int,
 Email varchar(255),
-Fantasy_Team_ID int,
+Fantasy_Team_ID int identity(1,1),
 Team_Name varchar(50),
 Total_Value int,
 Team_Funds int,
@@ -127,7 +127,7 @@ foreign key (Fantasy_Team_Id) references Fantasy_Player_Team(Fantasy_Team_ID),
 )
 create table Fantasy_League
 (
-League_Id int,
+League_Id int identity(1,1),
 League_Name varchar(50) not null,
 Country varchar(50),
 Total_Players int,

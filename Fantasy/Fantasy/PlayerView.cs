@@ -17,18 +17,14 @@ namespace Fantasy
         Controller C1 = new Controller();
 
         int FTID;
-        string[] TeamChosen = new string[15];
         string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/");
-        string[] Inplayers = new string[11];
-        string[] OutPlayers = new string[4];
+       
 
 
-
-        public PlayerView(int FantasyTeamId, string[] Team)
+        public PlayerView(int FantasyTeamId)
         {
             InitializeComponent();
             FTID = FantasyTeamId;
-            TeamChosen = Team;
             CustomizeDesign();
 
             
@@ -40,9 +36,15 @@ namespace Fantasy
         private void CustomizeDesign()
         {
             panel2.Hide();
-            textBox1.Hide();
-            label1.Hide();
+            EnterLeagueIDText.Hide();
+            EnterLeagueID.Hide();
             button15.Hide();
+            LeagueName.Hide();
+            LeagueNameText.Hide();
+            Country.Hide();
+            CountryText.Hide();
+            CreateButt.Hide();
+
         }
 
 
@@ -51,21 +53,6 @@ namespace Fantasy
         {
             
             
-             GK1.Load((path + TeamChosen[0] + ".png"));
-            GK2.Load(path + TeamChosen[11] + ".png");
-            DEF1.Load(path + TeamChosen[1] + ".png");
-            DEF2.Load(path + TeamChosen[2] + ".png");
-            DEF3.Load(path + TeamChosen[3] + ".png");
-            DEF4.Load(path + TeamChosen[4] + ".png");
-            DEF5.Load(path + TeamChosen[12] + ".png");
-            MID1.Load(path + TeamChosen[5] + ".png");
-            MID2.Load(path + TeamChosen[6] + ".png");
-            MID3.Load(path + TeamChosen[7] + ".png");
-            MID4.Load(path + TeamChosen[8] + ".png");
-            MID5.Load(path + TeamChosen[13] + ".png");
-            ATT1.Load(path + TeamChosen[9] + ".png");
-            ATT2.Load(path + TeamChosen[10] + ".png");
-            ATT3.Load(path + TeamChosen[14] + ".png");
             
 
 
@@ -74,8 +61,7 @@ namespace Fantasy
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GK1.Load((path + TeamChosen[11] + ".png"));
-            GK2.Load(path + TeamChosen[0] + ".png");
+            
 
 
 
@@ -83,8 +69,8 @@ namespace Fantasy
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Show();
-            label1.Show();
+            EnterLeagueIDText.Show();
+            EnterLeagueID.Show();
             button15.Show();
         }
 
@@ -101,9 +87,24 @@ namespace Fantasy
 
         private void button15_Click(object sender, EventArgs e)
         {
-            int LeagueID=Int32.Parse(textBox1.Text);
+            int LeagueID=Int32.Parse(EnterLeagueIDText.Text);
 
             C1.JoinLeague(FTID, LeagueID);
+        }
+
+        private void CreateLeagueButt_Click(object sender, EventArgs e)
+        {
+            LeagueName.Show();
+            LeagueNameText.Show();
+            CreateButt.Show();
+            Country.Show();
+            CountryText.Show();
+
+        }
+
+        private void CreateButt_Click(object sender, EventArgs e)
+        {
+            C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString());
         }
     }
 }

@@ -103,7 +103,6 @@ namespace Fantasy
                 if (flag == 1 )
                 {
                     MessageBox.Show("Player Added");
-                    dataGridView1.Refresh();
                 }
                 else
                 {

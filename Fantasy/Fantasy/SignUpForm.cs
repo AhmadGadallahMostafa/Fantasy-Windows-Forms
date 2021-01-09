@@ -69,14 +69,9 @@ namespace Fantasy
                     {
                         
                         label14.Visible = false;
-<<<<<<< Updated upstream
-=======
+
                         int id = controlObj.getFantasyTeamId(email);
                         openChildForm(new CreateTeams(id));
->>>>>>> Stashed changes
-
-
-                        
                     }
                     else 
                     {
@@ -89,6 +84,7 @@ namespace Fantasy
                 }
 
             }
+           
         }
 
         private void label8_Click(object sender, EventArgs e)

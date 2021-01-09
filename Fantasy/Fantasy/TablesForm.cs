@@ -22,7 +22,7 @@ namespace Fantasy
             DataGridViewImageColumn img = new DataGridViewImageColumn();
             //img.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridView1.Columns.Add(img);
-            dataGridView1.DataSource = ControllerObj.getClubsByRank();
+            dataGridView1.DataSource = ControllerObj.getTeamsByRankStoredProc();
             dataGridView1.ClearSelection();
             dataGridView1.Refresh();
           

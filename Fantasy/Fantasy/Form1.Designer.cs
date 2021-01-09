@@ -123,6 +123,7 @@ namespace Fantasy
             this.childPanel.Name = "childPanel";
             this.childPanel.Size = new System.Drawing.Size(1195, 798);
             this.childPanel.TabIndex = 1;
+            this.childPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.childPanel_Paint);
             // 
             // pictureBox22
             // 

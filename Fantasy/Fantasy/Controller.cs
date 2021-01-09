@@ -51,25 +51,59 @@ namespace Fantasy
             return (int)dbMan.ExecuteScalar(query);
 
         }
+        
+         public int BuyingInPLayer(int TeamID,string LastName)
+         {
+             if (InsertPlayer(GetPlayerId(LastName), TeamID,0) == 1)
+             {
 
-        public int BuyingFunction(int TeamID, string LastName)
-        {
-            int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+                 int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+                 string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
+                 return dbMan.ExecuteNonQuery(query);
 
-            string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
-            return dbMan.ExecuteNonQuery(query);
-        }
-        public int GetPlayerId(String LastName)
+             }
+             else
+             {
+                 return 0;
+             }
+
+
+         }
+         public int BuyingOutPLayer(int TeamID, string LastName)
+         {
+             if (InsertPlayer(GetPlayerId(LastName), TeamID, 1) == 1)
+             {
+
+                 int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+                 string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
+                 return dbMan.ExecuteNonQuery(query);
+
+             }
+             else
+             {
+                 return 0;
+             }
+
+
+         }
+        
+
+
+       
+            public int GetPlayerId(String LastName)
         {
             string query = "SELECT Player_id From Footballer Where Last_Name='" + LastName + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
-        public int InsertPlayer(int PlayerId, int FantasyTeamId)
-        {
-            string query = "Insert INTO Plays_In_Fantasy_Team VALUES (" + PlayerId + "," + FantasyTeamId + ");";
-            return dbMan.ExecuteNonQuery(query);
-        }
 
+       
+
+         public int InsertPlayer(int PlayerId, int FantasyTeamId, int sub)
+         {
+
+             string query = "Insert INTO Plays_In_Fantasy_Team  VALUES (" + PlayerId + "," + FantasyTeamId + "," + sub + ");";
+             return dbMan.ExecuteNonQuery(query);
+         }
         public Club GetClub(string ClubName)
         {
             Club c;
@@ -95,15 +129,16 @@ namespace Fantasy
         }
         public int GetLeaguesCount()
         {
-            string query = "COUNT(*) FROM Fantasy_League";
+            string query = "SELECT COUNT(*) FROM Fantasy_League";
             return (int)dbMan.ExecuteScalar(query);
         }
 
 
-        public int InsertLeague(String LeagueName)
+        public int InsertLeague(String LeagueName,string Country)
         {
             int LeagueId = GetLeaguesCount() + 1;
-            string query = "INSERT INTO Fantasy_League (League_Id,League_Name) Values(" + LeagueId + "," + LeagueName + ");";
+            
+            string query = "INSERT INTO Fantasy_League (League_Id,League_Name,Country,Total_Players) Values(" + LeagueId + ",'" + LeagueName + "','"+Country+"',1);";
             return dbMan.ExecuteNonQuery(query);
         }
 
@@ -115,6 +150,11 @@ namespace Fantasy
         public DataTable GetFootBallersByClubName(string club_name)
         {
             string query = $"select Footballer.Last_Name,Footballer.Points,Footballer.Price from footballer,club where footballer.Club_id = Club.Club_id and Club.club_name = '{club_name}'  order by points desc; ";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetFootBallersByClubNameForDelete(string club_name)
+        {
+            string query = $"select Footballer.First_Name,Footballer.Last_Name from footballer,club where footballer.Club_id = Club.Club_id and Club.club_name = '{club_name}' ; ";
             return dbMan.ExecuteReader(query);
         }
         public DataTable GetFootBallersByPoints()
@@ -160,6 +200,7 @@ namespace Fantasy
             return dbMan.ExecuteNonQuery(query);
 
         }
+       
 
 
         
@@ -203,9 +244,6 @@ namespace Fantasy
             return (int)dbMan.ExecuteScalar(query);
         }
 
-<<<<<<< Updated upstream
-=======
-
 
         public int getClubIdByName(string name)
         {
@@ -218,7 +256,6 @@ namespace Fantasy
             string query = $"delete from footballer where First_Name = '{fname}' and Last_Name = '{lname}' ";
             return dbMan.ExecuteNonQuery(query);
         }
-
 
         //testing stored procs
         public DataTable getTeamsByRankStoredProc()
@@ -244,6 +281,6 @@ namespace Fantasy
             parameters.Add("@points", points);
             return dbMan.ExecuteNonQuerySto(name, parameters);
         }
->>>>>>> Stashed changes
+
     }
 }

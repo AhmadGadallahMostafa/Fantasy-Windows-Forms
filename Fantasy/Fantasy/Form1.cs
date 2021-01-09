@@ -170,12 +170,22 @@ namespace Fantasy
 
         private void PlayersButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new PlayersForm());
+            if (AsAdmin)
+            {
+                openChildForm(new adminPlayersView());  
+            }
+            else openChildForm(new PlayersForm());
+
         }
 
         private void TablesButton_Click(object sender, EventArgs e)
         {
             openChildForm(new TablesForm());
+        }
+
+        private void childPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
