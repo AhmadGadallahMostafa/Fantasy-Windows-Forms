@@ -52,24 +52,58 @@ namespace Fantasy
 
         }
 
-       public int BuyingFunction(int TeamID,string LastName)
-        {
-            int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+         public int BuyingInPLayer(int TeamID,string LastName)
+         {
+             if (InsertPlayer(GetPlayerId(LastName), TeamID,0) == 1)
+             {
 
-            string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID="+TeamID +" ; ";
-            return dbMan.ExecuteNonQuery(query);
-        }
-        public int GetPlayerId(String LastName)
+                 int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+                 string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
+                 return dbMan.ExecuteNonQuery(query);
+
+             }
+             else
+             {
+                 return 0;
+             }
+
+
+         }
+         public int BuyingOutPLayer(int TeamID, string LastName)
+         {
+             if (InsertPlayer(GetPlayerId(LastName), TeamID, 1) == 1)
+             {
+
+                 int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+                 string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
+                 return dbMan.ExecuteNonQuery(query);
+
+             }
+             else
+             {
+                 return 0;
+             }
+
+
+         }
+        
+
+
+       
+            public int GetPlayerId(String LastName)
         {
             string query = "SELECT Player_id From Footballer Where Last_Name='" + LastName + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
-        public int InsertPlayer(int PlayerId, int FantasyTeamId)
-        {
-            string query = "Insert INTO Plays_In_Fantasy_Team VALUES (" + PlayerId + "," + FantasyTeamId + ");";
-            return dbMan.ExecuteNonQuery(query);
-        }
 
+       
+
+         public int InsertPlayer(int PlayerId, int FantasyTeamId, int sub)
+         {
+
+             string query = "Insert INTO Plays_In_Fantasy_Team  VALUES (" + PlayerId + "," + FantasyTeamId + "," + sub + ");";
+             return dbMan.ExecuteNonQuery(query);
+         }
         public Club GetClub(string ClubName)
         {
             Club c;
@@ -95,7 +129,7 @@ namespace Fantasy
         }
         public int GetLeaguesCount()
         {
-            string query = "COUNT(*) FROM Fantasy_League";
+            string query = "SELECT COUNT(*) FROM Fantasy_League";
             return (int)dbMan.ExecuteScalar(query);
         }
 
@@ -160,8 +194,7 @@ namespace Fantasy
             return dbMan.ExecuteNonQuery(query);
 
         }
+       
 
-
-        
     }
 }
