@@ -286,9 +286,10 @@ namespace Fantasy
             this.PlayersList.BackColor = System.Drawing.Color.White;
             this.PlayersList.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PlayersList.FormattingEnabled = true;
+            this.PlayersList.ItemHeight = 15;
             this.PlayersList.Location = new System.Drawing.Point(66, 12);
             this.PlayersList.Name = "PlayersList";
-            this.PlayersList.Size = new System.Drawing.Size(217, 173);
+            this.PlayersList.Size = new System.Drawing.Size(217, 169);
             this.PlayersList.TabIndex = 17;
             // 
             // textBox1
@@ -299,7 +300,7 @@ namespace Fantasy
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(14, 208);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 23);
+            this.textBox1.Size = new System.Drawing.Size(47, 29);
             this.textBox1.TabIndex = 19;
             // 
             // SBT1
@@ -518,7 +519,7 @@ namespace Fantasy
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 552);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 27);
+            this.label1.Size = new System.Drawing.Size(149, 35);
             this.label1.TabIndex = 22;
             this.label1.Text = "Team Name";
             // 
@@ -526,22 +527,22 @@ namespace Fantasy
             // 
             this.textBox2.Location = new System.Drawing.Point(14, 592);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
+            this.textBox2.Size = new System.Drawing.Size(212, 23);
             this.textBox2.TabIndex = 21;
             // 
             // Substitutes
             // 
             this.Substitutes.AutoSize = true;
             this.Substitutes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Substitutes.Location = new System.Drawing.Point(22, 670);
+            this.Substitutes.Location = new System.Drawing.Point(2, 658);
             this.Substitutes.Name = "Substitutes";
-            this.Substitutes.Size = new System.Drawing.Size(97, 23);
+            this.Substitutes.Size = new System.Drawing.Size(122, 29);
             this.Substitutes.TabIndex = 36;
             this.Substitutes.Text = "Substitutes";
             // 
             // CreateTeams
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 798);
             this.Controls.Add(this.Substitutes);

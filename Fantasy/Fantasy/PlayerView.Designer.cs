@@ -32,6 +32,7 @@ namespace Fantasy
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerView));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
+            this.CreateButt = new System.Windows.Forms.Button();
             this.Country = new System.Windows.Forms.Label();
             this.LeagueName = new System.Windows.Forms.Label();
             this.CountryText = new System.Windows.Forms.ComboBox();
@@ -65,18 +66,18 @@ namespace Fantasy
             this.ATT1 = new System.Windows.Forms.PictureBox();
             this.GK2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.CreateButt = new System.Windows.Forms.Button();
+            this.SubGK1 = new System.Windows.Forms.Button();
+            this.SubATT1 = new System.Windows.Forms.Button();
+            this.SubATT2 = new System.Windows.Forms.Button();
+            this.SubMID4 = new System.Windows.Forms.Button();
+            this.SubMID3 = new System.Windows.Forms.Button();
+            this.SubMID2 = new System.Windows.Forms.Button();
+            this.SubMID1 = new System.Windows.Forms.Button();
+            this.SubDEF1 = new System.Windows.Forms.Button();
+            this.SubDEF2 = new System.Windows.Forms.Button();
+            this.SubDEF3 = new System.Windows.Forms.Button();
+            this.SubDEF4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SideMenuPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -135,6 +136,17 @@ namespace Fantasy
             this.SideMenuPanel.Name = "SideMenuPanel";
             this.SideMenuPanel.Size = new System.Drawing.Size(368, 795);
             this.SideMenuPanel.TabIndex = 31;
+            // 
+            // CreateButt
+            // 
+            this.CreateButt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateButt.Location = new System.Drawing.Point(239, 652);
+            this.CreateButt.Name = "CreateButt";
+            this.CreateButt.Size = new System.Drawing.Size(102, 27);
+            this.CreateButt.TabIndex = 65;
+            this.CreateButt.Text = "Create";
+            this.CreateButt.UseVisualStyleBackColor = true;
+            this.CreateButt.Click += new System.EventHandler(this.CreateButt_Click);
             // 
             // Country
             // 
@@ -328,7 +340,7 @@ namespace Fantasy
             // 
             // ATT3
             // 
-            this.ATT3.Location = new System.Drawing.Point(402, 619);
+            this.ATT3.Location = new System.Drawing.Point(582, 653);
             this.ATT3.Name = "ATT3";
             this.ATT3.Size = new System.Drawing.Size(52, 56);
             this.ATT3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -337,7 +349,7 @@ namespace Fantasy
             // 
             // MID5
             // 
-            this.MID5.Location = new System.Drawing.Point(237, 619);
+            this.MID5.Location = new System.Drawing.Point(392, 653);
             this.MID5.Name = "MID5";
             this.MID5.Size = new System.Drawing.Size(52, 56);
             this.MID5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -346,7 +358,7 @@ namespace Fantasy
             // 
             // DEF5
             // 
-            this.DEF5.Location = new System.Drawing.Point(52, 619);
+            this.DEF5.Location = new System.Drawing.Point(220, 653);
             this.DEF5.Name = "DEF5";
             this.DEF5.Size = new System.Drawing.Size(52, 56);
             this.DEF5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -454,7 +466,7 @@ namespace Fantasy
             // 
             // GK2
             // 
-            this.GK2.Location = new System.Drawing.Point(556, 619);
+            this.GK2.Location = new System.Drawing.Point(52, 653);
             this.GK2.Name = "GK2";
             this.GK2.Size = new System.Drawing.Size(52, 56);
             this.GK2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -470,133 +482,140 @@ namespace Fantasy
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // SubGK1
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(91, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 23);
-            this.button2.TabIndex = 49;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.SubGK1.Image = ((System.Drawing.Image)(resources.GetObject("SubGK1.Image")));
+            this.SubGK1.Location = new System.Drawing.Point(91, 265);
+            this.SubGK1.Name = "SubGK1";
+            this.SubGK1.Size = new System.Drawing.Size(32, 23);
+            this.SubGK1.TabIndex = 49;
+            this.SubGK1.UseVisualStyleBackColor = true;
+            this.SubGK1.Click += new System.EventHandler(this.SubGK1_Click);
             // 
-            // button4
+            // SubATT1
             // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(620, 335);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(32, 23);
-            this.button4.TabIndex = 51;
-            this.button4.UseVisualStyleBackColor = true;
+            this.SubATT1.Image = ((System.Drawing.Image)(resources.GetObject("SubATT1.Image")));
+            this.SubATT1.Location = new System.Drawing.Point(620, 335);
+            this.SubATT1.Name = "SubATT1";
+            this.SubATT1.Size = new System.Drawing.Size(32, 23);
+            this.SubATT1.TabIndex = 51;
+            this.SubATT1.UseVisualStyleBackColor = true;
+            this.SubATT1.Click += new System.EventHandler(this.SubATT1_Click);
             // 
-            // button5
+            // SubATT2
             // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(620, 223);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(32, 23);
-            this.button5.TabIndex = 52;
-            this.button5.UseVisualStyleBackColor = true;
+            this.SubATT2.Image = ((System.Drawing.Image)(resources.GetObject("SubATT2.Image")));
+            this.SubATT2.Location = new System.Drawing.Point(620, 223);
+            this.SubATT2.Name = "SubATT2";
+            this.SubATT2.Size = new System.Drawing.Size(32, 23);
+            this.SubATT2.TabIndex = 52;
+            this.SubATT2.UseVisualStyleBackColor = true;
+            this.SubATT2.Click += new System.EventHandler(this.SubATT2_Click);
             // 
-            // button6
+            // SubMID4
             // 
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(392, 120);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(32, 23);
-            this.button6.TabIndex = 53;
-            this.button6.UseVisualStyleBackColor = true;
+            this.SubMID4.Image = ((System.Drawing.Image)(resources.GetObject("SubMID4.Image")));
+            this.SubMID4.Location = new System.Drawing.Point(392, 120);
+            this.SubMID4.Name = "SubMID4";
+            this.SubMID4.Size = new System.Drawing.Size(32, 23);
+            this.SubMID4.TabIndex = 53;
+            this.SubMID4.UseVisualStyleBackColor = true;
+            this.SubMID4.Click += new System.EventHandler(this.SubMID4_Click);
             // 
-            // button7
+            // SubMID3
             // 
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(392, 223);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(32, 23);
-            this.button7.TabIndex = 54;
-            this.button7.UseVisualStyleBackColor = true;
+            this.SubMID3.Image = ((System.Drawing.Image)(resources.GetObject("SubMID3.Image")));
+            this.SubMID3.Location = new System.Drawing.Point(392, 223);
+            this.SubMID3.Name = "SubMID3";
+            this.SubMID3.Size = new System.Drawing.Size(32, 23);
+            this.SubMID3.TabIndex = 54;
+            this.SubMID3.UseVisualStyleBackColor = true;
+            this.SubMID3.Click += new System.EventHandler(this.SubMID3_Click);
             // 
-            // button8
+            // SubMID2
             // 
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(392, 335);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(32, 23);
-            this.button8.TabIndex = 55;
-            this.button8.UseVisualStyleBackColor = true;
+            this.SubMID2.Image = ((System.Drawing.Image)(resources.GetObject("SubMID2.Image")));
+            this.SubMID2.Location = new System.Drawing.Point(392, 335);
+            this.SubMID2.Name = "SubMID2";
+            this.SubMID2.Size = new System.Drawing.Size(32, 23);
+            this.SubMID2.TabIndex = 55;
+            this.SubMID2.UseVisualStyleBackColor = true;
+            this.SubMID2.Click += new System.EventHandler(this.SubMID2_Click);
             // 
-            // button9
+            // SubMID1
             // 
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(392, 449);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(32, 23);
-            this.button9.TabIndex = 56;
-            this.button9.UseVisualStyleBackColor = true;
+            this.SubMID1.Image = ((System.Drawing.Image)(resources.GetObject("SubMID1.Image")));
+            this.SubMID1.Location = new System.Drawing.Point(392, 449);
+            this.SubMID1.Name = "SubMID1";
+            this.SubMID1.Size = new System.Drawing.Size(32, 23);
+            this.SubMID1.TabIndex = 56;
+            this.SubMID1.UseVisualStyleBackColor = true;
+            this.SubMID1.Click += new System.EventHandler(this.SubMID1_Click);
             // 
-            // button10
+            // SubDEF1
             // 
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(208, 449);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(32, 23);
-            this.button10.TabIndex = 57;
-            this.button10.UseVisualStyleBackColor = true;
+            this.SubDEF1.Image = ((System.Drawing.Image)(resources.GetObject("SubDEF1.Image")));
+            this.SubDEF1.Location = new System.Drawing.Point(208, 449);
+            this.SubDEF1.Name = "SubDEF1";
+            this.SubDEF1.Size = new System.Drawing.Size(32, 23);
+            this.SubDEF1.TabIndex = 57;
+            this.SubDEF1.UseVisualStyleBackColor = true;
+            this.SubDEF1.Click += new System.EventHandler(this.SubDEF1_Click);
             // 
-            // button11
+            // SubDEF2
             // 
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(208, 335);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(32, 23);
-            this.button11.TabIndex = 58;
-            this.button11.UseVisualStyleBackColor = true;
+            this.SubDEF2.Image = ((System.Drawing.Image)(resources.GetObject("SubDEF2.Image")));
+            this.SubDEF2.Location = new System.Drawing.Point(208, 335);
+            this.SubDEF2.Name = "SubDEF2";
+            this.SubDEF2.Size = new System.Drawing.Size(32, 23);
+            this.SubDEF2.TabIndex = 58;
+            this.SubDEF2.UseVisualStyleBackColor = true;
+            this.SubDEF2.Click += new System.EventHandler(this.SubDEF2_Click);
             // 
-            // button12
+            // SubDEF3
             // 
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(208, 223);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(32, 23);
-            this.button12.TabIndex = 59;
-            this.button12.UseVisualStyleBackColor = true;
+            this.SubDEF3.Image = ((System.Drawing.Image)(resources.GetObject("SubDEF3.Image")));
+            this.SubDEF3.Location = new System.Drawing.Point(208, 223);
+            this.SubDEF3.Name = "SubDEF3";
+            this.SubDEF3.Size = new System.Drawing.Size(32, 23);
+            this.SubDEF3.TabIndex = 59;
+            this.SubDEF3.UseVisualStyleBackColor = true;
+            this.SubDEF3.Click += new System.EventHandler(this.SubDEF3_Click);
             // 
-            // button13
+            // SubDEF4
             // 
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(208, 120);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(32, 23);
-            this.button13.TabIndex = 60;
-            this.button13.UseVisualStyleBackColor = true;
+            this.SubDEF4.Image = ((System.Drawing.Image)(resources.GetObject("SubDEF4.Image")));
+            this.SubDEF4.Location = new System.Drawing.Point(208, 120);
+            this.SubDEF4.Name = "SubDEF4";
+            this.SubDEF4.Size = new System.Drawing.Size(32, 23);
+            this.SubDEF4.TabIndex = 60;
+            this.SubDEF4.UseVisualStyleBackColor = true;
+            this.SubDEF4.Click += new System.EventHandler(this.SubDEF4_Click);
             // 
-            // CreateButt
+            // textBox1
             // 
-            this.CreateButt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateButt.Location = new System.Drawing.Point(239, 652);
-            this.CreateButt.Name = "CreateButt";
-            this.CreateButt.Size = new System.Drawing.Size(102, 27);
-            this.CreateButt.TabIndex = 65;
-            this.CreateButt.Text = "Create";
-            this.CreateButt.UseVisualStyleBackColor = true;
-            this.CreateButt.Click += new System.EventHandler(this.CreateButt_Click);
+            this.textBox1.Location = new System.Drawing.Point(664, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 61;
             // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 751);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SubDEF4);
+            this.Controls.Add(this.SubDEF3);
+            this.Controls.Add(this.SubDEF2);
+            this.Controls.Add(this.SubDEF1);
+            this.Controls.Add(this.SubMID1);
+            this.Controls.Add(this.SubMID2);
+            this.Controls.Add(this.SubMID3);
+            this.Controls.Add(this.SubMID4);
+            this.Controls.Add(this.SubATT2);
+            this.Controls.Add(this.SubATT1);
+            this.Controls.Add(this.SubGK1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.GK2);
             this.Controls.Add(this.ATT1);
@@ -642,6 +661,7 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.ATT1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -671,17 +691,17 @@ namespace Fantasy
         private System.Windows.Forms.PictureBox ATT1;
         private System.Windows.Forms.PictureBox GK2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button SubGK1;
+        private System.Windows.Forms.Button SubATT1;
+        private System.Windows.Forms.Button SubATT2;
+        private System.Windows.Forms.Button SubMID4;
+        private System.Windows.Forms.Button SubMID3;
+        private System.Windows.Forms.Button SubMID2;
+        private System.Windows.Forms.Button SubMID1;
+        private System.Windows.Forms.Button SubDEF1;
+        private System.Windows.Forms.Button SubDEF2;
+        private System.Windows.Forms.Button SubDEF3;
+        private System.Windows.Forms.Button SubDEF4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button MyLeaguesButt;
         private System.Windows.Forms.Button CreateLeagueButt;
@@ -694,5 +714,6 @@ namespace Fantasy
         private System.Windows.Forms.ComboBox CountryText;
         private System.Windows.Forms.TextBox LeagueNameText;
         private System.Windows.Forms.Button CreateButt;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

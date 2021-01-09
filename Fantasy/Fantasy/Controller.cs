@@ -279,5 +279,23 @@ namespace Fantasy
             parameters.Add("@points", points);
             return dbMan.ExecuteNonQuerySto(name, parameters);
         }
+
+        public  DataTable OnPitchList(int FantasyTeamID)
+        {
+            string query = "SELECT Last_Name FROM Plays_In_Fantasy_Team,Footballer WHERE Plays_In_Fantasy_Team.Fantasy_Team_Id=" + FantasyTeamID + " AND  Plays_In_Fantasy_Team.Player_ID=Footballer.PLayer_Id AND  Plays_In_Fantasy_Team.Sub=0 ORDER BY Poisition";
+            return dbMan.ExecuteReader(query);
+
+        }
+        public DataTable SubsList(int FantasyTeamID)
+        {
+            string query = "SELECT Last_Name FROM Plays_In_Fantasy_Team,Footballer WHERE Plays_In_Fantasy_Team.Fantasy_Team_Id=" + FantasyTeamID + " AND  Plays_In_Fantasy_Team.Player_ID=Footballer.PLayer_Id AND  Plays_In_Fantasy_Team.Sub=1 ORDER BY Poisition";
+            return dbMan.ExecuteReader(query);
+
+        }
+        public int Substitute(int FTID, int playerID, int sub )
+        {
+            string query = "UPDATE Plays_In_Fantasy_Team SET Sub=" + sub + "WHERE Fantasy_Team_Id=" + FTID + " AND Player_ID="+playerID+";";
+            return dbMan.ExecuteNonQuery(query);
+        }
     }
 }
