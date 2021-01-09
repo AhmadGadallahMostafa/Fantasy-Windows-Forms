@@ -70,8 +70,8 @@ namespace Fantasy
                         
                         label14.Visible = false;
 
+                        openChildForm(new CreateTeams(id));
 
-                        
                     }
                     else 
                     {
@@ -84,6 +84,7 @@ namespace Fantasy
                 }
 
             }
+           
         }
 
         private void label8_Click(object sender, EventArgs e)
