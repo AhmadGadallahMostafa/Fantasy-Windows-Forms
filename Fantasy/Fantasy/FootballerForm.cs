@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Fantasy
 {
-    public partial class PlayersForm : Form
+    public partial class FootballerForm : Form
     {
         Controller ControllerObj;
-        public PlayersForm()
+        public FootballerForm()
         {
             InitializeComponent();
             comboBox1.DataSource = new List<String> {"Points", "Club", "Poisition" };
