@@ -65,6 +65,27 @@
     <Compile Include="AddClubForm.Designer.cs">
       <DependentUpon>AddClubForm.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="AddFixture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFixture.Designer.cs">
+      <DependentUpon>AddFixture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFixturesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFixturesForm.Designer.cs">
+      <DependentUpon>adminFixturesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPlayersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPlayersView.Designer.cs">
+      <DependentUpon>adminPlayersView.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="Club.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -189,6 +210,18 @@
     <EmbeddedResource Include="AddClubForm.resx">
       <DependentUpon>AddClubForm.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< Updated upstream
+=======
+    <EmbeddedResource Include="AddFixture.resx">
+      <DependentUpon>AddFixture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFixturesForm.resx">
+      <DependentUpon>adminFixturesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPlayersView.resx">
+      <DependentUpon>adminPlayersView.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> Stashed changes
     <EmbeddedResource Include="ClubsForm.resx">
       <DependentUpon>ClubsForm.cs</DependentUpon>
       <SubType>Designer</SubType>

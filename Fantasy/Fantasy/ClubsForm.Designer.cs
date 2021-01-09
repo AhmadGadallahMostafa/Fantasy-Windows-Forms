@@ -696,6 +696,7 @@ namespace Fantasy
             this.Controls.Add(this.SixthClub);
             this.Controls.Add(this.SeventhClub);
             this.Controls.Add(this.FirstClub);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -22,7 +22,8 @@ namespace Fantasy
         private void FixturesForm_Load(object sender, EventArgs e)
         { 
             this.BackgroundImageLayout = ImageLayout.Stretch;
-             dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
+            dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
+
             dataGridView1.ClearSelection();
             styleDataGrid();
         }
