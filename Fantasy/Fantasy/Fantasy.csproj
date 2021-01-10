@@ -207,12 +207,6 @@
     <Compile Include="Unavailable_Player.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Validations.cs" />
     <Compile Include="Week.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -278,9 +272,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TablesForm.resx">
       <DependentUpon>TablesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

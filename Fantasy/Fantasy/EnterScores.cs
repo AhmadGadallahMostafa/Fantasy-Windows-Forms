@@ -14,14 +14,57 @@ namespace Fantasy
     {
         int HomeGoals = 0;
         int GuestGoals = 0;
-        public EnterScores()
+        int HomeAssists = 0;
+        int GuestAssists = 0;
+        int thisweek = 0;
+        string HomeClub = "";
+        string GuestClub="";
+        Controller controlObj;
+        string[] HomePlayersBackLine = new string[3];
+        string[] AwayPlayersBackLine = new string[3];
+
+        public EnterScores(string HTeam,string GTeam,int week)
         {
             InitializeComponent();
-        }
+            HomeClub = HTeam;
+            GuestClub = GTeam;
+            controlObj = new Controller();
+            thisweek = week;
 
+        }
+      
         private void EnterScores_Load(object sender, EventArgs e)
         {
+            DataTable homeClub = controlObj.GetFootBallersByClubName(HomeClub);
+            listBox1.DataSource = homeClub;
+            listBox1.DisplayMember = "Last_Name";
+            DataTable guestClub = controlObj.GetFootBallersByClubName(GuestClub);
+            listBox2.DataSource = guestClub;
+            listBox2.DisplayMember = "Last_Name";
+            label1.Text = HomeClub;
+            label2.Text = GuestClub;
 
+            DataTable dt1 = controlObj.GetDefendersAndGkNamesInClub(HomeClub);
+            DataTable dt2 = controlObj.GetDefendersAndGkNamesInClub(GuestClub);
+            int count1 = dt1.Rows.Count;
+            if (count1 > 0)
+            {
+
+                for (int i = 0; i < count1; i++)
+                {
+                    HomePlayersBackLine[i] = dt1.Rows[i][0].ToString();
+                }
+            }
+            int count2 = dt2.Rows.Count;
+            if (count2 > 0)
+            {
+
+                for (int i = 0; i < count2; i++)
+                {
+                    AwayPlayersBackLine[i] = dt2.Rows[i][0].ToString();
+
+                }
+            }
         }
 
         private void GuestTeam_Click(object sender, EventArgs e)
@@ -31,32 +74,117 @@ namespace Fantasy
 
         private void EnterScore_Click(object sender, EventArgs e)
         {
-            int n = 3;
-            UserControl1[] controls = new UserControl1[n];
-
-            for (int i = 0; i < n; i++)
+            if (HomeGoals == 0) 
             {
-                controls[i] = new UserControl1();
+                for (int i = 0; i < AwayPlayersBackLine.Length; i++) 
+                {
+                    controlObj.PlayerCleanSheet(AwayPlayersBackLine[i]);
 
-                controls[i].SetScoredBy("some value to display in text");
-                controls[i].SetLabel2Value("some value to display in label");
-                controls[i].GetScoredBy();
-                controls[i].GetLabel1Value();
+                }
             }
-
-            // This adds the controls to the form (you will need to specify thier co-ordinates etc. first)
-          
-            for (int i = 0; i < n; i++)
+            if (GuestGoals == 0) 
             {
-                this.Controls.Add(controls[i]);
-               
+                //cleansheet for home team
+                for(int i = 0; i < HomePlayersBackLine.Length; i++) 
+                {
+                    controlObj.PlayerCleanSheet(HomePlayersBackLine[i]);
+                }
             }
-            controls[1].Location = new Control(controls[1].GetScoredBy(), 49, 318, 150, 150).Location;
-            controls[0].Location = new Control("", 200, 50, 20, 50).Location;
-            controls[2].Location = new Control("", 300, 50, 30, 50).Location;
+            controlObj.UpdateClubAfterMatch(HomeClub, GuestGoals, HomeGoals);
+            controlObj.UpdateClubAfterMatch(GuestClub, HomeGoals, GuestGoals);
 
+            string score = HomeGoals.ToString() + "-" + GuestGoals.ToString();
+            if (controlObj.UpdateFixtureScore(HomeClub, GuestClub, thisweek, score, DateTime.Today.Year.ToString()) != 0)
+            {
+                MessageBox.Show("Fxiture Updated!");
+                UpdatedFixture?.Invoke(this, EventArgs.Empty);
+                this.Close();
+                
 
+            }
+        }
+        public event EventHandler UpdatedFixture;
+        private void label3_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void HScore_Click(object sender, EventArgs e)
+        {
+            HomeGoals++;
+            label3.Text = HomeGoals.ToString();
+            var playerName=  listBox1.Text;
+            controlObj.PlayerScored(playerName);
+
+        }
+
+        private void HAssist_Click(object sender, EventArgs e)
+        {
+            HomeAssists++;
+            if (HomeAssists > HomeGoals)
+            {
+                HomeAssists--;
+                MessageBox.Show("A Goal must be scored to add an assist!");
+            }
+            else
+            {
+                var playerName = listBox1.Text;
+                controlObj.PlayerAssisted(playerName);
+            }
+        }
+
+        private void AScore_Click(object sender, EventArgs e)
+        {
+            GuestGoals++;
+            label4.Text = GuestGoals.ToString();
+            var playerName = listBox2.Text;
+            controlObj.PlayerScored(playerName);
+
+        }
+
+        private void AAssist_Click(object sender, EventArgs e)
+        {
+            GuestAssists++;
+            if (GuestAssists > GuestGoals)
+            {
+                GuestAssists--;
+                MessageBox.Show("A Goal must be scored to add an assist!");
+            }
+            else
+            {
+                var playerName = listBox2.Text;
+                controlObj.PlayerAssisted(playerName);
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AwaySus_Click(object sender, EventArgs e)
+        {
+            controlObj.InsertPlayerUnavailable(listBox2.Text,true,false,DateTime.Today,7);
+        }
+
+        private void AwaInjure_Click(object sender, EventArgs e)
+        {
+            controlObj.InsertPlayerUnavailable(listBox2.Text, false, true, DateTime.Today, (int)numericUpDown1.Value);
+        }
+
+        private void HomeSus_Click(object sender, EventArgs e)
+        {
+            controlObj.InsertPlayerUnavailable(listBox1.Text, true, false, DateTime.Today, 7);
+        }
+
+        private void HomeInjure_Click(object sender, EventArgs e)
+        {
+            controlObj.InsertPlayerUnavailable(listBox2.Text, false, true, DateTime.Today, (int)numericUpDown2.Value);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

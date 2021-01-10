@@ -45,12 +45,58 @@ namespace Fantasy
 
         private void AddFixture_Click(object sender, EventArgs e)
         {
-            new AddFixture();
+           openChildForm( new AddFixture());
         }
+        private Form activeForm = null;
+        private void openScores(EnterScores childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            childForm.UpdatedFixture += OnUpdatedFixture;
 
+
+        }
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            
+
+
+        }
+        public event EventHandler RefreshFixtures;
+        protected void OnUpdatedFixture(object sender, EventArgs e)
+        {
+            RefreshFixtures?.Invoke(this, EventArgs.Empty);
+        }
         private void EnterScore_Click(object sender, EventArgs e)
         {
-            
+            if (dataGridView1.CurrentCell == null)
+            {
+                MessageBox.Show("Please Select a Fixture");
+            }
+            else
+            {
+                string Home = dataGridView1.SelectedCells[0].Value.ToString();
+                
+                string Away = dataGridView1.SelectedCells[2].Value.ToString();
+                openScores(new EnterScores(Home, Away, (int)numericUpDown1.Value));
+                this.adminFixturesForm_Load_1(this, EventArgs.Empty);
+            }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -84,7 +130,13 @@ namespace Fantasy
             dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
 
             dataGridView1.ClearSelection();
+            dataGridView1.Refresh();
             styleDataGrid();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
