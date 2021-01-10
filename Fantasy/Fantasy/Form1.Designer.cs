@@ -496,6 +496,7 @@ namespace Fantasy
             this.teamButton.Text = "My Team";
             this.teamButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.teamButton.UseVisualStyleBackColor = false;
+            this.teamButton.Visible = false;
             this.teamButton.Click += new System.EventHandler(this.teamButton_Click);
             // 
             // label3

@@ -23,10 +23,10 @@ namespace Fantasy
         string[] OnPitch = new string[11];
         string[] Subs = new string[4];
         List<Unavailable_Player> unAvailablefootballers;
-        int[] unavailableFlag = new int[15] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        string dummy="T";
+        string dummy = "T";
         int chosenNumber;
-        List<string> names;
+        bool found = false;
+
 
 
         public PlayerView(int FantasyTeamId)
@@ -93,6 +93,9 @@ namespace Fantasy
             TeamNameLabel.Text = name.Rows[0][0].ToString();
             DataTable dt1 = C1.OnPitchList(FTID);
             DataTable dt2 = C1.SubsList(FTID);
+            
+
+
             int count1 = dt1.Rows.Count;
             if (count1 > 0)
             {
@@ -140,7 +143,7 @@ namespace Fantasy
 
         }
 
-        
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -157,7 +160,7 @@ namespace Fantasy
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-          
+
             CreateLeagueButt.Visible = true;
             JoinLeagueButt.Visible = true;
             MyLeaguesButt.Visible = true;
@@ -166,14 +169,14 @@ namespace Fantasy
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-           
+
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            int LeagueID=Int32.Parse(EnterLeagueIDText.Text);
+            string LeagueName = EnterLeagueIDText.Text;
 
-            C1.JoinLeague(FTID, LeagueID);
+            C1.JoinLeague(FTID, LeagueName);
         }
 
         private void CreateLeagueButt_Click(object sender, EventArgs e)
@@ -191,7 +194,7 @@ namespace Fantasy
 
         private void CreateButt_Click(object sender, EventArgs e)
         {
-            C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString(),FTID);
+            C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString(), FTID);
         }
 
         private void SubGK1_Click(object sender, EventArgs e)
@@ -201,7 +204,7 @@ namespace Fantasy
             dummy = OnPitch[0];
             OnPitch[0] = Subs[0];
             Subs[0] = dummy;
-           
+
             GK1.Load(path + OnPitch[0] + ".png");
             GK2.Load(path + Subs[0] + ".png"); 
         }
@@ -366,7 +369,7 @@ namespace Fantasy
 
         private void MyLeaguesButt_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new MyLeagues(FTID));
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -405,8 +408,8 @@ namespace Fantasy
             transferdef4.Visible = true;
             dataGridView1.Visible = true;
             acceptTransfer.Visible = true;
-            
-            
+
+
         }
         private void hidetransfersButtons()
         {
@@ -455,30 +458,124 @@ namespace Fantasy
 
         private void acceptTransfer_Click(object sender, EventArgs e)
         {
-            //Funds Check 
-            string playerInLastName = dataGridView1.SelectedCells[0].Value.ToString();
-            int playerInPrice = C1.GetPrice(playerInLastName);
-            string chosenPlayerName = OnPitch[chosenNumber];
-            int chosenPlayerPrice = C1.GetPrice(chosenPlayerName);
-            int newFunds = C1.GetTeamFunds(FTID) + chosenPlayerPrice - playerInPrice;
-             if (newFunds < 0)
-             {
-                MessageBox.Show("You Dont Have Enough Money To Make This Transfer");
-             }
-             else
-             {
-                int flag = C1.transfer(playerInLastName, chosenPlayerName, FTID, newFunds);
-                if (flag == 1)
-                {
-                    FundsValueLabel.Text = newFunds.ToString();
-                    OnPitch[chosenNumber] = playerInLastName;
-                    C1.updateTransfers(FTID, 0);
-                    hidetransfersButtons();
+            //Funds Check
+            if (dataGridView1.CurrentCell == null)
+            {
+                MessageBox.Show("Select a player please");
 
-                    transfersButton.Visible = false;
-                    //Update the photo
+            }
+            else
+            {
+                string playerInLastName = dataGridView1.SelectedCells[0].Value.ToString();
+
+                for (int i = 0; i < 10; i++)
+                {
+                    if (playerInLastName == OnPitch[i])
+                    {
+                        found = true;
+                    }
                 }
-             }
+                for(int i=0;i<3;i++)
+                {
+                    if (playerInLastName == Subs[i])
+                    {
+                        found = true;
+                    }
+
+                }
+                if (found == false)
+                {
+                    int playerInPrice = C1.GetPrice(playerInLastName);
+                    string chosenPlayerName = OnPitch[chosenNumber];
+                    int chosenPlayerPrice = C1.GetPrice(chosenPlayerName);
+                    int newFunds = C1.GetTeamFunds(FTID) + chosenPlayerPrice - playerInPrice;
+                    if (newFunds < 0)
+                    {
+                        MessageBox.Show("You Dont Have Enough Money To Make This Transfer");
+                    }
+                    else
+                    {
+                        int flag = C1.transfer(playerInLastName, chosenPlayerName, FTID, newFunds);
+                        if (flag == 1)
+                        {
+                            FundsValueLabel.Text = newFunds.ToString();
+                            OnPitch[chosenNumber] = playerInLastName;
+                            C1.updateTransfers(FTID, 0);
+                            hidetransfersButtons();
+                            transfersButton.Visible = false;
+                            //Update the photo
+                            GK1.Load(path + OnPitch[0] + ".png");
+                            DEF1.Load(path + OnPitch[1] + ".png");
+                            DEF2.Load(path + OnPitch[2] + ".png");
+                            DEF3.Load(path + OnPitch[3] + ".png");
+                            DEF4.Load(path + OnPitch[4] + ".png");
+                            MID1.Load(path + OnPitch[5] + ".png");
+                            MID2.Load(path + OnPitch[6] + ".png");
+                            MID3.Load(path + OnPitch[7] + ".png");
+                            MID4.Load(path + OnPitch[8] + ".png");
+                            ATT1.Load(path + OnPitch[9] + ".png");
+                            ATT2.Load(path + OnPitch[10] + ".png");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please choose a player that you dont have");
+                }
+                found = false;
+            }
+        }
+
+   
+
+       
+        private void transfergk1_Click_1(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetGK();
+            chosenNumber = 0;
+            dataGridView1.Refresh();
+        }
+
+        private void transfermid1_Click_1(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetMidFielder();
+            chosenNumber = 5;
+            dataGridView1.Refresh();
+        }
+
+        private void transfermid2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetMidFielder();
+            chosenNumber = 6;
+            dataGridView1.Refresh();
+        }
+
+        private void transfermid3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetMidFielder();
+            chosenNumber = 7;
+            dataGridView1.Refresh();
+        }
+
+        private void transfermid4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetMidFielder();
+            chosenNumber = 8;
+            dataGridView1.Refresh();
+        }
+
+        private void transferatt1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetStriker();
+            chosenNumber = 9;
+            dataGridView1.Refresh();
+        }
+
+        private void transferatt2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetStriker();
+            chosenNumber = 10;
+            dataGridView1.Refresh();
         }
 
        
@@ -580,4 +677,9 @@ namespace Fantasy
 
         }
     }
-}
+ }
+
+
+
+
+

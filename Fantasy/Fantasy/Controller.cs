@@ -16,7 +16,48 @@ namespace Fantasy
             dbMan = new DBManager();
         }
 
-
+        public int UpdateClubAfterMatch(string name,int goalsAgainst,int goalsFor) 
+         
+        {
+            int clubId = getClubIdByName(name);
+            
+            int points;
+            if (goalsAgainst > goalsFor)
+            {
+                points = 0;
+            }
+            else if (goalsAgainst < goalsFor)
+            {
+                points = 3;
+            }
+            else 
+            {
+                points = 1;
+            }
+            int goalsAgainstP = GetClubGoalsAgainst(clubId);
+            int   goalsForP = GetClubGoalsFor(clubId);
+            int pointsP = GetClubPoints(clubId);
+            points += pointsP;
+            goalsAgainst += goalsAgainstP;
+            goalsFor += goalsForP;
+            string query = $"Update club set club_Points = { points }, Goals_Against = { goalsAgainst }, Total_Goals = { goalsFor } where Club_Id = {clubId}";
+           return dbMan.ExecuteNonQuery(query);
+        }
+        public int GetClubGoalsFor(int Club_Id) 
+        {
+            string query = $"Select Total_Goals From Club where Club_Id={Club_Id}";
+            return  (int)dbMan.ExecuteScalar(query);
+        }
+        public int GetClubGoalsAgainst(int Club_Id)
+        {
+            string query = $"Select Goals_Against From Club where Club_Id={Club_Id}";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int GetClubPoints(int Club_Id)
+        {
+            string query = $"Select Club_Points From Club where Club_Id={Club_Id}";
+            return (int)dbMan.ExecuteScalar(query);
+        }
         public DataTable GetGK()
         {
             string query = "SELECt Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=0 ";
@@ -182,6 +223,7 @@ namespace Fantasy
             string query = $"Select Club_Name from club ";
             return dbMan.ExecuteReader(query);
         }
+       
         public DataTable getPlayerByPos(int pos)
         {
             string query = $"select Footballer.Last_Name,Footballer.Points,Footballer.Price from footballer where poisition ='{pos}'";
@@ -207,11 +249,17 @@ namespace Fantasy
             string query = "UPDATE Fantasy_League SET Total_Players=Total_Players+1 WHERE League_Id=" + LeagueId + ";";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int JoinLeague(int FTID, int LeagueId)
+        public int GetLeagueID(String leaguename)
         {
-            UpdateTotalPlayers(LeagueId);
+            string query = "SELECT league_id From Fantasy_league Where league_name='" + leaguename + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
 
-            string query = "INSERT INTO Comepteing_Leauges Values(" + FTID + "," + LeagueId + ");";
+        public int JoinLeague(int FTID, string LeagueName)
+        {
+
+            int leagueId = GetLeagueID(LeagueName);
+            string query = "INSERT INTO Comepteing_Leauges Values(" + FTID + "," + leagueId + ");";
             return dbMan.ExecuteNonQuery(query);
 
         }
@@ -224,16 +272,16 @@ namespace Fantasy
 
 
         
-        public int LastClubID()
+        public int LastClubRank()
         {
-            string sql = "select max(Club_Id) from Club ";
+            string sql = "select max(Club_Rank) from Club ";
             return (int)dbMan.ExecuteScalar(sql);
         }
         public int InsertClub(Club clubToAdd)
         {
-            int ClubId = LastClubID() + 1;
-            int ClubRank = ClubId;
-            string query = $"Insert into Club values({ClubId},{ClubRank},'{clubToAdd.Name}',0,0,0,'{clubToAdd.StadiumName}','{clubToAdd.ManagerName}','{clubToAdd.FoundationDate}',0)";
+            int ClubRank= LastClubRank() + 1;
+            
+            string query = $"Insert into Club values({ClubRank},'{clubToAdd.Name}',0,0,0,'{clubToAdd.StadiumName}','{clubToAdd.ManagerName}','{clubToAdd.FoundationDate}',0)";
             return dbMan.ExecuteNonQuery(query);
         }
         public int RemoveClub(string clubName)
@@ -270,7 +318,13 @@ namespace Fantasy
             string query = $"select club.Club_Id from Club where Club.Club_Name = '{name}';";
             return (int)dbMan.ExecuteScalar(query);
         }
-        
+
+        public DataTable GetClubsName()
+        {
+            string query = "SELECT Club_Name FROM Club";
+            return dbMan.ExecuteReader(query);
+        }
+
         public int deletePlayerByNames(string fname, string lname)
         {
             string query = $"delete from footballer where First_Name = '{fname}' and Last_Name = '{lname}' ";
@@ -290,6 +344,41 @@ namespace Fantasy
         public DataTable getNameByID(int id)
         {
             string query = $"select team_Name from fantasy_player_team where fantasy_team_id = '{id}'";
+            return dbMan.ExecuteReader(query);
+        }
+        public int GetLastInsertedWeek() 
+        {
+            string query = "SELECT max(Week_Number) FROM Week";
+            return (int)dbMan.ExecuteScalar(query);
+
+        }
+        public DataTable GetWeeks() 
+        {
+            string query = "SELECT * FROM Week";
+            return dbMan.ExecuteReader(query);
+        }
+        public int GetSeason(string year) 
+        {
+            string query = $"select Season_Number From Season where year='{year}'";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int InsertWeek(DateTime Start_date,DateTime End_Date) 
+        {
+          
+            string query = $"INSERT INTO Week values ({GetSeason(Start_date.Year.ToString())},'{Start_date.ToShortDateString()}','{End_Date.ToShortDateString()}')";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertFixture(int host_id, int guest_id, int weekNumber, int seasonNumber, string score) 
+         
+        {
+           
+            string query = $"INSERT INTO Club_Fixtures values({host_id},{guest_id},{weekNumber},{seasonNumber},'{score}')";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+        public DataTable PlayedInThisWeek(int host_id, int guest_id, int weekNumber, int seasonNumber, string score) 
+        {
+            string query = $"SELECT * FROM Club_Fixtures where Host_id={host_id} and Week_number={weekNumber} and Season_number={seasonNumber} or Guest_id={guest_id} and Week_number={weekNumber} and Season_number={seasonNumber} ";
             return dbMan.ExecuteReader(query);
         }
         //testing stored procs
@@ -366,6 +455,114 @@ namespace Fantasy
         {
             string query = $"select * FROM Footballer , Fantasy_Player_Team , Plays_In_Fantasy_Team , Unavailable_Player WHERE Fantasy_Player_Team.Fantasy_Team_ID={teamId} AND Fantasy_Player_Team.Fantasy_Team_ID = Plays_In_Fantasy_Team.Fantasy_Team_Id AND Plays_In_Fantasy_Team.Player_ID = Unavailable_Player.ID AND Unavailable_Player.ID = Footballer.Player_Id; ";
             return dbMan.ExecuteReader(query);
+        }
+        public DataTable LeaguesName(int FTID)
+        {
+            string query = "SELECT League_Name FROM Comepteing_Leauges,Fantasy_League WHERE Fantasy_Team_id=" + FTID + "AND League_id=Fantasy_Leauge_Id;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable LeagueStandings(string LeagueName)
+        {
+            string query = "SELECT Team_Name,Total_Points FROM Fantasy_Player_Team FT,Comepteing_Leauges C,Fantasy_League FL WHERE FT.Fantasy_Team_Id=C.Fantasy_Team_Id AND C.Fantasy_Leauge_Id=FL.League_Id AND FL.League_Name='" + LeagueName + "'ORDER BY Total_Points DESC;";
+            return dbMan.ExecuteReader(query);
+
+        }
+        public int SetTransfered(int PlayerId, int WeekNumber, int SeasonNumber, int FTID)
+        {
+            string query = "INSERT INTO Transfered (Player_ID,Week_Number,Season_Number,Fantasy_Team_ID) Values(" + PlayerId + "," + WeekNumber + "," + SeasonNumber + "," + FTID + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int PlayerScored(string playerName) 
+        {
+            int FGoals = GetGoalsScoredBy(playerName);
+            int FAssists = GetAssistsBy(playerName);
+            int FCleansheets = GetCleanSheetsBy(playerName);
+            int FPoints = GetPointsdBy(playerName);
+            FGoals++;
+            FPoints += 5;
+            string name = StoredProcedures.playerScored;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@FGoals", FGoals);
+            parameters.Add("@FAssists", FAssists);
+            parameters.Add("@FCleansheets", FCleansheets);
+            parameters.Add("@Fpoints", FPoints);
+            parameters.Add("@FootBallerName", playerName);
+            return dbMan.ExecuteNonQuerySto(name, parameters);
+        }
+        public int PlayerAssisted(string playerName)
+        {
+            
+            int FAssists = GetAssistsBy(playerName);
+            int FPoints = GetPointsdBy(playerName);
+            FAssists++;
+            FPoints += 3;
+            string name = StoredProcedures.playerAssisted;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@FAssists", FAssists);
+            parameters.Add("@Fpoints", FPoints);
+            parameters.Add("@FootBallerName", playerName);
+            return dbMan.ExecuteNonQuerySto(name, parameters);
+        }
+        public int PlayerCleanSheet(string playerName)
+        {
+
+            int FCleansheets = GetCleanSheetsBy(playerName);
+            int FPoints = GetPointsdBy(playerName);
+            FCleansheets++;
+            FPoints += 3;
+            string name = StoredProcedures.playerCleanSheet;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@FCleansheets", FCleansheets);
+            parameters.Add("@Fpoints", FPoints);
+            parameters.Add("@FootBallerName", playerName);
+            return dbMan.ExecuteNonQuerySto(name, parameters);
+        
+
+        }
+
+
+        public int GetGoalsScoredBy(string footballer) 
+        {
+            string query = $"SELECT Goals FROM Footballer where Last_Name='{footballer}' ";
+           return (int)dbMan.ExecuteScalar(query);
+        }
+        public int GetAssistsBy(string footballer)
+        {
+            string query = $"SELECT Assists FROM Footballer where Last_Name='{footballer}' ";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int GetCleanSheetsBy(string footballer)
+        {
+            string query = $"SELECT CleanSheets FROM Footballer where Last_Name='{footballer}' ";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int GetPointsdBy(string footballer)
+        {
+            string query = $"SELECT points FROM Footballer where Last_Name='{footballer}' ";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public DataTable GetDefendersAndGkNamesInClub(string clubName) 
+        {
+            int clubId= getClubIdByName(clubName);
+            string query = $"SELECT Last_Name FROM Footballer WHERE Club_Id={clubId} and Poisition = 0 or Club_Id={clubId} and Poisition = 1";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int InsertPlayerUnavailable(string playerName,bool suspended,bool injured,DateTime startDate,int durationInDays) 
+        {
+            int unAvailabePlayerId = GetPlayerId(playerName);
+            string query = $"INSERT INTO Unavailable_Player values({unAvailabePlayerId},{suspended},'{startDate.ToShortDateString()}',{durationInDays},{injured}) ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int UpdateFixtureScore(string home, string away, int week, string score,string year) 
+        {
+            int hostId = getClubIdByName(home);
+            int awayId = getClubIdByName(away);
+            int season = GetSeason(year);
+            string query = $"UPDATE Club_Fixtures Set Score='{score}'where Host_id ={hostId} and Guest_Id={awayId} and Week_number={week} and Season_number={season} ";
+            return dbMan.ExecuteNonQuery(query);
         }
     }
 }

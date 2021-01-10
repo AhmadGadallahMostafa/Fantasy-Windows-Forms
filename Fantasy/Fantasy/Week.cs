@@ -6,12 +6,15 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System.Data;
+using System.Linq;
+
 
 namespace Fantasy
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Week
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,16 +23,25 @@ namespace Fantasy
             this.Club_Fixtures = new HashSet<Club_Fixtures>();
             this.Transfereds = new HashSet<Transfered>();
         }
-    
+
         public int Week_Number { get; set; }
         public int Season_Number { get; set; }
         public Nullable<System.DateTime> Start_Date { get; set; }
         public Nullable<System.DateTime> End_Date { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Club_Fixtures> Club_Fixtures { get; set; }
         public virtual Season Season { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Transfered> Transfereds { get; set; }
+        public Week(DataTable d)
+        {
+            var row = d.AsEnumerable().FirstOrDefault();
+            Week_Number = row.Field<int>("Club_Name");
+            Season_Number = row.Field<int>("Club_Rank");
+            Start_Date = row.Field<DateTime>("Start_Date");
+            End_Date = row.Field<DateTime>("End_Date");
+
+        }
     }
 }

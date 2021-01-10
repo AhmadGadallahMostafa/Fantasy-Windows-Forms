@@ -22,10 +22,20 @@ namespace Fantasy
         private void FixturesForm_Load(object sender, EventArgs e)
         { 
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
+            DataTable dt = ControllerObj.GetFixturesByWeek(1);
+            if (dt == null)
+            {
+                label3.Visible = true;
+                return;
+            }
+            else
+            {
+                label3.Visible = false;
+                dataGridView1.DataSource = dt;
 
-            dataGridView1.ClearSelection();
-            styleDataGrid();
+                dataGridView1.ClearSelection();
+                styleDataGrid();
+            }
         }
         private void styleDataGrid()
         {
@@ -62,10 +72,21 @@ namespace Fantasy
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = ControllerObj.GetFixturesByWeek((int)numericUpDown1.Value);
-            dataGridView1.ClearSelection();
-            styleDataGrid();
-            dataGridView1.Refresh();
+            DataTable dt = ControllerObj.GetFixturesByWeek((int)numericUpDown1.Value);
+            if (dt != null)
+            {
+                label3.Visible = false;
+                dataGridView1.DataSource = dt;
+                dataGridView1.ClearSelection();
+                styleDataGrid();
+                dataGridView1.Refresh();
+                dataGridView1.Visible = true;
+            }
+            else
+            {
+                dataGridView1.Visible = false;
+                label3.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,6 +97,11 @@ namespace Fantasy
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -46,9 +46,33 @@ namespace Fantasy
             childForm.BringToFront();
             childForm.Show();
         }
+        private void openSignedUpForm(SignUpForm childForm)
+        {
+
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            childForm.SignedUp += OnSignedUp1;
+        }
+        public event EventHandler<string> SignedUp2;
+
+
+        protected void OnSignedUp1(object sender, string userName)
+        {
+            SignedUp2?.Invoke(this, userName);
+        }
+
+
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new SignUpForm());
+            
+            openSignedUpForm(new SignUpForm());
             
         }
 

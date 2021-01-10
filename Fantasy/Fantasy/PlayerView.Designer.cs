@@ -161,7 +161,7 @@ namespace Fantasy
             this.PointsValueLabel.ForeColor = System.Drawing.Color.Red;
             this.PointsValueLabel.Location = new System.Drawing.Point(101, 237);
             this.PointsValueLabel.Name = "PointsValueLabel";
-            this.PointsValueLabel.Size = new System.Drawing.Size(70, 26);
+            this.PointsValueLabel.Size = new System.Drawing.Size(88, 33);
             this.PointsValueLabel.TabIndex = 70;
             this.PointsValueLabel.Text = "Points ";
             // 
@@ -172,7 +172,7 @@ namespace Fantasy
             this.FundsValueLabel.ForeColor = System.Drawing.Color.Red;
             this.FundsValueLabel.Location = new System.Drawing.Point(101, 309);
             this.FundsValueLabel.Name = "FundsValueLabel";
-            this.FundsValueLabel.Size = new System.Drawing.Size(33, 26);
+            this.FundsValueLabel.Size = new System.Drawing.Size(41, 33);
             this.FundsValueLabel.TabIndex = 69;
             this.FundsValueLabel.Text = "lbl";
             // 
@@ -183,7 +183,7 @@ namespace Fantasy
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(26, 309);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 26);
+            this.label4.Size = new System.Drawing.Size(80, 33);
             this.label4.TabIndex = 68;
             this.label4.Text = "Funds";
             // 
@@ -194,7 +194,7 @@ namespace Fantasy
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(26, 237);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 26);
+            this.label2.Size = new System.Drawing.Size(88, 33);
             this.label2.TabIndex = 67;
             this.label2.Text = "Points ";
             // 
@@ -205,7 +205,7 @@ namespace Fantasy
             this.TeamNameLabel.ForeColor = System.Drawing.Color.White;
             this.TeamNameLabel.Location = new System.Drawing.Point(100, 189);
             this.TeamNameLabel.Name = "TeamNameLabel";
-            this.TeamNameLabel.Size = new System.Drawing.Size(89, 36);
+            this.TeamNameLabel.Size = new System.Drawing.Size(114, 45);
             this.TeamNameLabel.TabIndex = 66;
             this.TeamNameLabel.Text = "label1";
             // 
@@ -292,7 +292,7 @@ namespace Fantasy
             this.Country.ForeColor = System.Drawing.Color.White;
             this.Country.Location = new System.Drawing.Point(9, 621);
             this.Country.Name = "Country";
-            this.Country.Size = new System.Drawing.Size(72, 23);
+            this.Country.Size = new System.Drawing.Size(92, 29);
             this.Country.TabIndex = 64;
             this.Country.Text = "Country";
             // 
@@ -303,7 +303,7 @@ namespace Fantasy
             this.LeagueName.ForeColor = System.Drawing.Color.White;
             this.LeagueName.Location = new System.Drawing.Point(9, 559);
             this.LeagueName.Name = "LeagueName";
-            this.LeagueName.Size = new System.Drawing.Size(158, 23);
+            this.LeagueName.Size = new System.Drawing.Size(205, 29);
             this.LeagueName.TabIndex = 63;
             this.LeagueName.Text = "Enter League Name";
             // 
@@ -320,14 +320,14 @@ namespace Fantasy
             ""});
             this.CountryText.Location = new System.Drawing.Point(14, 653);
             this.CountryText.Name = "CountryText";
-            this.CountryText.Size = new System.Drawing.Size(199, 23);
+            this.CountryText.Size = new System.Drawing.Size(199, 27);
             this.CountryText.TabIndex = 62;
             // 
             // LeagueNameText
             // 
             this.LeagueNameText.Location = new System.Drawing.Point(14, 591);
             this.LeagueNameText.Name = "LeagueNameText";
-            this.LeagueNameText.Size = new System.Drawing.Size(199, 23);
+            this.LeagueNameText.Size = new System.Drawing.Size(199, 27);
             this.LeagueNameText.TabIndex = 61;
             // 
             // JoinButton
@@ -351,7 +351,7 @@ namespace Fantasy
             this.EnterLeagueID.ForeColor = System.Drawing.Color.White;
             this.EnterLeagueID.Location = new System.Drawing.Point(9, 685);
             this.EnterLeagueID.Name = "EnterLeagueID";
-            this.EnterLeagueID.Size = new System.Drawing.Size(158, 23);
+            this.EnterLeagueID.Size = new System.Drawing.Size(205, 29);
             this.EnterLeagueID.TabIndex = 10;
             this.EnterLeagueID.Text = "Enter League Name";
             // 
@@ -359,7 +359,7 @@ namespace Fantasy
             // 
             this.EnterLeagueIDText.Location = new System.Drawing.Point(14, 717);
             this.EnterLeagueIDText.Name = "EnterLeagueIDText";
-            this.EnterLeagueIDText.Size = new System.Drawing.Size(199, 23);
+            this.EnterLeagueIDText.Size = new System.Drawing.Size(199, 27);
             this.EnterLeagueIDText.TabIndex = 3;
             // 
             // label3
@@ -368,7 +368,7 @@ namespace Fantasy
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(10, 724);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 15);
+            this.label3.Size = new System.Drawing.Size(0, 21);
             this.label3.TabIndex = 9;
             // 
             // SignedInAs
@@ -376,7 +376,7 @@ namespace Fantasy
             this.SignedInAs.AutoSize = true;
             this.SignedInAs.Location = new System.Drawing.Point(3, 495);
             this.SignedInAs.Name = "SignedInAs";
-            this.SignedInAs.Size = new System.Drawing.Size(0, 15);
+            this.SignedInAs.Size = new System.Drawing.Size(0, 21);
             this.SignedInAs.TabIndex = 8;
             // 
             // panel1
@@ -678,7 +678,7 @@ namespace Fantasy
             this.transfersButton.FlatAppearance.BorderSize = 0;
             this.transfersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.transfersButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transfersButton.Location = new System.Drawing.Point(723, 712);
+            this.transfersButton.Location = new System.Drawing.Point(702, 708);
             this.transfersButton.Name = "transfersButton";
             this.transfersButton.Size = new System.Drawing.Size(89, 36);
             this.transfersButton.TabIndex = 61;
@@ -695,6 +695,7 @@ namespace Fantasy
             this.transfergk1.TabIndex = 67;
             this.transfergk1.UseVisualStyleBackColor = true;
             this.transfergk1.Visible = false;
+            this.transfergk1.Click += new System.EventHandler(this.transfergk1_Click_1);
             // 
             // transfermid4
             // 
@@ -705,6 +706,7 @@ namespace Fantasy
             this.transfermid4.TabIndex = 73;
             this.transfermid4.UseVisualStyleBackColor = true;
             this.transfermid4.Visible = false;
+            this.transfermid4.Click += new System.EventHandler(this.transfermid4_Click);
             // 
             // transferatt2
             // 
@@ -715,6 +717,7 @@ namespace Fantasy
             this.transferatt2.TabIndex = 74;
             this.transferatt2.UseVisualStyleBackColor = true;
             this.transferatt2.Visible = false;
+            this.transferatt2.Click += new System.EventHandler(this.transferatt2_Click);
             // 
             // transferatt1
             // 
@@ -725,6 +728,7 @@ namespace Fantasy
             this.transferatt1.TabIndex = 75;
             this.transferatt1.UseVisualStyleBackColor = true;
             this.transferatt1.Visible = false;
+            this.transferatt1.Click += new System.EventHandler(this.transferatt1_Click);
             // 
             // transfermid3
             // 
@@ -735,6 +739,7 @@ namespace Fantasy
             this.transfermid3.TabIndex = 76;
             this.transfermid3.UseVisualStyleBackColor = true;
             this.transfermid3.Visible = false;
+            this.transfermid3.Click += new System.EventHandler(this.transfermid3_Click);
             // 
             // transfermid2
             // 
@@ -745,6 +750,7 @@ namespace Fantasy
             this.transfermid2.TabIndex = 77;
             this.transfermid2.UseVisualStyleBackColor = true;
             this.transfermid2.Visible = false;
+            this.transfermid2.Click += new System.EventHandler(this.transfermid2_Click);
             // 
             // transfermid1
             // 
@@ -755,6 +761,7 @@ namespace Fantasy
             this.transfermid1.TabIndex = 78;
             this.transfermid1.UseVisualStyleBackColor = true;
             this.transfermid1.Visible = false;
+            this.transfermid1.Click += new System.EventHandler(this.transfermid1_Click_1);
             // 
             // transferdef1
             // 
@@ -823,6 +830,7 @@ namespace Fantasy
             this.dataGridView1.Location = new System.Drawing.Point(598, 421);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(280, 218);
             this.dataGridView1.TabIndex = 83;
             this.dataGridView1.Visible = false;
@@ -866,7 +874,7 @@ namespace Fantasy
             // 
             // PlayerView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1179, 759);
             this.Controls.Add(this.label1);

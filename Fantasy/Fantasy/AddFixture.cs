@@ -14,23 +14,70 @@ namespace Fantasy
     {
         string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/Clubs/");
         Controller controlObj;
+        IEnumerable<Week> weeks;
+
+        string[] clubs = new string[20];
+        string[] clubs2 = new string[20];
+
+
+
         public AddFixture()
         {
             InitializeComponent();
             controlObj = new Controller();
-        }
 
+        }
+        private IEnumerable<Week> ConvertToWeeks(DataTable dataTable)
+        {
+            foreach (DataRow row in dataTable.Rows)
+            {
+                yield return new Week
+                {
+                    Week_Number = Convert.ToInt32(row["Week_Number"]),
+                    Season_Number = Convert.ToInt32(row["Season_Number"]),
+                    Start_Date = (DateTime)(row["Start_Date"]),
+                    End_Date =(DateTime)(row["End_Date"]),
+                   
+
+                };
+            }
+
+        }
         private void AddFixture_Load(object sender, EventArgs e)
         {
-            DataTable dt = controlObj.GetClubsInLeague();
-            comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = "Club_Name";
-            comboBox1.Refresh();
+            
+             
+            DataTable dt = controlObj.GetClubsName();
+          
+           
 
-            DataTable dt2 = controlObj.GetClubsInLeague();
-            comboBox2.DataSource = dt2;
-            comboBox2.DisplayMember = "Club_Name";
-            comboBox2.Refresh();
+          
+            int count1 = dt.Rows.Count;
+            if (count1 > 0)
+            {
+               
+                for (int i = 0; i < count1; i++)
+                {
+                    clubs[i] = dt.Rows[i][0].ToString();
+                
+                    
+                }
+            }
+            int count2 = dt.Rows.Count;
+            if (count2 > 0)
+            {
+
+                for (int i = 0; i < count2; i++)
+                {
+                    clubs2[i] = dt.Rows[i][0].ToString();
+
+
+                }
+            }
+            comboBox1.DataSource = clubs;
+            comboBox2.DataSource = clubs2;
+            
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,8 +95,132 @@ namespace Fantasy
         private void AddFix_Click(object sender, EventArgs e)
         {
 
-            label3.Text = dateTimePicker1.Value.Date.Day.ToString();
-              
+            int weekNumber = 0;
+            int season = 0;
+            int hostId= controlObj.getClubIdByName(comboBox1.Text);
+            int guestID =controlObj.getClubIdByName(comboBox2.Text);
+            if (hostId == guestID)
+            {
+                Error.Visible = true;
+                return;
+            }
+            else { Error.Visible = false; }
+            
+            DateTime endDate = dateTimePicker1.Value.AddDays(6);
+            DataTable weeksData = controlObj.GetWeeks();
+            if (weeksData != null)
+            {
+                weeks = ConvertToWeeks(weeksData);
+                foreach (Week w in weeks)
+                {
+                    if (dateTimePicker1.Value > w.Start_Date && dateTimePicker1.Value < w.End_Date) // there are weeks and the date entered is in w 
+                    {
+                        weekNumber = w.Week_Number;
+                        season = w.Season_Number;
+                        if (controlObj.InsertFixture(hostId, guestID, weekNumber, season, "N/A") != 0)
+                        {
+                            var AvailableClubs1 = new List<string>(clubs);
+                            var AvailableClubs2 = new List<string>(clubs2);
+
+                            AvailableClubs1.Remove(comboBox1.Text);
+                            AvailableClubs1.Remove(comboBox2.Text);
+                            AvailableClubs2.Remove(comboBox1.Text);
+                            AvailableClubs2.Remove(comboBox2.Text);
+
+                            comboBox1.DataSource = AvailableClubs1;
+                            comboBox2.DataSource = AvailableClubs2;
+                            clubs = AvailableClubs1.ToArray();
+                            clubs2 = AvailableClubs2.ToArray();
+
+
+                            MessageBox.Show("Fixture added");
+                        }
+
+                    }
+
+                }
+                if (weekNumber == 0) // there are weeks but none correspond to match day
+                {
+                    controlObj.InsertWeek(dateTimePicker1.Value, endDate.Date);
+                     weeksData = controlObj.GetWeeks();
+                    weeks = ConvertToWeeks(weeksData);
+                    foreach (Week w in weeks)
+                    {
+                        if (dateTimePicker1.Value > w.Start_Date && dateTimePicker1.Value < w.End_Date) // there are weeks and the date entered is in w 
+                        {
+                            weekNumber = w.Week_Number;
+                            season = w.Season_Number;
+                            if (controlObj.InsertFixture(hostId, guestID, weekNumber, season, "N/A") != 0) 
+                            {
+                                var AvailableClubs1 = new List<string>(clubs);
+                                var AvailableClubs2 = new List<string>(clubs2);
+
+                                AvailableClubs1.Remove(comboBox1.Text);
+                                AvailableClubs1.Remove(comboBox2.Text);
+                                AvailableClubs2.Remove(comboBox1.Text);
+                                AvailableClubs2.Remove(comboBox2.Text);
+
+
+                                comboBox1.DataSource = AvailableClubs1;
+                                comboBox2.DataSource = AvailableClubs2;
+
+                                clubs = AvailableClubs1.ToArray();
+                                clubs2 = AvailableClubs2.ToArray();
+                                MessageBox.Show("Fixture added");
+                            }
+                            
+
+                        }
+
+                    }
+                }
+            }
+            else// this is the first week to be added 
+            {
+                controlObj.InsertWeek(dateTimePicker1.Value, endDate.Date);
+                weeksData = controlObj.GetWeeks();
+                weeks = ConvertToWeeks(weeksData);
+                foreach (Week w in weeks)
+                {
+                    if (dateTimePicker1.Value > w.Start_Date && dateTimePicker1.Value < w.End_Date) // there are weeks and the date entered is in w 
+                    {
+                        weekNumber = w.Week_Number;
+                        season = w.Season_Number;
+                        if (controlObj.InsertFixture(hostId, guestID, weekNumber, season, "N/A") != 0)
+                        {
+                            var AvailableClubs1 = new List<string>(clubs);
+                            var AvailableClubs2 = new List<string>(clubs2);
+
+                            AvailableClubs1.Remove(comboBox1.Text);
+                            AvailableClubs1.Remove(comboBox2.Text);
+                            AvailableClubs2.Remove(comboBox1.Text);
+                            AvailableClubs2.Remove(comboBox2.Text);
+
+
+                            comboBox1.DataSource = AvailableClubs1;
+                            comboBox2.DataSource = AvailableClubs2;
+                            clubs = AvailableClubs1.ToArray();
+                            clubs2 = AvailableClubs2.ToArray();
+                            MessageBox.Show("Fixture added");
+
+                        }
+
+                    }
+
+                }
+            }
+
+            
+
+
+
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

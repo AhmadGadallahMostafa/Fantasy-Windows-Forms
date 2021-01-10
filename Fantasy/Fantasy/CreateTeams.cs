@@ -774,9 +774,12 @@ namespace Fantasy
             }
             else
             {
-                openChildForm(new PlayerView(FTID));
+                
+                
                 string TeamName = teamName.Text;
                 C1.SetTeamName(FTID, TeamName);
+                this.Close();
+
             }
         }
 

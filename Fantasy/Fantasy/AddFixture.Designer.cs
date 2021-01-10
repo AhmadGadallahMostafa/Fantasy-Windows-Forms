@@ -39,13 +39,15 @@ namespace Fantasy
             this.AddFix = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Error = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HomeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GuestBox)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(27, 80);
             this.comboBox1.Name = "comboBox1";
@@ -55,6 +57,7 @@ namespace Fantasy
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(441, 80);
             this.comboBox2.Name = "comboBox2";
@@ -140,14 +143,32 @@ namespace Fantasy
             this.label2.TabIndex = 16;
             this.label2.Text = "Match Day";
             // 
-            // label3
+            // Error
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(351, 446);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "label3";
+            this.Error.AutoSize = true;
+            this.Error.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error.ForeColor = System.Drawing.Color.Red;
+            this.Error.Location = new System.Drawing.Point(437, 503);
+            this.Error.Name = "Error";
+            this.Error.Size = new System.Drawing.Size(192, 19);
+            this.Error.TabIndex = 17;
+            this.Error.Text = "The teams must be different";
+            this.Error.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(688, -1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(46, 45);
+            this.button3.TabIndex = 46;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // AddFixture
             // 
@@ -155,7 +176,8 @@ namespace Fantasy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(731, 563);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Error);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.AddFix);
@@ -190,6 +212,7 @@ namespace Fantasy
         private System.Windows.Forms.Button AddFix;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Error;
+        private System.Windows.Forms.Button button3;
     }
 }
