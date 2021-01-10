@@ -327,7 +327,7 @@ namespace Fantasy
 
         public  DataTable OnPitchList(int FantasyTeamID)
         {
-            string query = "SELECT Last_Name FROM Plays_In_Fantasy_Team,Footballer WHERE Plays_In_Fantasy_Team.Fantasy_Team_Id=" + FantasyTeamID + " AND  Plays_In_Fantasy_Team.Player_ID=Footballer.PLayer_Id AND  Plays_In_Fantasy_Team.Sub=0 ORDER BY Poisition";
+            string query = "SELECT Last_Name FROM Plays_In_Fantasy_Team,Footballer WHERE Plays_In_Fantasy_Team.Fantasy_Team_Id=" + FantasyTeamID + " AND  Plays_In_Fantasy_Team.Player_ID=Footballer.PLayer_Id AND  Plays_In_Fantasy_Team.Sub=0 ORDER BY Poisition ,Last_Name ";
             return dbMan.ExecuteReader(query);
 
         }
@@ -350,6 +350,22 @@ namespace Fantasy
             parameters.Add("@Lname", lname);
             parameters.Add("@points", points);
             return dbMan.ExecuteNonQuerySto(name, parameters);
+        }
+
+        public DataTable getUnAvailablePlayers()
+        {
+            string query = $"select * from unavailable_player";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable isUnavailable(int playerId)
+        {
+            string query = $"select * from unavailable_player where ID = {playerId} ";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable getAllUnavailableInTeam(int teamId)
+        {
+            string query = $"select * FROM Footballer , Fantasy_Player_Team , Plays_In_Fantasy_Team , Unavailable_Player WHERE Fantasy_Player_Team.Fantasy_Team_ID={teamId} AND Fantasy_Player_Team.Fantasy_Team_ID = Plays_In_Fantasy_Team.Fantasy_Team_Id AND Plays_In_Fantasy_Team.Player_ID = Unavailable_Player.ID AND Unavailable_Player.ID = Footballer.Player_Id; ";
+            return dbMan.ExecuteReader(query);
         }
     }
 }

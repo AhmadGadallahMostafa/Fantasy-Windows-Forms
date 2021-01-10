@@ -15,6 +15,7 @@ namespace Fantasy
     public partial class Unavailable_Player
     {
         public int ID { get; set; }
+        public string name { get; set; }
         public Nullable<bool> Suspension_Status { get; set; }
         public System.DateTime Start_Date { get; set; }
         public Nullable<int> Duration { get; set; }

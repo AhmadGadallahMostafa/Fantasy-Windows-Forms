@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
+
 namespace Fantasy
 {
     public partial class PlayerView : Form
@@ -21,8 +22,11 @@ namespace Fantasy
 
         string[] OnPitch = new string[11];
         string[] Subs = new string[4];
+        List<Unavailable_Player> unAvailablefootballers;
+        int[] unavailableFlag = new int[15] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         string dummy="T";
         int chosenNumber;
+        List<string> names;
 
 
         public PlayerView(int FantasyTeamId)
@@ -76,7 +80,7 @@ namespace Fantasy
 
 
         private void Form2_Load(object sender, EventArgs e)
-        {
+        { 
             CreateLeagueButt.Visible = false;
             JoinLeagueButt.Visible = false;
             MyLeaguesButt.Visible = false;
@@ -89,9 +93,6 @@ namespace Fantasy
             TeamNameLabel.Text = name.Rows[0][0].ToString();
             DataTable dt1 = C1.OnPitchList(FTID);
             DataTable dt2 = C1.SubsList(FTID);
-
-
-
             int count1 = dt1.Rows.Count;
             if (count1 > 0)
             {
@@ -133,28 +134,9 @@ namespace Fantasy
             MID5.Load(path + Subs[2] + ".png");
             ATT3.Load(path + Subs[3] + ".png");
 
-
-
-
-
-
-
-            /*int count = dt1.Rows.Count;
-            if (count > 0)
-            {
-                //listView1.Items.Clear();
-                listBox1.Items.Clear();
-
-                for (int i = 0; i < count; i++)
-                {
-                    //listView1.Items.Add(dt);
-                    listBox1.Items.Add(dt1.Rows[i][0].ToString());
-                }
-            }*/
-
-
-
-
+            //unavailable check
+            DateTime today = DateTime.Today;
+            check();
 
         }
 
@@ -214,7 +196,6 @@ namespace Fantasy
 
         private void SubGK1_Click(object sender, EventArgs e)
         {
-
             C1.Substitute(FTID, C1.GetPlayerId(OnPitch[0]), 1);
             C1.Substitute(FTID, C1.GetPlayerId(Subs[0]), 0);
             dummy = OnPitch[0];
@@ -222,50 +203,54 @@ namespace Fantasy
             Subs[0] = dummy;
            
             GK1.Load(path + OnPitch[0] + ".png");
-            GK2.Load(path + Subs[0] + ".png");
-
-
-
-
-
-
-
+            GK2.Load(path + Subs[0] + ".png"); 
         }
 
         private void SubDEF1_Click(object sender, EventArgs e)
         {
+            
             C1.Substitute(FTID, C1.GetPlayerId(OnPitch[1]), 1);
             C1.Substitute(FTID, C1.GetPlayerId(Subs[1]), 0);
+            
             dummy = OnPitch[1];
             OnPitch[1] = Subs[1];
             Subs[1] = dummy;
-
+            
             DEF1.Load(path + OnPitch[1] + ".png");
             DEF5.Load(path + Subs[1] + ".png");
+            
+
         }
 
         private void SubDEF2_Click(object sender, EventArgs e)
         {
+            
             C1.Substitute(FTID, C1.GetPlayerId(OnPitch[2]), 1);
             C1.Substitute(FTID, C1.GetPlayerId(Subs[1]), 0);
+            
             dummy = OnPitch[2];
             OnPitch[2] = Subs[1];
             Subs[1] = dummy;
-
+            
             DEF2.Load(path + OnPitch[2] + ".png");
             DEF5.Load(path + Subs[1] + ".png");
+            
+
         }
 
         private void SubDEF3_Click(object sender, EventArgs e)
         {
+          
             C1.Substitute(FTID, C1.GetPlayerId(OnPitch[3]), 1);
             C1.Substitute(FTID, C1.GetPlayerId(Subs[1]), 0);
+            
             dummy = OnPitch[3];
             OnPitch[3] = Subs[1];
             Subs[1] = dummy;
-
+            
             DEF3.Load(path + OnPitch[3] + ".png");
             DEF5.Load(path + Subs[1] + ".png");
+            
 
         }
 
@@ -273,36 +258,43 @@ namespace Fantasy
         {
             C1.Substitute(FTID, C1.GetPlayerId(OnPitch[4]), 1);
             C1.Substitute(FTID, C1.GetPlayerId(Subs[1]), 0);
+            
             dummy = OnPitch[4];
             OnPitch[4] = Subs[1];
             Subs[1] = dummy;
 
             DEF4.Load(path + OnPitch[4] + ".png");
             DEF5.Load(path + Subs[1] + ".png");
+            
+
         }
 
         private void SubMID1_Click(object sender, EventArgs e)
         {
             C1.Substitute(FTID, C1.GetPlayerId(OnPitch[5]), 1);
             C1.Substitute(FTID, C1.GetPlayerId(Subs[2]), 0);
+            
             dummy = OnPitch[5];
             OnPitch[5] = Subs[2];
             Subs[2] = dummy;
 
             MID1.Load(path + OnPitch[5] + ".png");
             MID5.Load(path + Subs[2] + ".png");
+           
         }
 
         private void SubMID2_Click(object sender, EventArgs e)
         {
             C1.Substitute(FTID, C1.GetPlayerId(OnPitch[6]), 1);
             C1.Substitute(FTID, C1.GetPlayerId(Subs[2]), 0);
+           
             dummy = OnPitch[6];
             OnPitch[6] = Subs[2];
             Subs[2] = dummy;
 
             MID2.Load(path + OnPitch[6] + ".png");
             MID5.Load(path + Subs[2] + ".png");
+            
         }
 
         private void SubMID3_Click(object sender, EventArgs e)
@@ -315,6 +307,7 @@ namespace Fantasy
 
             MID3.Load(path + OnPitch[7] + ".png");
             MID5.Load(path + Subs[2] + ".png");
+            
         }
 
         private void SubMID4_Click(object sender, EventArgs e)
@@ -327,6 +320,8 @@ namespace Fantasy
 
             MID4.Load(path + OnPitch[8] + ".png");
             MID5.Load(path + Subs[2] + ".png");
+            
+
         }
 
         private void SubATT1_Click(object sender, EventArgs e)
@@ -339,6 +334,7 @@ namespace Fantasy
 
             ATT1.Load(path + OnPitch[9] + ".png");
             ATT3.Load(path + Subs[3] + ".png");
+            
         }
 
         private void SubATT2_Click(object sender, EventArgs e)
@@ -348,9 +344,9 @@ namespace Fantasy
             dummy = OnPitch[10];
             OnPitch[10] = Subs[3];
             Subs[3] = dummy;
-
             ATT2.Load(path + OnPitch[10] + ".png");
             ATT3.Load(path + Subs[3] + ".png");
+            this.Form2_Load(this, EventArgs.Empty);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -483,6 +479,105 @@ namespace Fantasy
                     //Update the photo
                 }
              }
+        }
+
+       
+       /* private void checkUnavailable()
+        {
+            DateTime today = DateTime.Today;
+            for (int i = 0; i < 10; i++)
+            {
+                int PlayerID = C1.GetPlayerId(OnPitch[i]);
+                DataTable d = C1.isUnavailable(PlayerID);
+                if (d == null)
+                {
+                    continue;
+                }
+                var row = d.AsEnumerable().FirstOrDefault();
+                Unavailable_Player p = new Unavailable_Player()
+                {
+                    ID = row.Field<int>("ID"),
+                    Start_Date = row.Field<DateTime>("Start_Date"),
+                    Duration = row.Field<int>("Duration")
+                };
+                if (today > p.Start_Date && today < p.Start_Date.AddDays((double)p.Duration))
+                {
+                    unavailableFlag[i] = 1;
+                    dataGridView2.Rows.Add("name");
+                    dataGridView2.Rows.Insert(i,OnPitch[i]);
+                }
+                else
+                {
+                    unavailableFlag[i] = 0;
+                }
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                int PlayerID = C1.GetPlayerId(Subs[i]);
+                DataTable d = C1.isUnavailable(PlayerID);
+                if (d == null)
+                {
+                    continue;
+                }
+                var row = d.AsEnumerable().FirstOrDefault();
+                Unavailable_Player p = new Unavailable_Player()
+                {
+                    ID = row.Field<int>("ID"),
+                    Start_Date = row.Field<DateTime>("Start_Date"),
+                    Duration = row.Field<int>("Duration")
+                };
+                if (today > p.Start_Date && today < p.Start_Date.AddDays((double)p.Duration))
+                {
+                    unavailableFlag[i + 11] = 1;
+                }
+                else
+                {
+                    unavailableFlag[i + 11] = 0;
+                }
+            }
+        }*/
+
+        private void check()
+        {
+            DateTime today = DateTime.Today;
+            names = new List<string>();
+            DataTable t = C1.getAllUnavailableInTeam(FTID);
+            if (t != null)
+            {
+                unAvailablefootballers = new List<Unavailable_Player>();
+                unAvailablefootballers = (from DataRow dr in t.Rows
+                                          select new Unavailable_Player()
+                                          {
+                                              ID = (int)dr["ID"],
+                                              Start_Date = (DateTime)dr["Start_Date"],
+                                              Duration = (int)dr["Duration"],
+                                              name = dr["Last_Name"].ToString()
+                                          }).ToList();
+
+
+                foreach (Unavailable_Player p in unAvailablefootballers)
+                {
+                    if (!(today > p.Start_Date && today < p.Start_Date.AddDays((double)p.Duration)))
+                    {
+                        unAvailablefootballers.Remove(p);
+                    }
+                }
+
+
+                comboBox1.DataSource = unAvailablefootballers;
+                comboBox1.DisplayMember = "name";
+            }
+            
+
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
