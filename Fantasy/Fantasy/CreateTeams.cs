@@ -639,7 +639,6 @@ namespace Fantasy
                         Team[0] = PlayersList.GetItemText(PlayersList.SelectedItem);
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-                        GK1.Enabled = false;
 
                     }
                     else if (ChosenPlayerNo == 1)
