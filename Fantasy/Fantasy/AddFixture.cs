@@ -94,7 +94,7 @@ namespace Fantasy
         
         private void AddFix_Click(object sender, EventArgs e)
         {
-            if ((int)controlObj.getWeekCount()%38==0)
+            if ((int)controlObj.getWeekCount()%10==0)
             {
                 controlObj.InsertSeason(dateTimePicker1.Value.Year.ToString());
             }
@@ -231,7 +231,9 @@ namespace Fantasy
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+     
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

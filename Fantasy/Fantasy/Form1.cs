@@ -268,5 +268,17 @@ namespace Fantasy
            AnalystRequests a= new AnalystRequests();
             a.Show();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (AsAdmin)
+            {
+                openChildForm(new StatisiticsAdmin());
+            }
+            else
+            {
+                openChildForm(new Statistics());
+            }
+        }
     }
 }

@@ -688,3 +688,5 @@ D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Van de beek.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Wijnaldum.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Xhaka.png
 D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Ziyech.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.StatisiticsAdmin.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.Statistics.resources
