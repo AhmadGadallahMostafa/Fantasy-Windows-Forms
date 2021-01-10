@@ -46,8 +46,8 @@ namespace Fantasy
         private void AddFixture_Click(object sender, EventArgs e)
         {
             Form addFixture = new AddFixture();
-            this.Hide();
             addFixture.Show();
+
         }
         private Form activeForm = null;
         private void openScores(EnterScores childForm)
