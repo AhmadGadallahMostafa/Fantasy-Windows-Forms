@@ -127,11 +127,18 @@ namespace Fantasy
         private void adminFixturesForm_Load_1(object sender, EventArgs e)
         {
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
+            if (ControllerObj.GetFixturesByWeek(1) == null)
+            {
+                label3.Visible = true;
+            }
+            else
+            {
+                dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
 
-            dataGridView1.ClearSelection();
-            dataGridView1.Refresh();
-            styleDataGrid();
+                dataGridView1.ClearSelection();
+                dataGridView1.Refresh();
+                styleDataGrid();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

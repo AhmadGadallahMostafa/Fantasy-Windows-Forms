@@ -29,15 +29,22 @@ namespace Fantasy
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (!Validations.EmptyInputField(textBox2.Text))
+            if (!Validations.EmptyInputField(textBox2.Text) && !Validations.EmptyInputField(textBox1.Text))
             {
-                string password = Validations.EncodePasswordToBase64(textBox2.Text);
-                int flag = ControllerObj.updatePassword(password,userEmail);
-                if (flag ==1)
+                if (textBox2.Text != textBox1.Text)
                 {
-                    MessageBox.Show("Changed Successfully");
+                    label3.Visible = true;
                 }
-                else { MessageBox.Show("Failed"); }
+                else
+                {
+                    string password = Validations.EncodePasswordToBase64(textBox2.Text);
+                    int flag = ControllerObj.updatePassword(password, userEmail);
+                    if (flag == 1)
+                    {
+                        MessageBox.Show("Changed Successfully");
+                    }
+                    else { MessageBox.Show("Failed"); }
+                }
             }
             else
             {
@@ -47,6 +54,11 @@ namespace Fantasy
         }
 
         private void changePasswordForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

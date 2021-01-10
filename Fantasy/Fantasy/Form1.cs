@@ -251,7 +251,7 @@ namespace Fantasy
         {
             if (AsAdmin)
             {
-                string email = AccountController.getEmailFromUserName(SignInAsAdmin);
+                string email = SignInAsAdmin;
                 openChildForm(new changePasswordForm(email));
             }
             else
