@@ -125,7 +125,7 @@ namespace Fantasy
             }
             else
             {
-                MessageBox.Show("login");
+               
 
 
 
