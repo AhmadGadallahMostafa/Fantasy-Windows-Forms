@@ -22,10 +22,20 @@ namespace Fantasy
         private void FixturesForm_Load(object sender, EventArgs e)
         { 
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
+            DataTable dt = ControllerObj.GetFixturesByWeek(1);
+            if (dt == null)
+            {
+                label3.Visible = true;
+                return;
+            }
+            else
+            {
+                label3.Visible = false;
+                dataGridView1.DataSource = dt;
 
-            dataGridView1.ClearSelection();
-            styleDataGrid();
+                dataGridView1.ClearSelection();
+                styleDataGrid();
+            }
         }
         private void styleDataGrid()
         {
@@ -87,6 +97,11 @@ namespace Fantasy
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

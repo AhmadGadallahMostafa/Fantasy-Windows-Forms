@@ -19,6 +19,7 @@ namespace Fantasy
             InitializeComponent();
             controlObj = new AccountController();
         }
+        public event EventHandler<string> SignedUp;
         private Form activeForm = null;
 
         private void openChildForm(Form childForm)
@@ -70,8 +71,9 @@ namespace Fantasy
                         
                         label14.Visible = false;
 
-                        int id = controlObj.getFantasyTeamId(email);
-                        openChildForm(new CreateTeams(id));
+                        SignedUp?.Invoke(this, username);
+                        //this.Close();
+                       // openChildForm(new CreateTeams(id));
                     }
                     else 
                     {

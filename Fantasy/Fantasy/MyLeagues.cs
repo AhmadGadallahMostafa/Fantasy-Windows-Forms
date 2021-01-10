@@ -24,20 +24,25 @@ namespace Fantasy
         private void MyLeagues_Load(object sender, EventArgs e)
         {
            DataTable dt1= C1.LeaguesName(FTID);
-
-            int count = dt1.Rows.Count;
-            if (count > 0)
+            if (dt1 == null)
             {
-                //listView1.Items.Clear();
-                listBox1.Items.Clear();
-
-                for (int i = 0; i < count; i++)
+                label2.Visible = true;
+            }
+            else
+            {
+                int count = dt1.Rows.Count;
+                if (count > 0)
                 {
-                    //listView1.Items.Add(dt);
-                    listBox1.Items.Add(dt1.Rows[i][0].ToString());
+                    //listView1.Items.Clear();
+                    listBox1.Items.Clear();
+                    label2.Visible = false;
+                    for (int i = 0; i < count; i++)
+                    {
+                        //listView1.Items.Add(dt);
+                        listBox1.Items.Add(dt1.Rows[i][0].ToString());
+                    }
                 }
             }
-
             
 
 

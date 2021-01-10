@@ -91,7 +91,7 @@ namespace Fantasy
             TeamNameLabel.Text = name.Rows[0][0].ToString();
             DataTable dt1 = C1.OnPitchList(FTID);
             DataTable dt2 = C1.SubsList(FTID);
-
+            
 
 
             int count1 = dt1.Rows.Count;

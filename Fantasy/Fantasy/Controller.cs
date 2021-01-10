@@ -344,6 +344,8 @@ namespace Fantasy
         public DataTable getNameByID(int id)
         {
             string query = $"select team_Name from fantasy_player_team where fantasy_team_id = '{id}'";
+            return dbMan.ExecuteReader(query);
+        }
         public int GetLastInsertedWeek() 
         {
             string query = "SELECT max(Week_Number) FROM Week";
@@ -452,6 +454,8 @@ namespace Fantasy
         public int SetTransfered(int PlayerId, int WeekNumber, int SeasonNumber, int FTID)
         {
             string query = "INSERT INTO Transfered (Player_ID,Week_Number,Season_Number,Fantasy_Team_ID) Values(" + PlayerId + "," + WeekNumber + "," + SeasonNumber + "," + FTID + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
         public int PlayerScored(string playerName) 
         {
             int FGoals = GetGoalsScoredBy(playerName);
