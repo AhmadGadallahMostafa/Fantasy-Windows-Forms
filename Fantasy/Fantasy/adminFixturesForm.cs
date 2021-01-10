@@ -45,7 +45,9 @@ namespace Fantasy
 
         private void AddFixture_Click(object sender, EventArgs e)
         {
-           openChildForm( new AddFixture());
+            Form addFixture = new AddFixture();
+            this.Hide();
+            addFixture.Show();
         }
         private Form activeForm = null;
         private void openScores(EnterScores childForm)
@@ -85,12 +87,16 @@ namespace Fantasy
         }
         private void EnterScore_Click(object sender, EventArgs e)
         {
+            //numericUpDown1.Value =(int) ControllerObj.GetWeek(DateTime.Today);
+            dataGridView1.DataSource = ControllerObj.GetFixturesByWeek((int)numericUpDown1.Value);
+
             if (dataGridView1.CurrentCell == null)
             {
                 MessageBox.Show("Please Select a Fixture");
             }
             else
             {
+               
                 string Home = dataGridView1.SelectedCells[0].Value.ToString();
                 
                 string Away = dataGridView1.SelectedCells[2].Value.ToString();
@@ -127,13 +133,13 @@ namespace Fantasy
         private void adminFixturesForm_Load_1(object sender, EventArgs e)
         {
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            if (ControllerObj.GetFixturesByWeek(1) == null)
+            if (ControllerObj.GetFixturesByWeek((int)ControllerObj.GetWeek(DateTime.Today)) == null)
             {
                 label3.Visible = true;
             }
             else
             {
-                dataGridView1.DataSource = ControllerObj.GetFixturesByWeek(1);
+                dataGridView1.DataSource = ControllerObj.GetFixturesByWeek((int)ControllerObj.GetWeek(DateTime.Today));
 
                 dataGridView1.ClearSelection();
                 dataGridView1.Refresh();

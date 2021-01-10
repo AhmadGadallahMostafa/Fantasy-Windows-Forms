@@ -522,6 +522,9 @@ namespace Fantasy
                             C1.updateTransfers(FTID, 0);
                             hidetransfersButtons();
                             transfersButton.Visible = false;
+
+                            C1.InsertTransfer(C1.GetPlayerId(playerInLastName),(int)C1.GetWeek(DateTime.Today),C1.GetSeason(DateTime.Today.Year.ToString()),FTID,"IN");
+                            C1.InsertTransfer(C1.GetPlayerId(chosenPlayerName), (int)C1.GetWeek(DateTime.Today), C1.GetSeason(DateTime.Today.Year.ToString()), FTID, "OUT");
                             //Update the photo
                             GK1.Load(path + OnPitch[0] + ".png");
                             DEF1.Load(path + OnPitch[1] + ".png");

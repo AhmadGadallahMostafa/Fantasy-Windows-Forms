@@ -97,7 +97,7 @@ namespace Fantasy
         {
             if (InsertPlayer(GetPlayerId(LastName), TeamID,0) == 1)
             {
-
+                
                 int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
                 string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
                 return dbMan.ExecuteNonQuery(query);
@@ -347,12 +347,7 @@ namespace Fantasy
             string query = $"select team_Name from fantasy_player_team where fantasy_team_id = '{id}'";
             return dbMan.ExecuteReader(query);
         }
-        public int GetLastInsertedWeek() 
-        {
-            string query = "SELECT max(Week_Number) FROM Week";
-            return (int)dbMan.ExecuteScalar(query);
-
-        }
+      
         public DataTable GetWeeks() 
         {
             string query = "SELECT * FROM Week";
@@ -362,6 +357,12 @@ namespace Fantasy
         {
             string query = $"select Season_Number From Season where year='{year}'";
             return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public object GetWeek(DateTime date)
+        {
+            string query = $"select Week.Week_Number FROM Week where Week.Start_Date<='{date.ToShortDateString()}' and Week.End_Date>'{date.ToShortDateString()}' ";
+            return dbMan.ExecuteScalar(query);
         }
         public int InsertWeek(DateTime Start_date,DateTime End_Date) 
         {
@@ -377,12 +378,8 @@ namespace Fantasy
             return dbMan.ExecuteNonQuery(query);
 
         }
-        public DataTable PlayedInThisWeek(int host_id, int guest_id, int weekNumber, int seasonNumber, string score) 
-        {
-            string query = $"SELECT * FROM Club_Fixtures where Host_id={host_id} and Week_number={weekNumber} and Season_number={seasonNumber} or Guest_id={guest_id} and Week_number={weekNumber} and Season_number={seasonNumber} ";
-            return dbMan.ExecuteReader(query);
-        }
-        //testing stored procs
+        
+        
         public DataTable getTeamsByRankStoredProc()
         {
             string name = StoredProcedures.getClubsByRank;
@@ -602,5 +599,38 @@ namespace Fantasy
 
         }
 
+        public int UpdateFootballerPrice(string lastName, string firstName,int newPrice) 
+        {
+            string query = $"UPDATE Footballer set Price={newPrice} where First_Name='{firstName}' and Last_Name='{lastName}'";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int GetFixtureCountInWeek(int weekNumber,int seasonNumber) 
+        {
+            string query = $"select count(*)from Club_Fixtures where Week_number={weekNumber} and Season_number={seasonNumber}";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int ResetTransfers() 
+        {
+            string query = "UPDATE Fantasy_Player_Team Set Total_Transfers =1";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertTransfer(int playerId, int weekNumber, int seasonNumber, int fantasyTeamId, string status) 
+        {
+            string query = $"INSERT INTO Transfered values({playerId},{weekNumber},{seasonNumber},{fantasyTeamId},'{status}')";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public object getWeekCount() 
+        {
+            string query = "SELECT count(Week_Number) FROM week";
+            return dbMan.ExecuteScalar(query);
+        }
+        public int InsertSeason(string year) 
+        {
+            string query = $"Insert Into Season values('{year}')";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
     }
 }

@@ -468,7 +468,11 @@ namespace Fantasy
         {
             string PlayerName = dataGridView1.SelectedCells[0].Value.ToString();
 
-
+            if (dataGridView1.CurrentCell == null) 
+            {
+                MessageBox.Show("Please Select a player!");
+                return;
+            }
             for (int i = 0; i < 14; i++)
             {
                 if (PlayerName == Team[i])
@@ -478,7 +482,7 @@ namespace Fantasy
             }
             if (found == false)
             {
-
+              
                 if (C1.GetTeamFunds(FTID) > C1.GetPrice(PlayerName))
                 {
 
