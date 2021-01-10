@@ -368,5 +368,10 @@ namespace Fantasy
             return dbMan.ExecuteReader(query);
 
         }
+        public int SetTransfered(int PlayerId, int WeekNumber, int SeasonNumber, int FTID)
+        {
+            string query = "INSERT INTO Transfered (Player_ID,Week_Number,Season_Number,Fantasy_Team_ID) Values(" + PlayerId + "," + WeekNumber + "," + SeasonNumber + "," + FTID + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
     }
 }

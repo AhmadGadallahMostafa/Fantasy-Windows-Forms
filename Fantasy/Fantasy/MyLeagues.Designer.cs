@@ -41,9 +41,11 @@ namespace Fantasy
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 28);
+            this.label1.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(42, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.Size = new System.Drawing.Size(206, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "My Leagues";
             // 
@@ -51,37 +53,41 @@ namespace Fantasy
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(34, 91);
+            this.listBox1.Location = new System.Drawing.Point(33, 92);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(144, 148);
+            this.listBox1.Size = new System.Drawing.Size(273, 244);
             this.listBox1.TabIndex = 1;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.Controls.Add(this.ViewLeague);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(0, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(512, 331);
+            this.panel1.Size = new System.Drawing.Size(1177, 754);
             this.panel1.TabIndex = 2;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(236, 89);
+            this.dataGridView1.Location = new System.Drawing.Point(695, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(432, 338);
             this.dataGridView1.TabIndex = 3;
             // 
             // ViewLeague
             // 
-            this.ViewLeague.Location = new System.Drawing.Point(103, 265);
+            this.ViewLeague.FlatAppearance.BorderSize = 0;
+            this.ViewLeague.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ViewLeague.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewLeague.Location = new System.Drawing.Point(33, 383);
             this.ViewLeague.Name = "ViewLeague";
-            this.ViewLeague.Size = new System.Drawing.Size(122, 32);
+            this.ViewLeague.Size = new System.Drawing.Size(227, 53);
             this.ViewLeague.TabIndex = 4;
             this.ViewLeague.Text = "View League";
             this.ViewLeague.UseVisualStyleBackColor = true;
@@ -91,7 +97,7 @@ namespace Fantasy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1177, 751);
             this.Controls.Add(this.panel1);
             this.Name = "MyLeagues";
             this.Text = "Form3";
