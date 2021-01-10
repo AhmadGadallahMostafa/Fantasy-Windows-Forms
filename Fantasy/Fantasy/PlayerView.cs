@@ -637,7 +637,6 @@ namespace Fantasy
         private void check()
         {
             DateTime today = DateTime.Today;
-            names = new List<string>();
             DataTable t = C1.getAllUnavailableInTeam(FTID);
             if (t != null)
             {
