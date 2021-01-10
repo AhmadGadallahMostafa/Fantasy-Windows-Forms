@@ -339,7 +339,7 @@ namespace Fantasy
 
         public int getPointsByID (int id)
         {
-            string query = $"select points from fantasy_player_team where fantasy_team_id = '{id}'";
+            string query = $"select total_points from fantasy_player_team where fantasy_team_id = '{id}'";
             return (int)dbMan.ExecuteScalar(query);
         }
         public DataTable getNameByID(int id)

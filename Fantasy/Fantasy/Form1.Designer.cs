@@ -141,7 +141,7 @@ namespace Fantasy
             // pictureBox21
             // 
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(1116, 98);
+            this.pictureBox21.Location = new System.Drawing.Point(1115, 98);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(50, 57);
             this.pictureBox21.TabIndex = 42;
@@ -159,7 +159,7 @@ namespace Fantasy
             // pictureBox19
             // 
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(652, 98);
+            this.pictureBox19.Location = new System.Drawing.Point(651, 98);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(50, 57);
             this.pictureBox19.TabIndex = 40;
@@ -195,7 +195,7 @@ namespace Fantasy
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(884, 98);
+            this.pictureBox15.Location = new System.Drawing.Point(885, 98);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(50, 57);
             this.pictureBox15.TabIndex = 36;
@@ -276,7 +276,7 @@ namespace Fantasy
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(420, 98);
+            this.pictureBox6.Location = new System.Drawing.Point(421, 98);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(50, 57);
             this.pictureBox6.TabIndex = 27;
@@ -322,7 +322,7 @@ namespace Fantasy
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 54);
+            this.label2.Location = new System.Drawing.Point(11, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(793, 23);
             this.label2.TabIndex = 21;
@@ -545,7 +545,7 @@ namespace Fantasy
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(12, 772);
+            this.label3.Location = new System.Drawing.Point(11, 772);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 9;
@@ -565,9 +565,9 @@ namespace Fantasy
             this.ClientSize = new System.Drawing.Size(1442, 796);
             this.Controls.Add(this.childPanel);
             this.Controls.Add(this.SideMenuPanel);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
             this.Text = "Fantasy";
             this.Load += new System.EventHandler(this.Form1_Load);
