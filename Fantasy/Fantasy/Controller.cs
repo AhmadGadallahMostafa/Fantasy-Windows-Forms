@@ -132,14 +132,29 @@ namespace Fantasy
             string query = "SELECT COUNT(*) FROM Fantasy_League";
             return (int)dbMan.ExecuteScalar(query);
         }
-
-
-        public int InsertLeague(String LeagueName,string Country)
+        public int GetTransfers(int TeamId)
         {
-            
-            
-            string query = "INSERT INTO Fantasy_League (League_Name,Country,Total_Players) Values('" + LeagueName + "','"+Country+"',1);";
+            string query = $"SELECT total_transfers from fantasy_player_team where fantasy_team_id = '{TeamId}'";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+
+        public int InsertLeague(String LeagueName,string Country,int CreatorId)
+        {
+            string query = "INSERT INTO Fantasy_League (League_Name,Country,Total_Players,Creator_id) Values('" + LeagueName + "','"+Country+"',1,"+CreatorId+");";
             return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int transfer(string playerLastNameIn, string playerLastNameOut, int TeamID, int newFunds)
+        {
+            //string query = $"delete from plays_in_fantasy_team where player_id ='{GetPlayerId(playerLastNameOut)}' and fantasy_team_id = {TeamID} ";
+             //int flag1 = dbMan.ExecuteNonQuery(query);
+            //query = $"insert into plays_in_fantasy_team player_id ({GetPlayerId(playerLastNameIn)},{TeamID},0) where fantasy_team_id = {TeamID}";
+             //int flag2 = dbMan.ExecuteNonQuery(query);
+             string query1 = $"update plays_in_fantasy_team set player_id = {GetPlayerId(playerLastNameIn)} where player_id={GetPlayerId(playerLastNameOut)} and fantasy_team_id = {TeamID} ";
+            dbMan.ExecuteNonQuery(query1);
+            string query2 = $"update fantasy_player_team set team_funds = {newFunds} where fantasy_team_id = {TeamID};  ";
+            return dbMan.ExecuteNonQuery(query2);
         }
 
         public DataTable GetFixturesByWeek(int weekNumber)
@@ -200,6 +215,11 @@ namespace Fantasy
             return dbMan.ExecuteNonQuery(query);
 
         }
+        public int updateTransfers(int TeamID,int number)
+        {
+            string query = $"update fantasy_player_team set total_transfers = {number} where fantasy_team_id = {TeamID}";
+            return dbMan.ExecuteNonQuery(query);
+        }
        
 
 
@@ -256,7 +276,22 @@ namespace Fantasy
             string query = $"delete from footballer where First_Name = '{fname}' and Last_Name = '{lname}' ";
             return dbMan.ExecuteNonQuery(query);
         }
+        public int getUserTeamId(string username)
+        {
+            string query = $"select fantasy_team_id from Fantasy_player_team where player_username = '{username}' ";
+            return (int)dbMan.ExecuteScalar(query);
+        }
 
+        public int getPointsByID (int id)
+        {
+            string query = $"select points from fantasy_player_team where fantasy_team_id = '{id}'";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public DataTable getNameByID(int id)
+        {
+            string query = $"select team_Name from fantasy_player_team where fantasy_team_id = '{id}'";
+            return dbMan.ExecuteReader(query);
+        }
         //testing stored procs
         public DataTable getTeamsByRankStoredProc()
         {

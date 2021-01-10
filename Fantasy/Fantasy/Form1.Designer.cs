@@ -63,6 +63,7 @@ namespace Fantasy
             this.ClubsButton = new System.Windows.Forms.Button();
             this.SignInButton = new System.Windows.Forms.Button();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
+            this.teamButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SignedInAs = new System.Windows.Forms.Label();
             this.childPanel.SuspendLayout();
@@ -467,6 +468,7 @@ namespace Fantasy
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SideMenuPanel.AutoScroll = true;
             this.SideMenuPanel.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.SideMenuPanel.Controls.Add(this.teamButton);
             this.SideMenuPanel.Controls.Add(this.label3);
             this.SideMenuPanel.Controls.Add(this.SignedInAs);
             this.SideMenuPanel.Controls.Add(this.panel1);
@@ -477,6 +479,24 @@ namespace Fantasy
             this.SideMenuPanel.Size = new System.Drawing.Size(250, 798);
             this.SideMenuPanel.TabIndex = 0;
             this.SideMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SideMenuPanel_Paint);
+            // 
+            // teamButton
+            // 
+            this.teamButton.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.teamButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.teamButton.FlatAppearance.BorderSize = 0;
+            this.teamButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.teamButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teamButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.teamButton.Location = new System.Drawing.Point(0, 465);
+            this.teamButton.Name = "teamButton";
+            this.teamButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.teamButton.Size = new System.Drawing.Size(250, 60);
+            this.teamButton.TabIndex = 10;
+            this.teamButton.Text = "My Team";
+            this.teamButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.teamButton.UseVisualStyleBackColor = false;
+            this.teamButton.Click += new System.EventHandler(this.teamButton_Click);
             // 
             // label3
             // 
@@ -576,6 +596,7 @@ namespace Fantasy
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Label SignedInAs;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button teamButton;
     }
 }
 

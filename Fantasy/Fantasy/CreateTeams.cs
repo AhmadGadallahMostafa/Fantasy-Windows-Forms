@@ -19,7 +19,7 @@ namespace Fantasy
         int ChosenPlayerNo = -1;
         string[] Team = new string[15];
         int FTID;
-        bool found= false;
+        bool found = false;
 
         string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/");
 
@@ -28,7 +28,7 @@ namespace Fantasy
             InitializeComponent();
             FTID = FT;
             styleDataGrid();
-           
+
         }
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace Fantasy
         }
         private void styleDataGrid()
         {
-   
+
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.White;
@@ -63,9 +63,9 @@ namespace Fantasy
             string PlayerName = PlayersList.GetItemText(PlayersList.SelectedItem);
 
 
-            for(int i=0;i<14;i++)
+            for (int i = 0; i < 14; i++)
             {
-                if(PlayerName==Team[i])
+                if (PlayerName == Team[i])
                 {
                     found = true;
                 }
@@ -469,7 +469,7 @@ namespace Fantasy
 
                 Team[4] = null;
 
-              }
+            }
         }
 
         private void DBT5_Click(object sender, EventArgs e)
@@ -608,8 +608,8 @@ namespace Fantasy
         {
             PlayerView PLayerView = new PlayerView(FTID);
             PLayerView.Show();
-            string TeamName = textBox2.Text;
-            C1.SetTeamName(FTID,TeamName);
+            string TeamName = teamName.Text;
+            C1.SetTeamName(FTID, TeamName);
 
         }
 
@@ -764,6 +764,36 @@ namespace Fantasy
                 }
             }
             found = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Validations.EmptyInputField(teamName.Text))
+            {
+                enternamewarning.Visible = true;
+            }
+            else
+            {
+                openChildForm(new PlayerView(FTID));
+                string TeamName = teamName.Text;
+                C1.SetTeamName(FTID, TeamName);
+            }
+        }
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+
         }
     }
 }

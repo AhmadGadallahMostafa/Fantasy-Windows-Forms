@@ -18,10 +18,6 @@ namespace Fantasy
             InitializeComponent();
             ControllerObj = new Controller();
             styleDataGrid();
-            //Image loading
-            DataGridViewImageColumn img = new DataGridViewImageColumn();
-            //img.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            dataGridView1.Columns.Add(img);
             dataGridView1.DataSource = ControllerObj.getTeamsByRankStoredProc();
             dataGridView1.ClearSelection();
             dataGridView1.Refresh();

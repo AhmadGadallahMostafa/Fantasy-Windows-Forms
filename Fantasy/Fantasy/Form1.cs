@@ -17,10 +17,13 @@ namespace Fantasy
         string SignInAsJourn = "";
 
         bool AsAdmin;
+        Controller ControllerObj;
 
         public Form1()
         {
             InitializeComponent();
+            ControllerObj = new Controller();
+            teamButton.Visible = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -93,6 +96,9 @@ namespace Fantasy
             AsAdmin = false;
             label3.Text = $"Signed In as {SignInAsUser}";
             SignInButton.Text = "Sign Out";
+            int playerID = ControllerObj.getUserTeamId(userName);
+            teamButton.Visible = true;
+            openChildForm(new PlayerView(playerID));
         }
         protected void OnSignedIn_AsJourn(object sender, string userName)
         {
@@ -187,5 +193,13 @@ namespace Fantasy
         {
 
         }
+
+        private void teamButton_Click(object sender, EventArgs e)
+        {
+            int id = ControllerObj.getUserTeamId(SignInAsUser);
+            openChildForm(new PlayerView(id));
+        }
+
+       
     }
 }

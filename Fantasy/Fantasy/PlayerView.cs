@@ -22,6 +22,7 @@ namespace Fantasy
         string[] OnPitch = new string[11];
         string[] Subs = new string[4];
         string dummy="T";
+        int chosenNumber;
 
 
         public PlayerView(int FantasyTeamId)
@@ -29,11 +30,33 @@ namespace Fantasy
             InitializeComponent();
             FTID = FantasyTeamId;
             CustomizeDesign();
+            if (C1.GetTransfers(FTID) == 0)
+            {
+                transfersButton.Visible = false;
+            }
+            styleDataGrid();
 
-            
 
 
-
+        }
+        private void styleDataGrid()
+        {
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SkyBlue;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dataGridView1.BackgroundColor = Color.SkyBlue;
+            dataGridView1.DefaultCellStyle.Font = new Font("Calibri", 8);
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dataGridView1.RowTemplate.Height = 70;
+            //dataGridView1.Columns.Width = 100;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10);
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(37, 37, 38);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.ClearSelection();
         }
 
         private void CustomizeDesign()
@@ -41,7 +64,7 @@ namespace Fantasy
             panel2.Hide();
             EnterLeagueIDText.Hide();
             EnterLeagueID.Hide();
-            button15.Hide();
+            JoinButton.Hide();
             LeagueName.Hide();
             LeagueNameText.Hide();
             Country.Hide();
@@ -54,8 +77,19 @@ namespace Fantasy
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            CreateLeagueButt.Visible = false;
+            JoinLeagueButt.Visible = false;
+            MyLeaguesButt.Visible = false;
+            //displaying player info 
+            int Funds = C1.GetTeamFunds(FTID);
+            int points = C1.getPointsByID(FTID);
+            FundsValueLabel.Text = Funds.ToString();
+            PointsValueLabel.Text = points.ToString();
+            DataTable name = C1.getNameByID(FTID);
+            TeamNameLabel.Text = name.Rows[0][0].ToString();
             DataTable dt1 = C1.OnPitchList(FTID);
             DataTable dt2 = C1.SubsList(FTID);
+
 
 
             int count1 = dt1.Rows.Count;
@@ -130,12 +164,21 @@ namespace Fantasy
         {
             EnterLeagueIDText.Show();
             EnterLeagueID.Show();
-            button15.Show();
+            JoinButton.Show();
+            LeagueName.Visible = false;
+            LeagueName.Visible = false;
+            CreateButt.Visible = false;
+            Country.Visible = false;
+            CountryText.Visible = false;
+            LeagueNameText.Visible = false;
         }
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            panel2.Show();
+          
+            CreateLeagueButt.Visible = true;
+            JoinLeagueButt.Visible = true;
+            MyLeaguesButt.Visible = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -158,12 +201,15 @@ namespace Fantasy
             CreateButt.Show();
             Country.Show();
             CountryText.Show();
+            JoinButton.Visible = false;
+            EnterLeagueID.Visible = false;
+            EnterLeagueIDText.Visible = false;
 
         }
 
         private void CreateButt_Click(object sender, EventArgs e)
         {
-            C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString());
+            C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString(),FTID);
         }
 
         private void SubGK1_Click(object sender, EventArgs e)
@@ -305,6 +351,138 @@ namespace Fantasy
 
             ATT2.Load(path + OnPitch[10] + ".png");
             ATT3.Load(path + Subs[3] + ".png");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MyLeaguesButt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            transfermid1.Visible = true;
+            transfermid2.Visible = true;
+            transfermid3.Visible = true;
+            transfermid4.Visible = true;
+            transfergk1.Visible = true;
+            transferatt1.Visible = true;
+            transferatt2.Visible = true;
+            transferdef1.Visible = true;
+            transferdef2.Visible = true;
+            transferdef3.Visible = true;
+            transferdef4.Visible = true;
+            dataGridView1.Visible = true;
+            acceptTransfer.Visible = true;
+            
+            
+        }
+        private void hidetransfersButtons()
+        {
+            transfermid1.Visible = false;
+            transfermid2.Visible = false;
+            transfermid3.Visible = false;
+            transfermid4.Visible = false;
+            transfergk1.Visible = false;
+            transferatt1.Visible = false;
+            transferatt2.Visible = false;
+            transferdef1.Visible = false;
+            transferdef2.Visible = false;
+            transferdef3.Visible = false;
+            transferdef4.Visible = false;
+            dataGridView1.Visible = false;
+            acceptTransfer.Visible = false;
+        }
+
+        private void transferdef1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetDefender();
+            chosenNumber = 1;
+            dataGridView1.Refresh();
+        }
+
+        private void transferdef2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetDefender();
+            chosenNumber = 2;
+            dataGridView1.Refresh();
+        }
+
+        private void transferdef3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetDefender();
+            chosenNumber = 3;
+            dataGridView1.Refresh();
+        }
+
+        private void transferdef4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = C1.GetDefender();
+            chosenNumber = 4;
+            dataGridView1.Refresh();
+        }
+
+        private void acceptTransfer_Click(object sender, EventArgs e)
+        {
+            //Funds Check 
+            string playerInLastName = dataGridView1.SelectedCells[0].Value.ToString();
+            int playerInPrice = C1.GetPrice(playerInLastName);
+            string chosenPlayerName = OnPitch[chosenNumber];
+            int chosenPlayerPrice = C1.GetPrice(chosenPlayerName);
+            int newFunds = C1.GetTeamFunds(FTID) + chosenPlayerPrice - playerInPrice;
+             if (newFunds < 0)
+             {
+                MessageBox.Show("You Dont Have Enough Money To Make This Transfer");
+             }
+             else
+             {
+                int flag = C1.transfer(playerInLastName, chosenPlayerName, FTID, newFunds);
+                if (flag == 1)
+                {
+                    FundsValueLabel.Text = newFunds.ToString();
+                    OnPitch[chosenNumber] = playerInLastName;
+                    C1.updateTransfers(FTID, 0);
+                    hidetransfersButtons();
+
+                    transfersButton.Visible = false;
+                    //Update the photo
+                }
+             }
         }
     }
 }

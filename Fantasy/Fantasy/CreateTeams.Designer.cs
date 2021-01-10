@@ -68,8 +68,9 @@ namespace Fantasy
             this.button1 = new System.Windows.Forms.Button();
             this.addPlayer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.teamName = new System.Windows.Forms.TextBox();
             this.Substitutes = new System.Windows.Forms.Label();
+            this.enternamewarning = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).BeginInit();
@@ -286,21 +287,20 @@ namespace Fantasy
             this.PlayersList.BackColor = System.Drawing.Color.White;
             this.PlayersList.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PlayersList.FormattingEnabled = true;
-            this.PlayersList.ItemHeight = 15;
             this.PlayersList.Location = new System.Drawing.Point(66, 12);
             this.PlayersList.Name = "PlayersList";
-            this.PlayersList.Size = new System.Drawing.Size(217, 169);
+            this.PlayersList.Size = new System.Drawing.Size(217, 160);
             this.PlayersList.TabIndex = 17;
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.textBox1.BackColor = System.Drawing.Color.SkyBlue;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(14, 208);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 29);
+            this.textBox1.Size = new System.Drawing.Size(47, 23);
             this.textBox1.TabIndex = 19;
             // 
             // SBT1
@@ -470,11 +470,12 @@ namespace Fantasy
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.enternamewarning);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.addPlayer);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.teamName);
             this.panel1.Controls.Add(this.PlayersList);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.textBox1);
@@ -485,21 +486,22 @@ namespace Fantasy
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(79, 679);
+            this.button1.Location = new System.Drawing.Point(80, 679);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 40);
             this.button1.TabIndex = 24;
             this.button1.Text = "Proceed";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // addPlayer
             // 
-            this.addPlayer.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.addPlayer.BackColor = System.Drawing.Color.Transparent;
             this.addPlayer.FlatAppearance.BorderSize = 0;
             this.addPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPlayer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -517,18 +519,18 @@ namespace Fantasy
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 552);
+            this.label1.Location = new System.Drawing.Point(9, 562);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 35);
+            this.label1.Size = new System.Drawing.Size(120, 27);
             this.label1.TabIndex = 22;
             this.label1.Text = "Team Name";
             // 
-            // textBox2
+            // teamName
             // 
-            this.textBox2.Location = new System.Drawing.Point(14, 592);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 23);
-            this.textBox2.TabIndex = 21;
+            this.teamName.Location = new System.Drawing.Point(9, 604);
+            this.teamName.Name = "teamName";
+            this.teamName.Size = new System.Drawing.Size(212, 20);
+            this.teamName.TabIndex = 21;
             // 
             // Substitutes
             // 
@@ -536,13 +538,25 @@ namespace Fantasy
             this.Substitutes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Substitutes.Location = new System.Drawing.Point(2, 658);
             this.Substitutes.Name = "Substitutes";
-            this.Substitutes.Size = new System.Drawing.Size(122, 29);
+            this.Substitutes.Size = new System.Drawing.Size(97, 23);
             this.Substitutes.TabIndex = 36;
             this.Substitutes.Text = "Substitutes";
             // 
+            // enternamewarning
+            // 
+            this.enternamewarning.AutoSize = true;
+            this.enternamewarning.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enternamewarning.ForeColor = System.Drawing.Color.Red;
+            this.enternamewarning.Location = new System.Drawing.Point(11, 633);
+            this.enternamewarning.Name = "enternamewarning";
+            this.enternamewarning.Size = new System.Drawing.Size(152, 14);
+            this.enternamewarning.TabIndex = 25;
+            this.enternamewarning.Text = "Please Enter a Team Name";
+            this.enternamewarning.Visible = false;
+            // 
             // CreateTeams
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 798);
             this.Controls.Add(this.Substitutes);
@@ -645,9 +659,10 @@ namespace Fantasy
         private System.Windows.Forms.Button GKBT2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox teamName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button addPlayer;
         private System.Windows.Forms.Label Substitutes;
+        private System.Windows.Forms.Label enternamewarning;
     }
 }
