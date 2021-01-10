@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Fantasy
 {
@@ -85,6 +86,25 @@ namespace Fantasy
             string query = $"select account.Email from account, fantasy_player_team where player_username = '{username}' and Fantasy_Player_Team.Email = Account.Email ";
             return dbMan.ExecuteScalar(query).ToString();
         }
-
+        public int requestAnalystAccount(string email, DateTime birthdate, string password,string gender) 
+        {
+            string query = $"Insert INTO ACCOUNT values('{email}','{birthdate.ToShortDateString()}',4,'{password}','{gender}')";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable GetAnalysRequests() 
+        {
+            string query = "SELECT email,Date_Of_Birth,Gender FROM ACCOUNT WHERE Account_Type = 4 ";
+            return dbMan.ExecuteReader(query);
+        }
+        public int AcceptRequest(string email)
+        {
+            string query = $"UPDATE ACCOUNT set Account_Type = 1 Where Email='{email}'";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int DenyRequest(string email)
+        {
+            string query = $"DELETE FROM Account Where Email='{email}'";
+            return dbMan.ExecuteNonQuery(query);
+        }
     }
 }

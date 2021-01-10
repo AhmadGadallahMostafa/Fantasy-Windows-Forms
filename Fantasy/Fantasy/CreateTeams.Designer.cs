@@ -47,7 +47,6 @@ namespace Fantasy
             this.ATT2 = new System.Windows.Forms.PictureBox();
             this.ATT1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.PlayersList = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SBT1 = new System.Windows.Forms.Button();
             this.SBT2 = new System.Windows.Forms.Button();
@@ -65,12 +64,12 @@ namespace Fantasy
             this.GKBT1 = new System.Windows.Forms.Button();
             this.GKBT2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.enternamewarning = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.addPlayer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.teamName = new System.Windows.Forms.TextBox();
             this.Substitutes = new System.Windows.Forms.Label();
-            this.enternamewarning = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GK1)).BeginInit();
@@ -274,7 +273,7 @@ namespace Fantasy
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 257);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -282,25 +281,15 @@ namespace Fantasy
             this.dataGridView1.Size = new System.Drawing.Size(286, 272);
             this.dataGridView1.TabIndex = 16;
             // 
-            // PlayersList
-            // 
-            this.PlayersList.BackColor = System.Drawing.Color.White;
-            this.PlayersList.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PlayersList.FormattingEnabled = true;
-            this.PlayersList.Location = new System.Drawing.Point(66, 12);
-            this.PlayersList.Name = "PlayersList";
-            this.PlayersList.Size = new System.Drawing.Size(217, 160);
-            this.PlayersList.TabIndex = 17;
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.SkyBlue;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(14, 208);
+            this.textBox1.Location = new System.Drawing.Point(15, 313);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 23);
+            this.textBox1.Size = new System.Drawing.Size(47, 29);
             this.textBox1.TabIndex = 19;
             // 
             // SBT1
@@ -476,13 +465,24 @@ namespace Fantasy
             this.panel1.Controls.Add(this.addPlayer);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.teamName);
-            this.panel1.Controls.Add(this.PlayersList);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(878, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 798);
             this.panel1.TabIndex = 35;
+            // 
+            // enternamewarning
+            // 
+            this.enternamewarning.AutoSize = true;
+            this.enternamewarning.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enternamewarning.ForeColor = System.Drawing.Color.Red;
+            this.enternamewarning.Location = new System.Drawing.Point(11, 633);
+            this.enternamewarning.Name = "enternamewarning";
+            this.enternamewarning.Size = new System.Drawing.Size(171, 18);
+            this.enternamewarning.TabIndex = 25;
+            this.enternamewarning.Text = "Please Enter a Team Name";
+            this.enternamewarning.Visible = false;
             // 
             // button1
             // 
@@ -506,13 +506,13 @@ namespace Fantasy
             this.addPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPlayer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPlayer.ForeColor = System.Drawing.SystemColors.Control;
-            this.addPlayer.Location = new System.Drawing.Point(159, 202);
+            this.addPlayer.Location = new System.Drawing.Point(177, 308);
             this.addPlayer.Name = "addPlayer";
             this.addPlayer.Size = new System.Drawing.Size(124, 40);
             this.addPlayer.TabIndex = 23;
             this.addPlayer.Text = "Add Player";
             this.addPlayer.UseVisualStyleBackColor = false;
-            this.addPlayer.Click += new System.EventHandler(this.SignUp_Click);
+            this.addPlayer.Click += new System.EventHandler(this.addPlayer_Click_1);
             // 
             // label1
             // 
@@ -521,7 +521,7 @@ namespace Fantasy
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(9, 562);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 27);
+            this.label1.Size = new System.Drawing.Size(149, 35);
             this.label1.TabIndex = 22;
             this.label1.Text = "Team Name";
             // 
@@ -529,7 +529,7 @@ namespace Fantasy
             // 
             this.teamName.Location = new System.Drawing.Point(9, 604);
             this.teamName.Name = "teamName";
-            this.teamName.Size = new System.Drawing.Size(212, 20);
+            this.teamName.Size = new System.Drawing.Size(212, 23);
             this.teamName.TabIndex = 21;
             // 
             // Substitutes
@@ -538,25 +538,13 @@ namespace Fantasy
             this.Substitutes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Substitutes.Location = new System.Drawing.Point(2, 658);
             this.Substitutes.Name = "Substitutes";
-            this.Substitutes.Size = new System.Drawing.Size(97, 23);
+            this.Substitutes.Size = new System.Drawing.Size(122, 29);
             this.Substitutes.TabIndex = 36;
             this.Substitutes.Text = "Substitutes";
             // 
-            // enternamewarning
-            // 
-            this.enternamewarning.AutoSize = true;
-            this.enternamewarning.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enternamewarning.ForeColor = System.Drawing.Color.Red;
-            this.enternamewarning.Location = new System.Drawing.Point(11, 633);
-            this.enternamewarning.Name = "enternamewarning";
-            this.enternamewarning.Size = new System.Drawing.Size(152, 14);
-            this.enternamewarning.TabIndex = 25;
-            this.enternamewarning.Text = "Please Enter a Team Name";
-            this.enternamewarning.Visible = false;
-            // 
             // CreateTeams
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 798);
             this.Controls.Add(this.Substitutes);
@@ -640,7 +628,6 @@ namespace Fantasy
         private System.Windows.Forms.PictureBox ATT2;
         private System.Windows.Forms.PictureBox ATT1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ListBox PlayersList;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button SBT1;
         private System.Windows.Forms.Button SBT2;
