@@ -66,18 +66,27 @@ namespace Fantasy
                     label12.Visible = false;
                     password = Validations.EncodePasswordToBase64(password);
 
-                    if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
+                    if (checkBox1.Checked)
                     {
-                        
-                        label14.Visible = false;
 
-                        SignedUp?.Invoke(this, username);
-                        //this.Close();
-                       // openChildForm(new CreateTeams(id));
+                        if (controlObj.requestAnalystAccount(email, birthDate, password, gender) != 0)
+                         {
+                            MessageBox.Show("Your request is added!");
+                         }
                     }
-                    else 
+                    else
                     {
-                        label14.Visible = true;
+                        if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
+                        {
+
+                            label14.Visible = false;
+                            SignedUp?.Invoke(this, username);
+
+                        }
+                        else
+                        {
+                            label14.Visible = true;
+                        }
                     }
                 }
                 else 

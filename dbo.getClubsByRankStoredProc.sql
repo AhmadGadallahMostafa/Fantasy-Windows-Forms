@@ -1,6 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[getFootballlerNameAndClub]
+﻿CREATE PROCEDURE [dbo].[getClubsByRank]
 AS
-BEGIN
-Select Footballer.First_Name,Footballer.Last_Name,Club.Club_Name from Footballer , Club where Footballer.Club_ID = Club.Club_Id; 
-END
-go
+Begin
+    SELECT  Club_Rank, Club_Name,Club_Points,Total_Goals,Goals_Against From Club order by club_rank asc
+End

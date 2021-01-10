@@ -93,6 +93,7 @@ namespace Fantasy
             if (!Validations.ValidEmail(textBox1.Text))
             {
                 label4.Visible = true;
+                return;
             }
             else
             {
@@ -102,6 +103,7 @@ namespace Fantasy
             if (Validations.EmptyInputField(textBox2.Text))
             {
                 label5.Visible = true;
+                return;
             }
             else
             {
@@ -116,46 +118,46 @@ namespace Fantasy
             }
             
                 object accountType = controlObj.LoginVerification(textBox1.Text, textBox2.Text);
-                if (accountType == null)
-                {
-                    label6.Visible = true;
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("login");
+            if (accountType == null)
+            {
+                label6.Visible = true;
+                return;
+            }
+            else
+            {
+                MessageBox.Show("login");
 
 
 
-                    label6.Visible = false;
-                }
+                label6.Visible = false;
+            }
 
 
-                switch ((int)accountType)
-                {
+            switch ((int)accountType)
+            {
 
-                    case (int)accountTypes.admin:
-
-
-                        SignedIn_AsAdmin?.Invoke(this, textBox1.Text);
-                        this.Close();
+                case (int)accountTypes.admin:
 
 
-                        break;
-                    case (int)accountTypes.player:
+                    SignedIn_AsAdmin?.Invoke(this, textBox1.Text);
+                    this.Close();
 
-                        SignedIn_AsUser?.Invoke(this, controlObj.GetUserName(textBox1.Text));
-                        this.Close();
-                        // player view
-                        break;
-                    case (int)accountTypes.journalist:
 
-                        SignedIn_AsJourn?.Invoke(this, controlObj.GetUserName(textBox1.Text));
-                        this.Close();
-                        // journalist view : player view + add player profile + scout selection
-                        break;
-                }
-               
+                    break;
+                case (int)accountTypes.player:
+
+                    SignedIn_AsUser?.Invoke(this, controlObj.GetUserName(textBox1.Text));
+                    this.Close();
+                    // player view
+                    break;
+                case (int)accountTypes.journalist:
+
+                    SignedIn_AsJourn?.Invoke(this, controlObj.GetUserName(textBox1.Text));
+                    this.Close();
+                    // journalist view : player view + add player profile + scout selection
+                    break;
+            }
+
         }
         public event EventHandler<string> SignedIn_AsAdmin;
         public event EventHandler<string> SignedIn_AsUser;

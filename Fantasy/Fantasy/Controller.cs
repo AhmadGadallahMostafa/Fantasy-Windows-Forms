@@ -93,45 +93,46 @@ namespace Fantasy
 
         }
         
-         public int BuyingInPLayer(int TeamID,string LastName)
-         {
-             if (InsertPlayer(GetPlayerId(LastName), TeamID,0) == 1)
-             {
+        public int BuyingInPLayer(int TeamID,string LastName)
+        {
+            if (InsertPlayer(GetPlayerId(LastName), TeamID,0) == 1)
+            {
 
-                 int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
-                 string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
-                 return dbMan.ExecuteNonQuery(query);
+                int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+                string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
+                return dbMan.ExecuteNonQuery(query);
 
-             }
-             else
-             {
+            }
+            else
+            {
                  return 0;
-             }
+            }
 
 
-         }
+        }
+
          public int BuyingOutPLayer(int TeamID, string LastName)
-         {
-             if (InsertPlayer(GetPlayerId(LastName), TeamID, 1) == 1)
-             {
+        {
+            if (InsertPlayer(GetPlayerId(LastName), TeamID, 1) == 1)
+            {
 
-                 int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
-                 string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
-                 return dbMan.ExecuteNonQuery(query);
+                int NewFunds = GetTeamFunds(TeamID) - GetPrice(LastName);
+                string query = "UPDATE Fantasy_Player_Team   Set Team_Funds=" + NewFunds + " WHERE Fantasy_Team_ID=" + TeamID + " ; ";
+                return dbMan.ExecuteNonQuery(query);
 
-             }
-             else
-             {
-                 return 0;
-             }
-
-
-         }
-        
+            }
+            else
+            {
+                return 0;
+            }
 
 
-       
-            public int GetPlayerId(String LastName)
+        }
+
+
+
+
+        public int GetPlayerId(String LastName)
         {
             string query = "SELECT Player_id From Footballer Where Last_Name='" + LastName + "';";
             return (int)dbMan.ExecuteScalar(query);

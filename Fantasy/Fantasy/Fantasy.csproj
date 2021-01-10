@@ -83,6 +83,12 @@
     <Compile Include="adminPlayersView.Designer.cs">
       <DependentUpon>adminPlayersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnalystRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalystRequests.Designer.cs">
+      <DependentUpon>AnalystRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="changePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminPlayersView.resx">
       <DependentUpon>adminPlayersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalystRequests.resx">
+      <DependentUpon>AnalystRequests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="changePasswordForm.resx">
       <DependentUpon>changePasswordForm.cs</DependentUpon>

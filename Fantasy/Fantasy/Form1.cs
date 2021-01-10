@@ -125,6 +125,7 @@ namespace Fantasy
             label3.Text = $"Signed In as {SignInAsAdmin}";
             SignInButton.Text = "Sign Out";
             changePassword.Visible = true;
+            button1.Visible = true;
         }
         protected void OnSignedIn_AsUser(object sender, string userName)
         {
@@ -173,6 +174,7 @@ namespace Fantasy
                 AsAdmin = false;
                 teamButton.Visible = false;
                 changePassword.Visible = false;
+                button1.Visible = false;
                 activeForm.Close();
 
             }
@@ -259,6 +261,12 @@ namespace Fantasy
                 string email = AccountController.getEmailFromUserName(SignInAsUser);
                 openChildForm(new changePasswordForm(email));
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           AnalystRequests a= new AnalystRequests();
+            a.Show();
         }
     }
 }
