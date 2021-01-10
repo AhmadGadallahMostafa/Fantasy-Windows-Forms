@@ -64,7 +64,7 @@ namespace Fantasy
                 if (controlObj.UniqueUsername(username))
                 {
                     label12.Visible = false;
-                   
+                    password = Validations.EncodePasswordToBase64(password);
 
                     if (controlObj.SignUpUser(email, birthDate, password, gender) != 0 && (controlObj.CreateFantasyTeam(username, email, age) != 0))
                     {

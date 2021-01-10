@@ -16,8 +16,15 @@ namespace Fantasy
         }
         public object LoginVerification(string email, string password)
         {
-            string sql = $"Select Account_Type from Account where Password='{password}' and Email ='{email}';";
-            return dbMan.ExecuteScalar(sql);
+            string encryptedPassword = getEncryptedPassword(email);
+            string decryptedPassword = Validations.DecodeFrom64(encryptedPassword);
+            if (decryptedPassword == password)
+            {
+                string sql = $"Select Account_Type from Account where  Email ='{email}';";
+                return dbMan.ExecuteScalar(sql);
+            }
+            else
+                return null;
         }
 
         public object GetSignedIn(string email) 
@@ -62,6 +69,21 @@ namespace Fantasy
         {
             string query = $"SELECT Fantasy_Team_ID FROM Fantasy_Player_Team where Email='{email}'";
             return (int)dbMan.ExecuteScalar(query);
+        }
+        public string getEncryptedPassword(string email)
+        {
+            string query = $"select password from Account where email = '{email}'";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+        public int updatePassword(string password, string email)
+        {
+            string query = $"update account set password = '{password}' where  email = '{email}'";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public string getEmailFromUserName(string username)
+        {
+            string query = $"select account.Email from account, fantasy_player_team where player_username = '{username}' and Fantasy_Player_Team.Email = Account.Email ";
+            return dbMan.ExecuteScalar(query).ToString();
         }
 
     }

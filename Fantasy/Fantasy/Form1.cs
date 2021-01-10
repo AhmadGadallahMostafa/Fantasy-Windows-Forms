@@ -18,11 +18,12 @@ namespace Fantasy
 
         bool AsAdmin;
         Controller ControllerObj;
-
+        AccountController AccountController;
         public Form1()
         {
             InitializeComponent();
             ControllerObj = new Controller();
+            AccountController = new AccountController();
             teamButton.Visible = false;
         }
 
@@ -123,6 +124,7 @@ namespace Fantasy
             AsAdmin = true;
             label3.Text = $"Signed In as {SignInAsAdmin}";
             SignInButton.Text = "Sign Out";
+            changePassword.Visible = true;
         }
         protected void OnSignedIn_AsUser(object sender, string userName)
         {
@@ -132,7 +134,7 @@ namespace Fantasy
             SignInButton.Text = "Sign Out";
             int playerID = ControllerObj.getUserTeamId(userName);
             teamButton.Visible = true;
-
+            changePassword.Visible = true;
             //openChildForm(new PlayerView(playerID));
         }
         protected void OnSignedIn_AsJourn(object sender, string userName)
@@ -170,6 +172,7 @@ namespace Fantasy
                 label3.Text="";
                 AsAdmin = false;
                 teamButton.Visible = false;
+                changePassword.Visible = false;
                 activeForm.Close();
 
             }
@@ -244,6 +247,18 @@ namespace Fantasy
             openChildForm(new PlayerView(id));
         }
 
-       
+        private void changePassword_Click(object sender, EventArgs e)
+        {
+            if (AsAdmin)
+            {
+                string email = AccountController.getEmailFromUserName(SignInAsAdmin);
+                openChildForm(new changePasswordForm(email));
+            }
+            else
+            {
+                string email = AccountController.getEmailFromUserName(SignInAsUser);
+                openChildForm(new changePasswordForm(email));
+            }
+        }
     }
 }

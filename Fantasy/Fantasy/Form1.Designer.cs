@@ -66,6 +66,7 @@ namespace Fantasy
             this.teamButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SignedInAs = new System.Windows.Forms.Label();
+            this.changePassword = new System.Windows.Forms.Button();
             this.childPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -468,6 +469,7 @@ namespace Fantasy
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SideMenuPanel.AutoScroll = true;
             this.SideMenuPanel.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.SideMenuPanel.Controls.Add(this.changePassword);
             this.SideMenuPanel.Controls.Add(this.teamButton);
             this.SideMenuPanel.Controls.Add(this.label3);
             this.SideMenuPanel.Controls.Add(this.SignedInAs);
@@ -515,6 +517,25 @@ namespace Fantasy
             this.SignedInAs.Name = "SignedInAs";
             this.SignedInAs.Size = new System.Drawing.Size(0, 15);
             this.SignedInAs.TabIndex = 8;
+            // 
+            // changePassword
+            // 
+            this.changePassword.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.changePassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.changePassword.FlatAppearance.BorderSize = 0;
+            this.changePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changePassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changePassword.ForeColor = System.Drawing.SystemColors.Control;
+            this.changePassword.Location = new System.Drawing.Point(0, 525);
+            this.changePassword.Name = "changePassword";
+            this.changePassword.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.changePassword.Size = new System.Drawing.Size(250, 60);
+            this.changePassword.TabIndex = 11;
+            this.changePassword.Text = "Change Password";
+            this.changePassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.changePassword.UseVisualStyleBackColor = false;
+            this.changePassword.Visible = false;
+            this.changePassword.Click += new System.EventHandler(this.changePassword_Click);
             // 
             // Form1
             // 
@@ -598,6 +619,7 @@ namespace Fantasy
         private System.Windows.Forms.Label SignedInAs;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button teamButton;
+        private System.Windows.Forms.Button changePassword;
     }
 }
 
