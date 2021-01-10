@@ -53,27 +53,21 @@ namespace Fantasy
             this.cm1 = new System.Windows.Forms.PictureBox();
             this.cdm = new System.Windows.Forms.PictureBox();
             this.cm2 = new System.Windows.Forms.PictureBox();
-            this.rw = new System.Windows.Forms.PictureBox();
             this.lw = new System.Windows.Forms.PictureBox();
+            this.rw = new System.Windows.Forms.PictureBox();
             this.gk = new System.Windows.Forms.PictureBox();
             this.st = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.gklabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lbLabel = new System.Windows.Forms.Label();
+            this.cb1Label = new System.Windows.Forms.Label();
+            this.cb2label = new System.Windows.Forms.Label();
+            this.rblabel = new System.Windows.Forms.Label();
+            this.cdmlabel = new System.Windows.Forms.Label();
+            this.cm1label = new System.Windows.Forms.Label();
+            this.cm2label = new System.Windows.Forms.Label();
+            this.lwlabel = new System.Windows.Forms.Label();
+            this.rwlabel = new System.Windows.Forms.Label();
+            this.stlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ClubPicture)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lb)).BeginInit();
@@ -83,13 +77,10 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.cm1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cm2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lw)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.st)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -273,6 +264,7 @@ namespace Fantasy
             this.button2.TabIndex = 48;
             this.button2.Text = "For More Information Click Here ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -364,23 +356,23 @@ namespace Fantasy
             this.cm2.TabIndex = 9;
             this.cm2.TabStop = false;
             // 
-            // rw
-            // 
-            this.rw.BackColor = System.Drawing.Color.Transparent;
-            this.rw.Location = new System.Drawing.Point(168, 196);
-            this.rw.Name = "rw";
-            this.rw.Size = new System.Drawing.Size(60, 60);
-            this.rw.TabIndex = 10;
-            this.rw.TabStop = false;
-            // 
             // lw
             // 
             this.lw.BackColor = System.Drawing.Color.Transparent;
-            this.lw.Location = new System.Drawing.Point(168, 551);
+            this.lw.Location = new System.Drawing.Point(168, 196);
             this.lw.Name = "lw";
             this.lw.Size = new System.Drawing.Size(60, 60);
-            this.lw.TabIndex = 11;
+            this.lw.TabIndex = 10;
             this.lw.TabStop = false;
+            // 
+            // rw
+            // 
+            this.rw.BackColor = System.Drawing.Color.Transparent;
+            this.rw.Location = new System.Drawing.Point(168, 551);
+            this.rw.Name = "rw";
+            this.rw.Size = new System.Drawing.Size(60, 60);
+            this.rw.TabIndex = 11;
+            this.rw.TabStop = false;
             // 
             // gk
             // 
@@ -401,204 +393,139 @@ namespace Fantasy
             this.st.TabIndex = 12;
             this.st.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(537, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Location = new System.Drawing.Point(471, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Location = new System.Drawing.Point(403, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
-            // 
             // gklabel
             // 
             this.gklabel.AutoSize = true;
             this.gklabel.BackColor = System.Drawing.Color.Transparent;
             this.gklabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gklabel.ForeColor = System.Drawing.Color.Black;
-            this.gklabel.Location = new System.Drawing.Point(884, 335);
+            this.gklabel.Location = new System.Drawing.Point(884, 432);
             this.gklabel.Name = "gklabel";
             this.gklabel.Size = new System.Drawing.Size(46, 18);
             this.gklabel.TabIndex = 16;
             this.gklabel.Text = "label3";
             this.gklabel.Click += new System.EventHandler(this.gklabel_Click);
             // 
-            // label3
+            // lbLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(772, 593);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 18);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
+            this.lbLabel.AutoSize = true;
+            this.lbLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lbLabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLabel.ForeColor = System.Drawing.Color.Black;
+            this.lbLabel.Location = new System.Drawing.Point(772, 593);
+            this.lbLabel.Name = "lbLabel";
+            this.lbLabel.Size = new System.Drawing.Size(46, 18);
+            this.lbLabel.TabIndex = 17;
+            this.lbLabel.Text = "label3";
+            this.lbLabel.Click += new System.EventHandler(this.label3_Click_1);
             // 
-            // label6
+            // cb1Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(772, 404);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 18);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "label3";
+            this.cb1Label.AutoSize = true;
+            this.cb1Label.BackColor = System.Drawing.Color.Transparent;
+            this.cb1Label.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb1Label.ForeColor = System.Drawing.Color.Black;
+            this.cb1Label.Location = new System.Drawing.Point(772, 500);
+            this.cb1Label.Name = "cb1Label";
+            this.cb1Label.Size = new System.Drawing.Size(46, 18);
+            this.cb1Label.TabIndex = 18;
+            this.cb1Label.Text = "label3";
             // 
-            // label7
+            // cb2label
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(772, 241);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 18);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "label3";
+            this.cb2label.AutoSize = true;
+            this.cb2label.BackColor = System.Drawing.Color.Transparent;
+            this.cb2label.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb2label.ForeColor = System.Drawing.Color.Black;
+            this.cb2label.Location = new System.Drawing.Point(772, 335);
+            this.cb2label.Name = "cb2label";
+            this.cb2label.Size = new System.Drawing.Size(46, 18);
+            this.cb2label.TabIndex = 19;
+            this.cb2label.Text = "label3";
             // 
-            // label9
+            // rblabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(772, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 18);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "label3";
+            this.rblabel.AutoSize = true;
+            this.rblabel.BackColor = System.Drawing.Color.Transparent;
+            this.rblabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rblabel.ForeColor = System.Drawing.Color.Black;
+            this.rblabel.Location = new System.Drawing.Point(772, 164);
+            this.rblabel.Name = "rblabel";
+            this.rblabel.Size = new System.Drawing.Size(46, 18);
+            this.rblabel.TabIndex = 20;
+            this.rblabel.Text = "label3";
             // 
-            // label10
+            // cdmlabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(578, 335);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 18);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "label3";
+            this.cdmlabel.AutoSize = true;
+            this.cdmlabel.BackColor = System.Drawing.Color.Transparent;
+            this.cdmlabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdmlabel.ForeColor = System.Drawing.Color.Black;
+            this.cdmlabel.Location = new System.Drawing.Point(578, 432);
+            this.cdmlabel.Name = "cdmlabel";
+            this.cdmlabel.Size = new System.Drawing.Size(46, 18);
+            this.cdmlabel.TabIndex = 21;
+            this.cdmlabel.Text = "label3";
             // 
-            // label11
+            // cm1label
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(485, 175);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 18);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "label3";
+            this.cm1label.AutoSize = true;
+            this.cm1label.BackColor = System.Drawing.Color.Transparent;
+            this.cm1label.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cm1label.ForeColor = System.Drawing.Color.Black;
+            this.cm1label.Location = new System.Drawing.Point(485, 271);
+            this.cm1label.Name = "cm1label";
+            this.cm1label.Size = new System.Drawing.Size(46, 18);
+            this.cm1label.TabIndex = 22;
+            this.cm1label.Text = "label3";
             // 
-            // label12
+            // cm2label
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(485, 530);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 18);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "label3";
+            this.cm2label.AutoSize = true;
+            this.cm2label.BackColor = System.Drawing.Color.Transparent;
+            this.cm2label.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cm2label.ForeColor = System.Drawing.Color.Black;
+            this.cm2label.Location = new System.Drawing.Point(485, 625);
+            this.cm2label.Name = "cm2label";
+            this.cm2label.Size = new System.Drawing.Size(46, 18);
+            this.cm2label.TabIndex = 23;
+            this.cm2label.Text = "label3";
             // 
-            // label13
+            // lwlabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(182, 175);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 18);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "label3";
+            this.lwlabel.AutoSize = true;
+            this.lwlabel.BackColor = System.Drawing.Color.Transparent;
+            this.lwlabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lwlabel.ForeColor = System.Drawing.Color.Black;
+            this.lwlabel.Location = new System.Drawing.Point(182, 271);
+            this.lwlabel.Name = "lwlabel";
+            this.lwlabel.Size = new System.Drawing.Size(46, 18);
+            this.lwlabel.TabIndex = 24;
+            this.lwlabel.Text = "label3";
             // 
-            // label14
+            // rwlabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(182, 530);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 18);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "label3";
+            this.rwlabel.AutoSize = true;
+            this.rwlabel.BackColor = System.Drawing.Color.Transparent;
+            this.rwlabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rwlabel.ForeColor = System.Drawing.Color.Black;
+            this.rwlabel.Location = new System.Drawing.Point(182, 625);
+            this.rwlabel.Name = "rwlabel";
+            this.rwlabel.Size = new System.Drawing.Size(46, 18);
+            this.rwlabel.TabIndex = 25;
+            this.rwlabel.Text = "label3";
             // 
-            // label15
+            // stlabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(131, 349);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 18);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "label3";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(400, 63);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 18);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "label3";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(468, 63);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 18);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "label3";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(534, 63);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 18);
-            this.label18.TabIndex = 29;
-            this.label18.Text = "label3";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
+            this.stlabel.AutoSize = true;
+            this.stlabel.BackColor = System.Drawing.Color.Transparent;
+            this.stlabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stlabel.ForeColor = System.Drawing.Color.Black;
+            this.stlabel.Location = new System.Drawing.Point(131, 443);
+            this.stlabel.Name = "stlabel";
+            this.stlabel.Size = new System.Drawing.Size(46, 18);
+            this.stlabel.TabIndex = 26;
+            this.stlabel.Text = "label3";
             // 
             // ClubsInfoForms
             // 
@@ -607,23 +534,17 @@ namespace Fantasy
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1195, 798);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.stlabel);
+            this.Controls.Add(this.rwlabel);
+            this.Controls.Add(this.lwlabel);
+            this.Controls.Add(this.cm2label);
+            this.Controls.Add(this.cm1label);
+            this.Controls.Add(this.cdmlabel);
+            this.Controls.Add(this.rblabel);
+            this.Controls.Add(this.cb2label);
+            this.Controls.Add(this.cb1Label);
+            this.Controls.Add(this.lbLabel);
             this.Controls.Add(this.gklabel);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.st);
             this.Controls.Add(this.cb1);
             this.Controls.Add(this.gk);
@@ -632,8 +553,8 @@ namespace Fantasy
             this.Controls.Add(this.cb2);
             this.Controls.Add(this.cm1);
             this.Controls.Add(this.rb);
-            this.Controls.Add(this.rw);
             this.Controls.Add(this.lw);
+            this.Controls.Add(this.rw);
             this.Controls.Add(this.lb);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -653,13 +574,10 @@ namespace Fantasy
             ((System.ComponentModel.ISupportInitialize)(this.cm1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cm2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.st)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -687,28 +605,22 @@ namespace Fantasy
         private System.Windows.Forms.PictureBox cm1;
         private System.Windows.Forms.PictureBox cdm;
         private System.Windows.Forms.PictureBox cm2;
-        private System.Windows.Forms.PictureBox rw;
         private System.Windows.Forms.PictureBox lw;
+        private System.Windows.Forms.PictureBox rw;
         private System.Windows.Forms.PictureBox gk;
         private System.Windows.Forms.PictureBox st;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label gklabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbLabel;
+        private System.Windows.Forms.Label cb1Label;
+        private System.Windows.Forms.Label cb2label;
+        private System.Windows.Forms.Label rblabel;
+        private System.Windows.Forms.Label cdmlabel;
+        private System.Windows.Forms.Label cm1label;
+        private System.Windows.Forms.Label cm2label;
+        private System.Windows.Forms.Label lwlabel;
+        private System.Windows.Forms.Label rwlabel;
+        private System.Windows.Forms.Label stlabel;
         private System.Windows.Forms.Button button2;
     }
 }

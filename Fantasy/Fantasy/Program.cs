@@ -17,7 +17,7 @@ namespace Fantasy
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new CreateTeams(1));
+            Application.Run(new Form1());
 
         }
     }
