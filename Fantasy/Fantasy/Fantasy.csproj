@@ -95,6 +95,12 @@
     <Compile Include="Club_Fixtures.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EnterScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterScores.Designer.cs">
+      <DependentUpon>EnterScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fantasy_League.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClubsUser.resx">
       <DependentUpon>ClubsUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterScores.resx">
+      <DependentUpon>EnterScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FixturesForm.resx">
       <DependentUpon>FixturesForm.cs</DependentUpon>

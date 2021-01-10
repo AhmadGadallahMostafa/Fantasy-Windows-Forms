@@ -83,6 +83,27 @@ namespace Fantasy
             childForm.AddedClub2 += OnAddedClub;
 
         }
+        private void openAdminViewsForm(adminFixturesForm childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            childPanel.Controls.Add(childForm);
+            childPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            childForm.RefreshFixtures += OnRefreshFixtures;
+
+
+        }
+        protected void OnRefreshFixtures(object sender,EventArgs e)
+        {
+            activeForm.Close();
+            this.openAdminViewsForm(new adminFixturesForm());
+        }
+
         protected void OnSignedIn_AsAdmin(object sender,string email)
         {
             SignInAsAdmin = email;
@@ -160,8 +181,14 @@ namespace Fantasy
 
         private void FixturesButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new FixturesForm());
-
+            if (AsAdmin)
+            {
+                 openAdminViewsForm(new adminFixturesForm());
+            }
+            else
+            {
+                openChildForm(new FixturesForm());
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
