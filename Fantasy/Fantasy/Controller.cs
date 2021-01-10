@@ -207,11 +207,17 @@ namespace Fantasy
             string query = "UPDATE Fantasy_League SET Total_Players=Total_Players+1 WHERE League_Id=" + LeagueId + ";";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int JoinLeague(int FTID, int LeagueId)
+        public int GetLeagueID(String leaguename)
         {
-            UpdateTotalPlayers(LeagueId);
+            string query = "SELECT league_id From Fantasy_league Where league_name='" + leaguename + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
 
-            string query = "INSERT INTO Comepteing_Leauges Values(" + FTID + "," + LeagueId + ");";
+        public int JoinLeague(int FTID, string LeagueName)
+        {
+
+            int leagueId = GetLeagueID(LeagueName);
+            string query = "INSERT INTO Comepteing_Leauges Values(" + FTID + "," + leagueId + ");";
             return dbMan.ExecuteNonQuery(query);
 
         }
@@ -350,6 +356,17 @@ namespace Fantasy
             parameters.Add("@Lname", lname);
             parameters.Add("@points", points);
             return dbMan.ExecuteNonQuerySto(name, parameters);
+        }
+        public DataTable LeaguesName(int FTID)
+        {
+            string query = "SELECT League_Name FROM Comepteing_Leauges,Fantasy_League WHERE Fantasy_Team_id=" + FTID + "AND League_id=Fantasy_Leauge_Id;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable LeagueStandings(string LeagueName)
+        {
+            string query = "SELECT Team_Name,Total_Points FROM Fantasy_Player_Team FT,Comepteing_Leauges C,Fantasy_League FL WHERE FT.Fantasy_Team_Id=C.Fantasy_Team_Id AND C.Fantasy_Leauge_Id=FL.League_Id AND FL.League_Name='" + LeagueName + "'ORDER BY Total_Points DESC;";
+            return dbMan.ExecuteReader(query);
+
         }
     }
 }

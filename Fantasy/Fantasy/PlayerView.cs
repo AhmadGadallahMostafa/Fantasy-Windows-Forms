@@ -189,9 +189,9 @@ namespace Fantasy
 
         private void button15_Click(object sender, EventArgs e)
         {
-            int LeagueID = Int32.Parse(EnterLeagueIDText.Text);
+            string LeagueName = EnterLeagueIDText.Text;
 
-            C1.JoinLeague(FTID, LeagueID);
+            C1.JoinLeague(FTID, LeagueName);
         }
 
         private void CreateLeagueButt_Click(object sender, EventArgs e)
