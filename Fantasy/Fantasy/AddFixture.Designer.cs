@@ -40,7 +40,6 @@ namespace Fantasy
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.Error = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HomeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GuestBox)).BeginInit();
             this.SuspendLayout();
@@ -155,28 +154,12 @@ namespace Fantasy
             this.Error.Text = "The teams must be different";
             this.Error.Visible = false;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(688, -1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(46, 45);
-            this.button3.TabIndex = 46;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // AddFixture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(731, 563);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.Error);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
@@ -189,7 +172,7 @@ namespace Fantasy
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "AddFixture";
             this.Text = "AddFixture";
             this.Load += new System.EventHandler(this.AddFixture_Load);
@@ -213,6 +196,5 @@ namespace Fantasy
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Error;
-        private System.Windows.Forms.Button button3;
     }
 }

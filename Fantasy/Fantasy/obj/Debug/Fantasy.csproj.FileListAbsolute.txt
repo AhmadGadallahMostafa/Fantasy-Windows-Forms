@@ -662,3 +662,29 @@ C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\bin\Debug\
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\bin\Debug\Images\Xhaka.png
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\bin\Debug\Images\Ziyech.png
 C:\Users\ahmad\OneDrive\Desktop\Fantasy Windows Forms\Fantasy\Fantasy\obj\Debug\Fantasy.AnalystRequests.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.AnalystRequests.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\obj\Debug\Fantasy.changePasswordForm.resources
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Ake.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Ceballos.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Chilwell.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Doherty.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Havertz.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Henderson.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Holding.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\James.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Lindelof.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Lo Celso.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Mahrez.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Martial.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Matip.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Ndombele.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Robertson.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Sanchez.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Shaw.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Sterling.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Stones.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Tierny.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Van de beek.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Wijnaldum.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Xhaka.png
+D:\Code\Fantasy-Windows-Forms\Fantasy\Fantasy\bin\Debug\Images\Ziyech.png

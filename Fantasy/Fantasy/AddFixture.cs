@@ -91,14 +91,23 @@ namespace Fantasy
         {
             HomeBox.Load(path + comboBox1.Text + ".png");
         }
-
+        
         private void AddFix_Click(object sender, EventArgs e)
         {
-
+            if ((int)controlObj.getWeekCount()%38==0)
+            {
+                controlObj.InsertSeason(dateTimePicker1.Value.Year.ToString());
+            }
             int weekNumber = 0;
             int season = 0;
+            if (comboBox1.Text == "" && comboBox2.Text == "")
+            {
+                MessageBox.Show("No more clubss");
+                return;
+            }
             int hostId= controlObj.getClubIdByName(comboBox1.Text);
             int guestID =controlObj.getClubIdByName(comboBox2.Text);
+           
             if (hostId == guestID)
             {
                 Error.Visible = true;
@@ -106,7 +115,7 @@ namespace Fantasy
             }
             else { Error.Visible = false; }
             
-            DateTime endDate = dateTimePicker1.Value.AddDays(6);
+            DateTime endDate = dateTimePicker1.Value.AddDays(7);
             DataTable weeksData = controlObj.GetWeeks();
             if (weeksData != null)
             {
@@ -134,6 +143,7 @@ namespace Fantasy
 
 
                             MessageBox.Show("Fixture added");
+                            return;
                         }
 
                     }
@@ -167,6 +177,7 @@ namespace Fantasy
                                 clubs = AvailableClubs1.ToArray();
                                 clubs2 = AvailableClubs2.ToArray();
                                 MessageBox.Show("Fixture added");
+                                return;
                             }
                             
 
@@ -177,6 +188,7 @@ namespace Fantasy
             }
             else// this is the first week to be added 
             {
+                
                 controlObj.InsertWeek(dateTimePicker1.Value, endDate.Date);
                 weeksData = controlObj.GetWeeks();
                 weeks = ConvertToWeeks(weeksData);
@@ -202,6 +214,7 @@ namespace Fantasy
                             clubs = AvailableClubs1.ToArray();
                             clubs2 = AvailableClubs2.ToArray();
                             MessageBox.Show("Fixture added");
+                            return;
 
                         }
 

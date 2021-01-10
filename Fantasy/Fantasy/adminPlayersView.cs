@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
 
 namespace Fantasy
 {
@@ -99,7 +101,7 @@ namespace Fantasy
                 int clubID = ControllerObj.getClubIdByName(ClubsComboBox.Text);
                 //adding the player
                 int flag = ControllerObj.addFootballerStoredProc(clubID,firstNameTextBox.Text,
-                    lastNameTextBox.Text,posComboBox.SelectedIndex,(int)priceNumeric.Value, (int)AgeNumeric.Value, (int)PointsNumeric.Value);
+                    lastNameTextBox.Text,posComboBox.SelectedIndex,(int)priceNumeric.Value, (int)AgeNumeric.Value,0);
                 if (flag == 1 )
                 {
                     MessageBox.Show("Player Added");
@@ -161,7 +163,27 @@ namespace Fantasy
 
         }
 
-        private void edit_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (Validations.EmptyInputField(textBox1.Text))
+            {
+                UrlField.Visible = true;
+                return;
+            }
+            else
+            {
+                UrlField.Visible = false;
+            }
+            using (WebClient client = new WebClient())
+            {
+
+                client.DownloadFile(new Uri(textBox1.Text), Path.Combine(Directory.GetCurrentDirectory(), $@"Images/{lastNameTextBox.Text}.png"));
+
+            }
+            pictureBox1.Load(Path.Combine(Directory.GetCurrentDirectory(), $@"Images/{lastNameTextBox.Text}.png"));
+        }
+
+        private void edit_Click_1(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentCell == null)
             {
@@ -171,12 +193,13 @@ namespace Fantasy
             {
                 string fname = dataGridView1.SelectedCells[0].Value.ToString();
                 string lname = dataGridView1.SelectedCells[1].Value.ToString();
-                int Points = ControllerObj.getPointsByNameStoredProc(fname, lname);
-                Points = Points + (int)pointsedit.Value;
-                int flag = ControllerObj.updatePointsStoredProc(fname, lname, Points);
+                int Price = (int)numericUpDown1.Value;
+
+
+                int flag = ControllerObj.UpdateFootballerPrice(fname, lname, Price);
                 if (flag == 1)
                 {
-                    MessageBox.Show("points added ");
+                    MessageBox.Show("Price altered! ");
                 }
             }
         }

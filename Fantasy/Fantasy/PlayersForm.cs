@@ -59,7 +59,7 @@ namespace Fantasy
         {
             if (comboBox1.SelectedIndex == 0 )
             {
-                dataGridView1.DataSource = ControllerObj.GetFootBallersByPoints();
+               dataGridView1.DataSource = ControllerObj.GetFootBallersByPoints();
                 dataGridView1.ClearSelection();
                 ClubsLabel.Visible = false;
                 ClubsComboBox.Visible = false;

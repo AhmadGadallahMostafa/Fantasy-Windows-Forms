@@ -17,11 +17,13 @@ namespace Fantasy
         int HomeAssists = 0;
         int GuestAssists = 0;
         int thisweek = 0;
+        int seasonNumber = 0;
         string HomeClub = "";
         string GuestClub="";
+
         Controller controlObj;
-        string[] HomePlayersBackLine = new string[3];
-        string[] AwayPlayersBackLine = new string[3];
+        string[] HomePlayersBackLine = new string[5];
+        string[] AwayPlayersBackLine = new string[5];
 
         public EnterScores(string HTeam,string GTeam,int week)
         {
@@ -35,6 +37,8 @@ namespace Fantasy
       
         private void EnterScores_Load(object sender, EventArgs e)
         {
+            seasonNumber = controlObj.GetSeason(DateTime.Today.Year.ToString());
+
             DataTable homeClub = controlObj.GetFootBallersByClubName(HomeClub);
             listBox1.DataSource = homeClub;
             listBox1.DisplayMember = "Last_Name";
@@ -43,6 +47,11 @@ namespace Fantasy
             listBox2.DisplayMember = "Last_Name";
             label1.Text = HomeClub;
             label2.Text = GuestClub;
+
+            if (controlObj.GetFixtureCountInWeek(thisweek, seasonNumber) == 3)
+            {
+                controlObj.ResetTransfers();
+            }
 
             DataTable dt1 = controlObj.GetDefendersAndGkNamesInClub(HomeClub);
             DataTable dt2 = controlObj.GetDefendersAndGkNamesInClub(GuestClub);
