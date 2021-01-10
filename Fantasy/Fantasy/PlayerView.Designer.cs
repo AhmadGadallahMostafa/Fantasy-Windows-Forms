@@ -98,6 +98,8 @@ namespace Fantasy
             this.acceptTransfer = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.RankLabel = new System.Windows.Forms.Label();
             this.SideMenuPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -127,6 +129,8 @@ namespace Fantasy
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SideMenuPanel.AutoScroll = true;
             this.SideMenuPanel.BackColor = System.Drawing.Color.SkyBlue;
+            this.SideMenuPanel.Controls.Add(this.RankLabel);
+            this.SideMenuPanel.Controls.Add(this.label5);
             this.SideMenuPanel.Controls.Add(this.PointsValueLabel);
             this.SideMenuPanel.Controls.Add(this.FundsValueLabel);
             this.SideMenuPanel.Controls.Add(this.label4);
@@ -159,9 +163,9 @@ namespace Fantasy
             this.PointsValueLabel.AutoSize = true;
             this.PointsValueLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PointsValueLabel.ForeColor = System.Drawing.Color.Red;
-            this.PointsValueLabel.Location = new System.Drawing.Point(101, 237);
+            this.PointsValueLabel.Location = new System.Drawing.Point(169, 241);
             this.PointsValueLabel.Name = "PointsValueLabel";
-            this.PointsValueLabel.Size = new System.Drawing.Size(88, 33);
+            this.PointsValueLabel.Size = new System.Drawing.Size(70, 26);
             this.PointsValueLabel.TabIndex = 70;
             this.PointsValueLabel.Text = "Points ";
             // 
@@ -170,9 +174,9 @@ namespace Fantasy
             this.FundsValueLabel.AutoSize = true;
             this.FundsValueLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FundsValueLabel.ForeColor = System.Drawing.Color.Red;
-            this.FundsValueLabel.Location = new System.Drawing.Point(101, 309);
+            this.FundsValueLabel.Location = new System.Drawing.Point(169, 309);
             this.FundsValueLabel.Name = "FundsValueLabel";
-            this.FundsValueLabel.Size = new System.Drawing.Size(41, 33);
+            this.FundsValueLabel.Size = new System.Drawing.Size(33, 26);
             this.FundsValueLabel.TabIndex = 69;
             this.FundsValueLabel.Text = "lbl";
             // 
@@ -183,7 +187,7 @@ namespace Fantasy
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(26, 309);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 33);
+            this.label4.Size = new System.Drawing.Size(63, 26);
             this.label4.TabIndex = 68;
             this.label4.Text = "Funds";
             // 
@@ -194,7 +198,7 @@ namespace Fantasy
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(26, 237);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 33);
+            this.label2.Size = new System.Drawing.Size(70, 26);
             this.label2.TabIndex = 67;
             this.label2.Text = "Points ";
             // 
@@ -205,7 +209,7 @@ namespace Fantasy
             this.TeamNameLabel.ForeColor = System.Drawing.Color.White;
             this.TeamNameLabel.Location = new System.Drawing.Point(100, 189);
             this.TeamNameLabel.Name = "TeamNameLabel";
-            this.TeamNameLabel.Size = new System.Drawing.Size(114, 45);
+            this.TeamNameLabel.Size = new System.Drawing.Size(89, 36);
             this.TeamNameLabel.TabIndex = 66;
             this.TeamNameLabel.Text = "label1";
             // 
@@ -235,7 +239,7 @@ namespace Fantasy
             this.CreateLeagueButt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CreateLeagueButt.Location = new System.Drawing.Point(0, 407);
             this.CreateLeagueButt.Name = "CreateLeagueButt";
-            this.CreateLeagueButt.Size = new System.Drawing.Size(305, 45);
+            this.CreateLeagueButt.Size = new System.Drawing.Size(320, 45);
             this.CreateLeagueButt.TabIndex = 3;
             this.CreateLeagueButt.Text = "Create League";
             this.CreateLeagueButt.UseVisualStyleBackColor = false;
@@ -250,7 +254,7 @@ namespace Fantasy
             this.JoinLeagueButt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.JoinLeagueButt.Location = new System.Drawing.Point(0, 446);
             this.JoinLeagueButt.Name = "JoinLeagueButt";
-            this.JoinLeagueButt.Size = new System.Drawing.Size(305, 45);
+            this.JoinLeagueButt.Size = new System.Drawing.Size(320, 45);
             this.JoinLeagueButt.TabIndex = 0;
             this.JoinLeagueButt.Text = "Join League";
             this.JoinLeagueButt.UseVisualStyleBackColor = false;
@@ -265,7 +269,7 @@ namespace Fantasy
             this.MyLeaguesButt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.MyLeaguesButt.Location = new System.Drawing.Point(0, 490);
             this.MyLeaguesButt.Name = "MyLeaguesButt";
-            this.MyLeaguesButt.Size = new System.Drawing.Size(305, 48);
+            this.MyLeaguesButt.Size = new System.Drawing.Size(320, 48);
             this.MyLeaguesButt.TabIndex = 4;
             this.MyLeaguesButt.Text = "My Leagues";
             this.MyLeaguesButt.UseVisualStyleBackColor = false;
@@ -292,7 +296,7 @@ namespace Fantasy
             this.Country.ForeColor = System.Drawing.Color.White;
             this.Country.Location = new System.Drawing.Point(9, 621);
             this.Country.Name = "Country";
-            this.Country.Size = new System.Drawing.Size(92, 29);
+            this.Country.Size = new System.Drawing.Size(72, 23);
             this.Country.TabIndex = 64;
             this.Country.Text = "Country";
             // 
@@ -303,7 +307,7 @@ namespace Fantasy
             this.LeagueName.ForeColor = System.Drawing.Color.White;
             this.LeagueName.Location = new System.Drawing.Point(9, 559);
             this.LeagueName.Name = "LeagueName";
-            this.LeagueName.Size = new System.Drawing.Size(205, 29);
+            this.LeagueName.Size = new System.Drawing.Size(158, 23);
             this.LeagueName.TabIndex = 63;
             this.LeagueName.Text = "Enter League Name";
             // 
@@ -320,14 +324,14 @@ namespace Fantasy
             ""});
             this.CountryText.Location = new System.Drawing.Point(14, 653);
             this.CountryText.Name = "CountryText";
-            this.CountryText.Size = new System.Drawing.Size(199, 27);
+            this.CountryText.Size = new System.Drawing.Size(199, 23);
             this.CountryText.TabIndex = 62;
             // 
             // LeagueNameText
             // 
             this.LeagueNameText.Location = new System.Drawing.Point(14, 591);
             this.LeagueNameText.Name = "LeagueNameText";
-            this.LeagueNameText.Size = new System.Drawing.Size(199, 27);
+            this.LeagueNameText.Size = new System.Drawing.Size(199, 23);
             this.LeagueNameText.TabIndex = 61;
             // 
             // JoinButton
@@ -351,7 +355,7 @@ namespace Fantasy
             this.EnterLeagueID.ForeColor = System.Drawing.Color.White;
             this.EnterLeagueID.Location = new System.Drawing.Point(9, 685);
             this.EnterLeagueID.Name = "EnterLeagueID";
-            this.EnterLeagueID.Size = new System.Drawing.Size(205, 29);
+            this.EnterLeagueID.Size = new System.Drawing.Size(158, 23);
             this.EnterLeagueID.TabIndex = 10;
             this.EnterLeagueID.Text = "Enter League Name";
             // 
@@ -359,7 +363,7 @@ namespace Fantasy
             // 
             this.EnterLeagueIDText.Location = new System.Drawing.Point(14, 717);
             this.EnterLeagueIDText.Name = "EnterLeagueIDText";
-            this.EnterLeagueIDText.Size = new System.Drawing.Size(199, 27);
+            this.EnterLeagueIDText.Size = new System.Drawing.Size(199, 23);
             this.EnterLeagueIDText.TabIndex = 3;
             // 
             // label3
@@ -368,7 +372,7 @@ namespace Fantasy
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(10, 724);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 21);
+            this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 9;
             // 
             // SignedInAs
@@ -376,7 +380,7 @@ namespace Fantasy
             this.SignedInAs.AutoSize = true;
             this.SignedInAs.Location = new System.Drawing.Point(3, 495);
             this.SignedInAs.Name = "SignedInAs";
-            this.SignedInAs.Size = new System.Drawing.Size(0, 21);
+            this.SignedInAs.Size = new System.Drawing.Size(0, 15);
             this.SignedInAs.TabIndex = 8;
             // 
             // panel1
@@ -859,7 +863,7 @@ namespace Fantasy
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(748, 10);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
+            this.comboBox1.Size = new System.Drawing.Size(121, 27);
             this.comboBox1.TabIndex = 103;
             // 
             // label1
@@ -868,13 +872,35 @@ namespace Fantasy
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(641, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 104;
             this.label1.Text = "InjuredPlayers";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(26, 274);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 26);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "Overall Rank";
+            // 
+            // RankLabel
+            // 
+            this.RankLabel.AutoSize = true;
+            this.RankLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RankLabel.ForeColor = System.Drawing.Color.Red;
+            this.RankLabel.Location = new System.Drawing.Point(169, 274);
+            this.RankLabel.Name = "RankLabel";
+            this.RankLabel.Size = new System.Drawing.Size(54, 26);
+            this.RankLabel.TabIndex = 72;
+            this.RankLabel.Text = "Rank";
+            // 
             // PlayerView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1179, 759);
             this.Controls.Add(this.label1);
@@ -1022,5 +1048,7 @@ namespace Fantasy
         private System.Windows.Forms.Button acceptTransfer;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label RankLabel;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -60,24 +60,24 @@ namespace Fantasy
         }
         public DataTable GetGK()
         {
-            string query = "SELECt Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=0 ";
+            string query = "SELECt Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer WHERE Poisition=0 ";
             return dbMan.ExecuteReader(query);
         }
 
         public DataTable GetDefender()
         {
-            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=1 ";
+            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer WHERE Poisition=1 ";
             return dbMan.ExecuteReader(query);
         }
         public DataTable GetMidFielder()
         {
-            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets From Footballer WHERE Poisition=2 ";
+            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer WHERE Poisition=2 ";
             return dbMan.ExecuteReader(query);
         }
 
         public DataTable GetStriker()
         {
-            string query = "SELECT Last_Name,Price,Goals,Assists From Footballer WHERE Poisition=3 ";
+            string query = "SELECT Last_Name,Price,Goals,Assists,points From Footballer WHERE Poisition=3 ";
             return dbMan.ExecuteReader(query);
         }
         public int GetPrice(String LastName)
@@ -565,5 +565,42 @@ namespace Fantasy
             string query = $"UPDATE Club_Fixtures Set Score='{score}'where Host_id ={hostId} and Guest_Id={awayId} and Week_number={week} and Season_number={season} ";
             return dbMan.ExecuteNonQuery(query);
         }
+        public DataTable getHighestParticpatingLeagues()  //stat admin
+        {
+            string query = $"select top 5  Fantasy_League.League_Name from Fantasy_League, Comepteing_Leauges where Fantasy_League.League_Id = Comepteing_Leauges.Fantasy_Leauge_Id group by Fantasy_League.League_Name order by COUNT(Comepteing_Leauges.Fantasy_Leauge_Id) desc ";
+            return dbMan.ExecuteReader(query);
+        }
+        public int updatePoints(int PlayerID,  int playerPoints)
+        {
+            string query = $"update fantasy_player_team set total_points = Total_Points + {playerPoints} from Plays_In_Fantasy_Team where fantasy_player_team.Fantasy_Team_ID = Plays_In_Fantasy_Team.Fantasy_Team_Id and Plays_In_Fantasy_Team.Player_ID = {PlayerID}";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable getHighestPointsTeams() //stat admin 
+        {
+            string query = "select top 5 Fantasy_Player_Team.Team_Name , Fantasy_Player_Team.Total_Points from Fantasy_Player_Team order by Total_Points desc; ";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable HighestPlayer() //stat player
+        {
+            string query = "SELECT TOP 5 Last_Name,points FROM Footballer ORDER BY Points DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable getMostPickedFootballer() //stat player
+        {
+            string query = "select top  5  Footballer.Last_Name from Footballer, Plays_In_Fantasy_Team where Footballer.Player_Id = Plays_In_Fantasy_Team.Player_ID group by Footballer.Last_Name order by count(Plays_In_Fantasy_Team.Player_ID) desc";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable getMostTransferedFootballer() //stat admin
+        {
+            string query = "select top 5 Footballer.Last_Name from Footballer, Transfered where Footballer.Player_Id = Transfered.Player_ID  group by Footballer.Last_Name  order by count(Footballer.Player_Id) desc";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable mostPointsFantasyTeam()
+        {
+            string query = "SELECT Fantasy_Player_Team.Fantasy_team_id  FROM Fantasy_Player_Team ORDER BY Total_Points DESC;";
+            return dbMan.ExecuteReader(query);
+
+        }
+
     }
 }

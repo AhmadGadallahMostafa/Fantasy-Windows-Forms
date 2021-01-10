@@ -26,6 +26,7 @@ namespace Fantasy
         string dummy = "T";
         int chosenNumber;
         bool found = false;
+        int rank;
 
 
 
@@ -93,9 +94,6 @@ namespace Fantasy
             TeamNameLabel.Text = name.Rows[0][0].ToString();
             DataTable dt1 = C1.OnPitchList(FTID);
             DataTable dt2 = C1.SubsList(FTID);
-            
-
-
             int count1 = dt1.Rows.Count;
             if (count1 > 0)
             {
@@ -137,9 +135,25 @@ namespace Fantasy
             MID5.Load(path + Subs[2] + ".png");
             ATT3.Load(path + Subs[3] + ".png");
 
+            //Rank calculation
+            DataTable teams = C1.mostPointsFantasyTeam();
+            if (teams != null )
+            {
+                int rowCount = teams.Rows.Count;
+                for (int i = 0; i < rowCount; i++)
+                {
+                    if (FTID == (int)teams.Rows[i][0])
+                    {
+                        rank = i + 1;
+                    }
+                }
+            }
+            RankLabel.Text = rank.ToString();
+           
+
             //unavailable check
             DateTime today = DateTime.Today;
-            check();
+            checkUnavailable();
 
         }
 
@@ -194,7 +208,12 @@ namespace Fantasy
 
         private void CreateButt_Click(object sender, EventArgs e)
         {
-            C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString(), FTID);
+            int result = C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString(), FTID);
+            if (result != 0)
+            {
+                C1.JoinLeague(FTID, LeagueNameText.Text);
+            }
+
         }
 
         private void SubGK1_Click(object sender, EventArgs e)
@@ -634,7 +653,7 @@ namespace Fantasy
             }
         }*/
 
-        private void check()
+        private void checkUnavailable()
         {
             DateTime today = DateTime.Today;
             DataTable t = C1.getAllUnavailableInTeam(FTID);

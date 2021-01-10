@@ -79,6 +79,8 @@ namespace Fantasy
                 for (int i = 0; i < AwayPlayersBackLine.Length; i++) 
                 {
                     controlObj.PlayerCleanSheet(AwayPlayersBackLine[i]);
+                    int footballerID = controlObj.GetPlayerId(AwayPlayersBackLine[i]);
+                    controlObj.updatePoints(footballerID, 3);
 
                 }
             }
@@ -88,10 +90,13 @@ namespace Fantasy
                 for(int i = 0; i < HomePlayersBackLine.Length; i++) 
                 {
                     controlObj.PlayerCleanSheet(HomePlayersBackLine[i]);
+                    int footballerID = controlObj.GetPlayerId(HomePlayersBackLine[i]);
+                    controlObj.updatePoints(footballerID, 3);
                 }
             }
             controlObj.UpdateClubAfterMatch(HomeClub, GuestGoals, HomeGoals);
             controlObj.UpdateClubAfterMatch(GuestClub, HomeGoals, GuestGoals);
+            
 
             string score = HomeGoals.ToString() + "-" + GuestGoals.ToString();
             if (controlObj.UpdateFixtureScore(HomeClub, GuestClub, thisweek, score, DateTime.Today.Year.ToString()) != 0)
@@ -115,6 +120,8 @@ namespace Fantasy
             label3.Text = HomeGoals.ToString();
             var playerName=  listBox1.Text;
             controlObj.PlayerScored(playerName);
+            int footballerID = controlObj.GetPlayerId(playerName);
+            controlObj.updatePoints(footballerID, 5);
 
         }
 
@@ -130,6 +137,8 @@ namespace Fantasy
             {
                 var playerName = listBox1.Text;
                 controlObj.PlayerAssisted(playerName);
+                int footballerID = controlObj.GetPlayerId(playerName);
+                controlObj.updatePoints(footballerID, 3);
             }
         }
 
@@ -139,7 +148,8 @@ namespace Fantasy
             label4.Text = GuestGoals.ToString();
             var playerName = listBox2.Text;
             controlObj.PlayerScored(playerName);
-
+            int footballerID = controlObj.GetPlayerId(playerName);
+            controlObj.updatePoints(footballerID, 3);
         }
 
         private void AAssist_Click(object sender, EventArgs e)
@@ -154,6 +164,8 @@ namespace Fantasy
             {
                 var playerName = listBox2.Text;
                 controlObj.PlayerAssisted(playerName);
+                int footballerID = controlObj.GetPlayerId(playerName);
+                controlObj.updatePoints(footballerID, 3);
             }
         }
 
