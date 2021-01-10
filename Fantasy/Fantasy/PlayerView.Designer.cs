@@ -859,7 +859,7 @@ namespace Fantasy
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(748, 10);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
+            this.comboBox1.Size = new System.Drawing.Size(121, 32);
             this.comboBox1.TabIndex = 103;
             // 
             // label1
@@ -868,7 +868,7 @@ namespace Fantasy
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(641, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 19);
+            this.label1.Size = new System.Drawing.Size(129, 24);
             this.label1.TabIndex = 104;
             this.label1.Text = "InjuredPlayers";
             // 
