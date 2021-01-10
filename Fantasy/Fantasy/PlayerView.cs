@@ -23,6 +23,8 @@ namespace Fantasy
         string[] Subs = new string[4];
         string dummy = "T";
         int chosenNumber;
+        bool found = false;
+
 
 
         public PlayerView(int FantasyTeamId)
@@ -370,7 +372,7 @@ namespace Fantasy
 
         private void MyLeaguesButt_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new MyLeagues(FTID));
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -468,38 +470,62 @@ namespace Fantasy
             else
             {
                 string playerInLastName = dataGridView1.SelectedCells[0].Value.ToString();
-                int playerInPrice = C1.GetPrice(playerInLastName);
-                string chosenPlayerName = OnPitch[chosenNumber];
-                int chosenPlayerPrice = C1.GetPrice(chosenPlayerName);
-                int newFunds = C1.GetTeamFunds(FTID) + chosenPlayerPrice - playerInPrice;
-                if (newFunds < 0)
+
+                for (int i = 0; i < 10; i++)
                 {
-                    MessageBox.Show("You Dont Have Enough Money To Make This Transfer");
+                    if (playerInLastName == OnPitch[i])
+                    {
+                        found = true;
+                    }
+                }
+                for(int i=0;i<3;i++)
+                {
+                    if (playerInLastName == Subs[i])
+                    {
+                        found = true;
+                    }
+
+                }
+                if (found == false)
+                {
+                    int playerInPrice = C1.GetPrice(playerInLastName);
+                    string chosenPlayerName = OnPitch[chosenNumber];
+                    int chosenPlayerPrice = C1.GetPrice(chosenPlayerName);
+                    int newFunds = C1.GetTeamFunds(FTID) + chosenPlayerPrice - playerInPrice;
+                    if (newFunds < 0)
+                    {
+                        MessageBox.Show("You Dont Have Enough Money To Make This Transfer");
+                    }
+                    else
+                    {
+                        int flag = C1.transfer(playerInLastName, chosenPlayerName, FTID, newFunds);
+                        if (flag == 1)
+                        {
+                            FundsValueLabel.Text = newFunds.ToString();
+                            OnPitch[chosenNumber] = playerInLastName;
+                            C1.updateTransfers(FTID, 0);
+                            hidetransfersButtons();
+                            transfersButton.Visible = false;
+                            //Update the photo
+                            GK1.Load(path + OnPitch[0] + ".png");
+                            DEF1.Load(path + OnPitch[1] + ".png");
+                            DEF2.Load(path + OnPitch[2] + ".png");
+                            DEF3.Load(path + OnPitch[3] + ".png");
+                            DEF4.Load(path + OnPitch[4] + ".png");
+                            MID1.Load(path + OnPitch[5] + ".png");
+                            MID2.Load(path + OnPitch[6] + ".png");
+                            MID3.Load(path + OnPitch[7] + ".png");
+                            MID4.Load(path + OnPitch[8] + ".png");
+                            ATT1.Load(path + OnPitch[9] + ".png");
+                            ATT2.Load(path + OnPitch[10] + ".png");
+                        }
+                    }
                 }
                 else
                 {
-                    int flag = C1.transfer(playerInLastName, chosenPlayerName, FTID, newFunds);
-                    if (flag == 1)
-                    {
-                        FundsValueLabel.Text = newFunds.ToString();
-                        OnPitch[chosenNumber] = playerInLastName;
-                        C1.updateTransfers(FTID, 0);
-                        hidetransfersButtons();
-                        transfersButton.Visible = false;
-                        //Update the photo
-                        GK1.Load(path + OnPitch[0] + ".png");
-                        DEF1.Load(path + OnPitch[1] + ".png");
-                        DEF2.Load(path + OnPitch[2] + ".png");
-                        DEF3.Load(path + OnPitch[3] + ".png");
-                        DEF4.Load(path + OnPitch[4] + ".png");
-                        MID1.Load(path + OnPitch[5] + ".png");
-                        MID2.Load(path + OnPitch[6] + ".png");
-                        MID3.Load(path + OnPitch[7] + ".png");
-                        MID4.Load(path + OnPitch[8] + ".png");
-                        ATT1.Load(path + OnPitch[9] + ".png");
-                        ATT2.Load(path + OnPitch[10] + ".png");
-                    }
+                    MessageBox.Show("Please choose a player that you dont have");
                 }
+                found = false;
             }
         }
 

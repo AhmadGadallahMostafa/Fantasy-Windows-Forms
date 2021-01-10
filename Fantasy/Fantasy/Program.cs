@@ -16,7 +16,7 @@ namespace Fantasy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyLeagues(5));
+            Application.Run(new PlayerView(2));
         }
     }
 }
