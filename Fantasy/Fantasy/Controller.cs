@@ -60,24 +60,24 @@ namespace Fantasy
         }
         public DataTable GetGK()
         {
-            string query = "SELECt Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer WHERE Poisition=0 ";
+            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer,CLub  WHERE Poisition=0 and Footballer.Club_id = Club.Club_id and Club.inFpl =1";
             return dbMan.ExecuteReader(query);
         }
 
         public DataTable GetDefender()
         {
-            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer WHERE Poisition=1 ";
+            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer,CLub  WHERE Poisition=1 and Footballer.Club_id = Club.Club_id and Club.inFpl =1 ";
             return dbMan.ExecuteReader(query);
         }
         public DataTable GetMidFielder()
         {
-            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer WHERE Poisition=2 ";
+            string query = "SELECT Last_Name,Price,Goals,Assists,CleanSheets,points From Footballer,CLub  WHERE Poisition=2 and Footballer.Club_id = Club.Club_id and Club.inFpl =1";
             return dbMan.ExecuteReader(query);
         }
 
         public DataTable GetStriker()
         {
-            string query = "SELECT Last_Name,Price,Goals,Assists,points From Footballer WHERE Poisition=3 ";
+            string query = "SELECT Last_Name,Price,Goals,Assists,points From Footballer,CLub  WHERE Poisition=3 and Footballer.Club_id = Club.Club_id and Club.inFpl =1";
             return dbMan.ExecuteReader(query);
         }
         public int GetPrice(String LastName)
