@@ -95,6 +95,7 @@ namespace Fantasy
             DataTable dt1 = C1.OnPitchList(FTID);
             DataTable dt2 = C1.SubsList(FTID);
             int count1 = dt1.Rows.Count;
+            CountryText.DataSource = new List<string> { "Egypt", "Russia", "England", "France", "Spain" };
             if (count1 > 0)
             {
                 //listView1.Items.Clear();
@@ -134,7 +135,6 @@ namespace Fantasy
             DEF5.Load(path + Subs[1] + ".png");
             MID5.Load(path + Subs[2] + ".png");
             ATT3.Load(path + Subs[3] + ".png");
-
             //Rank calculation
             DataTable teams = C1.mostPointsFantasyTeam();
             if (teams != null )
@@ -189,8 +189,24 @@ namespace Fantasy
         private void button15_Click(object sender, EventArgs e)
         {
             string LeagueName = EnterLeagueIDText.Text;
-
-            C1.JoinLeague(FTID, LeagueName);
+            if (!Validations.EmptyInputField(LeagueName))
+            {
+                if (C1.JoinLeague(FTID, LeagueName) != 0)
+                {
+                    MessageBox.Show("Leauge Joined");
+                    EnterLeagueID.Visible = false;
+                    EnterLeagueIDText.Visible = false;
+                    JoinButton.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Unavailable League");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Enter a league name");
+            }
         }
 
         private void CreateLeagueButt_Click(object sender, EventArgs e)
@@ -208,12 +224,27 @@ namespace Fantasy
 
         private void CreateButt_Click(object sender, EventArgs e)
         {
-            int result = C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString(), FTID);
-            if (result != 0)
+            if (!Validations.EmptyInputField(LeagueNameText.Text))
             {
-                C1.JoinLeague(FTID, LeagueNameText.Text);
-            }
+                int result = C1.InsertLeague(LeagueNameText.Text, CountryText.SelectedItem.ToString(), FTID);
+                if (result != 0 && C1.LeagueCreationCheck(LeagueNameText.Text) == null)
+                {
+                    C1.JoinLeague(FTID, LeagueNameText.Text);
+                    MessageBox.Show("League created");
+                    CreateButt.Visible = false;
+                    comboBox1.Visible = false;
+                    LeagueNameText.Visible = false;
+                    CountryText.Visible = false;
+                    LeagueName.Visible = false;
+                    Country.Visible = false;
 
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("Please Enter a League Name");
+            }
         }
 
         private void SubGK1_Click(object sender, EventArgs e)
@@ -675,7 +706,7 @@ namespace Fantasy
 
                 foreach (Unavailable_Player p in unAvailablefootballers)
                 {
-                    if (!(today > p.Start_Date && today < p.Start_Date.AddDays((double)p.Duration)))
+                    if ((today > p.Start_Date && today < p.Start_Date.AddDays((double)p.Duration)))
                     {
                         unAvailablefootballers.Remove(p);
                     }
@@ -698,7 +729,10 @@ namespace Fantasy
 
         }
 
-       
+        private void CountryText_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
  }
 

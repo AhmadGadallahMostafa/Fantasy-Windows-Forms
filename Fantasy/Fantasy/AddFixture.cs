@@ -15,6 +15,7 @@ namespace Fantasy
         string path = Path.Combine(Directory.GetCurrentDirectory(), @"Images/Clubs/");
         Controller controlObj;
         IEnumerable<Week> weeks;
+        int fixtureCount;
 
         string[] clubs = new string[20];
         string[] clubs2 = new string[20];
@@ -140,7 +141,7 @@ namespace Fantasy
                             comboBox2.DataSource = AvailableClubs2;
                             clubs = AvailableClubs1.ToArray();
                             clubs2 = AvailableClubs2.ToArray();
-
+                            fixtureCount++;
 
                             MessageBox.Show("Fixture added");
                             return;
@@ -176,6 +177,7 @@ namespace Fantasy
 
                                 clubs = AvailableClubs1.ToArray();
                                 clubs2 = AvailableClubs2.ToArray();
+                                fixtureCount++;
                                 MessageBox.Show("Fixture added");
                                 return;
                             }
@@ -213,6 +215,7 @@ namespace Fantasy
                             comboBox2.DataSource = AvailableClubs2;
                             clubs = AvailableClubs1.ToArray();
                             clubs2 = AvailableClubs2.ToArray();
+                            fixtureCount++;
                             MessageBox.Show("Fixture added");
                             return;
 
@@ -236,6 +239,18 @@ namespace Fantasy
         private void button3_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (fixtureCount != 3)
+            {
+                MessageBox.Show($"Please add 3 fixtures");
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

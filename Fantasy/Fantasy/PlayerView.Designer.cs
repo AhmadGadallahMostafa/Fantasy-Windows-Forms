@@ -31,6 +31,8 @@ namespace Fantasy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerView));
             this.SideMenuPanel = new System.Windows.Forms.Panel();
+            this.RankLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.PointsValueLabel = new System.Windows.Forms.Label();
             this.FundsValueLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -98,8 +100,6 @@ namespace Fantasy
             this.acceptTransfer = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.RankLabel = new System.Windows.Forms.Label();
             this.SideMenuPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -157,6 +157,28 @@ namespace Fantasy
             this.SideMenuPanel.Name = "SideMenuPanel";
             this.SideMenuPanel.Size = new System.Drawing.Size(305, 764);
             this.SideMenuPanel.TabIndex = 31;
+            // 
+            // RankLabel
+            // 
+            this.RankLabel.AutoSize = true;
+            this.RankLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RankLabel.ForeColor = System.Drawing.Color.Red;
+            this.RankLabel.Location = new System.Drawing.Point(169, 274);
+            this.RankLabel.Name = "RankLabel";
+            this.RankLabel.Size = new System.Drawing.Size(54, 26);
+            this.RankLabel.TabIndex = 72;
+            this.RankLabel.Text = "Rank";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(26, 274);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 26);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "Overall Rank";
             // 
             // PointsValueLabel
             // 
@@ -313,19 +335,13 @@ namespace Fantasy
             // 
             // CountryText
             // 
+            this.CountryText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CountryText.FormattingEnabled = true;
-            this.CountryText.Items.AddRange(new object[] {
-            "Egypt",
-            "England",
-            "Russia",
-            "Algeria",
-            "Tunisia",
-            "Morocco",
-            ""});
             this.CountryText.Location = new System.Drawing.Point(14, 653);
             this.CountryText.Name = "CountryText";
             this.CountryText.Size = new System.Drawing.Size(199, 23);
             this.CountryText.TabIndex = 62;
+            this.CountryText.SelectedIndexChanged += new System.EventHandler(this.CountryText_SelectedIndexChanged);
             // 
             // LeagueNameText
             // 
@@ -875,28 +891,6 @@ namespace Fantasy
             this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 104;
             this.label1.Text = "InjuredPlayers";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(26, 274);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 26);
-            this.label5.TabIndex = 71;
-            this.label5.Text = "Overall Rank";
-            // 
-            // RankLabel
-            // 
-            this.RankLabel.AutoSize = true;
-            this.RankLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RankLabel.ForeColor = System.Drawing.Color.Red;
-            this.RankLabel.Location = new System.Drawing.Point(169, 274);
-            this.RankLabel.Name = "RankLabel";
-            this.RankLabel.Size = new System.Drawing.Size(54, 26);
-            this.RankLabel.TabIndex = 72;
-            this.RankLabel.Text = "Rank";
             // 
             // PlayerView
             // 

@@ -75,7 +75,7 @@ namespace Fantasy
         private void styleDataGrid4()
         {
             dataGridView4.Columns[0].HeaderText = "First Name";
-            dataGridView4.Columns[1].HeaderText = "Last Name";
+           
 
             dataGridView4.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView4.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -99,5 +99,7 @@ namespace Fantasy
         {
             this.Close();
         }
+
+        
     }
 }

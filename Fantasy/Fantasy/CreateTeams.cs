@@ -54,35 +54,39 @@ namespace Fantasy
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.ClearSelection();
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Yellow;
         }
 
 
 
-        
-            
+
+
         private void GK1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetGK();
+            if (Team[0] == null)
+                dataGridView1.DataSource = C1.GetGK();
 
-           
+
 
             ChosenPlayerNo = 0;
 
         }
         private void GK2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetGK();
+            if (Team[11] == null)
+                dataGridView1.DataSource = C1.GetGK();
 
-            
+
 
             ChosenPlayerNo = 1;
         }
 
         private void DEF1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetDefender();
+            if (Team[1] == null)
+                dataGridView1.DataSource = C1.GetDefender();
 
-           
+
 
             ChosenPlayerNo = 2;
 
@@ -90,33 +94,37 @@ namespace Fantasy
 
         private void DEF2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetDefender();
+            if (Team[2] == null)
+                dataGridView1.DataSource = C1.GetDefender();
 
-            
+
 
             ChosenPlayerNo = 3;
         }
 
         private void DEF3_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetDefender();
+            if (Team[3] == null)
+                dataGridView1.DataSource = C1.GetDefender();
 
-           
+
 
             ChosenPlayerNo = 4;
         }
 
         private void DEF4_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetDefender();
+            if (Team[4] == null)
+                dataGridView1.DataSource = C1.GetDefender();
             ChosenPlayerNo = 5;
         }
 
         private void DEF5_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetDefender();
+            if (Team[12] == null)
+                dataGridView1.DataSource = C1.GetDefender();
 
-          
+
 
             ChosenPlayerNo = 6;
 
@@ -124,9 +132,10 @@ namespace Fantasy
 
         private void MID1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetMidFielder();
+            if (Team[5] == null)
+                dataGridView1.DataSource = C1.GetMidFielder();
 
-            
+
 
             ChosenPlayerNo = 7;
 
@@ -134,36 +143,40 @@ namespace Fantasy
 
         private void MID2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetMidFielder();
+            if (Team[6] == null)
+                dataGridView1.DataSource = C1.GetMidFielder();
 
-           
+
 
             ChosenPlayerNo = 8;
         }
 
         private void MID3_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetMidFielder();
+            if (Team[7] == null)
+                dataGridView1.DataSource = C1.GetMidFielder();
 
-            
+
 
             ChosenPlayerNo = 9;
         }
 
         private void MID4_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetMidFielder();
+            if (Team[8] == null)
+                dataGridView1.DataSource = C1.GetMidFielder();
 
-            
+
 
             ChosenPlayerNo = 10;
         }
 
         private void MID5_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetMidFielder();
+            if (Team[13] == null)
+                dataGridView1.DataSource = C1.GetMidFielder();
 
-           
+
 
             ChosenPlayerNo = 11;
 
@@ -171,27 +184,30 @@ namespace Fantasy
 
         private void ATT1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetStriker();
+            if (Team[9] == null)
+                dataGridView1.DataSource = C1.GetStriker();
 
-            
+
 
             ChosenPlayerNo = 12;
         }
 
         private void ATT2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetStriker();
+            if (Team[10] == null)
+                dataGridView1.DataSource = C1.GetStriker();
 
-           
+
 
             ChosenPlayerNo = 13;
         }
 
         private void ATT3_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = C1.GetStriker();
+            if (Team[14] == null)
+                dataGridView1.DataSource = C1.GetStriker();
 
-            
+
 
             ChosenPlayerNo = 14;
         }
@@ -439,12 +455,9 @@ namespace Fantasy
             }
             else
             {
-                
-                
                 string TeamName = teamName.Text;
                 C1.SetTeamName(FTID, TeamName);
                 this.Close();
-
             }
         }
 
@@ -466,13 +479,12 @@ namespace Fantasy
 
         private void addPlayer_Click_1(object sender, EventArgs e)
         {
-            string PlayerName = dataGridView1.SelectedCells[0].Value.ToString();
-
-            if (dataGridView1.CurrentCell == null) 
+            if (dataGridView1.CurrentCell == null)
             {
                 MessageBox.Show("Please Select a player!");
                 return;
             }
+            string PlayerName = dataGridView1.SelectedCells[0].Value.ToString();
             for (int i = 0; i < 14; i++)
             {
                 if (PlayerName == Team[i])
@@ -483,7 +495,7 @@ namespace Fantasy
             if (found == false)
             {
               
-                if (C1.GetTeamFunds(FTID) > C1.GetPrice(PlayerName))
+                if (C1.GetTeamFunds(FTID) >= C1.GetPrice(PlayerName))
                 {
 
                     if (ChosenPlayerNo == 0)
@@ -494,8 +506,7 @@ namespace Fantasy
                         Team[0] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-                        
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 1)
                     {
@@ -503,8 +514,7 @@ namespace Fantasy
                         Team[11] = PlayerName;
                         C1.BuyingOutPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 2)
                     {
@@ -512,17 +522,15 @@ namespace Fantasy
                         Team[1] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 3)
                     {
                         DEF2.Load(path + PlayerName + ".png");
                         Team[2] = PlayerName;
-
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 4)
                     {
@@ -530,7 +538,7 @@ namespace Fantasy
                         Team[3] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 5)
                     {
@@ -538,7 +546,7 @@ namespace Fantasy
                         Team[4] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 6)
                     {
@@ -546,7 +554,7 @@ namespace Fantasy
                         Team[12] = PlayerName;
                         C1.BuyingOutPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 7)
                     {
@@ -554,7 +562,7 @@ namespace Fantasy
                         Team[5] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 8)
                     {
@@ -562,7 +570,7 @@ namespace Fantasy
                         Team[6] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 9)
                     {
@@ -570,7 +578,7 @@ namespace Fantasy
                         Team[7] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 10)
                     {
@@ -578,7 +586,7 @@ namespace Fantasy
                         Team[8] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 11)
                     {
@@ -586,7 +594,7 @@ namespace Fantasy
                         Team[13] = PlayerName;
                         C1.BuyingOutPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 12)
                     {
@@ -594,7 +602,7 @@ namespace Fantasy
                         Team[9] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 13)
                     {
@@ -602,7 +610,7 @@ namespace Fantasy
                         Team[10] = PlayerName;
                         C1.BuyingInPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                     else if (ChosenPlayerNo == 14)
                     {
@@ -610,7 +618,7 @@ namespace Fantasy
                         Team[14] = PlayerName;
                         C1.BuyingOutPLayer(FTID, PlayerName);
                         textBox1.Text = C1.GetTeamFunds(FTID).ToString();
-
+                        dataGridView1.DataSource = null;
                     }
                 }
                 else

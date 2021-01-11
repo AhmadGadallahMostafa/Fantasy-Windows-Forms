@@ -549,8 +549,13 @@ namespace Fantasy
 
         public int InsertPlayerUnavailable(string playerName,bool suspended,bool injured,DateTime startDate,int durationInDays) 
         {
+            int supendedflag = 0;
+            int injuredFlag = 0;
+            if (suspended) supendedflag = 1;
+            if (injured) injuredFlag = 1;
+
             int unAvailabePlayerId = GetPlayerId(playerName);
-            string query = $"INSERT INTO Unavailable_Player values({unAvailabePlayerId},{suspended},'{startDate.ToShortDateString()}',{durationInDays},{injured}) ";
+            string query = $"INSERT INTO Unavailable_Player values({unAvailabePlayerId},{supendedflag},'{startDate.ToShortDateString()}',{durationInDays},{injuredFlag}) ";
             return dbMan.ExecuteNonQuery(query);
         }
 
@@ -569,7 +574,7 @@ namespace Fantasy
         }
         public int updatePoints(int PlayerID,  int playerPoints)
         {
-            string query = $"update fantasy_player_team set total_points = Total_Points + {playerPoints} from Plays_In_Fantasy_Team where fantasy_player_team.Fantasy_Team_ID = Plays_In_Fantasy_Team.Fantasy_Team_Id and Plays_In_Fantasy_Team.Player_ID = {PlayerID}";
+            string query = $"update fantasy_player_team set total_points = Total_Points + {playerPoints} from Plays_In_Fantasy_Team where fantasy_player_team.Fantasy_Team_ID = Plays_In_Fantasy_Team.Fantasy_Team_Id and Plays_In_Fantasy_Team.Player_ID = {PlayerID} and Plays_In_Fantasy_Team.Sub = 0";
             return dbMan.ExecuteNonQuery(query);
         }
         public DataTable getHighestPointsTeams() //stat admin //
@@ -584,17 +589,17 @@ namespace Fantasy
         }
         public DataTable getMostPickedFootballer() //stat player//
         {
-            string query = "select top 5 Footballer.First_Name ,Footballer.Last_Name  from Footballer, Plays_In_Fantasy_Team where Footballer.Player_Id = Plays_In_Fantasy_Team.Player_ID group by Footballer.Last_Name order by count(Plays_In_Fantasy_Team.Player_ID) desc";
+            string query = "select top 5 Footballer.Last_Name  from Footballer, Plays_In_Fantasy_Team where Footballer.Player_Id = Plays_In_Fantasy_Team.Player_ID group by Footballer.Last_Name order by count(Plays_In_Fantasy_Team.Player_ID) desc";
             return dbMan.ExecuteReader(query);
         }
         public DataTable getMostTransferedInFootballer() //stat admin//
         {
-            string query = $"select top 5 Footballer.First_Name ,Footballer.Last_Name from Footballer, Transfered where Footballer.Player_Id = Transfered.Player_ID and Transfered.status = IN  group by Footballer.Last_Name  order by count(Footballer.Player_Id) desc";
+            string query = $"select top 5 Footballer.Last_Name from Footballer, Transfered where Footballer.Player_Id = Transfered.Player_ID and Transfered.status = 'IN'  group by Footballer.Last_Name  order by count(Footballer.Player_Id) desc";
             return dbMan.ExecuteReader(query);
         }
         public DataTable getMostTransferedOutFootballer() //stat admin//
         {
-            string query = $"select top 5 Footballer.Last_Name from Footballer, Transfered where Footballer.Player_Id = Transfered.Player_ID and Transfered.status = OUT  group by Footballer.Last_Name  order by count(Footballer.Player_Id) desc";
+            string query = $"select top 5 Footballer.Last_Name from Footballer, Transfered where Footballer.Player_Id = Transfered.Player_ID and Transfered.status = 'OUT'  group by Footballer.Last_Name  order by count(Footballer.Player_Id) desc";
             return dbMan.ExecuteReader(query);
         }
 
@@ -637,6 +642,11 @@ namespace Fantasy
             string query = $"Insert Into Season values('{year}')";
             return dbMan.ExecuteNonQuery(query);
 
+        }
+        public DataTable LeagueCreationCheck(String leaguename)
+        { 
+            String query = "SELECT * FROM fantasy_league WHERE fantasy_league.league_name=" + leaguename + ";";
+            return dbMan.ExecuteReader(query);
         }
     }
 }

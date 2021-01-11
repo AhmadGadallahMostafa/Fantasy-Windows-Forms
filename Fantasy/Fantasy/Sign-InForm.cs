@@ -110,8 +110,13 @@ namespace Fantasy
                 label5.Visible = false;
             }
 
-            string encryptedPassword = controlObj.getEncryptedPassword(textBox1.Text);
-            string decryptedPassword = Validations.DecodeFrom64(encryptedPassword);
+            object encryptedPassword = controlObj.getEncryptedPassword(textBox1.Text);
+            if (encryptedPassword == null)
+            {
+                label6.Visible = true;
+                return;
+            }
+            string decryptedPassword = Validations.DecodeFrom64(encryptedPassword.ToString());
             if (decryptedPassword != textBox2.Text)
             {
                 label6.Visible = true;

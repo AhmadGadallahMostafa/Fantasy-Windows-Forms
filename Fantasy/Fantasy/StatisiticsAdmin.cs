@@ -79,9 +79,7 @@ namespace Fantasy
         }
         private void styleDataGrid1()
         {
-            dataGridView1.Columns[0].HeaderText = "First Name";
-            dataGridView1.Columns[1].HeaderText = "Last Name";
-          
+            dataGridView1.Columns[0].HeaderText = "Last Name";
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SkyBlue;
@@ -101,9 +99,7 @@ namespace Fantasy
         }
         private void styleDataGrid2()
         {
-            dataGridView2.Columns[0].HeaderText = "First Name";
-            dataGridView2.Columns[1].HeaderText = "Last Name";
-
+            dataGridView2.Columns[0].HeaderText = "Last Name";
             dataGridView2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView2.DefaultCellStyle.SelectionBackColor = Color.SkyBlue;
@@ -145,8 +141,8 @@ namespace Fantasy
         }
         private void styleDataGrid4()
         {
-            dataGridView4.Columns[0].HeaderText = "First Name";
-            dataGridView4.Columns[1].HeaderText = "Last Name";
+            dataGridView4.Columns[0].HeaderText = "League Name";
+            //dataGridView4.Columns[1].HeaderText = "Last Name";
 
             dataGridView4.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView4.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
